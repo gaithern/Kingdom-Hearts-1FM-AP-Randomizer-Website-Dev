@@ -1,0 +1,117 @@
+/* Enemy Randomizer page.
+   Loaded after the site stylesheet, so it inherits --surface, --gold and the rest. */
+
+.er-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .er-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.er-sourcecard {
+    padding: 0;
+    overflow: hidden;
+}
+
+.er-cardhead {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.er-cardhead h3 {
+    margin: 0;
+    border-bottom: none;
+}
+
+.er-sourcelist {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 6px;
+}
+
+.er-source {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 9px 12px;
+    text-align: left;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid transparent;
+}
+
+.er-source:hover {
+    filter: none;
+    transform: none;
+    background: var(--surface-hover);
+}
+
+.er-source[aria-current="true"] {
+    background: var(--surface);
+    border-color: var(--accent-dim);
+}
+
+.er-source__note {
+    margin-left: auto;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--gold);
+}
+
+/* The target list reuses .category-checkboxes from the site stylesheet. */
+.er-tier {
+    padding: 14px 16px;
+}
+
+.er-empty {
+    padding: 0 16px 16px;
+    color: var(--text-dim);
+}
+
+.er-settings__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.er-settings__row button {
+    margin-bottom: 0;
+}
+
+.er-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.er-upload input[type="file"] {
+    margin-bottom: 0;
+    padding: 4px;
+    max-width: 100%;
+    color: var(--text-dim);
+}
+
+.er-upload input[type="file"]::file-selector-button {
+    font: inherit;
+    margin-right: 10px;
+    padding: 5px 12px;
+    background: var(--surface-hover);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.er-upload input[type="file"]::file-selector-button:hover {
+    border-color: var(--accent-dim);
+}
