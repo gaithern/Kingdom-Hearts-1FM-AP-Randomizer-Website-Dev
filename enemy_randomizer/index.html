@@ -32,9 +32,9 @@
             <div class="page-intro">
                 <p>Decide what each heartless is allowed to turn into, then download a mod that
                    shuffles them across every room in the game. Only swaps the game can actually
-                   handle are offered, so anything you can pick here should be safe.</p>
+                   handle are offered, so anything you can pick here is safe to pick.</p>
                 <p>Choose a heartless on the left, then click names on the right to allow or forbid
-                   them.</p>
+                   them. Everything is allowed to begin with.</p>
             </div>
 
             <div class="er-layout">
@@ -215,13 +215,24 @@
                     var L = ["title: KH1 Enemy Randomizer Seed " + res.seed,
                         "originalAuthor: Gicu",
                         "description: >-",
-                        "  Randomizes heartless.",
+                        "  Randomizes heartless",
                         "game: kh1", "assets:"];
                     res.assets.forEach(function (a) {
-                        L.push("- name: " + a.ard, "  method: kh1ardresource", "  replacements:");
-                        a.reps.forEach(function (p) { L.push("    " + p[0] + ": " + p[1]); });
+                        L.push("- name: " + a.ard,
+                               "  method: kh1ardresource",
+                               "  source:",
+                               "  - name: " + sourcePath(a));
                     });
                     return L.join("\n") + "\n";
+                }
+
+                // mod.yml only lists the rooms; each room's edits live in its own file under
+                // files/, which is how every other OpenKH patch method is laid out
+                function sourcePath(a) {
+                    return "files/" + a.ard.replace(/\.ard$/, "") + ".yml";
+                }
+                function toSourceYaml(a) {
+                    return a.reps.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n";
                 }
 
                 // --- a store-only ZIP, so the mod arrives as one archive ---
@@ -315,6 +326,10 @@
                     var summary = res.swaps + " heartless swapped across " + res.assets.length
                         + " rooms.";
 
+                    var files = res.assets.map(function (a) {
+                        return { name: sourcePath(a), data: toSourceYaml(a) };
+                    });
+
                     function deliver(entries, note) {
                         var blob = new Blob([zipFiles(entries)], { type: "application/zip" });
                         var url = URL.createObjectURL(blob);
@@ -332,13 +347,15 @@
                     say("Building " + name + "...");
                     loadIcon().then(function (icon) {
                         deliver([{ name: "mod.yml", data: yaml },
-                                 { name: "icon.png", data: icon }],
-                                "Extract both files into your mod folder.");
+                                 { name: "icon.png", data: icon }].concat(files),
+                                "Extract the whole archive into your mod folder, keeping the "
+                                + "files folder alongside mod.yml.");
                     }, function () {
                         // the icon is cosmetic, so a failed fetch must not cost you the mod
-                        deliver([{ name: "mod.yml", data: yaml }],
-                                "Extract mod.yml into your mod folder. The mod icon could not "
-                                + "be loaded, so it was left out.");
+                        deliver([{ name: "mod.yml", data: yaml }].concat(files),
+                                "Extract the whole archive into your mod folder, keeping the "
+                                + "files folder alongside mod.yml. The mod icon could not be "
+                                + "loaded, so it was left out.");
                     });
                 }
 
