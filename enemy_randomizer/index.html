@@ -32,6 +32,8 @@
             <div class="page-intro">
                 <p>Decide what each heartless is allowed to be randomized to.</p>
                 <p>Choose a heartless on the left, then click names on the right to allow or forbid them.</p>
+                <p>NOTE: You must have extracted your KH1 game data in OpenKH in order for the patching process to work correctly.</p>
+                <p>NOTE: This is an experimental feature.  Please report bugs on the Discord server.</p>
             </div>
 
             <div class="er-layout">
@@ -392,14 +394,12 @@
                     loadIcon().then(function (icon) {
                         deliver([{ name: "mod.yml", data: yaml },
                                  { name: "icon.png", data: icon }].concat(files),
-                                "Extract the whole archive into your mod folder, keeping the "
-                                + "enemyrando folder alongside mod.yml.");
+                                "Load the zip as a separate mod in OpenKH.");
                     }, function () {
                         // the icon is cosmetic, so a failed fetch must not cost you the mod
                         deliver([{ name: "mod.yml", data: yaml }].concat(files),
-                                "Extract the whole archive into your mod folder, keeping the "
-                                + "enemyrando folder alongside mod.yml. The mod icon could not be "
-                                + "loaded, so it was left out.");
+                                "Load the zip as a separate mod in OpenKH.  "
+                                + "The mod icon could not be loaded, so it was left out.");
                     });
                 }
 
