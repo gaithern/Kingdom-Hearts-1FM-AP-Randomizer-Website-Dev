@@ -1,0 +1,57 @@
+{
+  "ard": "tz12.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Jungle: Cliff",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 48,
+      "msetIndex": 49,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 54,
+      "msetIndex": 55,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 56,
+      "msetIndex": 57,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 58,
+      "msetIndex": 59,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bouncywild",
+      "modelIndex": 60,
+      "msetIndex": 61,
+      "msetValue": "xa_ex_2040.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 62,
+      "msetIndex": 63,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

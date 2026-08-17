@@ -1,0 +1,195 @@
+{
+  "ard": "he03.ard",
+  "world": "Olympus Coliseum",
+  "worldId": 11,
+  "room": "Coliseum (Preliminaries)",
+  "exclude": [
+    "Missile Diver"
+  ],
+  "pairs": [
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 6,
+      "msetIndex": 7,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 8,
+      "msetIndex": 9,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 10,
+      "msetIndex": 11,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wight Knight",
+      "modelIndex": 14,
+      "msetIndex": 15,
+      "msetValue": "xa_ex_2200.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Soldier",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 54,
+      "msetIndex": 55,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 56,
+      "msetIndex": 57,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 58,
+      "msetIndex": 59,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 60,
+      "msetIndex": 61,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Pirate",
+      "modelIndex": 62,
+      "msetIndex": 63,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Pirate",
+      "modelIndex": 64,
+      "msetIndex": 65,
+      "msetValue": "xa_ex_2210.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle",
+      "modelIndex": 66,
+      "msetIndex": 67,
+      "msetValue": "xa_ex_2220.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Rare Truffles",
+      "modelIndex": 70,
+      "msetIndex": 71,
+      "msetValue": "xa_ex_2390.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 211,
+      "msetIndex": 212,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 213,
+      "msetIndex": 214,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 215,
+      "msetIndex": 216,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 219,
+      "msetIndex": 220,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Angel Star",
+      "modelIndex": 221,
+      "msetIndex": 222,
+      "msetValue": "xa_ex_2330.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Black Fungi",
+      "modelIndex": 223,
+      "msetIndex": 224,
+      "msetValue": "xa_ex_2380.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 229,
+      "msetIndex": 230,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Invisible",
+      "modelIndex": 231,
+      "msetIndex": 232,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 233,
+      "msetIndex": 234,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

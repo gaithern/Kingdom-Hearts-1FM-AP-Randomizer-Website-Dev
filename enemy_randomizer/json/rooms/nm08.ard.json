@@ -1,0 +1,33 @@
+{
+  "ard": "nm08.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Torture Chamber",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Wight Knight (Halloween Town)",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2200.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle (Halloween Town)",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2220.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost (Halloween Town)",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

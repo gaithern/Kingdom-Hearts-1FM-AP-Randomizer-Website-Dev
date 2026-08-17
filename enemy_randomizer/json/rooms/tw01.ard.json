@@ -1,0 +1,17 @@
+{
+  "ard": "tw01.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "1st District",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 60,
+      "msetIndex": 61,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

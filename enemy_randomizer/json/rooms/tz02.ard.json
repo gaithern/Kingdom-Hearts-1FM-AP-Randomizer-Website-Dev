@@ -1,0 +1,17 @@
+{
+  "ard": "tz02.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Camp",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 75,
+      "msetIndex": 76,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

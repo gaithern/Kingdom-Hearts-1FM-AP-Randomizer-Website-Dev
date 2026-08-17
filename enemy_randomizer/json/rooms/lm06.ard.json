@@ -1,0 +1,25 @@
+{
+  "ard": "lm06.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Garden",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sea Neon",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2070.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

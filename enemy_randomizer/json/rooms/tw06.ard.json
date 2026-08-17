@@ -1,0 +1,34 @@
+{
+  "ard": "tw06.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "Green Room",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Soldier",
+      "modelIndex": 56,
+      "msetIndex": 57,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": false,
+      "lockedReason": "extramset",
+      "exclude": []
+    }
+  ]
+}

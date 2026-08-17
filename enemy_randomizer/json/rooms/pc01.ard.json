@@ -1,0 +1,18 @@
+{
+  "ard": "pc01.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Rising Falls",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    }
+  ]
+}

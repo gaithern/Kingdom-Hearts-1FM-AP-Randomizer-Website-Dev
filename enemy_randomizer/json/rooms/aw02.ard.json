@@ -1,0 +1,97 @@
+{
+  "ard": "aw02.ard",
+  "world": "Wonderland",
+  "worldId": 4,
+  "room": "Bizarre Room (Small)",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 54,
+      "msetIndex": 55,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 56,
+      "msetIndex": 57,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 58,
+      "msetIndex": 59,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 60,
+      "msetIndex": 61,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 64,
+      "msetIndex": 65,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 66,
+      "msetIndex": 67,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 70,
+      "msetIndex": 71,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 72,
+      "msetIndex": 73,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Soldier",
+      "modelIndex": 74,
+      "msetIndex": 75,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 76,
+      "msetIndex": 77,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

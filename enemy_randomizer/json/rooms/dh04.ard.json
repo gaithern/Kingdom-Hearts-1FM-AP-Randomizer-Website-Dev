@@ -1,0 +1,17 @@
+{
+  "ard": "dh04.ard",
+  "world": "Awakening",
+  "worldId": 0,
+  "room": "???",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 3,
+      "msetIndex": 4,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

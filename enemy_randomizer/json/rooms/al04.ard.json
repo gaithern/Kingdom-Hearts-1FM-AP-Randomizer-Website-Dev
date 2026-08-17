@@ -1,0 +1,65 @@
+{
+  "ard": "al04.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Agrabah: Alley",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 28,
+      "msetIndex": 29,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 38,
+      "msetIndex": 39,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

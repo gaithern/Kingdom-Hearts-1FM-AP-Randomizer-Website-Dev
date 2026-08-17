@@ -1,0 +1,50 @@
+{
+  "ard": "tw03.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "3rd District",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Soldier",
+      "modelIndex": 50,
+      "msetIndex": 51,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": false,
+      "lockedReason": "extramset",
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 59,
+      "msetIndex": 60,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 61,
+      "msetIndex": 62,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 63,
+      "msetIndex": 64,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

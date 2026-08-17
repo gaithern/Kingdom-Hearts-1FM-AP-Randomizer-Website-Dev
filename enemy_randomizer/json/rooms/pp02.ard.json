@@ -1,0 +1,41 @@
+{
+  "ard": "pp02.ard",
+  "world": "Neverland",
+  "worldId": 13,
+  "room": "Ship: Hold",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Pirate",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

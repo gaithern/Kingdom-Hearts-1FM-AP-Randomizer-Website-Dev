@@ -1,0 +1,17 @@
+{
+  "ard": "di06.ard",
+  "world": "Destiny Islands",
+  "worldId": 1,
+  "room": "Seashore (Day 3)",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

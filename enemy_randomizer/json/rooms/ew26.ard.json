@@ -1,0 +1,17 @@
+{
+  "ard": "ew26.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Hollow Bastion",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Invisible",
+      "modelIndex": 6,
+      "msetIndex": 7,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

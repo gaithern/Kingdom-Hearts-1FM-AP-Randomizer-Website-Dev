@@ -1,0 +1,41 @@
+{
+  "ard": "ew22.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Atlantica",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Sea Neon",
+      "modelIndex": 14,
+      "msetIndex": 15,
+      "msetValue": "xa_ex_2070.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sheltering Zone",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2080.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Aquatank",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2240.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Screwdiver",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2250.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

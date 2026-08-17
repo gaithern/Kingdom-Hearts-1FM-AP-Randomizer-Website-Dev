@@ -1,0 +1,17 @@
+{
+  "ard": "lm16.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Triton's Throne (1)",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Screwdiver",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2250.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

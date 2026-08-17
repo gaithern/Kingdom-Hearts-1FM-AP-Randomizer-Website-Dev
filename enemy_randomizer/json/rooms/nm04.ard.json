@@ -1,0 +1,49 @@
+{
+  "ard": "nm04.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Moonlight Hill",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow (Halloween Town)",
+      "modelIndex": 50,
+      "msetIndex": 51,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wight Knight (Halloween Town)",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2200.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost (Halloween Town)",
+      "modelIndex": 54,
+      "msetIndex": 55,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle (Halloween Town)",
+      "modelIndex": 56,
+      "msetIndex": 57,
+      "msetValue": "xa_ex_2220.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball (Halloween Town)",
+      "modelIndex": 58,
+      "msetIndex": 59,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

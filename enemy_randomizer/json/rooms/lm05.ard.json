@@ -1,0 +1,65 @@
+{
+  "ard": "lm05.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Cave",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Pink Agaricus",
+      "modelIndex": 17,
+      "msetIndex": 18,
+      "msetValue": "xa_ex_2410.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sea Neon",
+      "modelIndex": 19,
+      "msetIndex": 20,
+      "msetValue": "xa_ex_2070.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 21,
+      "msetIndex": 22,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sheltering Zone",
+      "modelIndex": 23,
+      "msetIndex": 24,
+      "msetValue": "xa_ex_2080.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Aquatank",
+      "modelIndex": 25,
+      "msetIndex": 26,
+      "msetValue": "xa_ex_2240.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Screwdiver",
+      "modelIndex": 27,
+      "msetIndex": 28,
+      "msetValue": "xa_ex_2250.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 29,
+      "msetIndex": 30,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

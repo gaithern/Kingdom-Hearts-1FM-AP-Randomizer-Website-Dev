@@ -1,0 +1,49 @@
+{
+  "ard": "al05.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Agrabah: Bazaar",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 28,
+      "msetIndex": 29,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Black Fungi",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2380.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,847 @@
+{
+  "version": 1,
+  "heartless": "heartless.json",
+  "defaults": "defaults.json",
+  "rooms": [
+    {
+      "ard": "al02.ard",
+      "file": "rooms/al02.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Desert: Cave"
+    },
+    {
+      "ard": "al03.ard",
+      "file": "rooms/al03.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Agrabah: Plaza"
+    },
+    {
+      "ard": "al04.ard",
+      "file": "rooms/al04.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Agrabah: Alley"
+    },
+    {
+      "ard": "al05.ard",
+      "file": "rooms/al05.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Agrabah: Bazaar"
+    },
+    {
+      "ard": "al06.ard",
+      "file": "rooms/al06.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Agrabah: Main Street"
+    },
+    {
+      "ard": "al07.ard",
+      "file": "rooms/al07.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Palace Gates"
+    },
+    {
+      "ard": "al09.ard",
+      "file": "rooms/al09.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Cave: Entrance"
+    },
+    {
+      "ard": "al10.ard",
+      "file": "rooms/al10.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Cave: Hall"
+    },
+    {
+      "ard": "al11.ard",
+      "file": "rooms/al11.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Bottomless Hall"
+    },
+    {
+      "ard": "al12.ard",
+      "file": "rooms/al12.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Treasure Room"
+    },
+    {
+      "ard": "al17.ard",
+      "file": "rooms/al17.ard.json",
+      "world": "Agrabah",
+      "worldId": 8,
+      "room": "Lamp Chamber"
+    },
+    {
+      "ard": "aw01.ard",
+      "file": "rooms/aw01.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Rabbit Hole"
+    },
+    {
+      "ard": "aw02.ard",
+      "file": "rooms/aw02.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Bizarre Room (Small)"
+    },
+    {
+      "ard": "aw04.ard",
+      "file": "rooms/aw04.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Queen's Castle"
+    },
+    {
+      "ard": "aw05.ard",
+      "file": "rooms/aw05.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Lotus Forest"
+    },
+    {
+      "ard": "aw07.ard",
+      "file": "rooms/aw07.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Bizarre Room (Sideways 1)"
+    },
+    {
+      "ard": "aw08.ard",
+      "file": "rooms/aw08.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Bizarre Room (Sideways 2)"
+    },
+    {
+      "ard": "aw09.ard",
+      "file": "rooms/aw09.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Bizarre Room (Upside Down)"
+    },
+    {
+      "ard": "aw10.ard",
+      "file": "rooms/aw10.ard.json",
+      "world": "Wonderland",
+      "worldId": 4,
+      "room": "Teaparty Garden"
+    },
+    {
+      "ard": "dh02.ard",
+      "file": "rooms/dh02.ard.json",
+      "world": "Awakening",
+      "worldId": 0,
+      "room": null
+    },
+    {
+      "ard": "dh04.ard",
+      "file": "rooms/dh04.ard.json",
+      "world": "Awakening",
+      "worldId": 0,
+      "room": "???"
+    },
+    {
+      "ard": "dh05.ard",
+      "file": "rooms/dh05.ard.json",
+      "world": "Awakening",
+      "worldId": 0,
+      "room": "???"
+    },
+    {
+      "ard": "di01.ard",
+      "file": "rooms/di01.ard.json",
+      "world": "Destiny Islands",
+      "worldId": 1,
+      "room": "Seashore"
+    },
+    {
+      "ard": "di06.ard",
+      "file": "rooms/di06.ard.json",
+      "world": "Destiny Islands",
+      "worldId": 1,
+      "room": "Seashore (Day 3)"
+    },
+    {
+      "ard": "di09.ard",
+      "file": "rooms/di09.ard.json",
+      "world": "Destiny Islands",
+      "worldId": 1,
+      "room": "Seashore (Darkside Fight)"
+    },
+    {
+      "ard": "ew03.ard",
+      "file": "rooms/ew03.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Final Dimension?"
+    },
+    {
+      "ard": "ew04.ard",
+      "file": "rooms/ew04.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Final Dimension?"
+    },
+    {
+      "ard": "ew07.ard",
+      "file": "rooms/ew07.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Final Dimension?"
+    },
+    {
+      "ard": "ew09.ard",
+      "file": "rooms/ew09.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Final Dimension?"
+    },
+    {
+      "ard": "ew10.ard",
+      "file": "rooms/ew10.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Final Dimension?"
+    },
+    {
+      "ard": "ew12.ard",
+      "file": "rooms/ew12.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Final Dimension?"
+    },
+    {
+      "ard": "ew15.ard",
+      "file": "rooms/ew15.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Giant Crevasse"
+    },
+    {
+      "ard": "ew17.ard",
+      "file": "rooms/ew17.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Traverse Town"
+    },
+    {
+      "ard": "ew18.ard",
+      "file": "rooms/ew18.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Wonderland"
+    },
+    {
+      "ard": "ew19.ard",
+      "file": "rooms/ew19.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Olympus Coliseum"
+    },
+    {
+      "ard": "ew20.ard",
+      "file": "rooms/ew20.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Deep Jungle"
+    },
+    {
+      "ard": "ew21.ard",
+      "file": "rooms/ew21.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Agrabah"
+    },
+    {
+      "ard": "ew22.ard",
+      "file": "rooms/ew22.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Atlantica"
+    },
+    {
+      "ard": "ew23.ard",
+      "file": "rooms/ew23.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Halloween Town"
+    },
+    {
+      "ard": "ew24.ard",
+      "file": "rooms/ew24.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Neverland"
+    },
+    {
+      "ard": "ew26.ard",
+      "file": "rooms/ew26.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "World Terminus: Hollow Bastion"
+    },
+    {
+      "ard": "ew29.ard",
+      "file": "rooms/ew29.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "Linked Worlds"
+    },
+    {
+      "ard": "ew31.ard",
+      "file": "rooms/ew31.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "???"
+    },
+    {
+      "ard": "ew34.ard",
+      "file": "rooms/ew34.ard.json",
+      "world": "End of the World",
+      "worldId": 16,
+      "room": "The Void"
+    },
+    {
+      "ard": "he03.ard",
+      "file": "rooms/he03.ard.json",
+      "world": "Olympus Coliseum",
+      "worldId": 11,
+      "room": "Coliseum (Preliminaries)"
+    },
+    {
+      "ard": "he04.ard",
+      "file": "rooms/he04.ard.json",
+      "world": "Olympus Coliseum",
+      "worldId": 11,
+      "room": "Main Gates"
+    },
+    {
+      "ard": "he06.ard",
+      "file": "rooms/he06.ard.json",
+      "world": "Olympus Coliseum",
+      "worldId": 11,
+      "room": "Coliseum (Cups)"
+    },
+    {
+      "ard": "he07.ard",
+      "file": "rooms/he07.ard.json",
+      "world": "Olympus Coliseum",
+      "worldId": 11,
+      "room": "Coliseum: Arena"
+    },
+    {
+      "ard": "lm01.ard",
+      "file": "rooms/lm01.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Atlantica (Undersea Valley)"
+    },
+    {
+      "ard": "lm02.ard",
+      "file": "rooms/lm02.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Tranquil Grotto"
+    },
+    {
+      "ard": "lm03.ard",
+      "file": "rooms/lm03.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Calm Depths"
+    },
+    {
+      "ard": "lm04.ard",
+      "file": "rooms/lm04.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Undersea Gorge"
+    },
+    {
+      "ard": "lm05.ard",
+      "file": "rooms/lm05.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Undersea Cave"
+    },
+    {
+      "ard": "lm06.ard",
+      "file": "rooms/lm06.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Undersea Garden"
+    },
+    {
+      "ard": "lm07.ard",
+      "file": "rooms/lm07.ard.json",
+      "world": null,
+      "worldId": null,
+      "room": null
+    },
+    {
+      "ard": "lm08.ard",
+      "file": "rooms/lm08.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Sunken Ship"
+    },
+    {
+      "ard": "lm10.ard",
+      "file": "rooms/lm10.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Den of Tides"
+    },
+    {
+      "ard": "lm11.ard",
+      "file": "rooms/lm11.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Cavern Nook"
+    },
+    {
+      "ard": "lm12.ard",
+      "file": "rooms/lm12.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Tidal Abyss"
+    },
+    {
+      "ard": "lm13.ard",
+      "file": "rooms/lm13.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Undersea Gorge"
+    },
+    {
+      "ard": "lm15.ard",
+      "file": "rooms/lm15.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Triton's Palace"
+    },
+    {
+      "ard": "lm16.ard",
+      "file": "rooms/lm16.ard.json",
+      "world": "Atlantica",
+      "worldId": 9,
+      "room": "Triton's Throne (1)"
+    },
+    {
+      "ard": "nm01.ard",
+      "file": "rooms/nm01.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Guillotine Square"
+    },
+    {
+      "ard": "nm03.ard",
+      "file": "rooms/nm03.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Graveyard"
+    },
+    {
+      "ard": "nm04.ard",
+      "file": "rooms/nm04.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Moonlight Hill"
+    },
+    {
+      "ard": "nm05.ard",
+      "file": "rooms/nm05.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Bridge"
+    },
+    {
+      "ard": "nm07.ard",
+      "file": "rooms/nm07.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Oogie's Manor"
+    },
+    {
+      "ard": "nm08.ard",
+      "file": "rooms/nm08.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Torture Chamber"
+    },
+    {
+      "ard": "nm09.ard",
+      "file": "rooms/nm09.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Manor Ruins"
+    },
+    {
+      "ard": "nm10.ard",
+      "file": "rooms/nm10.ard.json",
+      "world": "Halloween Town",
+      "worldId": 10,
+      "room": "Evil Playroom"
+    },
+    {
+      "ard": "pc01.ard",
+      "file": "rooms/pc01.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Rising Falls"
+    },
+    {
+      "ard": "pc02.ard",
+      "file": "rooms/pc02.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Castle Gates"
+    },
+    {
+      "ard": "pc03.ard",
+      "file": "rooms/pc03.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Great Crest"
+    },
+    {
+      "ard": "pc04.ard",
+      "file": "rooms/pc04.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "High Tower"
+    },
+    {
+      "ard": "pc05.ard",
+      "file": "rooms/pc05.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Entrance Hall"
+    },
+    {
+      "ard": "pc06.ard",
+      "file": "rooms/pc06.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Library"
+    },
+    {
+      "ard": "pc07.ard",
+      "file": "rooms/pc07.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Lift Stop"
+    },
+    {
+      "ard": "pc08.ard",
+      "file": "rooms/pc08.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Base Level"
+    },
+    {
+      "ard": "pc09.ard",
+      "file": "rooms/pc09.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Waterway"
+    },
+    {
+      "ard": "pc10.ard",
+      "file": "rooms/pc10.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Waterway"
+    },
+    {
+      "ard": "pc11.ard",
+      "file": "rooms/pc11.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Dungeon"
+    },
+    {
+      "ard": "pc12.ard",
+      "file": "rooms/pc12.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Castle Chapel"
+    },
+    {
+      "ard": "pc13.ard",
+      "file": "rooms/pc13.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Castle Chapel"
+    },
+    {
+      "ard": "pc14.ard",
+      "file": "rooms/pc14.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "???"
+    },
+    {
+      "ard": "pc15.ard",
+      "file": "rooms/pc15.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Grand Hall"
+    },
+    {
+      "ard": "pc16.ard",
+      "file": "rooms/pc16.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Dark Depths"
+    },
+    {
+      "ard": "pc17.ard",
+      "file": "rooms/pc17.ard.json",
+      "world": "Hollow Bastion",
+      "worldId": 15,
+      "room": "Villians Meeting"
+    },
+    {
+      "ard": "pi03.ard",
+      "file": "rooms/pi03.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Stomach"
+    },
+    {
+      "ard": "pi04.ard",
+      "file": "rooms/pi04.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Throat"
+    },
+    {
+      "ard": "pi05.ard",
+      "file": "rooms/pi05.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Bowels"
+    },
+    {
+      "ard": "pi06.ard",
+      "file": "rooms/pi06.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Chamber 1"
+    },
+    {
+      "ard": "pi07.ard",
+      "file": "rooms/pi07.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Chamber 2"
+    },
+    {
+      "ard": "pi08.ard",
+      "file": "rooms/pi08.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Chamber 3"
+    },
+    {
+      "ard": "pi10.ard",
+      "file": "rooms/pi10.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Chamber 5"
+    },
+    {
+      "ard": "pi11.ard",
+      "file": "rooms/pi11.ard.json",
+      "world": "Monstro",
+      "worldId": 12,
+      "room": "Monstro: Chamber 6"
+    },
+    {
+      "ard": "po32.ard",
+      "file": "rooms/po32.ard.json",
+      "world": null,
+      "worldId": null,
+      "room": null
+    },
+    {
+      "ard": "pp01.ard",
+      "file": "rooms/pp01.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Ship: Hold"
+    },
+    {
+      "ard": "pp02.ard",
+      "file": "rooms/pp02.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Ship: Hold"
+    },
+    {
+      "ard": "pp03.ard",
+      "file": "rooms/pp03.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Ship: Hold"
+    },
+    {
+      "ard": "pp04.ard",
+      "file": "rooms/pp04.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Ship: Freezer"
+    },
+    {
+      "ard": "pp05.ard",
+      "file": "rooms/pp05.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Ship: Galley"
+    },
+    {
+      "ard": "pp06.ard",
+      "file": "rooms/pp06.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Ship: Cabin"
+    },
+    {
+      "ard": "pp07.ard",
+      "file": "rooms/pp07.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Pirate Ship"
+    },
+    {
+      "ard": "pp09.ard",
+      "file": "rooms/pp09.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Pirate Ship"
+    },
+    {
+      "ard": "pp10.ard",
+      "file": "rooms/pp10.ard.json",
+      "world": "Neverland",
+      "worldId": 13,
+      "room": "Clock Tower"
+    },
+    {
+      "ard": "tw01.ard",
+      "file": "rooms/tw01.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "1st District"
+    },
+    {
+      "ard": "tw02.ard",
+      "file": "rooms/tw02.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "2nd District"
+    },
+    {
+      "ard": "tw03.ard",
+      "file": "rooms/tw03.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "3rd District"
+    },
+    {
+      "ard": "tw05.ard",
+      "file": "rooms/tw05.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "Alleyway"
+    },
+    {
+      "ard": "tw06.ard",
+      "file": "rooms/tw06.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "Green Room"
+    },
+    {
+      "ard": "tw07.ard",
+      "file": "rooms/tw07.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "Red Room"
+    },
+    {
+      "ard": "tw08.ard",
+      "file": "rooms/tw08.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "Hallway"
+    },
+    {
+      "ard": "tw18.ard",
+      "file": "rooms/tw18.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "Gizmo Shop"
+    },
+    {
+      "ard": "tw25.ard",
+      "file": "rooms/tw25.ard.json",
+      "world": "Traverse Town",
+      "worldId": 3,
+      "room": "3rd District"
+    },
+    {
+      "ard": "tz01.ard",
+      "file": "rooms/tz01.ard.json",
+      "world": "Deep Jungle",
+      "worldId": 5,
+      "room": "Treehouse"
+    },
+    {
+      "ard": "tz02.ard",
+      "file": "rooms/tz02.ard.json",
+      "world": "Deep Jungle",
+      "worldId": 5,
+      "room": "Camp"
+    },
+    {
+      "ard": "tz03.ard",
+      "file": "rooms/tz03.ard.json",
+      "world": "Deep Jungle",
+      "worldId": 5,
+      "room": "Bamboo Thicket"
+    },
+    {
+      "ard": "tz07.ard",
+      "file": "rooms/tz07.ard.json",
+      "world": "Deep Jungle",
+      "worldId": 5,
+      "room": "Climbing Trees"
+    },
+    {
+      "ard": "tz12.ard",
+      "file": "rooms/tz12.ard.json",
+      "world": "Deep Jungle",
+      "worldId": 5,
+      "room": "Jungle: Cliff"
+    },
+    {
+      "ard": "tz13.ard",
+      "file": "rooms/tz13.ard.json",
+      "world": "Deep Jungle",
+      "worldId": 5,
+      "room": "Camp"
+    }
+  ]
+}

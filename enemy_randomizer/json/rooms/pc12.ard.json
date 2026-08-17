@@ -1,0 +1,34 @@
+{
+  "ard": "pc12.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Castle Chapel",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Defender",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    }
+  ]
+}

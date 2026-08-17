@@ -1,0 +1,73 @@
+{
+  "ard": "tz13.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Camp",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Darkball",
+      "modelIndex": 6,
+      "msetIndex": 7,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 8,
+      "msetIndex": 9,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 74,
+      "msetIndex": 75,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 76,
+      "msetIndex": 77,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bouncywild",
+      "modelIndex": 78,
+      "msetIndex": 79,
+      "msetValue": "xa_ex_2040.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 86,
+      "msetIndex": 87,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Black Fungi",
+      "modelIndex": 90,
+      "msetIndex": 91,
+      "msetValue": "xa_ex_2380.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Rare Truffles",
+      "modelIndex": 92,
+      "msetIndex": 93,
+      "msetValue": "xa_ex_2390.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

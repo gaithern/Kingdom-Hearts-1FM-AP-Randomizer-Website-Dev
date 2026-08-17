@@ -1,0 +1,105 @@
+{
+  "ard": "po32.ard",
+  "world": null,
+  "worldId": null,
+  "room": null,
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Large Body",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 28,
+      "msetIndex": 29,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Pirate",
+      "modelIndex": 38,
+      "msetIndex": 39,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Pirate",
+      "modelIndex": 40,
+      "msetIndex": 41,
+      "msetValue": "xa_ex_2210.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

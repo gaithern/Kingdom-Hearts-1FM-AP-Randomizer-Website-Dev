@@ -1,0 +1,75 @@
+{
+  "ard": "nm09.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Manor Ruins",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Wight Knight",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2200.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2220.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow (Halloween Town)",
+      "modelIndex": 88,
+      "msetIndex": 89,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wight Knight (Halloween Town)",
+      "modelIndex": 90,
+      "msetIndex": 91,
+      "msetValue": "xa_ex_2151.mdls",
+      "randomize": false,
+      "lockedReason": "layout",
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard (Halloween Town)",
+      "modelIndex": 91,
+      "msetIndex": 92,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle (Halloween Town)",
+      "modelIndex": 93,
+      "msetIndex": 94,
+      "msetValue": "xa_ex_2231.mdls",
+      "randomize": false,
+      "lockedReason": "layout",
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost (Halloween Town)",
+      "modelIndex": 94,
+      "msetIndex": 95,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball (Halloween Town)",
+      "modelIndex": 96,
+      "msetIndex": 97,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

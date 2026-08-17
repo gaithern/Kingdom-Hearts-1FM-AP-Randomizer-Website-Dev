@@ -1,0 +1,49 @@
+{
+  "ard": "al11.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Bottomless Hall",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "ard": "pc04.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "High Tower",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": false,
+      "lockedReason": "extramset",
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 37,
+      "msetIndex": 38,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 39,
+      "msetIndex": 40,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 41,
+      "msetIndex": 42,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 43,
+      "msetIndex": 44,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Soldier",
+      "modelIndex": 45,
+      "msetIndex": 46,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 47,
+      "msetIndex": 48,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 49,
+      "msetIndex": 50,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

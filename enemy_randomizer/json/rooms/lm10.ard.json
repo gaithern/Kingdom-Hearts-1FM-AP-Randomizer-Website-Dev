@@ -1,0 +1,25 @@
+{
+  "ard": "lm10.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Den of Tides",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

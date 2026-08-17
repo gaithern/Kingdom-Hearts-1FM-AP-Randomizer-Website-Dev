@@ -1,0 +1,58 @@
+{
+  "ard": "pc08.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Base Level",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Wizard",
+      "modelIndex": 40,
+      "msetIndex": 41,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 48,
+      "msetIndex": 49,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 50,
+      "msetIndex": 51,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "ard": "al06.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Agrabah: Main Street",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Bandit",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 48,
+      "msetIndex": 49,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Soldier",
+      "modelIndex": 50,
+      "msetIndex": 51,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 54,
+      "msetIndex": 55,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

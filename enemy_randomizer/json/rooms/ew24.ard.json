@@ -1,0 +1,17 @@
+{
+  "ard": "ew24.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Neverland",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Pirate",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

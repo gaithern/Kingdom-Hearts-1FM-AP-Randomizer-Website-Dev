@@ -1,0 +1,41 @@
+{
+  "ard": "pp06.ard",
+  "world": "Neverland",
+  "worldId": 13,
+  "room": "Ship: Cabin",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 6,
+      "msetIndex": 7,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Pirate",
+      "modelIndex": 8,
+      "msetIndex": 9,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

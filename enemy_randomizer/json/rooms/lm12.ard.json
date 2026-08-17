@@ -1,0 +1,25 @@
+{
+  "ard": "lm12.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Tidal Abyss",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Darkball",
+      "modelIndex": 12,
+      "msetIndex": 13,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 14,
+      "msetIndex": 15,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

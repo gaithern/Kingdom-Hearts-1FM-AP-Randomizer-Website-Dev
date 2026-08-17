@@ -1,0 +1,66 @@
+{
+  "ard": "pc10.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Waterway",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Defender",
+      "modelIndex": 50,
+      "msetIndex": 51,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": false,
+      "lockedReason": "extramset",
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 55,
+      "msetIndex": 56,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 57,
+      "msetIndex": 58,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 59,
+      "msetIndex": 60,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 61,
+      "msetIndex": 62,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 63,
+      "msetIndex": 64,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

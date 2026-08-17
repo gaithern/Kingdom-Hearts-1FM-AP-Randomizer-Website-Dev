@@ -1,0 +1,33 @@
+{
+  "ard": "tw07.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "Red Room",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

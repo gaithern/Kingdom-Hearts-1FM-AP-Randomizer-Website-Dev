@@ -1,0 +1,57 @@
+{
+  "ard": "lm04.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Gorge",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Sea Neon",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2070.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sheltering Zone",
+      "modelIndex": 41,
+      "msetIndex": 42,
+      "msetValue": "xa_ex_2080.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Screwdiver",
+      "modelIndex": 43,
+      "msetIndex": 44,
+      "msetValue": "xa_ex_2250.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Aquatank",
+      "modelIndex": 45,
+      "msetIndex": 46,
+      "msetValue": "xa_ex_2240.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 49,
+      "msetIndex": 50,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

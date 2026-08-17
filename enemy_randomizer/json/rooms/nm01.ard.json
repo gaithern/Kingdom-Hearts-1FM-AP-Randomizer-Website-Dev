@@ -1,0 +1,41 @@
+{
+  "ard": "nm01.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Guillotine Square",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow (Halloween Town)",
+      "modelIndex": 72,
+      "msetIndex": 73,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost (Halloween Town)",
+      "modelIndex": 74,
+      "msetIndex": 75,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wight Knight (Halloween Town)",
+      "modelIndex": 76,
+      "msetIndex": 77,
+      "msetValue": "xa_ex_2200.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle (Halloween Town)",
+      "modelIndex": 78,
+      "msetIndex": 79,
+      "msetValue": "xa_ex_2220.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

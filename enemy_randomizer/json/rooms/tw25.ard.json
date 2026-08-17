@@ -1,0 +1,66 @@
+{
+  "ard": "tw25.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "3rd District",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Soldier",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2010_E.mset",
+      "randomize": false,
+      "lockedReason": "extramset",
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 38,
+      "msetIndex": 39,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 40,
+      "msetIndex": 41,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "ard": "pi03.ard",
+  "world": "Monstro",
+  "worldId": 12,
+  "room": "Monstro: Stomach",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Large Body",
+      "modelIndex": 14,
+      "msetIndex": 15,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bouncywild",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2040.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Pirate",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Pirate",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2210.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

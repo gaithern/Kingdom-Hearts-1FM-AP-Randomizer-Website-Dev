@@ -1,0 +1,25 @@
+{
+  "ard": "ew21.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Agrabah",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

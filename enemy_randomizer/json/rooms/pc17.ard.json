@@ -1,0 +1,18 @@
+{
+  "ard": "pc17.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Villians Meeting",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    }
+  ]
+}

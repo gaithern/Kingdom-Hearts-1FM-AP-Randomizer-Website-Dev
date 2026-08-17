@@ -1,0 +1,177 @@
+{
+  "ard": "he07.ard",
+  "world": "Olympus Coliseum",
+  "worldId": 11,
+  "room": "Coliseum: Arena",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 28,
+      "msetIndex": 29,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wight Knight",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2200.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Pirate",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2210.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Gargoyle",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2220.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 38,
+      "msetIndex": 39,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 40,
+      "msetIndex": 41,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Invisible",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Angel Star",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2330.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 48,
+      "msetIndex": 49,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 84,
+      "msetIndex": 85,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Pirate",
+      "modelIndex": 86,
+      "msetIndex": 87,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 88,
+      "msetIndex": 89,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 90,
+      "msetIndex": 91,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ard": "ew07.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Final Dimension?",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Angel Star",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2330.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

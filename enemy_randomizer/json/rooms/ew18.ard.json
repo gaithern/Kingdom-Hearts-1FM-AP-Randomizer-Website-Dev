@@ -1,0 +1,49 @@
+{
+  "ard": "ew18.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Wonderland",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 10,
+      "msetIndex": 11,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 12,
+      "msetIndex": 13,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 14,
+      "msetIndex": 15,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 16,
+      "msetIndex": 17,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

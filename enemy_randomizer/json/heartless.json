@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "heartless": {
+    "Air Pirate": {
+      "model": "xa_ex_2210.mdls",
+      "mset": "xa_ex_2210.mset",
+      "charId": 320,
+      "slots": 4,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Air Soldier": {
+      "model": "xa_ex_2160.mdls",
+      "mset": "xa_ex_2160.mset",
+      "charId": 315,
+      "slots": 4,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Angel Star": {
+      "model": "xa_ex_2330.mdls",
+      "mset": "xa_ex_2330.mset",
+      "charId": 331,
+      "slots": 6,
+      "weight": 7,
+      "halloweenTown": false
+    },
+    "Aquatank": {
+      "model": "xa_ex_2240.mdls",
+      "mset": "xa_ex_2240.mset",
+      "charId": 323,
+      "slots": 6,
+      "weight": 7,
+      "halloweenTown": false
+    },
+    "Bandit": {
+      "model": "xa_ex_2090.mdls",
+      "mset": "xa_ex_2090.mset",
+      "charId": 308,
+      "slots": 5,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Bitsniper": {
+      "model": "xa_ew_2010.mdls",
+      "mset": "xa_ew_2010.mset",
+      "charId": 336,
+      "slots": 2,
+      "weight": 2,
+      "halloweenTown": false
+    },
+    "Black Fungi": {
+      "model": "xa_ex_2380.mdls",
+      "mset": "xa_ex_2380.mset",
+      "charId": 334,
+      "slots": 13,
+      "weight": 7,
+      "halloweenTown": false
+    },
+    "Blue Rhapsody": {
+      "model": "xa_ex_2120.mdls",
+      "mset": "xa_ex_2120.mset",
+      "charId": 311,
+      "slots": 3,
+      "weight": 3,
+      "halloweenTown": false
+    },
+    "Bouncywild": {
+      "model": "xa_ex_2040.mdls",
+      "mset": "xa_ex_2040.mset",
+      "charId": 303,
+      "slots": 5,
+      "weight": 5,
+      "halloweenTown": false
+    },
+    "Darkball": {
+      "model": "xa_ex_2280.mdls",
+      "mset": "xa_ex_2280.mset",
+      "charId": 327,
+      "slots": 3,
+      "weight": 2,
+      "halloweenTown": false
+    },
+    "Darkball (Halloween Town)": {
+      "model": "xa_ex_2281.mdls",
+      "mset": "xa_ex_2280.mset",
+      "charId": 327,
+      "slots": 3,
+      "weight": 2,
+      "halloweenTown": true
+    },
+    "Defender": {
+      "model": "xa_ex_2340.mdls",
+      "mset": "xa_ex_2340.mset",
+      "charId": 332,
+      "slots": 4,
+      "weight": 7,
+      "halloweenTown": false
+    },
+    "Fat Bandit": {
+      "model": "xa_ex_2060.mdls",
+      "mset": "xa_ex_2060.mset",
+      "charId": 305,
+      "slots": 4,
+      "weight": 6,
+      "halloweenTown": false
+    },
+    "Gargoyle": {
+      "model": "xa_ex_2220.mdls",
+      "mset": "xa_ex_2220.mset",
+      "charId": 321,
+      "slots": 4,
+      "weight": 6,
+      "halloweenTown": false
+    },
+    "Gargoyle (Halloween Town)": {
+      "model": "xa_ex_2221.mdls",
+      "mset": "xa_ex_2220.mset",
+      "charId": 321,
+      "slots": 4,
+      "weight": 6,
+      "halloweenTown": true
+    },
+    "Green Requiem": {
+      "model": "xa_ex_2140.mdls",
+      "mset": "xa_ex_2140.mset",
+      "charId": 313,
+      "slots": 3,
+      "weight": 3,
+      "halloweenTown": false
+    },
+    "Invisible": {
+      "model": "xa_ex_2290.mdls",
+      "mset": "xa_ex_2290.mset",
+      "charId": 328,
+      "slots": 4,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Jet Balloon": {
+      "model": "xa_ex_2480.mdls",
+      "mset": "xa_ex_2480.mset",
+      "charId": 345,
+      "slots": 5,
+      "weight": 7,
+      "halloweenTown": false
+    },
+    "Large Body": {
+      "model": "xa_ex_2050.mdls",
+      "mset": "xa_ex_2050.mset",
+      "charId": 304,
+      "slots": 5,
+      "weight": 6,
+      "halloweenTown": false
+    },
+    "Missile Diver": {
+      "model": "xa_ex_2490.mdls",
+      "mset": "xa_ex_2490.mset",
+      "charId": 346,
+      "slots": 2,
+      "weight": 6,
+      "halloweenTown": false
+    },
+    "Pink Agaricus": {
+      "model": "xa_ex_2410.mdls",
+      "mset": "xa_ex_2410.mset",
+      "charId": 339,
+      "slots": 11,
+      "weight": 0,
+      "halloweenTown": false
+    },
+    "Pirate": {
+      "model": "xa_ex_2100.mdls",
+      "mset": "xa_ex_2100.mset",
+      "charId": 309,
+      "slots": 5,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Powerwild": {
+      "model": "xa_ex_2030.mdls",
+      "mset": "xa_ex_2030.mset",
+      "charId": 302,
+      "slots": 5,
+      "weight": 3,
+      "halloweenTown": false
+    },
+    "Rare Truffles": {
+      "model": "xa_ex_2390.mdls",
+      "mset": "xa_ex_2390.mset",
+      "charId": 335,
+      "slots": 7,
+      "weight": 7,
+      "halloweenTown": false
+    },
+    "Red Nocturne": {
+      "model": "xa_ex_2110.mdls",
+      "mset": "xa_ex_2110.mset",
+      "charId": 310,
+      "slots": 3,
+      "weight": 3,
+      "halloweenTown": false
+    },
+    "Screwdiver": {
+      "model": "xa_ex_2250.mdls",
+      "mset": "xa_ex_2250.mset",
+      "charId": 324,
+      "slots": 3,
+      "weight": 6,
+      "halloweenTown": false
+    },
+    "Sea Neon": {
+      "model": "xa_ex_2070.mdls",
+      "mset": "xa_ex_2070.mset",
+      "charId": 306,
+      "slots": 3,
+      "weight": 5,
+      "halloweenTown": false
+    },
+    "Search Ghost": {
+      "model": "xa_ex_2230.mdls",
+      "mset": "xa_ex_2230.mset",
+      "charId": 322,
+      "slots": 4,
+      "weight": 5,
+      "halloweenTown": false
+    },
+    "Search Ghost (Halloween Town)": {
+      "model": "xa_ex_2231.mdls",
+      "mset": "xa_ex_2230.mset",
+      "charId": 322,
+      "slots": 4,
+      "weight": 5,
+      "halloweenTown": true
+    },
+    "Shadow": {
+      "model": "xa_ex_2020.mdls",
+      "mset": "xa_ex_2020.mset",
+      "charId": 301,
+      "slots": 4,
+      "weight": 3,
+      "halloweenTown": false
+    },
+    "Shadow (Halloween Town)": {
+      "model": "xa_ex_2021.mdls",
+      "mset": "xa_ex_2020.mset",
+      "charId": 301,
+      "slots": 4,
+      "weight": 3,
+      "halloweenTown": true
+    },
+    "Sheltering Zone": {
+      "model": "xa_ex_2080.mdls",
+      "mset": "xa_ex_2080.mset",
+      "charId": 307,
+      "slots": 3,
+      "weight": 5,
+      "halloweenTown": false
+    },
+    "Sniperwild": {
+      "model": "xa_ex_2450.mdls",
+      "mset": "xa_ex_2450.mset",
+      "charId": 343,
+      "slots": 6,
+      "weight": 5,
+      "halloweenTown": false
+    },
+    "Soldier": {
+      "model": "xa_ex_2010.mdls",
+      "mset": "xa_ex_2010.mset",
+      "charId": 300,
+      "slots": 5,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Stealth Sneak": {
+      "model": "xa_ex_2430.mdls",
+      "mset": "xa_ex_2430.mset",
+      "charId": 341,
+      "slots": 4,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Wight Knight": {
+      "model": "xa_ex_2200.mdls",
+      "mset": "xa_ex_2200.mset",
+      "charId": 319,
+      "slots": 4,
+      "weight": 4,
+      "halloweenTown": false
+    },
+    "Wight Knight (Halloween Town)": {
+      "model": "xa_ex_2201.mdls",
+      "mset": "xa_ex_2200.mset",
+      "charId": 319,
+      "slots": 4,
+      "weight": 4,
+      "halloweenTown": true
+    },
+    "Wizard": {
+      "model": "xa_ex_2150.mdls",
+      "mset": "xa_ex_2150.mset",
+      "charId": 314,
+      "slots": 6,
+      "weight": 6,
+      "halloweenTown": false
+    },
+    "Wizard (Halloween Town)": {
+      "model": "xa_ex_2151.mdls",
+      "mset": "xa_ex_2150.mset",
+      "charId": 314,
+      "slots": 6,
+      "weight": 6,
+      "halloweenTown": true
+    },
+    "Wyvern": {
+      "model": "xa_ex_2320.mdls",
+      "mset": "xa_ex_2320.mset",
+      "charId": 330,
+      "slots": 4,
+      "weight": 3,
+      "halloweenTown": false
+    },
+    "Yellow Opera": {
+      "model": "xa_ex_2130.mdls",
+      "mset": "xa_ex_2130.mset",
+      "charId": 312,
+      "slots": 3,
+      "weight": 3,
+      "halloweenTown": false
+    }
+  }
+}

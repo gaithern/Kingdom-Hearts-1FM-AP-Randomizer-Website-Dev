@@ -1,0 +1,33 @@
+{
+  "ard": "ew10.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Final Dimension?",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 28,
+      "msetIndex": 29,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Invisible",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ard": "pc13.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Castle Chapel",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 114,
+      "msetIndex": 115,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    }
+  ]
+}

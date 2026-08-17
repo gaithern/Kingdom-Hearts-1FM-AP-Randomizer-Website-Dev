@@ -1,0 +1,82 @@
+{
+  "ard": "pc11.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Dungeon",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "extramset",
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Black Fungi",
+      "modelIndex": 23,
+      "msetIndex": 24,
+      "msetValue": "xa_ex_2380.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 25,
+      "msetIndex": 26,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Red Nocturne",
+      "modelIndex": 27,
+      "msetIndex": 28,
+      "msetValue": "xa_ex_2110.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Blue Rhapsody",
+      "modelIndex": 29,
+      "msetIndex": 30,
+      "msetValue": "xa_ex_2120.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 31,
+      "msetIndex": 32,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Green Requiem",
+      "modelIndex": 33,
+      "msetIndex": 34,
+      "msetValue": "xa_ex_2140.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 35,
+      "msetIndex": 36,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

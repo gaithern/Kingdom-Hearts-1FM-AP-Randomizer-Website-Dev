@@ -1,0 +1,17 @@
+{
+  "ard": "lm13.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Gorge",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 39,
+      "msetIndex": 40,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

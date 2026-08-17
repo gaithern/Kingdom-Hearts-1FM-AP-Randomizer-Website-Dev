@@ -1,0 +1,17 @@
+{
+  "ard": "ew03.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Final Dimension?",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Invisible",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ard": "tz07.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Climbing Trees",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 37,
+      "msetIndex": 38,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

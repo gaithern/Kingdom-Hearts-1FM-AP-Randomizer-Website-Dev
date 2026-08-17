@@ -1,0 +1,25 @@
+{
+  "ard": "lm02.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Tranquil Grotto",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sea Neon",
+      "modelIndex": 47,
+      "msetIndex": 48,
+      "msetValue": "xa_ex_2070.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

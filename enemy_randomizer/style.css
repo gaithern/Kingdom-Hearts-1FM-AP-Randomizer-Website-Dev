@@ -88,6 +88,18 @@
     margin-bottom: 0;
 }
 
+/* Reset throws away work the other two controls only ever save or replace, so it
+   sits at the far end of the row rather than beside them. */
+.er-settings__reset {
+    margin-left: auto;
+}
+
+@media (max-width: 600px) {
+    .er-settings__reset {
+        margin-left: 0;
+    }
+}
+
 .er-upload {
     display: flex;
     align-items: center;

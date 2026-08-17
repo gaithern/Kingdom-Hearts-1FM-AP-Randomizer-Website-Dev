@@ -1,0 +1,33 @@
+{
+  "ard": "ew19.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Olympus Coliseum",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Wyvern",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2320.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

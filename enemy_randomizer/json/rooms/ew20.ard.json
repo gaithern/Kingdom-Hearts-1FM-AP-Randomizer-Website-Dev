@@ -1,0 +1,25 @@
+{
+  "ard": "ew20.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Deep Jungle",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 12,
+      "msetIndex": 13,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bouncywild",
+      "modelIndex": 14,
+      "msetIndex": 15,
+      "msetValue": "xa_ex_2040.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

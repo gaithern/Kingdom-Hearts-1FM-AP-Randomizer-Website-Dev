@@ -1,0 +1,49 @@
+{
+  "ard": "ew29.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Linked Worlds",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Darkball",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Invisible",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Angel Star",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2330.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Black Fungi",
+      "modelIndex": 80,
+      "msetIndex": 81,
+      "msetValue": "xa_ex_2380.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Rare Truffles",
+      "modelIndex": 84,
+      "msetIndex": 85,
+      "msetValue": "xa_ex_2390.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

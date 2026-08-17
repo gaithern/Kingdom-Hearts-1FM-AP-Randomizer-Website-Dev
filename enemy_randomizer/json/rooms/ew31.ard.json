@@ -1,0 +1,17 @@
+{
+  "ard": "ew31.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "???",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

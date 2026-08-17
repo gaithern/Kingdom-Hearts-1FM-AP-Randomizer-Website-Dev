@@ -1,0 +1,25 @@
+{
+  "ard": "ew17.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Traverse Town",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Soldier",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2010.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

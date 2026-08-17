@@ -1,0 +1,50 @@
+{
+  "ard": "pc03.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Great Crest",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 44,
+      "msetIndex": 45,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    },
+    {
+      "heartless": "Wizard",
+      "modelIndex": 46,
+      "msetIndex": 47,
+      "msetValue": "xa_ex_2150.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Defender",
+      "modelIndex": 48,
+      "msetIndex": 49,
+      "msetValue": "xa_ex_2340.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Yellow Opera",
+      "modelIndex": 50,
+      "msetIndex": 51,
+      "msetValue": "xa_ex_2130.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 52,
+      "msetIndex": 53,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

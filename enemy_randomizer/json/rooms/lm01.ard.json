@@ -1,0 +1,57 @@
+{
+  "ard": "lm01.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Atlantica (Undersea Valley)",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Sea Neon",
+      "modelIndex": 30,
+      "msetIndex": 31,
+      "msetValue": "xa_ex_2070.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Sheltering Zone",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2080.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Screwdiver",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2250.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Aquatank",
+      "modelIndex": 38,
+      "msetIndex": 39,
+      "msetValue": "xa_ex_2240.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 42,
+      "msetIndex": 43,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

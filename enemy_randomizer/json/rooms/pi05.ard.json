@@ -1,0 +1,97 @@
+{
+  "ard": "pi05.ard",
+  "world": "Monstro",
+  "worldId": 12,
+  "room": "Monstro: Bowels",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Pirate",
+      "modelIndex": 6,
+      "msetIndex": 7,
+      "msetValue": "xa_ex_2100.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Pirate",
+      "modelIndex": 10,
+      "msetIndex": 11,
+      "msetValue": "xa_ex_2210.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Darkball",
+      "modelIndex": 12,
+      "msetIndex": 13,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Shadow",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2020.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Large Body",
+      "modelIndex": 24,
+      "msetIndex": 25,
+      "msetValue": "xa_ex_2050.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Air Soldier",
+      "modelIndex": 26,
+      "msetIndex": 27,
+      "msetValue": "xa_ex_2160.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Search Ghost",
+      "modelIndex": 28,
+      "msetIndex": 29,
+      "msetValue": "xa_ex_2230.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Powerwild",
+      "modelIndex": 32,
+      "msetIndex": 33,
+      "msetValue": "xa_ex_2030.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bouncywild",
+      "modelIndex": 34,
+      "msetIndex": 35,
+      "msetValue": "xa_ex_2040.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Fat Bandit",
+      "modelIndex": 36,
+      "msetIndex": 37,
+      "msetValue": "xa_ex_2060.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Bandit",
+      "modelIndex": 38,
+      "msetIndex": 39,
+      "msetValue": "xa_ex_2090.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

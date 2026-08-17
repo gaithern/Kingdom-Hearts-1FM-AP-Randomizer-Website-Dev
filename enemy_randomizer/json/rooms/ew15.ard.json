@@ -1,0 +1,33 @@
+{
+  "ard": "ew15.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Giant Crevasse",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Darkball",
+      "modelIndex": 18,
+      "msetIndex": 19,
+      "msetValue": "xa_ex_2280.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Invisible",
+      "modelIndex": 20,
+      "msetIndex": 21,
+      "msetValue": "xa_ex_2290.mset",
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "heartless": "Angel Star",
+      "modelIndex": 22,
+      "msetIndex": 23,
+      "msetValue": "xa_ex_2330.mset",
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

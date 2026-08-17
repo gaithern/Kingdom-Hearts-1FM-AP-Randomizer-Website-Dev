@@ -1,0 +1,18 @@
+{
+  "ard": "pc16.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Dark Depths",
+  "exclude": [],
+  "pairs": [
+    {
+      "heartless": "Shadow",
+      "modelIndex": 12,
+      "msetIndex": 13,
+      "msetValue": "xa_ex_2020_sora.mset",
+      "randomize": false,
+      "lockedReason": "variant",
+      "exclude": []
+    }
+  ]
+}
