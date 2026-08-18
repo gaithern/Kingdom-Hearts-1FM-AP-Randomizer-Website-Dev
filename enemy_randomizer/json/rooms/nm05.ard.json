@@ -1,0 +1,86 @@
+{
+  "ard": "nm05.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Bridge",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Wizard (Halloween Town)",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball (Halloween Town)",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow (Halloween Town)",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

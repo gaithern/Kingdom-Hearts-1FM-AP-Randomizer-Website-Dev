@@ -1,0 +1,64 @@
+{
+  "ard": "ew29.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Linked Worlds",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        80
+      ],
+      "msetIndex": [
+        81
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        84
+      ],
+      "msetIndex": [
+        85
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

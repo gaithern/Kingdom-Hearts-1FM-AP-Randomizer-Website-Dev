@@ -1,0 +1,97 @@
+{
+  "ard": "pi03.ard",
+  "world": "Monstro",
+  "worldId": 12,
+  "room": "Monstro: Stomach",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

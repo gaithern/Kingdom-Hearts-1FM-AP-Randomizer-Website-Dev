@@ -1,0 +1,31 @@
+{
+  "ard": "ew17.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Traverse Town",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

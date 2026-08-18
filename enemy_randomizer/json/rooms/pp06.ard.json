@@ -1,0 +1,53 @@
+{
+  "ard": "pp06.ard",
+  "world": "Neverland",
+  "worldId": 13,
+  "room": "Ship: Cabin",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

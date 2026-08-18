@@ -1,0 +1,141 @@
+{
+  "ard": "po32.ard",
+  "world": null,
+  "worldId": null,
+  "room": null,
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

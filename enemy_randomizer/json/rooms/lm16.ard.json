@@ -1,0 +1,20 @@
+{
+  "ard": "lm16.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Triton's Throne (1)",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

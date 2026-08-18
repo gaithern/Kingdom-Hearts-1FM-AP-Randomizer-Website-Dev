@@ -1,0 +1,130 @@
+{
+  "ard": "aw09.ard",
+  "world": "Wonderland",
+  "worldId": 4,
+  "room": "Bizarre Room (Upside Down)",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

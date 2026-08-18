@@ -1,0 +1,20 @@
+{
+  "ard": "tz02.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Camp",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        75
+      ],
+      "msetIndex": [
+        76
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

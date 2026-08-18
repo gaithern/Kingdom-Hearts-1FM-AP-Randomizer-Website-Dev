@@ -1,0 +1,21 @@
+{
+  "ard": "pc16.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Dark Depths",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "variant"
+    }
+  ]
+}

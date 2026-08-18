@@ -1,0 +1,20 @@
+{
+  "ard": "dh04.ard",
+  "world": "Awakening",
+  "worldId": 0,
+  "room": "???",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        3
+      ],
+      "msetIndex": [
+        4
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

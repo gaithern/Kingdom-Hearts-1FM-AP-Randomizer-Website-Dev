@@ -1,0 +1,20 @@
+{
+  "ard": "lm13.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Gorge",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        39
+      ],
+      "msetIndex": [
+        40
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

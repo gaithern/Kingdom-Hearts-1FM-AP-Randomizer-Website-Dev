@@ -1,0 +1,98 @@
+{
+  "ard": "pc04.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "High Tower",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "extramset"
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        37
+      ],
+      "msetIndex": [
+        38
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        39
+      ],
+      "msetIndex": [
+        40
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        41
+      ],
+      "msetIndex": [
+        42
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        43
+      ],
+      "msetIndex": [
+        44
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        45
+      ],
+      "msetIndex": [
+        46
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        47
+      ],
+      "msetIndex": [
+        48
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        49
+      ],
+      "msetIndex": [
+        50
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

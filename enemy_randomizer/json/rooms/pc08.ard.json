@@ -1,0 +1,76 @@
+{
+  "ard": "pc08.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Base Level",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        48
+      ],
+      "msetIndex": [
+        49
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "variant"
+    }
+  ]
+}

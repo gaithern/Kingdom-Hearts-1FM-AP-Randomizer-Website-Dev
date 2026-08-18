@@ -1,0 +1,42 @@
+{
+  "ard": "ew15.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Giant Crevasse",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

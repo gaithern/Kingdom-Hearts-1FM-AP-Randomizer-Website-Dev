@@ -1,0 +1,31 @@
+{
+  "ard": "ew04.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Final Dimension?",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

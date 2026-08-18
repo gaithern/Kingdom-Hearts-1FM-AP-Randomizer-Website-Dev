@@ -1,0 +1,21 @@
+{
+  "ard": "pc09.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Waterway",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "variant"
+    }
+  ]
+}

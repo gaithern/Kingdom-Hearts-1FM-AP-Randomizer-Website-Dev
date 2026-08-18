@@ -1,0 +1,31 @@
+{
+  "ard": "ew20.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Deep Jungle",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

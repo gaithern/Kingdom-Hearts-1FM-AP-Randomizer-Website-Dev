@@ -1,0 +1,31 @@
+{
+  "ard": "ew09.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "Final Dimension?",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

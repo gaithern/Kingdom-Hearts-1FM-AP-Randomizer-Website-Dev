@@ -1,0 +1,53 @@
+{
+  "ard": "ew22.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Atlantica",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Aquatank",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

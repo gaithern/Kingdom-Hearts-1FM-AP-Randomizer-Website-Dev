@@ -1,0 +1,20 @@
+{
+  "ard": "nm10.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Evil Playroom",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

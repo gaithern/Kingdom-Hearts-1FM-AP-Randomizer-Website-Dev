@@ -1,0 +1,20 @@
+{
+  "ard": "ew26.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Hollow Bastion",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

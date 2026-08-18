@@ -1,0 +1,253 @@
+{
+  "ard": "he06.ard",
+  "world": "Olympus Coliseum",
+  "worldId": 11,
+  "room": "Coliseum (Cups)",
+  "exclude": [
+    "Missile Diver"
+  ],
+  "pairs": [
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        10
+      ],
+      "msetIndex": [
+        11
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wight Knight",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        92
+      ],
+      "msetIndex": [
+        93
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        94
+      ],
+      "msetIndex": [
+        95
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        96
+      ],
+      "msetIndex": [
+        97
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        98
+      ],
+      "msetIndex": [
+        99
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        100
+      ],
+      "msetIndex": [
+        101
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        102
+      ],
+      "msetIndex": [
+        103
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        106
+      ],
+      "msetIndex": [
+        107
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        108
+      ],
+      "msetIndex": [
+        109
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        110
+      ],
+      "msetIndex": [
+        111
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        112
+      ],
+      "msetIndex": [
+        113
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        116
+      ],
+      "msetIndex": [
+        117
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        122
+      ],
+      "msetIndex": [
+        123
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        124
+      ],
+      "msetIndex": [
+        125
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        126
+      ],
+      "msetIndex": [
+        127
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        132
+      ],
+      "msetIndex": [
+        133
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        134
+      ],
+      "msetIndex": [
+        135
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle",
+      "mdlsIndex": [
+        186
+      ],
+      "msetIndex": [
+        187
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

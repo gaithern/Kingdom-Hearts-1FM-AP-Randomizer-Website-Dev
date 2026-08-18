@@ -1,0 +1,196 @@
+{
+  "ard": "he04.ard",
+  "world": "Olympus Coliseum",
+  "worldId": 11,
+  "room": "Main Gates",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        10
+      ],
+      "msetIndex": [
+        11
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        80
+      ],
+      "msetIndex": [
+        81
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wight Knight",
+      "mdlsIndex": [
+        92
+      ],
+      "msetIndex": [
+        93
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        94
+      ],
+      "msetIndex": [
+        95
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        96
+      ],
+      "msetIndex": [
+        97
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        98
+      ],
+      "msetIndex": [
+        99
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        100
+      ],
+      "msetIndex": [
+        101
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        102
+      ],
+      "msetIndex": [
+        103
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        104
+      ],
+      "msetIndex": [
+        105
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        106
+      ],
+      "msetIndex": [
+        107
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        108
+      ],
+      "msetIndex": [
+        109
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        110
+      ],
+      "msetIndex": [
+        111
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        112
+      ],
+      "msetIndex": [
+        113
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        114
+      ],
+      "msetIndex": [
+        115
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

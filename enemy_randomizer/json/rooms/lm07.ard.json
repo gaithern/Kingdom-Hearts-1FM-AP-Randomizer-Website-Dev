@@ -1,0 +1,53 @@
+{
+  "ard": "lm07.ard",
+  "world": null,
+  "worldId": null,
+  "room": null,
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

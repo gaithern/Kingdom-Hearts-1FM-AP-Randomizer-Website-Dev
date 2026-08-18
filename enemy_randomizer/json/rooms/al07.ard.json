@@ -1,0 +1,108 @@
+{
+  "ard": "al07.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Palace Gates",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        37
+      ],
+      "msetIndex": [
+        38
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        39
+      ],
+      "msetIndex": [
+        40
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        41
+      ],
+      "msetIndex": [
+        42
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        43
+      ],
+      "msetIndex": [
+        44
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        45
+      ],
+      "msetIndex": [
+        46
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

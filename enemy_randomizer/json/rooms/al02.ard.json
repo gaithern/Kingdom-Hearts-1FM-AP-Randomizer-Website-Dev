@@ -1,0 +1,53 @@
+{
+  "ard": "al02.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Desert: Cave",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

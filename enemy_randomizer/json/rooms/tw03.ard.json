@@ -1,0 +1,65 @@
+{
+  "ard": "tw03.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "3rd District",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "extramset"
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        59
+      ],
+      "msetIndex": [
+        60
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        61
+      ],
+      "msetIndex": [
+        62
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        63
+      ],
+      "msetIndex": [
+        64
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

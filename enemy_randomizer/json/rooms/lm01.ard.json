@@ -1,0 +1,75 @@
+{
+  "ard": "lm01.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Atlantica (Undersea Valley)",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Aquatank",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

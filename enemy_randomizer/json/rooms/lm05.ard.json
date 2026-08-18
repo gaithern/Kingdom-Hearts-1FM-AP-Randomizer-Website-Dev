@@ -1,0 +1,86 @@
+{
+  "ard": "lm05.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Cave",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Pink Agaricus",
+      "mdlsIndex": [
+        17
+      ],
+      "msetIndex": [
+        18
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        19
+      ],
+      "msetIndex": [
+        20
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        21
+      ],
+      "msetIndex": [
+        22
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        23
+      ],
+      "msetIndex": [
+        24
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Aquatank",
+      "mdlsIndex": [
+        25
+      ],
+      "msetIndex": [
+        26
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        27
+      ],
+      "msetIndex": [
+        28
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        29
+      ],
+      "msetIndex": [
+        30
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

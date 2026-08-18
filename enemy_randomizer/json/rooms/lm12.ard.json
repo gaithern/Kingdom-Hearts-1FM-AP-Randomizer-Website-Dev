@@ -1,0 +1,31 @@
+{
+  "ard": "lm12.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Tidal Abyss",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

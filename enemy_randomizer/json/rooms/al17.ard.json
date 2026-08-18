@@ -1,0 +1,64 @@
+{
+  "ard": "al17.ard",
+  "world": "Agrabah",
+  "worldId": 8,
+  "room": "Lamp Chamber",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        56
+      ],
+      "msetIndex": [
+        57
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        58
+      ],
+      "msetIndex": [
+        59
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

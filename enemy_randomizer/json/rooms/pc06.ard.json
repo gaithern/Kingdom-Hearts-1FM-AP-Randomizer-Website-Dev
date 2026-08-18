@@ -1,0 +1,21 @@
+{
+  "ard": "pc06.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Library",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        98
+      ],
+      "msetIndex": [
+        99
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "variant"
+    }
+  ]
+}

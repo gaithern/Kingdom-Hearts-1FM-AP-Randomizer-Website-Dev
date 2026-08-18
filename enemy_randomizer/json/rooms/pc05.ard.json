@@ -1,0 +1,109 @@
+{
+  "ard": "pc05.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Entrance Hall",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        58
+      ],
+      "msetIndex": [
+        59
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "extramset"
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        72
+      ],
+      "msetIndex": [
+        73
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        74
+      ],
+      "msetIndex": [
+        75
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        76
+      ],
+      "msetIndex": [
+        77
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Stealth Sneak",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        95
+      ],
+      "msetIndex": [
+        96
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        97
+      ],
+      "msetIndex": [
+        98
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        99
+      ],
+      "msetIndex": [
+        100
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        101
+      ],
+      "msetIndex": [
+        102
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "ard": "tz07.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Climbing Trees",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        37
+      ],
+      "msetIndex": [
+        38
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

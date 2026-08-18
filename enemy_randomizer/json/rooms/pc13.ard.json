@@ -1,0 +1,21 @@
+{
+  "ard": "pc13.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Castle Chapel",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        114
+      ],
+      "msetIndex": [
+        115
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "variant"
+    }
+  ]
+}

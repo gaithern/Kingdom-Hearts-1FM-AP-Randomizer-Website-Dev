@@ -1,0 +1,119 @@
+{
+  "ard": "pi06.ard",
+  "world": "Monstro",
+  "worldId": 12,
+  "room": "Monstro: Chamber 1",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        10
+      ],
+      "msetIndex": [
+        11
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

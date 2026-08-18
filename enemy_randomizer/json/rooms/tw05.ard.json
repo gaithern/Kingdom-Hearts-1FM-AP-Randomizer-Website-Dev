@@ -1,0 +1,108 @@
+{
+  "ard": "tw05.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "Alleyway",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

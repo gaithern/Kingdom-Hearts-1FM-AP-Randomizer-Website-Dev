@@ -1,0 +1,132 @@
+{
+  "ard": "aw01.ard",
+  "world": "Wonderland",
+  "worldId": 4,
+  "room": "Rabbit Hole",
+  "exclude": [
+    "Sniperwild"
+  ],
+  "pairs": [
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        48
+      ],
+      "msetIndex": [
+        49
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        58
+      ],
+      "msetIndex": [
+        59
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        60
+      ],
+      "msetIndex": [
+        61
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        62
+      ],
+      "msetIndex": [
+        63
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        64
+      ],
+      "msetIndex": [
+        65
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        66
+      ],
+      "msetIndex": [
+        67
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

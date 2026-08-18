@@ -1,0 +1,75 @@
+{
+  "ard": "tz12.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Jungle: Cliff",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        48
+      ],
+      "msetIndex": [
+        49
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        56
+      ],
+      "msetIndex": [
+        57
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        58
+      ],
+      "msetIndex": [
+        59
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        60
+      ],
+      "msetIndex": [
+        61
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        62
+      ],
+      "msetIndex": [
+        63
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

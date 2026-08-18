@@ -1,0 +1,20 @@
+{
+  "ard": "ew34.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "The Void",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Bitsniper",
+      "mdlsIndex": [
+        120
+      ],
+      "msetIndex": [
+        121
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

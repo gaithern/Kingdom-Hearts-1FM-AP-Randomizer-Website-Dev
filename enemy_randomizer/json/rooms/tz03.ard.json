@@ -1,0 +1,86 @@
+{
+  "ard": "tz03.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Bamboo Thicket",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        65
+      ],
+      "msetIndex": [
+        66
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        67
+      ],
+      "msetIndex": [
+        68
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

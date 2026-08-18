@@ -1,0 +1,53 @@
+{
+  "ard": "pp10.ard",
+  "world": "Neverland",
+  "worldId": 13,
+  "room": "Clock Tower",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        48
+      ],
+      "msetIndex": [
+        49
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

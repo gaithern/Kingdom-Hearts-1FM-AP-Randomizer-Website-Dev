@@ -1,0 +1,45 @@
+{
+  "ard": "ew23.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Halloween Town",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        0,
+        40
+      ],
+      "msetIndex": [
+        1
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        38,
+        41
+      ],
+      "msetIndex": [
+        39
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        42,
+        44
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

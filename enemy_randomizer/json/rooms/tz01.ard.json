@@ -1,0 +1,75 @@
+{
+  "ard": "tz01.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Treehouse",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        62
+      ],
+      "msetIndex": [
+        63
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        64
+      ],
+      "msetIndex": [
+        65
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        66
+      ],
+      "msetIndex": [
+        67
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        76
+      ],
+      "msetIndex": [
+        77
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Pink Agaricus",
+      "mdlsIndex": [
+        96
+      ],
+      "msetIndex": [
+        97
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

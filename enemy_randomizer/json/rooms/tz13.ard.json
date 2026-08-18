@@ -1,0 +1,97 @@
+{
+  "ard": "tz13.ard",
+  "world": "Deep Jungle",
+  "worldId": 5,
+  "room": "Camp",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        74
+      ],
+      "msetIndex": [
+        75
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        76
+      ],
+      "msetIndex": [
+        77
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        86
+      ],
+      "msetIndex": [
+        87
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        90
+      ],
+      "msetIndex": [
+        91
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        92
+      ],
+      "msetIndex": [
+        93
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

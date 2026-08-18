@@ -1,0 +1,20 @@
+{
+  "ard": "di01.ard",
+  "world": "Destiny Islands",
+  "worldId": 1,
+  "room": "Seashore",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

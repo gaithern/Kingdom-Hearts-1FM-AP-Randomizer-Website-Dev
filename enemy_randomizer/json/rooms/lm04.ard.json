@@ -1,0 +1,75 @@
+{
+  "ard": "lm04.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Undersea Gorge",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        41
+      ],
+      "msetIndex": [
+        42
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        43
+      ],
+      "msetIndex": [
+        44
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Aquatank",
+      "mdlsIndex": [
+        45
+      ],
+      "msetIndex": [
+        46
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        49
+      ],
+      "msetIndex": [
+        50
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

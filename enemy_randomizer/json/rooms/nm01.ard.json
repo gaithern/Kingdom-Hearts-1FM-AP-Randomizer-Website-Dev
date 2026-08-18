@@ -1,0 +1,53 @@
+{
+  "ard": "nm01.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Guillotine Square",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow (Halloween Town)",
+      "mdlsIndex": [
+        72
+      ],
+      "msetIndex": [
+        73
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        74
+      ],
+      "msetIndex": [
+        75
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        76
+      ],
+      "msetIndex": [
+        77
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

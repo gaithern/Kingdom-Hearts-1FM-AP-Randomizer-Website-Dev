@@ -1,0 +1,21 @@
+{
+  "ard": "pc17.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Villians Meeting",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "variant"
+    }
+  ]
+}

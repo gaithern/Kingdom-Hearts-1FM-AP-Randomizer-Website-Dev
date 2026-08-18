@@ -1,0 +1,20 @@
+{
+  "ard": "ew24.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Neverland",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

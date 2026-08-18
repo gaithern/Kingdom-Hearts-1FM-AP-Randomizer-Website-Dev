@@ -1,0 +1,42 @@
+{
+  "ard": "ew19.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Olympus Coliseum",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 Staging site for [kh1fmrando.com](https://kh1fmrando.com), served at [dev.kh1fmrando.com](https://dev.kh1fmrando.com) via GitHub Pages. Used to try out content/layout changes before they go live on the main site.
 
-This repo was split out from a `dev/` subfolder of the [main site repo](https://github.com/gaithern/Kingdom-Hearts-1FM-AP-Randomizer-Website) so it could be served on its own subdomain — GitHub Pages only supports one custom domain per repo, so the dev content needed a repo of its own. History was preserved during the split.
+This repo was split out from a `dev/` subfolder of the [main site repo](https://github.com/gaithern/Kingdom-Hearts-1FM-AP-Randomizer-Website) so it could be served on its own subdomain - GitHub Pages only supports one custom domain per repo, so the dev content needed a repo of its own. History was preserved during the split.
 
 ## Structure
 

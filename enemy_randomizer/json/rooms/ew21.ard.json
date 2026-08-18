@@ -1,0 +1,31 @@
+{
+  "ard": "ew21.ard",
+  "world": "End of the World",
+  "worldId": 16,
+  "room": "World Terminus: Agrabah",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

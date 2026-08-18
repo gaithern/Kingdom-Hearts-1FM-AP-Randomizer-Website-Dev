@@ -1,0 +1,20 @@
+{
+  "ard": "di09.ard",
+  "world": "Destiny Islands",
+  "worldId": 1,
+  "room": "Seashore (Darkside Fight)",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "ard": "lm11.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Cavern Nook",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

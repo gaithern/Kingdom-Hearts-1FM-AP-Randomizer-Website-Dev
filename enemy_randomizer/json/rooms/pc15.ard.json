@@ -1,0 +1,98 @@
+{
+  "ard": "pc15.ard",
+  "world": "Hollow Bastion",
+  "worldId": 15,
+  "room": "Grand Hall",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Defender",
+      "mdlsIndex": [
+        10
+      ],
+      "msetIndex": [
+        11
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Stealth Sneak",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "extramset"
+    },
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        80
+      ],
+      "msetIndex": [
+        81
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        82
+      ],
+      "msetIndex": [
+        83
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

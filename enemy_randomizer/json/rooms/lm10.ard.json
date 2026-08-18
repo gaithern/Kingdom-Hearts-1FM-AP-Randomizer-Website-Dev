@@ -1,0 +1,31 @@
+{
+  "ard": "lm10.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Den of Tides",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

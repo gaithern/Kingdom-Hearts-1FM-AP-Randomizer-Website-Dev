@@ -1,0 +1,53 @@
+{
+  "ard": "nm07.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Oogie's Manor",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow (Halloween Town)",
+      "mdlsIndex": [
+        84
+      ],
+      "msetIndex": [
+        85
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        86
+      ],
+      "msetIndex": [
+        87
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        88
+      ],
+      "msetIndex": [
+        89
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        90
+      ],
+      "msetIndex": [
+        91
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

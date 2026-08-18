@@ -1,0 +1,31 @@
+{
+  "ard": "lm02.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Tranquil Grotto",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        47
+      ],
+      "msetIndex": [
+        48
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

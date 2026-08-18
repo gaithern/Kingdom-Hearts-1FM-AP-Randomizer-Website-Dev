@@ -46,132 +46,179 @@
             </div>
 
             <div class="card">
-                <button id="er-generate">Download mod</button>
+                <button id="er-generate" disabled>Download mod</button>
                 <div id="er-result" class="result-box"></div>
             </div>
 
             <div class="card er-settings">
                 <h3>Settings</h3>
-                <p>Save or load selection settings.</p>
+                <p>Save, load, or reset selection settings.</p>
                 <div class="er-settings__row">
-                    <button class="secondary" id="er-save">Download settings</button>
+                    <button class="secondary" id="er-save" disabled>Download settings</button>
                     <label class="er-upload">
                         <span>Load settings</span>
-                        <input type="file" id="er-load" accept="application/json,.json">
+                        <input type="file" id="er-load" accept="application/json,.json" disabled>
                     </label>
+                    <button class="secondary er-settings__reset" id="er-reset" disabled>Reset to defaults</button>
                 </div>
                 <div id="er-settings-result" class="result-box"></div>
             </div>
 
-            <script id="er-data" type="application/json">{"ards":[{"ard":"al02.ard","entries":[{"i":12,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":14,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":16,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":44,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"}],"room":"Desert: Cave","world":"Agrabah","worldId":8},{"ard":"al03.ard","entries":[{"i":48,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":50,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":56,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":58,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":60,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":64,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":66,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":68,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Agrabah: Plaza","world":"Agrabah","worldId":8},{"ard":"al04.ard","entries":[{"i":28,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":30,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":36,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":38,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":42,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":44,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":46,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Agrabah: Alley","world":"Agrabah","worldId":8},{"ard":"al05.ard","entries":[{"i":24,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":26,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":28,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":34,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":36,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Agrabah: Bazaar","world":"Agrabah","worldId":8},{"ard":"al06.ard","entries":[{"i":34,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":36,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":42,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":44,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":46,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":48,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":50,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":52,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":54,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"}],"room":"Agrabah: Main Street","world":"Agrabah","worldId":8},{"ard":"al07.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":28,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":30,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":32,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":37,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":39,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":41,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":43,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":45,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Palace Gates","world":"Agrabah","worldId":8},{"ard":"al09.ard","entries":[{"i":28,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":30,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":32,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":34,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":36,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Cave: Entrance","world":"Agrabah","worldId":8},{"ard":"al10.ard","entries":[{"i":34,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":36,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":38,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":40,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":42,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":44,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":46,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":48,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"}],"room":"Cave: Hall","world":"Agrabah","worldId":8},{"ard":"al11.ard","entries":[{"i":22,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":24,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":26,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":32,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":34,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"}],"room":"Bottomless Hall","world":"Agrabah","worldId":8},{"ard":"al12.ard","entries":[{"i":34,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":36,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":38,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":40,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":42,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Treasure Room","world":"Agrabah","worldId":8},{"ard":"al17.ard","entries":[{"i":50,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":52,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":54,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":56,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":58,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"}],"room":"Lamp Chamber","world":"Agrabah","worldId":8},{"ard":"aw01.ard","entries":[{"i":44,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":46,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":48,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":50,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":52,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":54,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":58,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":60,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":62,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":64,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":66,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"}],"room":"Rabbit Hole","world":"Wonderland","worldId":4},{"ard":"aw02.ard","entries":[{"i":52,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":54,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":56,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":58,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":60,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":64,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":66,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":70,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":72,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":74,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":76,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"}],"room":"Bizarre Room (Small)","world":"Wonderland","worldId":4},{"ard":"aw04.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":8,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":62,"issue":"extramset","mset":"xa_ex_2010_E.mset","stem":"xa_ex_2010"},{"i":64,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":66,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":68,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":70,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":72,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":93,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":95,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Queen's Castle","world":"Wonderland","worldId":4},{"ard":"aw05.ard","entries":[{"i":32,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":34,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":38,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":40,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":42,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":44,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":46,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":48,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":50,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":52,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Lotus Forest","world":"Wonderland","worldId":4},{"ard":"aw07.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":8,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":36,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":38,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":40,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":46,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":48,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":50,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":52,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":54,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":56,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":58,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"}],"room":"Bizarre Room (Sideways 1)","world":"Wonderland","worldId":4},{"ard":"aw08.ard","entries":[{"i":38,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":40,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":42,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":44,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":46,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":48,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":54,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":56,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":58,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":60,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":62,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"}],"room":"Bizarre Room (Sideways 2)","world":"Wonderland","worldId":4},{"ard":"aw09.ard","entries":[{"i":24,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":26,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":28,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":30,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":32,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":34,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":36,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":38,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":40,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":44,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":46,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"}],"room":"Bizarre Room (Upside Down)","world":"Wonderland","worldId":4},{"ard":"aw10.ard","entries":[{"i":48,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":50,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":52,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":54,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":56,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":58,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":60,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":62,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":64,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":66,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"}],"room":"Teaparty Garden","world":"Wonderland","worldId":4},{"ard":"dh02.ard","entries":[{"i":4,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"","world":"Awakening","worldId":0},{"ard":"dh04.ard","entries":[{"i":3,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"???","world":"Awakening","worldId":0},{"ard":"dh05.ard","entries":[{"i":9,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"???","world":"Awakening","worldId":0},{"ard":"di01.ard","entries":[{"i":50,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Seashore","world":"Destiny Islands","worldId":1},{"ard":"di06.ard","entries":[{"i":30,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Seashore (Day 3)","world":"Destiny Islands","worldId":1},{"ard":"di09.ard","entries":[{"i":30,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Seashore (Darkside Fight)","world":"Destiny Islands","worldId":1},{"ard":"ew03.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"}],"room":"Final Dimension?","world":"End of the World","worldId":16},{"ard":"ew04.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":28,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"}],"room":"Final Dimension?","world":"End of the World","worldId":16},{"ard":"ew07.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"}],"room":"Final Dimension?","world":"End of the World","worldId":16},{"ard":"ew09.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":28,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"}],"room":"Final Dimension?","world":"End of the World","worldId":16},{"ard":"ew10.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"}],"room":"Final Dimension?","world":"End of the World","worldId":16},{"ard":"ew12.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":28,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":30,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"}],"room":"Final Dimension?","world":"End of the World","worldId":16},{"ard":"ew15.ard","entries":[{"i":18,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":20,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":22,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"}],"room":"Giant Crevasse","world":"End of the World","worldId":16},{"ard":"ew17.ard","entries":[{"i":32,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":34,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"}],"room":"World Terminus: Traverse Town","world":"End of the World","worldId":16},{"ard":"ew18.ard","entries":[{"i":10,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":12,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":14,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":16,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":18,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"}],"room":"World Terminus: Wonderland","world":"End of the World","worldId":16},{"ard":"ew19.ard","entries":[{"i":20,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":22,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":24,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"}],"room":"World Terminus: Olympus Coliseum","world":"End of the World","worldId":16},{"ard":"ew20.ard","entries":[{"i":12,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":14,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"}],"room":"World Terminus: Deep Jungle","world":"End of the World","worldId":16},{"ard":"ew21.ard","entries":[{"i":20,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":22,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"}],"room":"World Terminus: Agrabah","world":"End of the World","worldId":16},{"ard":"ew22.ard","entries":[{"i":14,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":16,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"},{"i":18,"issue":"","mset":"xa_ex_2240.mset","stem":"xa_ex_2240"},{"i":20,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"}],"room":"World Terminus: Atlantica","world":"End of the World","worldId":16},{"ard":"ew23.ard","entries":[{"i":0,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2200"},{"i":38,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2220"},{"i":40,"issue":"layout","mset":"xa_ex_2221.mdls","stem":"xa_ex_2201"},{"i":41,"issue":"layout","mset":"xa_ex_2231.mdls","stem":"xa_ex_2221"},{"i":42,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"},{"i":44,"issue":"layout","mset":"","stem":"xa_ex_2230"}],"room":"World Terminus: Halloween Town","world":"End of the World","worldId":16},{"ard":"ew24.ard","entries":[{"i":20,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"}],"room":"World Terminus: Neverland","world":"End of the World","worldId":16},{"ard":"ew26.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"}],"room":"World Terminus: Hollow Bastion","world":"End of the World","worldId":16},{"ard":"ew29.ard","entries":[{"i":24,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":26,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":30,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"},{"i":80,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":84,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"}],"room":"Linked Worlds","world":"End of the World","worldId":16},{"ard":"ew31.ard","entries":[{"i":30,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"???","world":"End of the World","worldId":16},{"ard":"ew34.ard","entries":[{"i":120,"issue":"","mset":"xa_ew_2010.mset","stem":"xa_ew_2010"}],"room":"The Void","world":"End of the World","worldId":16},{"ard":"he03.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":8,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":10,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":14,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2200"},{"i":16,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":52,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":54,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":56,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":58,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":60,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":62,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":64,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":66,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2220"},{"i":70,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"},{"i":211,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":213,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":215,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":219,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":221,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"},{"i":223,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":229,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":231,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":233,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"}],"room":"Coliseum (Preliminaries)","world":"Olympus Coliseum","worldId":11},{"ard":"he04.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":8,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":10,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":78,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":80,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":92,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2200"},{"i":94,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":96,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":98,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":100,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":102,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":104,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":106,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":108,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":110,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":112,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":114,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"}],"room":"Main Gates","world":"Olympus Coliseum","worldId":11},{"ard":"he06.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":8,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":10,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":12,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2200"},{"i":14,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":92,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":94,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":96,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":98,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":100,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"},{"i":102,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":106,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":108,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":110,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":112,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":116,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"},{"i":122,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":124,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":126,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":132,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":134,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":186,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2220"}],"room":"Coliseum (Cups)","world":"Olympus Coliseum","worldId":11},{"ard":"he07.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":18,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":20,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":22,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":24,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":26,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":28,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":30,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":32,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2200"},{"i":34,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":36,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2220"},{"i":38,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":40,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":42,"issue":"","mset":"xa_ex_2290.mset","stem":"xa_ex_2290"},{"i":44,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":46,"issue":"","mset":"xa_ex_2330.mset","stem":"xa_ex_2330"},{"i":48,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":84,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":86,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":88,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":90,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"}],"room":"Coliseum: Arena","world":"Olympus Coliseum","worldId":11},{"ard":"lm01.ard","entries":[{"i":30,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":32,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"},{"i":34,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"},{"i":36,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":38,"issue":"","mset":"xa_ex_2240.mset","stem":"xa_ex_2240"},{"i":42,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Atlantica (Undersea Valley)","world":"Atlantica","worldId":9},{"ard":"lm02.ard","entries":[{"i":32,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":47,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"}],"room":"Tranquil Grotto","world":"Atlantica","worldId":9},{"ard":"lm03.ard","entries":[{"i":22,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":24,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"},{"i":26,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":28,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"},{"i":30,"issue":"","mset":"xa_ex_2240.mset","stem":"xa_ex_2240"},{"i":32,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Calm Depths","world":"Atlantica","worldId":9},{"ard":"lm04.ard","entries":[{"i":34,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":36,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":41,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"},{"i":43,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"},{"i":45,"issue":"","mset":"xa_ex_2240.mset","stem":"xa_ex_2240"},{"i":49,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Undersea Gorge","world":"Atlantica","worldId":9},{"ard":"lm05.ard","entries":[{"i":17,"issue":"","mset":"xa_ex_2410.mset","stem":"xa_ex_2410"},{"i":19,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":21,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":23,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"},{"i":25,"issue":"","mset":"xa_ex_2240.mset","stem":"xa_ex_2240"},{"i":27,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"},{"i":29,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Undersea Cave","world":"Atlantica","worldId":9},{"ard":"lm06.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":18,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"}],"room":"Undersea Garden","world":"Atlantica","worldId":9},{"ard":"lm07.ard","entries":[{"i":22,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":24,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":32,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"}],"room":"","world":"","worldId":-1},{"ard":"lm08.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"},{"i":30,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":35,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":37,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"}],"room":"Sunken Ship","world":"Atlantica","worldId":9},{"ard":"lm10.ard","entries":[{"i":18,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":20,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Den of Tides","world":"Atlantica","worldId":9},{"ard":"lm11.ard","entries":[{"i":24,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"}],"room":"Cavern Nook","world":"Atlantica","worldId":9},{"ard":"lm12.ard","entries":[{"i":12,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":14,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"}],"room":"Tidal Abyss","world":"Atlantica","worldId":9},{"ard":"lm13.ard","entries":[{"i":39,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"}],"room":"Undersea Gorge","world":"Atlantica","worldId":9},{"ard":"lm15.ard","entries":[{"i":24,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":26,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"},{"i":28,"issue":"","mset":"xa_ex_2070.mset","stem":"xa_ex_2070"},{"i":30,"issue":"","mset":"xa_ex_2080.mset","stem":"xa_ex_2080"},{"i":32,"issue":"","mset":"xa_ex_2240.mset","stem":"xa_ex_2240"},{"i":34,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Triton's Palace","world":"Atlantica","worldId":9},{"ard":"lm16.ard","entries":[{"i":18,"issue":"","mset":"xa_ex_2250.mset","stem":"xa_ex_2250"}],"room":"Triton's Throne (1)","world":"Atlantica","worldId":9},{"ard":"nm01.ard","entries":[{"i":72,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2021"},{"i":74,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"},{"i":76,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2201"},{"i":78,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2221"}],"room":"Guillotine Square","world":"Halloween Town","worldId":10},{"ard":"nm03.ard","entries":[{"i":44,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2201"},{"i":46,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2221"},{"i":52,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2021"},{"i":54,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"},{"i":56,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2151"}],"room":"Graveyard","world":"Halloween Town","worldId":10},{"ard":"nm04.ard","entries":[{"i":50,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2021"},{"i":52,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2201"},{"i":54,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"},{"i":56,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2221"},{"i":58,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2281"}],"room":"Moonlight Hill","world":"Halloween Town","worldId":10},{"ard":"nm05.ard","entries":[{"i":32,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2151"},{"i":34,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2201"},{"i":36,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2221"},{"i":38,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"},{"i":40,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2281"},{"i":42,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":44,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2021"}],"room":"Bridge","world":"Halloween Town","worldId":10},{"ard":"nm07.ard","entries":[{"i":84,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2021"},{"i":86,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2201"},{"i":88,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2221"},{"i":90,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"}],"room":"Oogie's Manor","world":"Halloween Town","worldId":10},{"ard":"nm08.ard","entries":[{"i":42,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2201"},{"i":44,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2221"},{"i":46,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"}],"room":"Torture Chamber","world":"Halloween Town","worldId":10},{"ard":"nm09.ard","entries":[{"i":22,"issue":"","mset":"xa_ex_2200.mset","stem":"xa_ex_2200"},{"i":24,"issue":"","mset":"xa_ex_2220.mset","stem":"xa_ex_2220"},{"i":88,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2021"},{"i":90,"issue":"layout","mset":"xa_ex_2151.mdls","stem":"xa_ex_2201"},{"i":91,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2151"},{"i":93,"issue":"layout","mset":"xa_ex_2231.mdls","stem":"xa_ex_2221"},{"i":94,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"},{"i":96,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2281"}],"room":"Manor Ruins","world":"Halloween Town","worldId":10},{"ard":"nm10.ard","entries":[{"i":52,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2231"}],"room":"Evil Playroom","world":"Halloween Town","worldId":10},{"ard":"pc01.ard","entries":[{"i":42,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Rising Falls","world":"Hollow Bastion","worldId":15},{"ard":"pc02.ard","entries":[{"i":38,"issue":"extramset","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"},{"i":40,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":42,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":44,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":46,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":48,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":50,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":52,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"}],"room":"Castle Gates","world":"Hollow Bastion","worldId":15},{"ard":"pc03.ard","entries":[{"i":44,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"},{"i":46,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":48,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":50,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":52,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"}],"room":"Great Crest","world":"Hollow Bastion","worldId":15},{"ard":"pc04.ard","entries":[{"i":34,"issue":"extramset","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":37,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":39,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":41,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":43,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":45,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":47,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":49,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"}],"room":"High Tower","world":"Hollow Bastion","worldId":15},{"ard":"pc05.ard","entries":[{"i":58,"issue":"extramset","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"},{"i":72,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":74,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":76,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":78,"issue":"","mset":"xa_ex_2430.mset","stem":"xa_ex_2430"},{"i":95,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":97,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":99,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":101,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"}],"room":"Entrance Hall","world":"Hollow Bastion","worldId":15},{"ard":"pc06.ard","entries":[{"i":98,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Library","world":"Hollow Bastion","worldId":15},{"ard":"pc07.ard","entries":[{"i":46,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":48,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":50,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":52,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":54,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":56,"issue":"extramset","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":59,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":61,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Lift Stop","world":"Hollow Bastion","worldId":15},{"ard":"pc08.ard","entries":[{"i":40,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":42,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":44,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":46,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":48,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":50,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Base Level","world":"Hollow Bastion","worldId":15},{"ard":"pc09.ard","entries":[{"i":50,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Waterway","world":"Hollow Bastion","worldId":15},{"ard":"pc10.ard","entries":[{"i":50,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":52,"issue":"extramset","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":55,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":57,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":59,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":61,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":63,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"}],"room":"Waterway","world":"Hollow Bastion","worldId":15},{"ard":"pc11.ard","entries":[{"i":18,"issue":"extramset","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"},{"i":20,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":23,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":25,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":27,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":29,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":31,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":33,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":35,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"}],"room":"Dungeon","world":"Hollow Bastion","worldId":15},{"ard":"pc12.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":18,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":32,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Castle Chapel","world":"Hollow Bastion","worldId":15},{"ard":"pc13.ard","entries":[{"i":114,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Castle Chapel","world":"Hollow Bastion","worldId":15},{"ard":"pc14.ard","entries":[{"i":10,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"???","world":"Hollow Bastion","worldId":15},{"ard":"pc15.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":8,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":10,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":12,"issue":"","mset":"xa_ex_2430.mset","stem":"xa_ex_2430"},{"i":54,"issue":"extramset","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"},{"i":78,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":80,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":82,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Grand Hall","world":"Hollow Bastion","worldId":15},{"ard":"pc16.ard","entries":[{"i":12,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Dark Depths","world":"Hollow Bastion","worldId":15},{"ard":"pc17.ard","entries":[{"i":26,"issue":"variant","mset":"xa_ex_2020_sora.mset","stem":"xa_ex_2020"}],"room":"Villians Meeting","world":"Hollow Bastion","worldId":15},{"ard":"pi03.ard","entries":[{"i":14,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":16,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":20,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":22,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"},{"i":30,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":32,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":34,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":36,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"}],"room":"Monstro: Stomach","world":"Monstro","worldId":12},{"ard":"pi04.ard","entries":[{"i":12,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":14,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":16,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":18,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":20,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"},{"i":22,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":24,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":26,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":32,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":34,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"}],"room":"Monstro: Throat","world":"Monstro","worldId":12},{"ard":"pi05.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":10,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":12,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":22,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":24,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":26,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":28,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":32,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":34,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"},{"i":36,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":38,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"}],"room":"Monstro: Bowels","world":"Monstro","worldId":12},{"ard":"pi06.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":8,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":10,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":12,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":18,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":28,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":30,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":32,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":34,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":36,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"}],"room":"Monstro: Chamber 1","world":"Monstro","worldId":12},{"ard":"pi07.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":18,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":20,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":22,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":32,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":38,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":40,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":42,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":44,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":46,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"}],"room":"Monstro: Chamber 2","world":"Monstro","worldId":12},{"ard":"pi08.ard","entries":[{"i":14,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":16,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":18,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":20,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":22,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":24,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":26,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":28,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":30,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":32,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":34,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":36,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"}],"room":"Monstro: Chamber 3","world":"Monstro","worldId":12},{"ard":"pi10.ard","entries":[{"i":18,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":20,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":22,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":32,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":34,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":36,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":38,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":40,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":42,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"}],"room":"Monstro: Chamber 5","world":"Monstro","worldId":12},{"ard":"pi11.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":18,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":20,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":22,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":28,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":30,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":32,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":34,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"}],"room":"Monstro: Chamber 6","world":"Monstro","worldId":12},{"ard":"po32.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":18,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":20,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":22,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2060.mset","stem":"xa_ex_2060"},{"i":32,"issue":"","mset":"xa_ex_2090.mset","stem":"xa_ex_2090"},{"i":38,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":40,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":42,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":44,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":46,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"}],"room":"","world":"","worldId":-1},{"ard":"pp01.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":30,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":34,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":36,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":38,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Ship: Hold","world":"Neverland","worldId":13},{"ard":"pp02.ard","entries":[{"i":20,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":22,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":24,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":26,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Ship: Hold","world":"Neverland","worldId":13},{"ard":"pp03.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":28,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":32,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":36,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"}],"room":"Ship: Hold","world":"Neverland","worldId":13},{"ard":"pp04.ard","entries":[{"i":14,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":16,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":20,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"},{"i":22,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":24,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":30,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"}],"room":"Ship: Freezer","world":"Neverland","worldId":13},{"ard":"pp05.ard","entries":[{"i":8,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":34,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":36,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":38,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":58,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Ship: Galley","world":"Neverland","worldId":13},{"ard":"pp06.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":8,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":30,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":34,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Ship: Cabin","world":"Neverland","worldId":13},{"ard":"pp07.ard","entries":[{"i":26,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":28,"issue":"","mset":"xa_ex_2100.mset","stem":"xa_ex_2100"},{"i":32,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":47,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":49,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Pirate Ship","world":"Neverland","worldId":13},{"ard":"pp09.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"},{"i":40,"issue":"","mset":"xa_ex_2480.mset","stem":"xa_ex_2480"},{"i":42,"issue":"","mset":"xa_ex_2490.mset","stem":"xa_ex_2490"},{"i":44,"issue":"extramset","mset":"xa_ex_2100_E.mset","stem":"xa_ex_2100"},{"i":46,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"},{"i":75,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Pirate Ship","world":"Neverland","worldId":13},{"ard":"pp10.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":48,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":50,"issue":"","mset":"xa_ex_2210.mset","stem":"xa_ex_2210"}],"room":"Clock Tower","world":"Neverland","worldId":13},{"ard":"tw01.ard","entries":[{"i":60,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"1st District","world":"Traverse Town","worldId":3},{"ard":"tw02.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2450.mset","stem":"xa_ex_2450"},{"i":48,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":50,"issue":"extramset","mset":"xa_ex_2010_E.mset","stem":"xa_ex_2010"},{"i":54,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":56,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":58,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":60,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":62,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":64,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":66,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":68,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"}],"room":"2nd District","world":"Traverse Town","worldId":3},{"ard":"tw03.ard","entries":[{"i":50,"issue":"extramset","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":52,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":59,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":61,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":63,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"}],"room":"3rd District","world":"Traverse Town","worldId":3},{"ard":"tw05.ard","entries":[{"i":30,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":32,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":34,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":36,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":38,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":40,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":42,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":52,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":54,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Alleyway","world":"Traverse Town","worldId":3},{"ard":"tw06.ard","entries":[{"i":42,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":44,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":56,"issue":"extramset","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"}],"room":"Green Room","world":"Traverse Town","worldId":3},{"ard":"tw07.ard","entries":[{"i":16,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":18,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":24,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"}],"room":"Red Room","world":"Traverse Town","worldId":3},{"ard":"tw08.ard","entries":[{"i":22,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"},{"i":24,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":26,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":28,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":30,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":32,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":34,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"}],"room":"Hallway","world":"Traverse Town","worldId":3},{"ard":"tw18.ard","entries":[{"i":54,"issue":"","mset":"xa_ex_2050.mset","stem":"xa_ex_2050"},{"i":56,"issue":"","mset":"xa_ex_2130.mset","stem":"xa_ex_2130"},{"i":58,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":60,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":62,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":64,"issue":"","mset":"xa_ex_2230.mset","stem":"xa_ex_2230"},{"i":66,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":68,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":70,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"},{"i":72,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":74,"issue":"","mset":"xa_ex_2010.mset","stem":"xa_ex_2010"}],"room":"Gizmo Shop","world":"Traverse Town","worldId":3},{"ard":"tw25.ard","entries":[{"i":30,"issue":"extramset","mset":"xa_ex_2010_E.mset","stem":"xa_ex_2010"},{"i":32,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":34,"issue":"","mset":"xa_ex_2110.mset","stem":"xa_ex_2110"},{"i":36,"issue":"","mset":"xa_ex_2120.mset","stem":"xa_ex_2120"},{"i":38,"issue":"","mset":"xa_ex_2160.mset","stem":"xa_ex_2160"},{"i":40,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":42,"issue":"","mset":"xa_ex_2340.mset","stem":"xa_ex_2340"}],"room":"3rd District","world":"Traverse Town","worldId":3},{"ard":"tz01.ard","entries":[{"i":62,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":64,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":66,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"},{"i":76,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":78,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":96,"issue":"","mset":"xa_ex_2410.mset","stem":"xa_ex_2410"}],"room":"Treehouse","world":"Deep Jungle","worldId":5},{"ard":"tz02.ard","entries":[{"i":75,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"}],"room":"Camp","world":"Deep Jungle","worldId":5},{"ard":"tz03.ard","entries":[{"i":22,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":24,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":26,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"},{"i":28,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":30,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":65,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":67,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"}],"room":"Bamboo Thicket","world":"Deep Jungle","worldId":5},{"ard":"tz07.ard","entries":[{"i":37,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"}],"room":"Climbing Trees","world":"Deep Jungle","worldId":5},{"ard":"tz12.ard","entries":[{"i":48,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":54,"issue":"","mset":"xa_ex_2140.mset","stem":"xa_ex_2140"},{"i":56,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":58,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":60,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"},{"i":62,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"}],"room":"Jungle: Cliff","world":"Deep Jungle","worldId":5},{"ard":"tz13.ard","entries":[{"i":6,"issue":"","mset":"xa_ex_2280.mset","stem":"xa_ex_2280"},{"i":8,"issue":"","mset":"xa_ex_2320.mset","stem":"xa_ex_2320"},{"i":74,"issue":"","mset":"xa_ex_2020.mset","stem":"xa_ex_2020"},{"i":76,"issue":"","mset":"xa_ex_2030.mset","stem":"xa_ex_2030"},{"i":78,"issue":"","mset":"xa_ex_2040.mset","stem":"xa_ex_2040"},{"i":86,"issue":"","mset":"xa_ex_2150.mset","stem":"xa_ex_2150"},{"i":90,"issue":"","mset":"xa_ex_2380.mset","stem":"xa_ex_2380"},{"i":92,"issue":"","mset":"xa_ex_2390.mset","stem":"xa_ex_2390"}],"room":"Camp","world":"Deep Jungle","worldId":5}],"creatures":{"xa_ew_2010":{"charId":336,"ht":false,"mset":"xa_ew_2010.mset","name":"Bitsniper","slots":2,"weight":2},"xa_ex_2010":{"charId":300,"ht":false,"mset":"xa_ex_2010.mset","name":"Soldier","slots":5,"weight":4},"xa_ex_2020":{"charId":301,"ht":false,"mset":"xa_ex_2020.mset","name":"Shadow","slots":4,"weight":3},"xa_ex_2021":{"charId":301,"ht":true,"mset":"xa_ex_2020.mset","name":"Shadow (Halloween Town)","slots":4,"weight":3},"xa_ex_2030":{"charId":302,"ht":false,"mset":"xa_ex_2030.mset","name":"Powerwild","slots":5,"weight":3},"xa_ex_2040":{"charId":303,"ht":false,"mset":"xa_ex_2040.mset","name":"Bouncywild","slots":5,"weight":5},"xa_ex_2050":{"charId":304,"ht":false,"mset":"xa_ex_2050.mset","name":"Large Body","slots":5,"weight":6},"xa_ex_2060":{"charId":305,"ht":false,"mset":"xa_ex_2060.mset","name":"Fat Bandit","slots":4,"weight":6},"xa_ex_2070":{"charId":306,"ht":false,"mset":"xa_ex_2070.mset","name":"Sea Neon","slots":3,"weight":5},"xa_ex_2080":{"charId":307,"ht":false,"mset":"xa_ex_2080.mset","name":"Sheltering Zone","slots":3,"weight":5},"xa_ex_2090":{"charId":308,"ht":false,"mset":"xa_ex_2090.mset","name":"Bandit","slots":5,"weight":4},"xa_ex_2100":{"charId":309,"ht":false,"mset":"xa_ex_2100.mset","name":"Pirate","slots":5,"weight":4},"xa_ex_2110":{"charId":310,"ht":false,"mset":"xa_ex_2110.mset","name":"Red Nocturne","slots":3,"weight":3},"xa_ex_2120":{"charId":311,"ht":false,"mset":"xa_ex_2120.mset","name":"Blue Rhapsody","slots":3,"weight":3},"xa_ex_2130":{"charId":312,"ht":false,"mset":"xa_ex_2130.mset","name":"Yellow Opera","slots":3,"weight":3},"xa_ex_2140":{"charId":313,"ht":false,"mset":"xa_ex_2140.mset","name":"Green Requiem","slots":3,"weight":3},"xa_ex_2150":{"charId":314,"ht":false,"mset":"xa_ex_2150.mset","name":"Wizard","slots":6,"weight":6},"xa_ex_2151":{"charId":314,"ht":true,"mset":"xa_ex_2150.mset","name":"Wizard (Halloween Town)","slots":6,"weight":6},"xa_ex_2160":{"charId":315,"ht":false,"mset":"xa_ex_2160.mset","name":"Air Soldier","slots":4,"weight":4},"xa_ex_2200":{"charId":319,"ht":false,"mset":"xa_ex_2200.mset","name":"Wight Knight","slots":4,"weight":4},"xa_ex_2201":{"charId":319,"ht":true,"mset":"xa_ex_2200.mset","name":"Wight Knight (Halloween Town)","slots":4,"weight":4},"xa_ex_2210":{"charId":320,"ht":false,"mset":"xa_ex_2210.mset","name":"Air Pirate","slots":4,"weight":4},"xa_ex_2220":{"charId":321,"ht":false,"mset":"xa_ex_2220.mset","name":"Gargoyle","slots":4,"weight":6},"xa_ex_2221":{"charId":321,"ht":true,"mset":"xa_ex_2220.mset","name":"Gargoyle (Halloween Town)","slots":4,"weight":6},"xa_ex_2230":{"charId":322,"ht":false,"mset":"xa_ex_2230.mset","name":"Search Ghost","slots":4,"weight":5},"xa_ex_2231":{"charId":322,"ht":true,"mset":"xa_ex_2230.mset","name":"Search Ghost (Halloween Town)","slots":4,"weight":5},"xa_ex_2240":{"charId":323,"ht":false,"mset":"xa_ex_2240.mset","name":"Aquatank","slots":6,"weight":7},"xa_ex_2250":{"charId":324,"ht":false,"mset":"xa_ex_2250.mset","name":"Screwdiver","slots":3,"weight":6},"xa_ex_2280":{"charId":327,"ht":false,"mset":"xa_ex_2280.mset","name":"Darkball","slots":3,"weight":2},"xa_ex_2281":{"charId":327,"ht":true,"mset":"xa_ex_2280.mset","name":"Darkball (Halloween Town)","slots":3,"weight":2},"xa_ex_2290":{"charId":328,"ht":false,"mset":"xa_ex_2290.mset","name":"Invisible","slots":4,"weight":4},"xa_ex_2320":{"charId":330,"ht":false,"mset":"xa_ex_2320.mset","name":"Wyvern","slots":4,"weight":3},"xa_ex_2330":{"charId":331,"ht":false,"mset":"xa_ex_2330.mset","name":"Angel Star","slots":6,"weight":7},"xa_ex_2340":{"charId":332,"ht":false,"mset":"xa_ex_2340.mset","name":"Defender","slots":4,"weight":7},"xa_ex_2380":{"charId":334,"ht":false,"mset":"xa_ex_2380.mset","name":"Black Fungi","slots":13,"weight":7},"xa_ex_2390":{"charId":335,"ht":false,"mset":"xa_ex_2390.mset","name":"Rare Truffles","slots":7,"weight":7},"xa_ex_2410":{"charId":339,"ht":false,"mset":"xa_ex_2410.mset","name":"Pink Agaricus","slots":11,"weight":0},"xa_ex_2430":{"charId":341,"ht":false,"mset":"xa_ex_2430.mset","name":"Stealth Sneak","slots":4,"weight":4},"xa_ex_2450":{"charId":343,"ht":false,"mset":"xa_ex_2450.mset","name":"Sniperwild","slots":6,"weight":5},"xa_ex_2480":{"charId":345,"ht":false,"mset":"xa_ex_2480.mset","name":"Jet Balloon","slots":5,"weight":7},"xa_ex_2490":{"charId":346,"ht":false,"mset":"xa_ex_2490.mset","name":"Missile Diver","slots":2,"weight":6}}}</script>
-            <!-- The picks the page starts from, in the exact shape of a downloaded settings
-                 file. To change them: set the picks up on the page, click "Download settings",
-                 then paste the file in here. Anything the game cannot honour is dropped on
-                 load, so a stale entry is harmless. Sources left out allow nothing. -->
-            <script id="er-defaults" type="application/json">{
-             "version": 1,
-             "mapping": {
-              "xa_ex_2210": ["xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2220","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2160": ["xa_ex_2210","xa_ex_2120","xa_ex_2280","xa_ex_2220","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2330": ["xa_ex_2210","xa_ex_2160","xa_ex_2240","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2450","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2150","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2240": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2080","xa_ex_2150","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2090": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2010","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2380": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ex_2240","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2410","xa_ex_2100","xa_ex_2030","xa_ex_2390","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2450","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2150","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2120": ["xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2130"],
-              "xa_ex_2040": ["xa_ex_2210","xa_ex_2160","xa_ex_2090","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2010","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2280": ["xa_ew_2010","xa_ex_2120","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2130"],
-              "xa_ex_2281": ["xa_ew_2010","xa_ex_2120","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2130"],
-              "xa_ex_2340": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2430","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2060": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2220": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2221": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2281","xa_ex_2340","xa_ex_2060","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2231","xa_ex_2021","xa_ex_2201","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2140": ["xa_ex_2120","xa_ex_2280","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2130"],
-              "xa_ex_2290": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2430","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2480": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2080","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2050": ["xa_ex_2210","xa_ex_2160","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2410": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ex_2240","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2390","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2450","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2150","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2100": ["xa_ex_2210","xa_ex_2160","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2010","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2030": ["xa_ex_2210","xa_ex_2160","xa_ex_2090","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2050","xa_ex_2100","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2010","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2390": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ex_2240","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2450","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2150","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2110": ["xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2250","xa_ex_2070","xa_ex_2130"],
-              "xa_ex_2250": ["xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2070","xa_ex_2080","xa_ex_2130"],
-              "xa_ex_2070": ["xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2130"],
-              "xa_ex_2230": ["xa_ex_2210","xa_ex_2160","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2020","xa_ex_2080","xa_ex_2130"],
-              "xa_ex_2231": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2281","xa_ex_2340","xa_ex_2060","xa_ex_2221","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2021","xa_ex_2080","xa_ex_2430","xa_ex_2201","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2020": ["xa_ex_2160","xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2130"],
-              "xa_ex_2021": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2281","xa_ex_2340","xa_ex_2060","xa_ex_2221","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2231","xa_ex_2201","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2080": ["xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2130"],
-              "xa_ex_2450": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2150","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2010": ["xa_ex_2160","xa_ex_2090","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2140","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2130"],
-              "xa_ex_2430": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2221","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2200": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2201": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2281","xa_ex_2340","xa_ex_2060","xa_ex_2221","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2231","xa_ex_2021","xa_ex_2080","xa_ex_2430","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2150": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ex_2240","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2450","xa_ex_2010","xa_ex_2430","xa_ex_2200","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2151": ["xa_ex_2210","xa_ex_2160","xa_ex_2330","xa_ex_2240","xa_ex_2090","xa_ew_2010","xa_ex_2120","xa_ex_2040","xa_ex_2281","xa_ex_2340","xa_ex_2060","xa_ex_2221","xa_ex_2140","xa_ex_2290","xa_ex_2050","xa_ex_2100","xa_ex_2030","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2231","xa_ex_2021","xa_ex_2080","xa_ex_2450","xa_ex_2010","xa_ex_2430","xa_ex_2201","xa_ex_2320","xa_ex_2130"],
-              "xa_ex_2320": ["xa_ex_2210","xa_ex_2160","xa_ew_2010","xa_ex_2120","xa_ex_2280","xa_ex_2340","xa_ex_2060","xa_ex_2220","xa_ex_2140","xa_ex_2290","xa_ex_2110","xa_ex_2250","xa_ex_2070","xa_ex_2230","xa_ex_2020","xa_ex_2080","xa_ex_2200","xa_ex_2130"],
-              "xa_ex_2130": ["xa_ex_2120","xa_ex_2280","xa_ex_2140","xa_ex_2110","xa_ex_2250","xa_ex_2070"]
-             }
-            }</script>
-
             <script>
             (function () {
                 "use strict";
-                var DATA = JSON.parse(document.getElementById("er-data").textContent);
-                var CRE = DATA.creatures, ARDS = DATA.ards;
-                var DEFAULTS = JSON.parse(document.getElementById("er-defaults").textContent);
-                var STEMS = Object.keys(CRE).sort(function (a, b) {
-                    return CRE[a].name.localeCompare(CRE[b].name);
-                });
+
+                // Everything this page runs on lives under enemy_randomizer/json/: the
+                // heartless catalogue, the picks the page starts from, and one file per
+                // room in rooms/. index.json lists them all, because a browser cannot
+                // list a folder, and its paths are relative to the folder below. That
+                // folder's README.md describes the file formats.
+                var JSON_DIR = "enemy_randomizer/json/";
+
+                var H = {};       // plaintext name -> catalogue entry
+                var MODEL = {};   // model stem -> plaintext name, for older settings files
+                var NAMES = [];   // every heartless name, sorted
+                var LEGAL = {};   // name -> the names that can stand in for it
+                var ROOMS = [];   // one entry per <room>.ard.json, in manifest order
+                var map = {}, sel = null;
+
+                var sourceList = document.getElementById("er-sourcelist");
+                var detail = document.getElementById("er-detail");
+                var result = document.getElementById("er-result");
+                var settingsResult = document.getElementById("er-settings-result");
+                var generateBtn = document.getElementById("er-generate");
+                var saveBtn = document.getElementById("er-save");
+                var loadInput = document.getElementById("er-load");
+                var resetBtn = document.getElementById("er-reset");
+
                 var esc = function (s) {
                     return String(s).replace(/[&<>"]/g, function (c) {
                         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c];
                     });
                 };
 
-                var ROWS = [];
-                ARDS.forEach(function (a) {
-                    a.entries.forEach(function (e) {
-                        ROWS.push({ ard: a.ard, slot: e.i, stem: e.stem, issue: e.issue || "" });
+                function getJSON(name) {
+                    return fetch(JSON_DIR + name).then(function (r) {
+                        if (!r.ok) throw new Error(name + " (HTTP " + r.status + ")");
+                        return r.json();
                     });
-                });
-                // Placements the build must never rewrite: the creature owns a second
-                // animation set elsewhere in the room, or the slot has no .mset after it.
-                function unsafe(r) { return !!r.issue; }
+                }
 
-                // A creature can only be replaced by one the room has space to spawn, so the
-                // list of candidates is fixed by the game, not by anything chosen here.
-                var LEGAL = {};
-                STEMS.forEach(function (s) {
-                    LEGAL[s] = STEMS.filter(function (t) {
-                        return t !== s && CRE[t].slots <= CRE[s].slots;
+                function say(text, kind) {
+                    result.textContent = text;
+                    result.className = "result-box" + (kind ? " " + kind : "");
+                }
+                function saySettings(text, kind) {
+                    settingsResult.textContent = text;
+                    settingsResult.className = "result-box" + (kind ? " " + kind : "");
+                }
+
+                // --- reading the data -------------------------------------------------
+
+                function readCatalogue(doc) {
+                    H = (doc && doc.heartless) || {};
+                    NAMES = Object.keys(H).sort(function (a, b) { return a.localeCompare(b); });
+                    // both spellings of the model: settings files written before the
+                    // page moved to plaintext names hold a bare stem, while anyone
+                    // copying a name out of heartless.json by hand gets the filename
+                    NAMES.forEach(function (n) {
+                        MODEL[H[n].model] = n;
+                        MODEL[H[n].model.replace(/\.mdls$/, "")] = n;
                     });
-                });
+                    // A heartless can only be replaced by one the room has space to spawn,
+                    // so the list of candidates is fixed by the game, not by anything
+                    // chosen here.
+                    LEGAL = {};
+                    NAMES.forEach(function (s) {
+                        LEGAL[s] = NAMES.filter(function (t) {
+                            return t !== s && H[t].slots <= H[s].slots;
+                        });
+                    });
+                }
 
-                // bumped alongside the starting picks below, so a change to them reaches
-                // people who have already used the page and have older picks stored
-                var KEY = "kh1-enemy-randomizer-v2";
-                var map = {}, sel = STEMS[0];
+                // a heartless by any of its spellings: the plaintext name, or either
+                // form of its model
+                function toName(x) {
+                    if (typeof x !== "string") return null;
+                    if (H[x]) return x;
+                    return MODEL[x] || null;
+                }
 
-                // What the page starts from before anyone touches it, and what it falls
-                // back to if stored picks cannot be read.
-                function seedDefault() { return normalize(DEFAULTS.mapping); }
+                // an exclude list, as a lookup of the names it actually blocks
+                function nameSet(list) {
+                    var out = {};
+                    (Array.isArray(list) ? list : []).forEach(function (x) {
+                        var n = toName(x);
+                        if (n) out[n] = 1;
+                    });
+                    return out;
+                }
+
+                function readRoom(doc) {
+                    // An entry is one enemy and every slot it occupies: mdlsIndex lists
+                    // where its .mdls goes, msetIndex where its .mset goes. Usually one
+                    // of each, side by side -- but a base model and its Halloween Town
+                    // re-skin share a single animation set, and there the entry carries
+                    // both model slots, is named for the form the room plays it as, and
+                    // is swapped as a whole. The enemy's own settings alone decide what
+                    // it may become; the replacement's model is written to every model
+                    // slot, which just means the room loads it more than once.
+                    var toIndexes = function (v) {
+                        return (Array.isArray(v) ? v : [v]).filter(function (i) {
+                            return typeof i === "number";
+                        });
+                    };
+                    var pairs = (doc.pairs || []).map(function (p) {
+                        var enemy = toName(p.enemy);
+                        var mdls = toIndexes(p.mdlsIndex), msets = toIndexes(p.msetIndex);
+                        if (!enemy || !mdls.length || !msets.length) return null;
+                        return {
+                            enemy: enemy,
+                            mdlsIndex: mdls,
+                            msetIndex: msets,
+                            randomize: p.randomize !== false,
+                            exclude: nameSet(p.exclude)
+                        };
+                    }).filter(Boolean)
+                      .sort(function (a, b) { return a.mdlsIndex[0] - b.mdlsIndex[0]; });
+
+                    return { ard: doc.ard, label: roomLabel(doc),
+                             exclude: nameSet(doc.exclude), pairs: pairs };
+                }
+
+                // how the room is named in the log: "Traverse Town 2nd District". A dozen
+                // rooms already carry their world in the name, so do not say it twice, and
+                // a few have no name at all yet.
+                function roomLabel(doc) {
+                    var world = doc.world || "", room = doc.room || "";
+                    if (!room) return world;
+                    if (!world || room.indexOf(world) === 0) return room;
+                    return world + " " + room;
+                }
+
+                // --- the picks --------------------------------------------------------
+
+                // bumped when the stored shape changes, so the change reaches people who
+                // have already used the page and have older picks stored
+                var KEY = "kh1-enemy-randomizer-v3";
+                var DEFAULTS = {};
+
+                function seedDefault() { return normalize(DEFAULTS); }
                 // keep only pairs this game data can actually honour
                 function normalize(src) {
                     var out = {};
-                    STEMS.forEach(function (s) { out[s] = {}; });
-                    Object.keys(src || {}).forEach(function (s) {
-                        if (!CRE[s]) return;
-                        var t = src[s], list = Array.isArray(t) ? t : Object.keys(t || {});
+                    NAMES.forEach(function (s) { out[s] = {}; });
+                    Object.keys(src || {}).forEach(function (k) {
+                        var s = toName(k);
+                        if (!s) return;
+                        var t = src[k], list = Array.isArray(t) ? t : Object.keys(t || {});
                         list.forEach(function (x) {
-                            if (LEGAL[s].indexOf(x) >= 0) out[s][x] = 1;
+                            var n = toName(x);
+                            if (n && LEGAL[s].indexOf(n) >= 0) out[s][n] = 1;
                         });
                     });
                     return out;
                 }
-                try {
-                    var raw = localStorage.getItem(KEY);
-                    map = raw ? normalize(JSON.parse(raw)) : seedDefault();
-                } catch (e) { map = seedDefault(); }
                 function save() {
                     try { localStorage.setItem(KEY, JSON.stringify(map)); } catch (e) { }
                 }
@@ -179,22 +226,24 @@
                     return LEGAL[s].filter(function (t) { return map[s][t]; });
                 }
 
+                // --- drawing ----------------------------------------------------------
+
                 function drawList() {
                     var h = "";
-                    STEMS.forEach(function (s) {
+                    NAMES.forEach(function (s) {
                         var none = !allowedOf(s).length && LEGAL[s].length;
-                        h += '<button type="button" class="er-source" data-src="' + s
+                        h += '<button type="button" class="er-source" data-src="' + esc(s)
                           + '" aria-current="' + (s === sel) + '">'
-                          + "<span>" + esc(CRE[s].name) + "</span>"
+                          + "<span>" + esc(s) + "</span>"
                           + (none ? '<span class="er-source__note">nothing allowed</span>' : "")
                           + "</button>";
                     });
-                    document.getElementById("er-sourcelist").innerHTML = h;
+                    sourceList.innerHTML = h;
                 }
 
                 function drawDetail() {
                     var s = sel, mine = map[s], list = LEGAL[s];
-                    var h = '<div class="er-cardhead"><h3>' + esc(CRE[s].name)
+                    var h = '<div class="er-cardhead"><h3>' + esc(s)
                       + " can become</h3></div>";
                     if (!list.length) {
                         h += '<div class="er-empty">Nothing else in the game can stand in for this '
@@ -202,17 +251,21 @@
                     } else {
                         h += '<div class="er-tier"><div class="category-checkboxes">'
                           + list.map(function (x) {
-                              return "<label><input type=\"checkbox\" data-target=\"" + x + "\""
-                                + (mine[x] ? " checked" : "") + "><span>" + esc(CRE[x].name)
+                              return "<label><input type=\"checkbox\" data-target=\"" + esc(x) + "\""
+                                + (mine[x] ? " checked" : "") + "><span>" + esc(x)
                                 + "</span></label>";
                           }).join("")
                           + "</div></div>";
                         h += '<div class="er-empty" id="er-detail-note"'
                           + (allowedOf(s).length ? ' hidden' : "") + ">Nothing ticked, so every "
-                          + esc(CRE[s].name) + " will be left as it is.</div>";
+                          + esc(s) + " will be left as it is.</div>";
                     }
-                    document.getElementById("er-detail").innerHTML = h;
+                    detail.innerHTML = h;
                 }
+
+                function render() { drawList(); drawDetail(); save(); }
+
+                // --- building the mod -------------------------------------------------
 
                 // mulberry32: a seeded PRNG, so a seed always rebuilds the same mod
                 function rngFrom(seed) {
@@ -226,35 +279,47 @@
                 }
 
                 function buildMod(seed) {
-                    var rand = rngFrom(seed), byArd = {};
-                    ROWS.forEach(function (r) { (byArd[r.ard] = byArd[r.ard] || []).push(r); });
-                    var assets = [], swaps = 0, skipUnsafe = 0, skipEmpty = 0;
-                    Object.keys(byArd).sort().forEach(function (ard) {
-                        var rows = byArd[ard], used = {}, reps = [];
-                        // everything already in the room: no vanilla .ard lists a model twice
-                        rows.forEach(function (r) { used[r.stem] = 1; });
-                        rows.forEach(function (r) {
-                            if (unsafe(r)) { skipUnsafe++; return; }
-                            var ok = allowedOf(r.stem), budget = CRE[r.stem].slots, chosen = null;
-                            // prefer a like-for-like swap, then step down a tier at a time
-                            for (var cost = budget; cost >= 1 && !chosen; cost--) {
-                                var tier = ok.filter(function (x) {
-                                    return CRE[x].slots === cost && !used[x];
-                                });
-                                if (tier.length) chosen = tier[Math.floor(rand() * tier.length)];
-                            }
-                            if (!chosen) { skipEmpty++; return; }
-                            used[chosen] = 1;
-                            reps.push([r.slot, chosen + ".mdls"], [r.slot + 1, CRE[chosen].mset]);
+                    var rand = rngFrom(seed);
+                    // kept covers both outcomes that leave a pair alone: the draw came up
+                    // with the heartless already there, or it had nothing else to offer
+                    var assets = [], swaps = 0, skipLocked = 0, kept = 0;
+                    ROOMS.forEach(function (room) {
+                        var reps = [], changes = [];
+                        room.pairs.forEach(function (p) {
+                            if (!p.randomize) { skipLocked++; return; }
+                            // The enemy already there stands in the draw alongside its
+                            // allowed replacements, weighted the same as any of them, so
+                            // an entry with N of them is left alone once in every N + 1
+                            // builds. Sizes are not weighted either: LEGAL never offers
+                            // anything bigger than what it replaces. Nothing is struck
+                            // off for being in the room already, so a room can end up
+                            // with several of the same enemy.
+                            var pool = allowedOf(p.enemy).filter(function (x) {
+                                return !room.exclude[x] && !p.exclude[x];
+                            });
+                            pool.push(p.enemy);
+                            var chosen = pool[Math.floor(rand() * pool.length)];
+                            if (chosen === p.enemy) { kept++; return; }
+                            p.mdlsIndex.forEach(function (i) {
+                                reps.push([i, H[chosen].model]);
+                            });
+                            p.msetIndex.forEach(function (i) {
+                                reps.push([i, H[chosen].mset]);
+                            });
+                            changes.push({ at: p.mdlsIndex[0], from: p.enemy, to: chosen });
                             swaps++;
                         });
                         if (reps.length) {
                             reps.sort(function (x, y) { return x[0] - y[0]; });
-                            assets.push({ ard: ard, reps: reps });
+                            // a shared group's models can sit far apart in the room, so
+                            // order the log by slot too rather than by draw
+                            changes.sort(function (x, y) { return x.at - y.at; });
+                            assets.push({ ard: room.ard, label: room.label,
+                                          reps: reps, changes: changes });
                         }
                     });
                     return { assets: assets, swaps: swaps,
-                             skipUnsafe: skipUnsafe, skipEmpty: skipEmpty, seed: seed };
+                             skipLocked: skipLocked, kept: kept, seed: seed };
                 }
 
                 function toYaml(res) {
@@ -279,6 +344,23 @@
                 }
                 function toSourceYaml(a) {
                     return a.reps.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n";
+                }
+
+                // A plain reading of what the seed did, for anyone who wants to know what
+                // is waiting for them, or to quote a room when reporting a bug. CRLF so it
+                // reads properly in whatever the zip gets opened with on Windows.
+                function toLog(res) {
+                    var L = ["KH1 Enemy Randomizer - seed " + res.seed,
+                             res.swaps + " heartless changed across " + res.assets.length
+                               + " rooms.", ""];
+                    res.assets.forEach(function (a) {
+                        L.push(a.ard + (a.label ? " (" + a.label + ")" : "") + ":");
+                        a.changes.forEach(function (c) {
+                            L.push("- " + c.from + " became " + c.to);
+                        });
+                        L.push("");
+                    });
+                    return L.join("\r\n");
                 }
 
                 // --- a store-only ZIP, so the mod arrives as one archive ---
@@ -350,13 +432,17 @@
                     return iconPromise;
                 }
 
-                var result = document.getElementById("er-result");
-                function say(text, kind) {
-                    result.textContent = text;
-                    result.className = "result-box" + (kind ? " " + kind : "");
+                function offer(blob, name) {
+                    var url = URL.createObjectURL(blob);
+                    var link = document.createElement("a");
+                    link.href = url;
+                    link.download = name;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    // give the browser a moment to start the download before revoking
+                    setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
                 }
-
-                function render() { drawList(); drawDetail(); save(); }
 
                 function generate() {
                     // a fresh seed every time, so each download is its own shuffle
@@ -372,21 +458,14 @@
                     var summary = res.swaps + " heartless swapped across " + res.assets.length
                         + " rooms.";
 
-                    var files = res.assets.map(function (a) {
-                        return { name: sourcePath(a), data: toSourceYaml(a) };
-                    });
+                    // the log rides along in both delivery paths below
+                    var files = [{ name: "enemy_randomizer_log.txt", data: toLog(res) }]
+                        .concat(res.assets.map(function (a) {
+                            return { name: sourcePath(a), data: toSourceYaml(a) };
+                        }));
 
                     function deliver(entries, note) {
-                        var blob = new Blob([zipFiles(entries)], { type: "application/zip" });
-                        var url = URL.createObjectURL(blob);
-                        var link = document.createElement("a");
-                        link.href = url;
-                        link.download = name;
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        // give the browser a moment to start the download before revoking
-                        setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+                        offer(new Blob([zipFiles(entries)], { type: "application/zip" }), name);
                         say("Downloaded " + name + ". " + summary + " " + note, "success");
                     }
 
@@ -403,13 +482,15 @@
                     });
                 }
 
-                document.getElementById("er-sourcelist").addEventListener("click", function (ev) {
+                // --- wiring -----------------------------------------------------------
+
+                sourceList.addEventListener("click", function (ev) {
                     var b = ev.target.closest("[data-src]");
                     if (!b) return;
                     sel = b.dataset.src;
                     drawList(); drawDetail();
                 });
-                document.getElementById("er-detail").addEventListener("change", function (ev) {
+                detail.addEventListener("change", function (ev) {
                     var t = ev.target.closest("[data-target]");
                     if (!t) return;
                     if (t.checked) map[sel][t.dataset.target] = 1;
@@ -421,29 +502,11 @@
                     if (note) note.hidden = !!allowedOf(sel).length;
                     drawList();
                 });
-                document.getElementById("er-generate").addEventListener("click", generate);
+                generateBtn.addEventListener("click", generate);
 
-                var settingsResult = document.getElementById("er-settings-result");
-                function saySettings(text, kind) {
-                    settingsResult.textContent = text;
-                    settingsResult.className = "result-box" + (kind ? " " + kind : "");
-                }
-
-                function offer(blob, name) {
-                    var url = URL.createObjectURL(blob);
-                    var link = document.createElement("a");
-                    link.href = url;
-                    link.download = name;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    // give the browser a moment to start the download before revoking
-                    setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
-                }
-
-                document.getElementById("er-save").addEventListener("click", function () {
+                saveBtn.addEventListener("click", function () {
                     var out = {};
-                    STEMS.forEach(function (s) {
+                    NAMES.forEach(function (s) {
                         var a = allowedOf(s);
                         if (a.length) out[s] = a;
                     });
@@ -453,7 +516,20 @@
                     saySettings("Downloaded enemy_randomizer_settings.json.", "success");
                 });
 
-                document.getElementById("er-load").addEventListener("change", function (ev) {
+                resetBtn.addEventListener("click", function () {
+                    // picks can be a lot of work to rebuild and the only copy is the one
+                    // in this browser, unless it has been downloaded, so ask first
+                    if (!window.confirm("Reset every heartless back to the starting picks?"
+                          + "\n\nAnything changed here will be lost. Download settings"
+                          + " first if you want to keep it.")) return;
+                    map = seedDefault();
+                    render();
+                    var n = NAMES.filter(function (s) { return allowedOf(s).length; }).length;
+                    saySettings("Reset to the starting picks: " + n + " heartless have"
+                      + " something they can become.", "success");
+                });
+
+                loadInput.addEventListener("change", function (ev) {
                     var file = ev.target.files && ev.target.files[0];
                     ev.target.value = "";
                     if (!file) return;
@@ -476,9 +552,12 @@
                             ? parsed.mapping : parsed;
                         var kept = 0, dropped = 0;
                         Object.keys(src).forEach(function (s) {
+                            var from = toName(s);
                             var t = src[s], list = Array.isArray(t) ? t : Object.keys(t || {});
                             list.forEach(function (x) {
-                                if (CRE[s] && LEGAL[s].indexOf(x) >= 0) kept++; else dropped++;
+                                var to = toName(x);
+                                if (from && to && LEGAL[from].indexOf(to) >= 0) kept++;
+                                else dropped++;
                             });
                         });
                         if (!kept) {
@@ -495,7 +574,43 @@
                     reader.readAsText(file);
                 });
 
-                render();
+                // --- start up ---------------------------------------------------------
+
+                sourceList.innerHTML = '<div class="er-empty">Loading heartless...</div>';
+
+                getJSON("index.json").then(function (manifest) {
+                    var rooms = manifest.rooms || [];
+                    return Promise.all([
+                        getJSON(manifest.heartless || "heartless.json"),
+                        getJSON(manifest.defaults || "defaults.json"),
+                        // one request per room, all in flight at once
+                        Promise.all(rooms.map(function (r) { return getJSON(r.file); }))
+                    ]);
+                }).then(function (loaded) {
+                    readCatalogue(loaded[0]);
+                    if (!NAMES.length) throw new Error("heartless.json lists no heartless");
+                    DEFAULTS = (loaded[1] && loaded[1].mapping) || loaded[1] || {};
+                    ROOMS = loaded[2].map(readRoom);
+                    sel = NAMES[0];
+
+                    // stored picks win over the defaults, so an edit to defaults.json only
+                    // reaches people who have not made picks of their own yet
+                    try {
+                        var raw = localStorage.getItem(KEY);
+                        map = raw ? normalize(JSON.parse(raw)) : seedDefault();
+                    } catch (e) { map = seedDefault(); }
+
+                    generateBtn.disabled = false;
+                    saveBtn.disabled = false;
+                    loadInput.disabled = false;
+                    resetBtn.disabled = false;
+                    render();
+                }).catch(function (err) {
+                    sourceList.innerHTML = "";
+                    detail.innerHTML = "";
+                    say("The randomizer data could not be loaded, so nothing can be built: "
+                      + err.message, "error");
+                });
             })();
             </script>
         </div>

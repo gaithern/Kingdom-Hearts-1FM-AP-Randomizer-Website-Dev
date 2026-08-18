@@ -1,0 +1,53 @@
+{
+  "ard": "lm08.ard",
+  "world": "Atlantica",
+  "worldId": 9,
+  "room": "Sunken Ship",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        35
+      ],
+      "msetIndex": [
+        36
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        37
+      ],
+      "msetIndex": [
+        38
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

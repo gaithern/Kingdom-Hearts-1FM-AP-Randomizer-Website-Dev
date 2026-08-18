@@ -1,0 +1,64 @@
+{
+  "ard": "nm03.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Graveyard",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow (Halloween Town)",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Wizard (Halloween Town)",
+      "mdlsIndex": [
+        56
+      ],
+      "msetIndex": [
+        57
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

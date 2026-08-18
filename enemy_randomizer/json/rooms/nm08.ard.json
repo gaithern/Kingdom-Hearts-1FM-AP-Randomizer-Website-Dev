@@ -1,0 +1,42 @@
+{
+  "ard": "nm08.ard",
+  "world": "Halloween Town",
+  "worldId": 10,
+  "room": "Torture Chamber",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "ard": "aw04.ard",
+  "world": "Wonderland",
+  "worldId": 4,
+  "room": "Queen's Castle",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        62
+      ],
+      "msetIndex": [
+        63
+      ],
+      "randomize": false,
+      "exclude": [],
+      "lockedReason": "extramset"
+    },
+    {
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        64
+      ],
+      "msetIndex": [
+        65
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        66
+      ],
+      "msetIndex": [
+        67
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        68
+      ],
+      "msetIndex": [
+        69
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        70
+      ],
+      "msetIndex": [
+        71
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        72
+      ],
+      "msetIndex": [
+        73
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        93
+      ],
+      "msetIndex": [
+        94
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        95
+      ],
+      "msetIndex": [
+        96
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}

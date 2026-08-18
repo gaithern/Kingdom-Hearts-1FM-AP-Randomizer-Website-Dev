@@ -1,0 +1,42 @@
+{
+  "ard": "tw07.ard",
+  "world": "Traverse Town",
+  "worldId": 3,
+  "room": "Red Room",
+  "exclude": [],
+  "pairs": [
+    {
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
+      "randomize": true,
+      "exclude": []
+    },
+    {
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
+      "randomize": true,
+      "exclude": []
+    }
+  ]
+}
