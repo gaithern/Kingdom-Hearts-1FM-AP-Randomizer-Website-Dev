@@ -6,18 +6,24 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Fat Bandit",
-      "modelIndex": 20,
-      "msetIndex": 21,
-      "msetValue": "xa_ex_2060.mset",
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Bandit",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2090.mset",
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     }

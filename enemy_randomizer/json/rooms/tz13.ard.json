@@ -6,66 +6,90 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Darkball",
-      "modelIndex": 6,
-      "msetIndex": 7,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 8,
-      "msetIndex": 9,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Shadow",
-      "modelIndex": 74,
-      "msetIndex": 75,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        74
+      ],
+      "msetIndex": [
+        75
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Powerwild",
-      "modelIndex": 76,
-      "msetIndex": 77,
-      "msetValue": "xa_ex_2030.mset",
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        76
+      ],
+      "msetIndex": [
+        77
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Bouncywild",
-      "modelIndex": 78,
-      "msetIndex": 79,
-      "msetValue": "xa_ex_2040.mset",
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wizard",
-      "modelIndex": 86,
-      "msetIndex": 87,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        86
+      ],
+      "msetIndex": [
+        87
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Black Fungi",
-      "modelIndex": 90,
-      "msetIndex": 91,
-      "msetValue": "xa_ex_2380.mset",
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        90
+      ],
+      "msetIndex": [
+        91
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Rare Truffles",
-      "modelIndex": 92,
-      "msetIndex": 93,
-      "msetValue": "xa_ex_2390.mset",
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        92
+      ],
+      "msetIndex": [
+        93
+      ],
       "randomize": true,
       "exclude": []
     }

@@ -155,20 +155,33 @@
                 }
 
                 function readRoom(doc) {
-                    var pairs = (doc.pairs || []).filter(function (p) {
-                        return p && H[p.heartless];
-                    }).map(function (p) {
+                    // An entry is one enemy and every slot it occupies: mdlsIndex lists
+                    // where its .mdls goes, msetIndex where its .mset goes. Usually one
+                    // of each, side by side -- but a base model and its Halloween Town
+                    // re-skin share a single animation set, and there the entry carries
+                    // both model slots, is named for the form the room plays it as, and
+                    // is swapped as a whole. The enemy's own settings alone decide what
+                    // it may become; the replacement's model is written to every model
+                    // slot, which just means the room loads it more than once.
+                    var toIndexes = function (v) {
+                        return (Array.isArray(v) ? v : [v]).filter(function (i) {
+                            return typeof i === "number";
+                        });
+                    };
+                    var pairs = (doc.pairs || []).map(function (p) {
+                        var enemy = toName(p.enemy);
+                        var mdls = toIndexes(p.mdlsIndex), msets = toIndexes(p.msetIndex);
+                        if (!enemy || !mdls.length || !msets.length) return null;
                         return {
-                            heartless: p.heartless,
-                            modelIndex: p.modelIndex,
-                            msetIndex: typeof p.msetIndex === "number"
-                                ? p.msetIndex : p.modelIndex + 1,
-                            // pairs the game cannot survive being rewritten are marked
-                            // in the room file; lockedReason there says how they break
+                            enemy: enemy,
+                            mdlsIndex: mdls,
+                            msetIndex: msets,
                             randomize: p.randomize !== false,
                             exclude: nameSet(p.exclude)
                         };
-                    }).sort(function (a, b) { return a.modelIndex - b.modelIndex; });
+                    }).filter(Boolean)
+                      .sort(function (a, b) { return a.mdlsIndex[0] - b.mdlsIndex[0]; });
+
                     return { ard: doc.ard, label: roomLabel(doc),
                              exclude: nameSet(doc.exclude), pairs: pairs };
                 }
@@ -274,30 +287,33 @@
                         var reps = [], changes = [];
                         room.pairs.forEach(function (p) {
                             if (!p.randomize) { skipLocked++; return; }
-                            // the room's exclude list and then this pair's own, on top of
-                            // what the checkboxes allow; neither list can add anything
-                            var ok = allowedOf(p.heartless).filter(function (x) {
+                            // The enemy already there stands in the draw alongside its
+                            // allowed replacements, weighted the same as any of them, so
+                            // an entry with N of them is left alone once in every N + 1
+                            // builds. Sizes are not weighted either: LEGAL never offers
+                            // anything bigger than what it replaces. Nothing is struck
+                            // off for being in the room already, so a room can end up
+                            // with several of the same enemy.
+                            var pool = allowedOf(p.enemy).filter(function (x) {
                                 return !room.exclude[x] && !p.exclude[x];
                             });
-                            // The heartless already there stands in the draw alongside the
-                            // replacements, weighted the same as any of them, so a pair
-                            // with N of them is left alone once in every N + 1 builds.
-                            // Sizes are not weighted either: LEGAL never offers anything
-                            // bigger than what it replaces, so the room's slot budget is
-                            // already spent and a smaller stand-in is no safer a pick.
-                            // Nothing is struck off for being in the room already, so a
-                            // room can end up with several of the same heartless; the
-                            // game just loads that model for more than one slot.
-                            var pool = ok.concat(p.heartless);
+                            pool.push(p.enemy);
                             var chosen = pool[Math.floor(rand() * pool.length)];
-                            if (chosen === p.heartless) { kept++; return; }
-                            reps.push([p.modelIndex, H[chosen].model],
-                                      [p.msetIndex, H[chosen].mset]);
-                            changes.push({ from: p.heartless, to: chosen });
+                            if (chosen === p.enemy) { kept++; return; }
+                            p.mdlsIndex.forEach(function (i) {
+                                reps.push([i, H[chosen].model]);
+                            });
+                            p.msetIndex.forEach(function (i) {
+                                reps.push([i, H[chosen].mset]);
+                            });
+                            changes.push({ at: p.mdlsIndex[0], from: p.enemy, to: chosen });
                             swaps++;
                         });
                         if (reps.length) {
                             reps.sort(function (x, y) { return x[0] - y[0]; });
+                            // a shared group's models can sit far apart in the room, so
+                            // order the log by slot too rather than by draw
+                            changes.sort(function (x, y) { return x.at - y.at; });
                             assets.push({ ard: room.ard, label: room.label,
                                           reps: reps, changes: changes });
                         }

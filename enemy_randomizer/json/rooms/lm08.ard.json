@@ -6,34 +6,46 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Screwdiver",
-      "modelIndex": 26,
-      "msetIndex": 27,
-      "msetValue": "xa_ex_2250.mset",
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 35,
-      "msetIndex": 36,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        35
+      ],
+      "msetIndex": [
+        36
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sea Neon",
-      "modelIndex": 37,
-      "msetIndex": 38,
-      "msetValue": "xa_ex_2070.mset",
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        37
+      ],
+      "msetIndex": [
+        38
+      ],
       "randomize": true,
       "exclude": []
     }

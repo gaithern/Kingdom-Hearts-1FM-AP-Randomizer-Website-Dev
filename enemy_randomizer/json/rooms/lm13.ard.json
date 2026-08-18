@@ -6,10 +6,13 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 39,
-      "msetIndex": 40,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        39
+      ],
+      "msetIndex": [
+        40
+      ],
       "randomize": true,
       "exclude": []
     }

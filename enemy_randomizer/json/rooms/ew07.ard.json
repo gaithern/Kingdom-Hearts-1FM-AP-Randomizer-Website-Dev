@@ -6,10 +6,13 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Angel Star",
-      "modelIndex": 26,
-      "msetIndex": 27,
-      "msetValue": "xa_ex_2330.mset",
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
       "randomize": true,
       "exclude": []
     }

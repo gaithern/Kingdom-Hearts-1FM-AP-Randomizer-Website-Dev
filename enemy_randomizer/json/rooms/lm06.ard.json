@@ -6,18 +6,24 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 16,
-      "msetIndex": 17,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sea Neon",
-      "modelIndex": 18,
-      "msetIndex": 19,
-      "msetValue": "xa_ex_2070.mset",
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
       "randomize": true,
       "exclude": []
     }

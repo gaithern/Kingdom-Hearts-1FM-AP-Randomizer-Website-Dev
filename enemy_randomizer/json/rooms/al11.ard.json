@@ -6,42 +6,57 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Fat Bandit",
-      "modelIndex": 24,
-      "msetIndex": 25,
-      "msetValue": "xa_ex_2060.mset",
+      "enemy": "Fat Bandit",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Bandit",
-      "modelIndex": 26,
-      "msetIndex": 27,
-      "msetValue": "xa_ex_2090.mset",
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 32,
-      "msetIndex": 33,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     }

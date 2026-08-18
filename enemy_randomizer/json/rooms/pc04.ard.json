@@ -6,67 +6,91 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": false,
-      "lockedReason": "extramset",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "extramset"
     },
     {
-      "heartless": "Wizard",
-      "modelIndex": 37,
-      "msetIndex": 38,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        37
+      ],
+      "msetIndex": [
+        38
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 39,
-      "msetIndex": 40,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        39
+      ],
+      "msetIndex": [
+        40
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 41,
-      "msetIndex": 42,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        41
+      ],
+      "msetIndex": [
+        42
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Defender",
-      "modelIndex": 43,
-      "msetIndex": 44,
-      "msetValue": "xa_ex_2340.mset",
+      "enemy": "Defender",
+      "mdlsIndex": [
+        43
+      ],
+      "msetIndex": [
+        44
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Soldier",
-      "modelIndex": 45,
-      "msetIndex": 46,
-      "msetValue": "xa_ex_2010.mset",
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        45
+      ],
+      "msetIndex": [
+        46
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Green Requiem",
-      "modelIndex": 47,
-      "msetIndex": 48,
-      "msetValue": "xa_ex_2140.mset",
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        47
+      ],
+      "msetIndex": [
+        48
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Soldier",
-      "modelIndex": 49,
-      "msetIndex": 50,
-      "msetValue": "xa_ex_2160.mset",
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        49
+      ],
+      "msetIndex": [
+        50
+      ],
       "randomize": true,
       "exclude": []
     }

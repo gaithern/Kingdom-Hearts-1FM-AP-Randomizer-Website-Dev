@@ -6,18 +6,24 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Powerwild",
-      "modelIndex": 12,
-      "msetIndex": 13,
-      "msetValue": "xa_ex_2030.mset",
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Bouncywild",
-      "modelIndex": 14,
-      "msetIndex": 15,
-      "msetValue": "xa_ex_2040.mset",
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
       "randomize": true,
       "exclude": []
     }

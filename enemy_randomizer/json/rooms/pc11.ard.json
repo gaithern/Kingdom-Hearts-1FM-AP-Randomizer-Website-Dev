@@ -6,75 +6,102 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 18,
-      "msetIndex": 19,
-      "msetValue": "xa_ex_2020_sora.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
       "randomize": false,
-      "lockedReason": "extramset",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "extramset"
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 20,
-      "msetIndex": 21,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Black Fungi",
-      "modelIndex": 23,
-      "msetIndex": 24,
-      "msetValue": "xa_ex_2380.mset",
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        23
+      ],
+      "msetIndex": [
+        24
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Defender",
-      "modelIndex": 25,
-      "msetIndex": 26,
-      "msetValue": "xa_ex_2340.mset",
+      "enemy": "Defender",
+      "mdlsIndex": [
+        25
+      ],
+      "msetIndex": [
+        26
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Red Nocturne",
-      "modelIndex": 27,
-      "msetIndex": 28,
-      "msetValue": "xa_ex_2110.mset",
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        27
+      ],
+      "msetIndex": [
+        28
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Blue Rhapsody",
-      "modelIndex": 29,
-      "msetIndex": 30,
-      "msetValue": "xa_ex_2120.mset",
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        29
+      ],
+      "msetIndex": [
+        30
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Yellow Opera",
-      "modelIndex": 31,
-      "msetIndex": 32,
-      "msetValue": "xa_ex_2130.mset",
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        31
+      ],
+      "msetIndex": [
+        32
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Green Requiem",
-      "modelIndex": 33,
-      "msetIndex": 34,
-      "msetValue": "xa_ex_2140.mset",
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        33
+      ],
+      "msetIndex": [
+        34
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wizard",
-      "modelIndex": 35,
-      "msetIndex": 36,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        35
+      ],
+      "msetIndex": [
+        36
+      ],
       "randomize": true,
       "exclude": []
     }

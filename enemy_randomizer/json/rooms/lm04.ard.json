@@ -6,50 +6,68 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Sea Neon",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2070.mset",
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 36,
-      "msetIndex": 37,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sheltering Zone",
-      "modelIndex": 41,
-      "msetIndex": 42,
-      "msetValue": "xa_ex_2080.mset",
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        41
+      ],
+      "msetIndex": [
+        42
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Screwdiver",
-      "modelIndex": 43,
-      "msetIndex": 44,
-      "msetValue": "xa_ex_2250.mset",
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        43
+      ],
+      "msetIndex": [
+        44
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Aquatank",
-      "modelIndex": 45,
-      "msetIndex": 46,
-      "msetValue": "xa_ex_2240.mset",
+      "enemy": "Aquatank",
+      "mdlsIndex": [
+        45
+      ],
+      "msetIndex": [
+        46
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 49,
-      "msetIndex": 50,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        49
+      ],
+      "msetIndex": [
+        50
+      ],
       "randomize": true,
       "exclude": []
     }

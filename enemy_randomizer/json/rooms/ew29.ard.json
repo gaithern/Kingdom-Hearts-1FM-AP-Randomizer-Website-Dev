@@ -6,42 +6,57 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Darkball",
-      "modelIndex": 24,
-      "msetIndex": 25,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Invisible",
-      "modelIndex": 26,
-      "msetIndex": 27,
-      "msetValue": "xa_ex_2290.mset",
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Angel Star",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2330.mset",
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Black Fungi",
-      "modelIndex": 80,
-      "msetIndex": 81,
-      "msetValue": "xa_ex_2380.mset",
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        80
+      ],
+      "msetIndex": [
+        81
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Rare Truffles",
-      "modelIndex": 84,
-      "msetIndex": 85,
-      "msetValue": "xa_ex_2390.mset",
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        84
+      ],
+      "msetIndex": [
+        85
+      ],
       "randomize": true,
       "exclude": []
     }

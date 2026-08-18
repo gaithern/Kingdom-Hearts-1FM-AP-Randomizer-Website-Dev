@@ -6,34 +6,46 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 6,
-      "msetIndex": 7,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 28,
-      "msetIndex": 29,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 48,
-      "msetIndex": 49,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        48
+      ],
+      "msetIndex": [
+        49
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Pirate",
-      "modelIndex": 50,
-      "msetIndex": 51,
-      "msetValue": "xa_ex_2210.mset",
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
       "randomize": true,
       "exclude": []
     }

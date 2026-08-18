@@ -6,42 +6,57 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 8,
-      "msetIndex": 9,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Pirate",
-      "modelIndex": 36,
-      "msetIndex": 37,
-      "msetValue": "xa_ex_2100.mset",
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Yellow Opera",
-      "modelIndex": 38,
-      "msetIndex": 39,
-      "msetValue": "xa_ex_2130.mset",
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Shadow",
-      "modelIndex": 58,
-      "msetIndex": 59,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        58
+      ],
+      "msetIndex": [
+        59
+      ],
       "randomize": true,
       "exclude": []
     }

@@ -6,58 +6,79 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Wizard (Halloween Town)",
-      "modelIndex": 32,
-      "msetIndex": 33,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard (Halloween Town)",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wight Knight (Halloween Town)",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2200.mset",
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Gargoyle (Halloween Town)",
-      "modelIndex": 36,
-      "msetIndex": 37,
-      "msetValue": "xa_ex_2220.mset",
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        36
+      ],
+      "msetIndex": [
+        37
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost (Halloween Town)",
-      "modelIndex": 38,
-      "msetIndex": 39,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        38
+      ],
+      "msetIndex": [
+        39
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball (Halloween Town)",
-      "modelIndex": 40,
-      "msetIndex": 41,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball (Halloween Town)",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 42,
-      "msetIndex": 43,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Shadow (Halloween Town)",
-      "modelIndex": 44,
-      "msetIndex": 45,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow (Halloween Town)",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
       "randomize": true,
       "exclude": []
     }

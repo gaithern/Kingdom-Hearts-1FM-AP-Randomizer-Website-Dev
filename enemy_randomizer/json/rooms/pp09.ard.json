@@ -6,51 +6,69 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Rare Truffles",
-      "modelIndex": 6,
-      "msetIndex": 7,
-      "msetValue": "xa_ex_2390.mset",
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Jet Balloon",
-      "modelIndex": 40,
-      "msetIndex": 41,
-      "msetValue": "xa_ex_2480.mset",
+      "enemy": "Jet Balloon",
+      "mdlsIndex": [
+        40
+      ],
+      "msetIndex": [
+        41
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Missile Diver",
-      "modelIndex": 42,
-      "msetIndex": 43,
-      "msetValue": "xa_ex_2490.mset",
+      "enemy": "Missile Diver",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Pirate",
-      "modelIndex": 44,
-      "msetIndex": 45,
-      "msetValue": "xa_ex_2100_E.mset",
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
       "randomize": false,
-      "lockedReason": "extramset",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "extramset"
     },
     {
-      "heartless": "Air Pirate",
-      "modelIndex": 46,
-      "msetIndex": 47,
-      "msetValue": "xa_ex_2210.mset",
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 75,
-      "msetIndex": 76,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        75
+      ],
+      "msetIndex": [
+        76
+      ],
       "randomize": true,
       "exclude": []
     }

@@ -6,18 +6,24 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Darkball",
-      "modelIndex": 12,
-      "msetIndex": 13,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 14,
-      "msetIndex": 15,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
       "randomize": true,
       "exclude": []
     }

@@ -6,43 +6,58 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 44,
-      "msetIndex": 45,
-      "msetValue": "xa_ex_2020_sora.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
       "randomize": false,
-      "lockedReason": "variant",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "variant"
     },
     {
-      "heartless": "Wizard",
-      "modelIndex": 46,
-      "msetIndex": 47,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        46
+      ],
+      "msetIndex": [
+        47
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Defender",
-      "modelIndex": 48,
-      "msetIndex": 49,
-      "msetValue": "xa_ex_2340.mset",
+      "enemy": "Defender",
+      "mdlsIndex": [
+        48
+      ],
+      "msetIndex": [
+        49
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Yellow Opera",
-      "modelIndex": 50,
-      "msetIndex": 51,
-      "msetValue": "xa_ex_2130.mset",
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Soldier",
-      "modelIndex": 52,
-      "msetIndex": 53,
-      "msetValue": "xa_ex_2160.mset",
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
       "randomize": true,
       "exclude": []
     }

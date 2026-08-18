@@ -6,98 +6,134 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 12,
-      "msetIndex": 13,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Green Requiem",
-      "modelIndex": 14,
-      "msetIndex": 15,
-      "msetValue": "xa_ex_2140.mset",
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Soldier",
-      "modelIndex": 16,
-      "msetIndex": 17,
-      "msetValue": "xa_ex_2160.mset",
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 18,
-      "msetIndex": 19,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Rare Truffles",
-      "modelIndex": 20,
-      "msetIndex": 21,
-      "msetValue": "xa_ex_2390.mset",
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Soldier",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2010.mset",
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Powerwild",
-      "modelIndex": 24,
-      "msetIndex": 25,
-      "msetValue": "xa_ex_2030.mset",
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Red Nocturne",
-      "modelIndex": 26,
-      "msetIndex": 27,
-      "msetValue": "xa_ex_2110.mset",
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 28,
-      "msetIndex": 29,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Bandit",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2090.mset",
+      "enemy": "Bandit",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Pirate",
-      "modelIndex": 32,
-      "msetIndex": 33,
-      "msetValue": "xa_ex_2100.mset",
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Pirate",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2210.mset",
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     }

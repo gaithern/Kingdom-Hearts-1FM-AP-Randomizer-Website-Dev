@@ -6,50 +6,68 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 14,
-      "msetIndex": 15,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        14
+      ],
+      "msetIndex": [
+        15
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 16,
-      "msetIndex": 17,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Rare Truffles",
-      "modelIndex": 20,
-      "msetIndex": 21,
-      "msetValue": "xa_ex_2390.mset",
+      "enemy": "Rare Truffles",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Black Fungi",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2380.mset",
+      "enemy": "Black Fungi",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Pirate",
-      "modelIndex": 24,
-      "msetIndex": 25,
-      "msetValue": "xa_ex_2100.mset",
+      "enemy": "Pirate",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     }

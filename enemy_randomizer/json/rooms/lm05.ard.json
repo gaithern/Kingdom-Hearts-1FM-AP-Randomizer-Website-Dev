@@ -6,58 +6,79 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Pink Agaricus",
-      "modelIndex": 17,
-      "msetIndex": 18,
-      "msetValue": "xa_ex_2410.mset",
+      "enemy": "Pink Agaricus",
+      "mdlsIndex": [
+        17
+      ],
+      "msetIndex": [
+        18
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sea Neon",
-      "modelIndex": 19,
-      "msetIndex": 20,
-      "msetValue": "xa_ex_2070.mset",
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        19
+      ],
+      "msetIndex": [
+        20
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 21,
-      "msetIndex": 22,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        21
+      ],
+      "msetIndex": [
+        22
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sheltering Zone",
-      "modelIndex": 23,
-      "msetIndex": 24,
-      "msetValue": "xa_ex_2080.mset",
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        23
+      ],
+      "msetIndex": [
+        24
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Aquatank",
-      "modelIndex": 25,
-      "msetIndex": 26,
-      "msetValue": "xa_ex_2240.mset",
+      "enemy": "Aquatank",
+      "mdlsIndex": [
+        25
+      ],
+      "msetIndex": [
+        26
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Screwdiver",
-      "modelIndex": 27,
-      "msetIndex": 28,
-      "msetValue": "xa_ex_2250.mset",
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        27
+      ],
+      "msetIndex": [
+        28
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 29,
-      "msetIndex": 30,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        29
+      ],
+      "msetIndex": [
+        30
+      ],
       "randomize": true,
       "exclude": []
     }

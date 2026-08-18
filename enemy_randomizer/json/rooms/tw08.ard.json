@@ -6,58 +6,79 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Soldier",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2010.mset",
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Shadow",
-      "modelIndex": 24,
-      "msetIndex": 25,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Red Nocturne",
-      "modelIndex": 26,
-      "msetIndex": 27,
-      "msetValue": "xa_ex_2110.mset",
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        26
+      ],
+      "msetIndex": [
+        27
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Blue Rhapsody",
-      "modelIndex": 28,
-      "msetIndex": 29,
-      "msetValue": "xa_ex_2120.mset",
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Yellow Opera",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2130.mset",
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wizard",
-      "modelIndex": 32,
-      "msetIndex": 33,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Defender",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2340.mset",
+      "enemy": "Defender",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     }

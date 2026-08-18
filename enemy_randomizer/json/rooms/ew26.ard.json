@@ -6,10 +6,13 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Invisible",
-      "modelIndex": 6,
-      "msetIndex": 7,
-      "msetValue": "xa_ex_2290.mset",
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
       "randomize": true,
       "exclude": []
     }

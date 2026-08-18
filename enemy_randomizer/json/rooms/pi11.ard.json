@@ -6,66 +6,90 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Large Body",
-      "modelIndex": 16,
-      "msetIndex": 17,
-      "msetValue": "xa_ex_2050.mset",
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        16
+      ],
+      "msetIndex": [
+        17
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Red Nocturne",
-      "modelIndex": 18,
-      "msetIndex": 19,
-      "msetValue": "xa_ex_2110.mset",
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Blue Rhapsody",
-      "modelIndex": 20,
-      "msetIndex": 21,
-      "msetValue": "xa_ex_2120.mset",
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Soldier",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2160.mset",
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Pirate",
-      "modelIndex": 28,
-      "msetIndex": 29,
-      "msetValue": "xa_ex_2210.mset",
+      "enemy": "Air Pirate",
+      "mdlsIndex": [
+        28
+      ],
+      "msetIndex": [
+        29
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Yellow Opera",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2130.mset",
+      "enemy": "Yellow Opera",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Green Requiem",
-      "modelIndex": 32,
-      "msetIndex": 33,
-      "msetValue": "xa_ex_2140.mset",
+      "enemy": "Green Requiem",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Powerwild",
-      "modelIndex": 34,
-      "msetIndex": 35,
-      "msetValue": "xa_ex_2030.mset",
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        34
+      ],
+      "msetIndex": [
+        35
+      ],
       "randomize": true,
       "exclude": []
     }

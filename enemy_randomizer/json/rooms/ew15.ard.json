@@ -6,26 +6,35 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Darkball",
-      "modelIndex": 18,
-      "msetIndex": 19,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Invisible",
-      "modelIndex": 20,
-      "msetIndex": 21,
-      "msetValue": "xa_ex_2290.mset",
+      "enemy": "Invisible",
+      "mdlsIndex": [
+        20
+      ],
+      "msetIndex": [
+        21
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Angel Star",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2330.mset",
+      "enemy": "Angel Star",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     }

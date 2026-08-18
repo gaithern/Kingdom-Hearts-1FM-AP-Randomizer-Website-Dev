@@ -6,29 +6,38 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Blue Rhapsody",
-      "modelIndex": 42,
-      "msetIndex": 43,
-      "msetValue": "xa_ex_2120.mset",
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        42
+      ],
+      "msetIndex": [
+        43
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 44,
-      "msetIndex": 45,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        44
+      ],
+      "msetIndex": [
+        45
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Soldier",
-      "modelIndex": 56,
-      "msetIndex": 57,
-      "msetValue": "xa_ex_2010.mset",
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        56
+      ],
+      "msetIndex": [
+        57
+      ],
       "randomize": false,
-      "lockedReason": "extramset",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "extramset"
     }
   ]
 }

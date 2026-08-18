@@ -6,10 +6,13 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Bitsniper",
-      "modelIndex": 120,
-      "msetIndex": 121,
-      "msetValue": "xa_ew_2010.mset",
+      "enemy": "Bitsniper",
+      "mdlsIndex": [
+        120
+      ],
+      "msetIndex": [
+        121
+      ],
       "randomize": true,
       "exclude": []
     }

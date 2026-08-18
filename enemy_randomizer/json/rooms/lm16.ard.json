@@ -6,10 +6,13 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Screwdiver",
-      "modelIndex": 18,
-      "msetIndex": 19,
-      "msetValue": "xa_ex_2250.mset",
+      "enemy": "Screwdiver",
+      "mdlsIndex": [
+        18
+      ],
+      "msetIndex": [
+        19
+      ],
       "randomize": true,
       "exclude": []
     }

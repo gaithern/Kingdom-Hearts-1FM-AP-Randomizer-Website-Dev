@@ -6,34 +6,46 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Search Ghost",
-      "modelIndex": 22,
-      "msetIndex": 23,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost",
+      "mdlsIndex": [
+        22
+      ],
+      "msetIndex": [
+        23
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 24,
-      "msetIndex": 25,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        24
+      ],
+      "msetIndex": [
+        25
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sea Neon",
-      "modelIndex": 30,
-      "msetIndex": 31,
-      "msetValue": "xa_ex_2070.mset",
+      "enemy": "Sea Neon",
+      "mdlsIndex": [
+        30
+      ],
+      "msetIndex": [
+        31
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Sheltering Zone",
-      "modelIndex": 32,
-      "msetIndex": 33,
-      "msetValue": "xa_ex_2080.mset",
+      "enemy": "Sheltering Zone",
+      "mdlsIndex": [
+        32
+      ],
+      "msetIndex": [
+        33
+      ],
       "randomize": true,
       "exclude": []
     }

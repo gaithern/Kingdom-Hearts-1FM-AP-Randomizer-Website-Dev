@@ -6,10 +6,13 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Search Ghost (Halloween Town)",
-      "modelIndex": 52,
-      "msetIndex": 53,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
       "randomize": true,
       "exclude": []
     }

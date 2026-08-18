@@ -6,67 +6,91 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Large Body",
-      "modelIndex": 6,
-      "msetIndex": 7,
-      "msetValue": "xa_ex_2050.mset",
+      "enemy": "Large Body",
+      "mdlsIndex": [
+        6
+      ],
+      "msetIndex": [
+        7
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wizard",
-      "modelIndex": 8,
-      "msetIndex": 9,
-      "msetValue": "xa_ex_2150.mset",
+      "enemy": "Wizard",
+      "mdlsIndex": [
+        8
+      ],
+      "msetIndex": [
+        9
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Defender",
-      "modelIndex": 10,
-      "msetIndex": 11,
-      "msetValue": "xa_ex_2340.mset",
+      "enemy": "Defender",
+      "mdlsIndex": [
+        10
+      ],
+      "msetIndex": [
+        11
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Stealth Sneak",
-      "modelIndex": 12,
-      "msetIndex": 13,
-      "msetValue": "xa_ex_2430.mset",
+      "enemy": "Stealth Sneak",
+      "mdlsIndex": [
+        12
+      ],
+      "msetIndex": [
+        13
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Shadow",
-      "modelIndex": 54,
-      "msetIndex": 55,
-      "msetValue": "xa_ex_2020_sora.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        54
+      ],
+      "msetIndex": [
+        55
+      ],
       "randomize": false,
-      "lockedReason": "extramset",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "extramset"
     },
     {
-      "heartless": "Soldier",
-      "modelIndex": 78,
-      "msetIndex": 79,
-      "msetValue": "xa_ex_2010.mset",
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 80,
-      "msetIndex": 81,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        80
+      ],
+      "msetIndex": [
+        81
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 82,
-      "msetIndex": 83,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        82
+      ],
+      "msetIndex": [
+        83
+      ],
       "randomize": true,
       "exclude": []
     }

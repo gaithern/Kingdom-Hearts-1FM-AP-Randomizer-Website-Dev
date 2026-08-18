@@ -6,43 +6,58 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Soldier",
-      "modelIndex": 50,
-      "msetIndex": 51,
-      "msetValue": "xa_ex_2010.mset",
+      "enemy": "Soldier",
+      "mdlsIndex": [
+        50
+      ],
+      "msetIndex": [
+        51
+      ],
       "randomize": false,
-      "lockedReason": "extramset",
-      "exclude": []
+      "exclude": [],
+      "lockedReason": "extramset"
     },
     {
-      "heartless": "Shadow",
-      "modelIndex": 52,
-      "msetIndex": 53,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        52
+      ],
+      "msetIndex": [
+        53
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Red Nocturne",
-      "modelIndex": 59,
-      "msetIndex": 60,
-      "msetValue": "xa_ex_2110.mset",
+      "enemy": "Red Nocturne",
+      "mdlsIndex": [
+        59
+      ],
+      "msetIndex": [
+        60
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Blue Rhapsody",
-      "modelIndex": 61,
-      "msetIndex": 62,
-      "msetValue": "xa_ex_2120.mset",
+      "enemy": "Blue Rhapsody",
+      "mdlsIndex": [
+        61
+      ],
+      "msetIndex": [
+        62
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Air Soldier",
-      "modelIndex": 63,
-      "msetIndex": 64,
-      "msetValue": "xa_ex_2160.mset",
+      "enemy": "Air Soldier",
+      "mdlsIndex": [
+        63
+      ],
+      "msetIndex": [
+        64
+      ],
       "randomize": true,
       "exclude": []
     }

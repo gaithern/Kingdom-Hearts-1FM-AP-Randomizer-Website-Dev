@@ -6,50 +6,68 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow",
-      "modelIndex": 62,
-      "msetIndex": 63,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow",
+      "mdlsIndex": [
+        62
+      ],
+      "msetIndex": [
+        63
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Powerwild",
-      "modelIndex": 64,
-      "msetIndex": 65,
-      "msetValue": "xa_ex_2030.mset",
+      "enemy": "Powerwild",
+      "mdlsIndex": [
+        64
+      ],
+      "msetIndex": [
+        65
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Bouncywild",
-      "modelIndex": 66,
-      "msetIndex": 67,
-      "msetValue": "xa_ex_2040.mset",
+      "enemy": "Bouncywild",
+      "mdlsIndex": [
+        66
+      ],
+      "msetIndex": [
+        67
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Darkball",
-      "modelIndex": 76,
-      "msetIndex": 77,
-      "msetValue": "xa_ex_2280.mset",
+      "enemy": "Darkball",
+      "mdlsIndex": [
+        76
+      ],
+      "msetIndex": [
+        77
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wyvern",
-      "modelIndex": 78,
-      "msetIndex": 79,
-      "msetValue": "xa_ex_2320.mset",
+      "enemy": "Wyvern",
+      "mdlsIndex": [
+        78
+      ],
+      "msetIndex": [
+        79
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Pink Agaricus",
-      "modelIndex": 96,
-      "msetIndex": 97,
-      "msetValue": "xa_ex_2410.mset",
+      "enemy": "Pink Agaricus",
+      "mdlsIndex": [
+        96
+      ],
+      "msetIndex": [
+        97
+      ],
       "randomize": true,
       "exclude": []
     }

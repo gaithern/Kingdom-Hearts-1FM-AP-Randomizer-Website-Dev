@@ -1,7 +1,7 @@
 # Enemy randomizer data
 
 Everything the enemy randomizer page needs lives in this folder. The page reads it at
-load time — nothing is baked into `index.html` any more, so editing a file here is
+load time - nothing is baked into `index.html` any more, so editing a file here is
 enough to change what the page does. Heartless are named in plain text throughout
 (`Shadow`, not `xa_ex_2020`); `heartless.json` is the one place the model names appear.
 
@@ -48,7 +48,7 @@ The catalogue, keyed by the plaintext name used everywhere else.
 | field | meaning |
 | --- | --- |
 | `model` | the `.mdls` written into the model slot |
-| `mset` | the `.mset` written into the slot after it — not always the model's own, as above, which is why both are spelled out in full |
+| `mset` | the `.mset` written into the entry’s `msetIndex` slot - not always the model’s own, as above, which is why both are spelled out in full |
 | `charId` | the game's internal character id |
 | `slots` | how much room the game needs to spawn it; a heartless can only be replaced by one whose `slots` is the same or lower |
 | `weight` | rough difficulty, 0-7 |
@@ -66,8 +66,9 @@ A source left out of `mapping` allows nothing and is never swapped.
 
 ## `rooms/<room>.ard.json`
 
-One file per room, named after its `.ard`. Every pair of indexes in the room that holds
-a heartless is listed, whether or not it can be randomized.
+One file per room, named after its `.ard`. An entry is **one enemy and every slot it
+occupies**: `mdlsIndex` lists the slots that get its `.mdls`, `msetIndex` the slots
+that get its `.mset`.
 
 ```json
 {
@@ -77,25 +78,31 @@ a heartless is listed, whether or not it can be randomized.
   "room": "Desert: Cave",
   "exclude": [],
   "pairs": [
-    {
-      "heartless": "Bandit",
-      "modelIndex": 12,
-      "msetIndex": 13,
-      "msetValue": "xa_ex_2090.mset",
-      "randomize": true,
-      "exclude": []
-    }
+    { "enemy": "Bandit", "mdlsIndex": [12], "msetIndex": [13],
+      "randomize": true, "exclude": [] }
   ]
 }
 ```
 
-A pair is the two consecutive `.ard` indexes the build rewrites together: `modelIndex`
-gets the replacement's `.mdls` and `msetIndex` gets its `.mset`. `msetValue` records
-what vanilla has in the second slot, which is what `randomize: false` is usually
-explained by.
+Almost always that is one of each, side by side. The exception is what the arrays exist
+for: a base model and its Halloween Town re-skin are the same heartless with different
+textures, so they **share one animation set**, and the set can sit anywhere in the room.
+Such an entry carries both model slots and is named for the form the room plays it as:
 
-`world`, `worldId` and `room` are labels only; they are `null` where the room has not
-been identified yet.
+```json
+{ "enemy": "Wight Knight (Halloween Town)", "mdlsIndex": [22, 90], "msetIndex": [23],
+  "randomize": true, "exclude": [] }
+```
+
+**The named enemy's settings alone decide what the entry may become.** When it is
+swapped, the replacement's `.mdls` is written to every `mdlsIndex` slot and its
+`.mset` to every `msetIndex` slot - the room simply loads the one model for more than
+one spawn point. Writing the slots together is what keeps the room from crashing: a
+model rewritten apart from the set it reads is left with nobody's animations.
+
+Five entries in the game span two model slots - two in `nm09`, three in `ew23`. `world`,
+`worldId` and `room` are labels only; they are `null` where the room has not been
+identified yet.
 
 ### `randomize` and `lockedReason`
 
@@ -104,31 +111,11 @@ says why:
 
 | reason | what is wrong |
 | --- | --- |
-| `extramset` | the heartless owns a second animation set elsewhere in the room, so swapping the model would orphan it |
-| `layout` | the slot after `modelIndex` is not an `.mset` — it is another `.mdls`, or nothing at all |
-| `variant` | the slot after `modelIndex` holds a scripted variant of the heartless's own set (`xa_ex_2020_sora.mset`), which no other heartless has |
+| `extramset` | the enemy owns a second animation set elsewhere in the room, so swapping the model would orphan it |
+| `variant` | the `msetIndex` slot holds a scripted variant of the enemy's own set (`xa_ex_2020_sora.mset`), which no other enemy has |
 
 Setting one of these back to `"randomize": true` will produce a mod that builds but is
 likely to crash or animate wrongly in that room.
-
-### How a pair is drawn
-
-For each pair the build collects everything the heartless there is allowed to become —
-the page's checkboxes, minus both `exclude` lists — **adds the heartless already there to
-that list**, and picks one at random. Every entry carries the same weight, the original
-included, so a pair with 19 candidates keeps what it has one build in twenty and changes
-it the other nineteen.
-
-Nothing is weighted by size or difficulty. `slots` decides only *which* heartless are
-eligible at all, never how likely one is; `weight` is not used by the page.
-
-Two rules fall out of the list being built that way:
-
-- **Pairs are drawn independently.** Nothing is struck off for being in the room already,
-  so a room can end up with several of the same heartless. That is fine — the game loads
-  the one model for more than one slot.
-- **A pair with nothing available is simply left alone.** Excluding is therefore always
-  safe: it can shorten the list, never break the build or force an odd pick.
 
 ### `exclude`
 
@@ -136,9 +123,9 @@ Two lists of plaintext heartless names that must never be **spawned as a replace
 here, applied on top of the allow-list the page's checkboxes produce:
 
 - the room-level `exclude` blocks a name anywhere in that room
-- a pair's `exclude` blocks a name at that one pair
+- an entry's `exclude` blocks a name at that one entry, all of its model slots
 
-Use it for placements a heartless would break rather than merely be odd in — a flier
+Use it for placements a heartless would break rather than merely be odd in - a flier
 over a pit, something too large for the arena, a room whose script expects the fight to
 end. Neither list touches what vanilla already puts in the room, only what may be put
 there instead; and neither can allow anything, so a name excluded here stays excluded
@@ -148,9 +135,8 @@ however the checkboxes are set.
 {
   "exclude": ["Pink Agaricus", "Black Fungi"],
   "pairs": [
-    { "heartless": "Shadow", "modelIndex": 12, "msetIndex": 13,
-      "msetValue": "xa_ex_2020.mset", "randomize": true,
-      "exclude": ["Aquatank"] }
+    { "enemy": "Shadow", "mdlsIndex": [12], "msetIndex": [13],
+      "randomize": true, "exclude": ["Aquatank"] }
   ]
 }
 ```

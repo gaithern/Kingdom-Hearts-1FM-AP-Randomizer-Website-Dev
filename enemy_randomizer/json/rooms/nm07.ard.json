@@ -6,34 +6,46 @@
   "exclude": [],
   "pairs": [
     {
-      "heartless": "Shadow (Halloween Town)",
-      "modelIndex": 84,
-      "msetIndex": 85,
-      "msetValue": "xa_ex_2020.mset",
+      "enemy": "Shadow (Halloween Town)",
+      "mdlsIndex": [
+        84
+      ],
+      "msetIndex": [
+        85
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Wight Knight (Halloween Town)",
-      "modelIndex": 86,
-      "msetIndex": 87,
-      "msetValue": "xa_ex_2200.mset",
+      "enemy": "Wight Knight (Halloween Town)",
+      "mdlsIndex": [
+        86
+      ],
+      "msetIndex": [
+        87
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Gargoyle (Halloween Town)",
-      "modelIndex": 88,
-      "msetIndex": 89,
-      "msetValue": "xa_ex_2220.mset",
+      "enemy": "Gargoyle (Halloween Town)",
+      "mdlsIndex": [
+        88
+      ],
+      "msetIndex": [
+        89
+      ],
       "randomize": true,
       "exclude": []
     },
     {
-      "heartless": "Search Ghost (Halloween Town)",
-      "modelIndex": 90,
-      "msetIndex": 91,
-      "msetValue": "xa_ex_2230.mset",
+      "enemy": "Search Ghost (Halloween Town)",
+      "mdlsIndex": [
+        90
+      ],
+      "msetIndex": [
+        91
+      ],
       "randomize": true,
       "exclude": []
     }
