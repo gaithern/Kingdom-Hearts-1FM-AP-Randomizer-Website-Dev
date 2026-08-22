@@ -11,3 +11,69 @@ Same plain static HTML/CSS structure as the main repo: per-world guide pages, `h
 ## Workflow
 
 Push changes here first, verify on `dev.kh1fmrando.com`, then port the changes over to the main repo to publish on `kh1fmrando.com`.
+
+## Locations Page Generation
+This entire section can be updated and cleaned up after if it's decided to keep these changes or not. I kind of just typed up as much as came to mind.
+
+### Overview
+The idea is to streamline content updates for worlds listed as locations, and to organize location related files by grouping them.
+
+### Breakdown
+Within the locations directory are additional directories for each location. Each location will include all relevant files to that location. All location data, the locations html page, and any images strictly related to that location would all be included. Routing to a location like so `/locations/100_acre_wood/` would then use that locations `index.html` page with the routing showing as the url path. If needing to access a root page from a location ( or from any nested html page ), the forward slash would be necessary like so `/traverse_town` to indicate that page starts at root. 
+
+Each locations `tbody.html` file includes that locations table body in html. This data is then used in generating a locations `index.html` page. To generate the pages run the `generateLocationsHtml.js` file.
+
+Running `generateLocationsHtml.js` will:
+- Parse through the locations directory
+- Grab each location directories name
+- Grab the data and images in that locations directory
+- Use the `locationsTemplate.html` file as a template page per location
+- Generate an `index.html` for each location with updated data
+
+Styling updates:
+- The `style.css` file has been updated to include global color variables for each difficulty
+- The `constants.js` file has been created with values to replace string placeholders for each difficulty
+- In `tbody.html`, placeholders have been added for each difficulty for the color values to replace
+
+### Location Directory Structure
+```
+root
+├── locations
+│   └── 100_acre_wood
+│       ├── tbody.html
+│       ├── index.html
+│       └── images
+│           └── image.webp
+└── utils
+    ├── constants.js
+    ├── generateLocationsHtml.js
+    └── locationsTemplate.html
+```
+
+### Notes
+Some temporary notes, questions, thoughts about this change. We can remove this section later.
+
+In `header.html` I included two additional locations under `locations_guide` as examples of this change. 
+One is the root path for `/traverse_town`, the other is the path for the `/locations/100_acre_wood` example.
+
+The purpose of adding these is to show the need for updating all root links to include the forward slash when using this new location pathing. Navigating from `/locations/100_acre_wood` to any of the root pages without that forward slash will show an error. But traveling from `/locations/100_acre_wood` to a page with the forward slash, which I added an extra traverse town `/traverse_town` to show that, will populate the page as expected.
+
+<!-- 
+<a href="/traverse_town">Traverse Town ( With Gen Page Ex )</a>
+<a href="/locations/100_acre_wood">100 Acre Wood ( Gen Page Ex )</a> 
+-->
+
+#### Thoughts
+- This is a POC. If we like this I can get started on building out other location directories.
+- I just copied the table data from `100_acre_wood.html` and added it into `100_acre_wood/tbody.html`.
+- Updates to `header.html`, `locations_guide.html`, and other files requiring path updates would be done after all locations are built to avoid breaking site routes.
+
+To generate the location html files, node would need to be installed on your machine. I considered adding node here, with a package.json, but I didn't want to overhaul this entire project. I want to keep it as simple, consistent, and close to the source as possible. Not trying to take over anymore than I already have.
+
+Also, the generated pages will not be formatted correctly, and unless we add something like prettier to auto format, they wont be. This will have no impact on the actual pages rendering or working.
+
+I ran `python serve.py` to spin up a local server.
+Running `node ./utils/generateLocationsHtml.js` will generate the location html files.
+
+#### Notes
+There is probably a cleaner way to handle the difficulty colors. One that doesn't require constants, replace, and a rebuild. Rather one that just pulls from style.css directly. Idk I'll research it later. I also want to consider updating the header / nav as a web component, and eventually splitting off the styling into that component. Also want to look into that header / page stutter that occurs on a page load, try to fix that. Will also need to update all pages to reference root when navigating.
