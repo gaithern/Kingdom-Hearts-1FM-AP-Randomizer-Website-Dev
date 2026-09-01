@@ -32,6 +32,10 @@
             {
               "value": "Unknown",
               "text": "Unknown"
+            },
+            {
+              "value": "Anywhere",
+              "text": "Anywhere"
             }
           ],
           "default": "Lucky Emblems",
