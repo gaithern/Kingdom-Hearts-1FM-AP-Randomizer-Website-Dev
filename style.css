@@ -520,7 +520,7 @@ button.ghost-button:hover {
     color: #ffb3b5;
 }
 
-.leaderboard-card .leaderboard-header {
+.leaderboard-header {
     display: flex;
     align-items: center;
     justify-content: space-between;

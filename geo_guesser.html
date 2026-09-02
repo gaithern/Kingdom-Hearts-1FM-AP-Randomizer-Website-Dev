@@ -1,38 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeoGuesser</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+<div class="container">
+    <!-- Make dark mode -->
+    <meta name    = "color-scheme" content = "light dark"/>
 
-<h2>KH1 GeoGuesser Lua Script Generator</h2>
+    <div id="header-container"></div>
 
-<div style="background:#eefaff; padding:15px; border:1px solid #b3d7ff; margin-bottom:20px;">
-    <strong>Script Personalization:</strong><br>
-    Creator Name: <input type="text" id="creator-name" placeholder="e.g. Gicu" style="width: 200px;">
-</div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-container').innerHTML = html;
+                document.getElementById('page-subtitle').textContent = 'GeoGuesser';
+                document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
+            });
+    </script>
 
-<div style="background:#f5f5f5; padding:15px; border:1px solid #ccc; margin-bottom:20px;">
-    <h3>HOW TO HIDE COORDINATES:</h3>
-    <ol>
-        <li>Install <code>gaithern/KH1-LUA-LIBRARY</code> in OpenKH.</li>
-        <li>Install <code>gaithern/KH1-GEOGUESSER</code> in OpenKH.</li>
-        <li>In game, to find coordinates press <strong>L2 + L1 + R2 + R1 + Triangle</strong> to show your current Room + World + X Y Z.</li>
-        <li>Enter the coordinates for the locations you want players to find in the form below.</li>
-        <li>Click <strong>"Generate & Download Find Script"</strong> and share the file with your friends.</li>
-    </ol>
-    <h3>HOW TO FIND COORDINATES:</h3>
-    <ol>
-        <li>Install <code>gaithern/KH1-LUA-LIBRARY</code> in OpenKH.</li>
-        <li>Install <code>gaithern/KH1-GEOGUESSER</code> in OpenKH.</li>
-        <li>Install the script provided by the person who set the coordinates.</li>
-        <li>A text box will pop up and a sound will play when they are within range of your coordinates.</li>
-    </ol>
-</div>
-</div>
+    <h2>KH1 GeoGuesser Lua Script Generator</h2>
 
-<div id="coords-container"></div>
+    <div class="card">
+        <h3>Script Personalization</h3>
+        <label>Creator Name: <input type="text" id="creator-name" placeholder="e.g. Gicu"></label>
+    </div>
 
-<button onclick="addCoord()">Add Coordinate</button>
-<br><br>
+    <div class="card">
+        <h3>How to hide coordinates</h3>
+        <ol class="guide-steps">
+            <li>Install <code>gaithern/KH1-LUA-LIBRARY</code> in OpenKH.</li>
+            <li>Install <code>gaithern/KH1-GEOGUESSER</code> in OpenKH.</li>
+            <li>In game, to find coordinates press <strong>L2 + L1 + R2 + R1 + Triangle</strong> to show your current Room + World + X Y Z.</li>
+            <li>Enter the coordinates for the locations you want players to find in the form below.</li>
+            <li>Click <strong>"Generate & Download Find Script"</strong> and share the file with your friends.</li>
+        </ol>
+        <h3>How to find coordinates</h3>
+        <ol class="guide-steps">
+            <li>Install <code>gaithern/KH1-LUA-LIBRARY</code> in OpenKH.</li>
+            <li>Install <code>gaithern/KH1-GEOGUESSER</code> in OpenKH.</li>
+            <li>Install the script provided by the person who set the coordinates.</li>
+            <li>A text box will pop up and a sound will play when they are within range of your coordinates.</li>
+        </ol>
+    </div>
 
-<button onclick="generateFindScript()">Generate & Download Find Script</button>
+    <div id="coords-container"></div>
 
+    <div class="action-row">
+        <button onclick="addCoord()" class="secondary">Add Coordinate</button>
+        <button onclick="generateFindScript()">Generate & Download Find Script</button>
+    </div>
+
+    <script src="config.js"></script>
 <script>
 let maxCoords = 10;
 
@@ -50,11 +72,13 @@ function addCoord() {
     const index = getCoordCount() + 1;
 
     const div = document.createElement("div");
-    div.className = "coord-block";
+    div.className = "card coord-block";
 
     div.innerHTML = `
-        <button class="remove-btn" onclick="removeCoord(this)">Remove</button>
-        <strong>Coordinate ${index}</strong><br>
+        <div class="leaderboard-header">
+            <strong>Coordinate ${index}</strong>
+            <button class="ghost-button" onclick="removeCoord(this)">Remove</button>
+        </div>
         World: <input type="number" required>
         Room: <input type="number" required><br>
         X: <input type="number" step="any" required>
@@ -113,8 +137,7 @@ function generateFindScript() {
 LUAGUI_AUTH = "${creatorName}"
 LUAGUI_DESC = "Kingdom Hearts 1FM Find GeoGuesser Coords"
 
-require("kh1_lua_library")
-local audio = require("PlaySound")
+local kh1_lua_library = require("kh1_lua_library")
 
 local radius = 100.0
 found_coords = {}
@@ -122,13 +145,13 @@ coords = {}
 ${coordEntries}
 
 function in_coord_pos()
-    local world = get_world()
-    local room = get_room()
-    local pos = get_sora_pos()
+    local world = kh1_lua_library.get_world()
+    local room = kh1_lua_library.get_room()
+    local pos = kh1_lua_library.get_sora_pos()
     local x, y, z = pos["X"], pos["Y"], pos["Z"]
     
     for k,v in pairs(coords) do
-        if not contains(found_coords, k) then
+        if not kh1_lua_library.contains(found_coords, k) then
             if world == v["World"] and room == v["Room"]
                     and x > v["X"] - radius and x < v["X"] + radius
                     and y > v["Y"] - radius and y < v["Y"] + radius
@@ -152,10 +175,8 @@ end
 function _OnFrame()
     if canExecute then
         if in_coord_pos() then
-            show_prompt({[1]=""},{[1]={"Found!", nil}},nil,142)
-            if audio then
-                audio.play_beep()
-            end
+            kh1_lua_library.show_prompt({[1]=""},{[1]={"Found!", nil}},nil,142)
+            kh1_lua_library.play_se2(46, 0)
         end
     end
 end
@@ -174,4 +195,6 @@ function downloadFile(content, filename) {
 
 addCoord();
 </script>
+</div>
 </body>
+</html>
