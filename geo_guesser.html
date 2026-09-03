@@ -87,10 +87,15 @@ function addCoord() {
     `;
 
     container.appendChild(div);
+    renumberCoords();
 }
 
 function removeCoord(button) {
-    button.parentElement.remove();
+    if (getCoordCount() <= 1) {
+        alert("At least one coordinate is required.");
+        return;
+    }
+    button.closest(".coord-block").remove();
     renumberCoords();
 }
 
@@ -98,6 +103,8 @@ function renumberCoords() {
     const blocks = document.querySelectorAll(".coord-block");
     blocks.forEach((block, index) => {
         block.querySelector("strong").innerText = `Coordinate ${index + 1}`;
+        // The last remaining coordinate cannot be removed.
+        block.querySelector("button").disabled = blocks.length <= 1;
     });
 }
 
@@ -109,27 +116,30 @@ function generateFindScript() {
     const creatorName = creatorInput || "Anonymous";
     const guiName = `GeoGuesser - ${creatorName}`;
 
-    if (blocks.length === 0) {
-        alert("Add at least one coordinate.");
-        return;
-    }
-
     let coordEntries = "";
+    let filledCount = 0;
 
     for (let i = 0; i < blocks.length; i++) {
-        const inputs = blocks[i].querySelectorAll("input");
-        const world = inputs[0].value;
-        const room  = inputs[1].value;
-        const x     = inputs[2].value;
-        const y     = inputs[3].value;
-        const z     = inputs[4].value;
+        const values = Array.from(blocks[i].querySelectorAll("input"), input => input.value.trim());
+        const [world, room, x, y, z] = values;
+        const filled = values.filter(v => v !== "").length;
 
-        if (!world || !room || !x || !y || !z) {
-            alert("All fields must be filled.");
+        // Completely empty blocks are skipped; partially filled ones are an error.
+        if (filled === 0) {
+            continue;
+        }
+        if (filled < values.length) {
+            alert(`All fields must be filled for Coordinate ${i + 1}.`);
             return;
         }
 
-        coordEntries += `coords[${i + 1}] = {["World"]=${parseInt(world)}, ["Room"]=${parseInt(room)}, ["X"]=${parseFloat(x)}, ["Y"]=${parseFloat(y)}, ["Z"]=${parseFloat(z)}}\n`;
+        filledCount++;
+        coordEntries += `coords[${filledCount}] = {["World"]=${parseInt(world)}, ["Room"]=${parseInt(room)}, ["X"]=${parseFloat(x)}, ["Y"]=${parseFloat(y)}, ["Z"]=${parseFloat(z)}}\n`;
+    }
+
+    if (filledCount === 0) {
+        alert("Fill in at least one coordinate.");
+        return;
     }
 
     // Template updated to use the dynamic guiName and creatorName

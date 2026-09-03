@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- This page lives in a subfolder, but header.html writes its nav links relative
+         to the site root ("draft", "index"), so they only resolve correctly when the
+         document base is the root. Page assets below are addressed from there too. -->
+    <base href="/">
+    <title>Crowd Control Setup</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <!-- Make dark mode -->
+            <meta name    = "color-scheme" content = "light dark"/>
+
+            <div id="header-container"></div>
+
+            <script src="config.js"></script>
+            <script>
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('header-container').innerHTML = html;
+                        document.getElementById('page-subtitle').textContent = 'Crowd Control Setup';
+                        document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
+                    });
+            </script>
+
+            <div class="page-intro">
+                <p>
+                    <a href="https://github.com/gaithern/KH1-CROWDCONTROL" target="_blank" rel="noopener">KH1 Crowd Control</a>
+                    lets Twitch <a href="https://crowdcontrol.live/" target="_blank" rel="noopener">Crowd Control</a> redemptions
+                    trigger real effects in Kingdom Hearts Final Mix (PC) - spawn items and Heartless near Sora, pop messages
+                    on screen, grant abilities, hinder combos, or KO him outright.
+                </p>
+                <p>
+                    The mod is a thin connector between the Crowd Control app and
+                    <a href="https://github.com/gaithern/KH1-LUA-LIBRARY" target="_blank" rel="noopener">KH1-LUA-LIBRARY</a>,
+                    which does the actual game-memory work. Both mods must be installed.
+                </p>
+            </div>
+
+            <h2>Installing</h2>
+            <ol class="guide-steps">
+                <li>Install Kingdom Hearts Final Mix (PC, Steam or EGS).</li>
+                <li>Open KH1 at least once.</li>
+                <li>Download and extract the latest version of
+                    <a href="https://github.com/OpenKH/OpenKh/releases/latest" target="_blank" rel="noopener">OpenKH</a>.
+                </li>
+                <li>Open "OpenKh.Tools.ModsManager.exe".</li>
+                <li>You'll be presented with the set up wizard when opening the mods manager for the first time.
+                    Set up your game edition and installation folders (again, only Steam and EGS are currently supported).
+                    <img src="crowdcontrol/images/setup/10.png" alt="Set-up wizard: game edition and installation folder">
+                </li>
+                <li>When prompted, install Panacea.
+                    <img src="crowdcontrol/images/setup/20.png" alt="Set-up wizard: install Panacea">
+                </li>
+                <li>When prompted, install Lua Backend for at least KH1.
+                    <img src="crowdcontrol/images/setup/30.png" alt="Set-up wizard: install Lua Backend">
+                </li>
+                <li>You may choose to create "steam_appid.txt".
+                    <img src="crowdcontrol/images/setup/40.png" alt="Set-up wizard: create steam_appid.txt">
+                </li>
+                <li>Extracting data is not required for Crowd Control.
+                    <img src="crowdcontrol/images/setup/50.png" alt="Set-up wizard: extract data">
+                </li>
+                <li>Ensure that you have selected "Kingdom Hearts 1" in the dropdown on the top right.
+                    <img src="crowdcontrol/images/setup/60.png" alt="Mods Manager with Kingdom Hearts 1 selected">
+                </li>
+                <li>Click the green "+" to install a new mod.
+                    <img src="crowdcontrol/images/setup/65.png" alt="Green plus button to install a new mod">
+                </li>
+                <li>In the "Add a new mod from GitHub" form, enter "gaithern/KH1-LUA-LIBRARY" and click "Install".
+                    <img src="crowdcontrol/images/setup/68.png" alt="Add a new mod from GitHub: gaithern/KH1-LUA-LIBRARY">
+                </li>
+                <li>You'll see the mod added to your mod list.
+                    <img src="crowdcontrol/images/setup/70.png" alt="KH1-LUA-LIBRARY in the mod list">
+                </li>
+                <li>Click the green "+" again to install another new mod.
+                    <img src="crowdcontrol/images/setup/80.png" alt="Green plus button to install another mod">
+                </li>
+                <li>In the "Add a new mod from GitHub" form, enter "gaithern/KH1-CROWDCONTROL" and click "Install".
+                    <img src="crowdcontrol/images/setup/90.png" alt="Add a new mod from GitHub: gaithern/KH1-CROWDCONTROL">
+                </li>
+                <li>You'll see the second mod added to your mod list.
+                    <img src="crowdcontrol/images/setup/100.png" alt="KH1-CROWDCONTROL in the mod list">
+                </li>
+                <li>Click the checkbox next to both mods.
+                    <img src="crowdcontrol/images/setup/110.png" alt="Both mods enabled in the mod list">
+                </li>
+                <li>Click "Mod Loader" at the top, and then "Build and Run." The game will open with your new mods installed.
+                    <img src="crowdcontrol/images/setup/120.png" alt="Mod Loader menu: Build and Run">
+                </li>
+                <li>The game should now automatically communicate with the Crowd Control desktop app.</li>
+            </ol>
+        </div>
+    </body>
+</html>
