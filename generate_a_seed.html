@@ -34,8 +34,22 @@
             <script src="config.js"></script>
             <script>
                 let settingsData = null;
-                const STORAGE_KEY = 'kh1fm-generate-a-seed-settings';
+                // v2: settings are keyed by AP option key and store raw AP values (the v1 format keyed
+                // by display label and stored display strings, so it can't be applied to this form).
+                const STORAGE_KEY = 'kh1fm-generate-a-seed-settings-v2';
                 const flaskUrl = `${FLASK_BASE_URL}/generate`;
+                const optionsUrl = `${FLASK_BASE_URL}/kh1_options`;
+
+                // Slot name isn't an AP option (it's the YAML's top-level "name:"), so it isn't part of
+                // the schema the backend serves and is added to the Misc tab here instead.
+                const SLOT_NAME_SETTING = {
+                    key: 'name',
+                    label: 'Slot Name',
+                    type: 'text',
+                    default: 'Player{number}',
+                    description: 'Defines what the slot name should be for hosting the game using Archipelago.\n\nYou can ignore this if you plan to play without using the server/client.',
+                    isSlotName: true
+                };
 
                 function setResultState(el, html, type = 'info') {
                     el.innerHTML = html;
@@ -51,6 +65,14 @@
                     }[c]));
                 }
 
+                function allSettings() {
+                    return settingsData ? settingsData.tabs.flatMap((tab) => tab.settings) : [];
+                }
+
+                function controlId(setting) {
+                    return 'setting-' + setting.key;
+                }
+
                 function buildOptionEl(opt, selectedValue) {
                     const optionEl = document.createElement('option');
                     optionEl.value = opt.value;
@@ -61,15 +83,71 @@
                     return optionEl;
                 }
 
+                // Range pills show a NamedRange's special name (e.g. "4x") when the slider lands on one.
+                function outputText(setting, value) {
+                    if (setting.type === 'range' && setting.special) {
+                        const special = setting.special.find((s) => s.value === Number(value));
+                        if (special) {
+                            return special.text;
+                        }
+                    }
+                    return value;
+                }
+
+                function refreshOutput(setting, control) {
+                    control.nextElementSibling.value = outputText(setting, control.value);
+                }
+
+                // Normalizes a value from a saved file or localStorage into one this setting's control
+                // accepts, or null if it isn't valid for the option.
+                function normalizeValue(setting, value) {
+                    if (value === null || value === undefined) {
+                        return null;
+                    }
+                    const text = String(value).trim();
+                    if (setting.type === 'text') {
+                        return text;
+                    }
+                    if (setting.type === 'select') {
+                        const aliases = { yes: 'true', on: 'true', no: 'false', off: 'false' };
+                        const lowered = text.toLowerCase();
+                        const candidates = [lowered, aliases[lowered]];
+                        const match = setting.options.find((opt) => candidates.includes(String(opt.value).toLowerCase()));
+                        return match ? match.value : null;
+                    }
+                    if (setting.type === 'range') {
+                        const special = (setting.special || []).find((s) => s.text === text.toLowerCase());
+                        const number = special ? special.value : Number(text);
+                        if (!Number.isInteger(number)) {
+                            return null;
+                        }
+                        const isSpecial = (setting.special || []).some((s) => s.value === number);
+                        return (isSpecial || (number >= setting.min && number <= setting.max)) ? String(number) : null;
+                    }
+                    return null;
+                }
+
+                // Returns whether the value was valid and applied.
+                function setControlValue(setting, value) {
+                    const normalized = normalizeValue(setting, value);
+                    if (normalized === null) {
+                        return false;
+                    }
+                    const control = document.getElementById(controlId(setting));
+                    control.value = normalized;
+                    refreshOutput(setting, control);
+                    return true;
+                }
+
                 function persistFormState() {
                     if (!settingsData) {
                         return;
                     }
                     const state = {};
-                    settingsData.tabs.flatMap((tab) => tab.settings).forEach((setting) => {
-                        const el = document.getElementById(setting.id);
+                    allSettings().forEach((setting) => {
+                        const el = document.getElementById(controlId(setting));
                         if (el) {
-                            state[setting.id] = el.value;
+                            state[setting.key] = el.value;
                         }
                     });
                     try {
@@ -89,16 +167,11 @@
                     if (!saved) {
                         return;
                     }
-                    for (const [id, value] of Object.entries(saved)) {
-                        const el = document.getElementById(id);
-                        if (!el) {
-                            continue;
+                    allSettings().forEach((setting) => {
+                        if (setting.key in saved) {
+                            setControlValue(setting, saved[setting.key]);
                         }
-                        el.value = value;
-                        if (el.nextElementSibling && el.nextElementSibling.tagName === 'OUTPUT') {
-                            el.nextElementSibling.value = el.value;
-                        }
-                    }
+                    });
                 }
 
                 function buildControl(setting) {
@@ -119,11 +192,11 @@
                     } else {
                         throw new Error('Unknown setting type: ' + setting.type);
                     }
-                    control.id = setting.id;
-                    control.name = setting.id;
+                    control.id = controlId(setting);
+                    control.name = setting.key;
                     control.required = true;
                     control.addEventListener('input', () => {
-                        control.nextElementSibling.value = control.value;
+                        refreshOutput(setting, control);
                         persistFormState();
                     });
                     return control;
@@ -146,7 +219,8 @@
                     tipIcon.textContent = 'i';
                     const tipContent = document.createElement('span');
                     tipContent.className = 'info-tip__content';
-                    tipContent.innerHTML = setting.description;
+                    // Descriptions are the apworld's option docstrings: plain text with newlines.
+                    tipContent.textContent = setting.description;
                     tip.append(tipIcon, tipContent);
                     label.appendChild(tip);
 
@@ -157,8 +231,8 @@
 
                     const output = document.createElement('output');
                     output.className = setting.type === 'range' ? 'output-pill' : 'output-pill output-pill--hidden';
-                    output.setAttribute('for', setting.id);
-                    output.value = setting.default;
+                    output.setAttribute('for', control.id);
+                    output.value = outputText(setting, setting.default);
                     controlWrap.appendChild(output);
 
                     row.append(label, controlWrap);
@@ -214,42 +288,6 @@
                     });
                 }
 
-                function applySettingTransform(type, value) {
-                    switch (type) {
-                        case 'raw':
-                            return value.toString();
-                        case 'bool':
-                            return value.toLowerCase().replace(/ /g, "_").replace("yes", "true").replace("no", "false");
-                        case 'enum':
-                            return value.toLowerCase().replace(/ /g, "_");
-                        case 'cups':
-                            return value.toLowerCase().replace(/ /g, "_").replace("all_cups", "hades_cup").replace("no_hades_cup", "cups");
-                        case 'multiply16':
-                            return (value * 16).toString();
-                        default:
-                            throw new Error('Unknown setting transform: ' + type);
-                    }
-                }
-
-                function reverseSettingTransform(setting, rawValue) {
-                    switch (setting.transform) {
-                        case 'raw':
-                            return rawValue;
-                        case 'multiply16':
-                            return (parseInt(rawValue, 10) / 16).toString();
-                        case 'bool':
-                        case 'enum':
-                        case 'cups': {
-                            const match = setting.options.find(
-                                (opt) => applySettingTransform(setting.transform, opt.value) === rawValue
-                            );
-                            return match ? match.value : null;
-                        }
-                        default:
-                            return null;
-                    }
-                }
-
                 function buildYamlString() {
                     if (!settingsData) {
                         return '';
@@ -258,23 +296,19 @@
                     //Create data object
                     let data = "";
 
-                    const allSettings = settingsData.tabs.flatMap((tab) => tab.settings);
-                    const slotNameSetting = allSettings.find((setting) => setting.transform === 'slotName');
-
                     //Append name
-                    data = data + "name: " + document.getElementById(slotNameSetting.id).value + "\r\n";
+                    data = data + "name: " + document.getElementById(controlId(SLOT_NAME_SETTING)).value + "\r\n";
 
                     //Append game
-                    data = data + "game: Kingdom Hearts" + "\r\n";
-                    data = data + "Kingdom Hearts:" + "\r\n";
+                    data = data + "game: " + settingsData.game + "\r\n";
+                    data = data + settingsData.game + ":" + "\r\n";
 
                     //Append settings
-                    for (const setting of allSettings) {
-                        if (setting.transform === 'slotName') {
+                    for (const setting of allSettings()) {
+                        if (setting.isSlotName) {
                             continue;
                         }
-                        const rawValue = document.getElementById(setting.id).value;
-                        data = data + "  " + setting.yamlKey + ": " + applySettingTransform(setting.transform, rawValue) + "\r\n";
+                        data = data + "  " + setting.key + ": " + document.getElementById(controlId(setting)).value + "\r\n";
                     }
 
                     return data;
@@ -328,36 +362,22 @@
                     }
 
                     const parsed = parseSettingsYaml(text);
-                    const allSettings = settingsData.tabs.flatMap((tab) => tab.settings);
-                    const byYamlKey = new Map(allSettings.filter((s) => s.yamlKey).map((s) => [s.yamlKey, s]));
+                    const byKey = new Map(allSettings().filter((s) => !s.isSlotName).map((s) => [s.key, s]));
 
                     let applied = 0;
                     const unrecognized = [];
 
-                    const slotNameSetting = allSettings.find((setting) => setting.transform === 'slotName');
-                    if (slotNameSetting && parsed.name !== null) {
-                        const el = document.getElementById(slotNameSetting.id);
-                        el.value = parsed.name;
+                    if (parsed.name !== null && setControlValue(SLOT_NAME_SETTING, parsed.name)) {
                         applied++;
                     }
 
-                    for (const [yamlKey, rawValue] of Object.entries(parsed.values)) {
-                        const setting = byYamlKey.get(yamlKey);
-                        if (!setting) {
-                            unrecognized.push(yamlKey);
-                            continue;
+                    for (const [key, rawValue] of Object.entries(parsed.values)) {
+                        const setting = byKey.get(key);
+                        if (setting && setControlValue(setting, rawValue)) {
+                            applied++;
+                        } else {
+                            unrecognized.push(key);
                         }
-                        const formValue = reverseSettingTransform(setting, rawValue);
-                        if (formValue === null) {
-                            unrecognized.push(yamlKey);
-                            continue;
-                        }
-                        const el = document.getElementById(setting.id);
-                        el.value = formValue;
-                        if (el.nextElementSibling && el.nextElementSibling.tagName === 'OUTPUT') {
-                            el.nextElementSibling.value = el.value;
-                        }
-                        applied++;
                     }
 
                     persistFormState();
@@ -487,7 +507,7 @@
                             const { applied, unrecognized } = loadSettingsFromYamlText(text);
                             let message = `Loaded ${applied} setting${applied === 1 ? '' : 's'} from ${escapeHtml(file.name)}.`;
                             if (unrecognized.length > 0) {
-                                message += ` Skipped ${unrecognized.length} unrecognized key${unrecognized.length === 1 ? '' : 's'}.`;
+                                message += ` Skipped ${unrecognized.length} unrecognized or invalid setting${unrecognized.length === 1 ? '' : 's'}: ${escapeHtml(unrecognized.join(', '))}.`;
                             }
                             setResultState(loadResult, message, 'success');
                         } catch (e) {
@@ -537,13 +557,26 @@
                     });
                 }
 
-                fetch('generate_a_seed_settings.json')
-                    .then((response) => response.json())
+                fetch(optionsUrl)
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}`);
+                        }
+                        return response.json();
+                    })
                     .then((data) => {
+                        const slotNameTab = data.tabs.find((tab) => tab.slug === 'misc') || data.tabs[data.tabs.length - 1];
+                        slotNameTab.settings.unshift(SLOT_NAME_SETTING);
                         settingsData = data;
                         renderTabs(data.tabs);
                         buildActionsTab();
                         restoreFormState();
+                    })
+                    .catch((error) => {
+                        const panelsContainer = document.getElementById('settings-panels');
+                        panelsContainer.innerHTML = '<div class="result-box error"></div>';
+                        panelsContainer.firstElementChild.textContent =
+                            `Couldn't load the settings from the server (${error.message}). Please try again later.`;
                     });
             </script>
     </div> </body>
