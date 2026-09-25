@@ -72,7 +72,7 @@
                         <button type="button" class="secondary" id="select-none-candidates-button">Select None</button>
                         <span id="candidate-count" class="pool-count"></span>
                     </div>
-                    <div id="candidate-groups"></div>
+                    <div id="candidate-groups" class="candidate-list"></div>
                 </div>
 
                 <div id="host-start-section" class="action-row" style="display:none;">
@@ -381,37 +381,27 @@
                     }
                 }
 
-                function candidateLabel({ item_name, category, quantity }, checked) {
-                    const label = document.createElement('label');
-                    const checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.className = 'candidate-checkbox';
-                    checkbox.value = item_name;
+                function candidateRow({ item_name, category, quantity }, checked) {
+                    const row = document.createElement('tr');
+                    const id = `candidate-${item_name.replace(/[^A-Za-z0-9]/g, '-')}`;
+                    const icon = iconFor(item_name, category);
+                    row.innerHTML = `
+                        <td><input type="checkbox" class="candidate-checkbox" id="${id}" value="${escapeHtml(item_name)}"></td>
+                        <td><label for="${id}">${icon ? `<img class="pool-icon" src="${icon}" alt="" loading="lazy">` : ''}${escapeHtml(item_name)}</label></td>
+                        <td class="pool-count">${quantity > 1 ? `\u00d7${quantity}` : ''}</td>`;
+                    const checkbox = row.querySelector('.candidate-checkbox');
                     setCandidateChecked(checkbox, checked);
                     checkbox.addEventListener('change', () => {
                         setCandidateChecked(checkbox, checkbox.checked);
                         updateCandidateCount();
                     });
-                    label.appendChild(checkbox);
-                    const icon = iconFor(item_name, category);
-                    if (icon) {
-                        const img = document.createElement('img');
-                        img.className = 'pool-icon';
-                        img.src = icon;
-                        img.alt = '';
-                        img.loading = 'lazy';
-                        label.appendChild(img);
-                    }
-                    label.appendChild(document.createTextNode(item_name));
-                    if (quantity > 1) {
-                        const count = document.createElement('span');
-                        count.className = 'pool-count';
-                        count.textContent = `\u00d7${quantity}`;
-                        label.appendChild(count);
-                    }
-                    return label;
+                    return row;
                 }
 
+                // One scrollable table, grouped under a sticky header row per
+                // category with its own all/none toggle. Only the default
+                // categories (Keyblades + Accessory) start checked; if those
+                // couldn't be loaded, everything does.
                 function renderCandidates(candidates) {
                     const key = candidates.map((c) => c.item_name).join('|');
                     if (key === candidatesKey) {
@@ -428,31 +418,36 @@
                         byCategory.get(candidate.category).push(candidate);
                     });
 
-                    const container = document.getElementById('candidate-groups');
-                    container.innerHTML = '';
+                    const table = document.createElement('table');
+                    table.className = 'location-table';
                     Array.from(byCategory.keys()).sort().forEach((category) => {
                         const checkedByDefault = !defaultCategories || defaultCategories.includes(category);
-                        const heading = document.createElement('h4');
-                        heading.className = 'action-row';
+                        // A tbody per category, so its All/None only touches its own rows.
+                        const group = document.createElement('tbody');
+                        const headerRow = document.createElement('tr');
+                        headerRow.className = 'candidate-list__category';
                         const categoryIcon = CATEGORY_ICONS[category];
-                        heading.innerHTML = `${categoryIcon ? `<img class="pool-icon" src="${iconUrl(categoryIcon)}" alt="" loading="lazy">` : ''}${escapeHtml(category)}`;
-                        const grid = document.createElement('div');
-                        grid.className = 'category-checkboxes';
-                        byCategory.get(category).forEach((candidate) => grid.appendChild(candidateLabel(candidate, checkedByDefault)));
+                        headerRow.innerHTML = `<th colspan="3"><div>${categoryIcon ? `<img class="pool-icon" src="${iconUrl(categoryIcon)}" alt="" loading="lazy">` : ''}${escapeHtml(category)}</div></th>`;
+                        const headerContent = headerRow.querySelector('div');
                         [['All', true], ['None', false]].forEach(([text, checked]) => {
                             const button = document.createElement('button');
                             button.type = 'button';
                             button.className = 'ghost-button';
                             button.textContent = text;
                             button.addEventListener('click', () => {
-                                grid.querySelectorAll('.candidate-checkbox').forEach((checkbox) => setCandidateChecked(checkbox, checked));
+                                group.querySelectorAll('.candidate-checkbox').forEach((checkbox) => setCandidateChecked(checkbox, checked));
                                 updateCandidateCount();
                             });
-                            heading.appendChild(button);
+                            headerContent.appendChild(button);
                         });
-                        container.appendChild(heading);
-                        container.appendChild(grid);
+                        group.appendChild(headerRow);
+                        byCategory.get(category).forEach((candidate) => group.appendChild(candidateRow(candidate, checkedByDefault)));
+                        table.appendChild(group);
                     });
+
+                    const container = document.getElementById('candidate-groups');
+                    container.innerHTML = '';
+                    container.appendChild(table);
                     updateCandidateCount();
                 }
 
