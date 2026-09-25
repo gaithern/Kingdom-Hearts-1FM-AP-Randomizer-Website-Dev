@@ -809,9 +809,9 @@ button:disabled {
 }
 
 .draft-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px 20px;
     margin-bottom: 16px;
 }
 
@@ -819,6 +819,7 @@ button:disabled {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    min-width: 0;
 }
 
 .draft-form__field > span {
@@ -826,10 +827,14 @@ button:disabled {
 }
 
 .draft-form__field select,
-.draft-form__field > input[type="text"],
-.draft-form__field > input[type="file"] {
+.draft-form__field > input {
     width: 100%;
-    max-width: 240px;
+    margin: 0;
+}
+
+.draft-form > .seed-actions__hint {
+    grid-column: 1 / -1;
+    margin: 0;
 }
 
 .candidate-list {
