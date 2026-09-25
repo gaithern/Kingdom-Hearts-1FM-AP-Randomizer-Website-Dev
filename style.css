@@ -832,7 +832,7 @@ button:disabled {
     min-width: 0;
 }
 
-.draft-form__field > span {
+.draft-form__field > span:first-child {
     font-weight: 500;
 }
 
@@ -840,6 +840,51 @@ button:disabled {
 .draft-form__field > input {
     width: 100%;
     margin: 0;
+}
+
+.file-picker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 4px 4px 0.7em;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--bg-elevated);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.file-picker:focus-within {
+    border-color: var(--accent-dim);
+}
+
+.draft-form__field .file-picker__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.file-picker__name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-dim);
+}
+
+.file-picker__button {
+    padding: 0.4em 0.9em;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface-hover);
+    font-weight: 600;
+}
+
+.file-picker:hover .file-picker__button {
+    filter: brightness(1.2);
 }
 
 .draft-form > .seed-actions__hint {

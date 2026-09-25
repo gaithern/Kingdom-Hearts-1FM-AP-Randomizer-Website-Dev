@@ -189,7 +189,11 @@
                         </label>
                         <label class="draft-form__field draft-form__field--wide">
                             <span>Settings YAML</span>
-                            <input type="file" id="create-yaml-file-input" accept=".yaml,.yml">
+                            <span class="file-picker">
+                                <input type="file" class="file-picker__input" id="create-yaml-file-input" accept=".yaml,.yml">
+                                <span class="file-picker__name" id="create-yaml-file-name">No file chosen</span>
+                                <span class="file-picker__button">Choose File</span>
+                            </span>
                         </label>
                         <p class="seed-actions__hint">Need a YAML? Build one on the <a href="generate_a_seed">Generate a Seed</a> page's Finish tab (Save Settings). The seed starts generating as soon as the game is created.</p>`;
 
@@ -208,6 +212,12 @@
                     }
                     draftTypeSelect.addEventListener('change', updateDraftTypeFields);
                     updateDraftTypeFields();
+
+                    const yamlFileInput = document.getElementById('create-yaml-file-input');
+                    yamlFileInput.addEventListener('change', () => {
+                        const file = yamlFileInput.files[0];
+                        document.getElementById('create-yaml-file-name').textContent = file ? file.name : 'No file chosen';
+                    });
                 }
 
                 async function createGame() {
