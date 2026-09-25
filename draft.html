@@ -56,8 +56,8 @@
                 </div>
 
                 <div id="yaml-section" style="display:none;">
-                    <h3>Host: Upload Settings</h3>
-                    <p class="seed-actions__hint">Need a YAML? Build one on the <a href="generate_a_seed">Generate a Seed</a> page's Finish tab (Save Settings), then upload it here. Uploading again before the draft starts re-rolls the seed.</p>
+                    <h3>Host: Re-upload Settings</h3>
+                    <p class="seed-actions__hint">Upload a different YAML to re-roll the seed before the draft starts (or to retry if generation failed).</p>
                     <div class="action-row">
                         <input type="file" id="yaml-file-input" accept=".yaml,.yml">
                         <button id="upload-yaml-button">Upload &amp; Generate</button>
@@ -66,13 +66,13 @@
 
                 <div id="candidate-section" style="display:none;">
                     <h3>Host: Choose the Draft Pool</h3>
-                    <p class="seed-actions__hint">Every item below is in your seed. Drafting one gives that player an extra copy early - it stays in the seed for everyone. Select at least as many items as the draft needs; if you select more, a random subset is used.</p>
+                    <p class="seed-actions__hint">Every draftable item in your seed is listed below; Keyblades and Accessories start selected. Drafting one gives that player an extra copy early - it stays in the seed for everyone. Select at least as many items as the draft needs; if you select more, a random subset is used.</p>
                     <div class="action-row">
                         <button type="button" class="secondary" id="select-all-candidates-button">Select All</button>
                         <button type="button" class="secondary" id="select-none-candidates-button">Select None</button>
                         <span id="candidate-count" class="pool-count"></span>
                     </div>
-                    <div class="category-checkboxes" id="candidate-checkboxes"></div>
+                    <div id="candidate-groups"></div>
                 </div>
 
                 <div id="host-start-section" class="action-row" style="display:none;">
@@ -140,6 +140,7 @@
                 let currentJoinCode = null;
                 let pollTimer = null;
                 let categoriesData = null;
+                let createFormBuilt = false;
                 // Host's pool selection survives the 3s re-render; reset
                 // whenever a (re-)generated seed brings a new candidate list.
                 let candidatesKey = null;
@@ -203,10 +204,11 @@
                             <span>Number of Grids</span>
                             <input type="text" id="num-grids-input" value="3">
                         </label>
-                        <div class="draft-form__field">
-                            <span>Item Categories</span>
-                            <div class="category-checkboxes" id="category-checkboxes"></div>
-                        </div>`;
+                        <label class="draft-form__field">
+                            <span>Settings YAML</span>
+                            <input type="file" id="create-yaml-file-input" accept=".yaml,.yml">
+                        </label>
+                        <p class="seed-actions__hint">Need a YAML? Build one on the <a href="generate_a_seed">Generate a Seed</a> page's Finish tab (Save Settings). The seed starts generating as soon as the game is created.</p>`;
 
                     // Grid draft (https://luckypaper.co/resources/formats/grid-draft/)
                     // is fixed to 2 players and sized by number of 3x3 grids
@@ -227,59 +229,44 @@
                     }
                     draftTypeSelect.addEventListener('change', updateDraftTypeFields);
                     updateDraftTypeFields();
-
-                    const categoryContainer = document.getElementById('category-checkboxes');
-                    categoriesData.categories.forEach((category) => {
-                        const label = document.createElement('label');
-                        const checkbox = document.createElement('input');
-                        checkbox.type = 'checkbox';
-                        checkbox.value = category;
-                        checkbox.className = 'category-checkbox';
-                        checkbox.checked = categoriesData.default.includes(category);
-                        label.appendChild(checkbox);
-                        const icon = CATEGORY_ICONS[category];
-                        if (icon) {
-                            const img = document.createElement('img');
-                            img.className = 'pool-icon';
-                            img.src = iconUrl(icon);
-                            img.alt = '';
-                            img.loading = 'lazy';
-                            label.appendChild(img);
-                        }
-                        label.appendChild(document.createTextNode(category));
-                        categoryContainer.appendChild(label);
-                    });
                 }
 
+                // Only used for which categories start checked in the host's
+                // pool selection - the pool itself comes from the seed.
                 async function loadCategories() {
                     try {
                         categoriesData = await apiGet('/draft/item_categories');
-                        buildCreateForm();
                     } catch (error) {
-                        setResultState(createResult, escapeHtml(error.message), 'error');
+                        categoriesData = null;
                     }
                 }
 
                 async function createGame() {
                     setResultState(createResult, '', 'info');
-                    const itemCategories = Array.from(document.querySelectorAll('.category-checkbox:checked')).map((el) => el.value);
+                    const yamlFile = document.getElementById('create-yaml-file-input').files[0];
+                    if (!yamlFile) {
+                        setResultState(createResult, 'Choose a settings YAML first.', 'error');
+                        return;
+                    }
                     const draftType = document.getElementById('draft-type-select').value;
                     const body = {
                         draft_type: draftType,
                         max_players: document.getElementById('max-players-input').value,
-                        item_categories: itemCategories,
                     };
                     if (draftType === 'grid') {
                         body.num_grids = document.getElementById('num-grids-input').value;
                     } else {
                         body.picks_per_player = document.getElementById('picks-per-player-input').value;
                     }
+                    let data;
                     try {
-                        const data = await apiPost('/draft/create', body);
-                        enterGame(data.join_code);
+                        data = await apiPost('/draft/create', body);
                     } catch (error) {
                         setResultState(createResult, escapeHtml(error.message), 'error');
+                        return;
                     }
+                    enterGame(data.join_code);
+                    await uploadYamlFile(yamlFile);
                 }
 
                 async function joinGame() {
@@ -385,6 +372,46 @@
                     document.getElementById('start-draft-button').disabled = short;
                 }
 
+                function setCandidateChecked(checkbox, checked) {
+                    checkbox.checked = checked;
+                    if (checked) {
+                        selectedCandidates.add(checkbox.value);
+                    } else {
+                        selectedCandidates.delete(checkbox.value);
+                    }
+                }
+
+                function candidateLabel({ item_name, category, quantity }, checked) {
+                    const label = document.createElement('label');
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.className = 'candidate-checkbox';
+                    checkbox.value = item_name;
+                    setCandidateChecked(checkbox, checked);
+                    checkbox.addEventListener('change', () => {
+                        setCandidateChecked(checkbox, checkbox.checked);
+                        updateCandidateCount();
+                    });
+                    label.appendChild(checkbox);
+                    const icon = iconFor(item_name, category);
+                    if (icon) {
+                        const img = document.createElement('img');
+                        img.className = 'pool-icon';
+                        img.src = icon;
+                        img.alt = '';
+                        img.loading = 'lazy';
+                        label.appendChild(img);
+                    }
+                    label.appendChild(document.createTextNode(item_name));
+                    if (quantity > 1) {
+                        const count = document.createElement('span');
+                        count.className = 'pool-count';
+                        count.textContent = `\u00d7${quantity}`;
+                        label.appendChild(count);
+                    }
+                    return label;
+                }
+
                 function renderCandidates(candidates) {
                     const key = candidates.map((c) => c.item_name).join('|');
                     if (key === candidatesKey) {
@@ -392,56 +419,45 @@
                         return;
                     }
                     candidatesKey = key;
-                    selectedCandidates = new Set(candidates.map((c) => c.item_name));
+                    selectedCandidates = new Set();
+                    const defaultCategories = categoriesData ? categoriesData.default : null;
 
-                    const container = document.getElementById('candidate-checkboxes');
+                    const byCategory = new Map();
+                    candidates.forEach((candidate) => {
+                        if (!byCategory.has(candidate.category)) byCategory.set(candidate.category, []);
+                        byCategory.get(candidate.category).push(candidate);
+                    });
+
+                    const container = document.getElementById('candidate-groups');
                     container.innerHTML = '';
-                    candidates.forEach(({ item_name, category, quantity }) => {
-                        const label = document.createElement('label');
-                        const checkbox = document.createElement('input');
-                        checkbox.type = 'checkbox';
-                        checkbox.className = 'candidate-checkbox';
-                        checkbox.value = item_name;
-                        checkbox.checked = true;
-                        checkbox.addEventListener('change', () => {
-                            if (checkbox.checked) {
-                                selectedCandidates.add(item_name);
-                            } else {
-                                selectedCandidates.delete(item_name);
-                            }
-                            updateCandidateCount();
+                    Array.from(byCategory.keys()).sort().forEach((category) => {
+                        const checkedByDefault = !defaultCategories || defaultCategories.includes(category);
+                        const heading = document.createElement('h4');
+                        heading.className = 'action-row';
+                        const categoryIcon = CATEGORY_ICONS[category];
+                        heading.innerHTML = `${categoryIcon ? `<img class="pool-icon" src="${iconUrl(categoryIcon)}" alt="" loading="lazy">` : ''}${escapeHtml(category)}`;
+                        const grid = document.createElement('div');
+                        grid.className = 'category-checkboxes';
+                        byCategory.get(category).forEach((candidate) => grid.appendChild(candidateLabel(candidate, checkedByDefault)));
+                        [['All', true], ['None', false]].forEach(([text, checked]) => {
+                            const button = document.createElement('button');
+                            button.type = 'button';
+                            button.className = 'ghost-button';
+                            button.textContent = text;
+                            button.addEventListener('click', () => {
+                                grid.querySelectorAll('.candidate-checkbox').forEach((checkbox) => setCandidateChecked(checkbox, checked));
+                                updateCandidateCount();
+                            });
+                            heading.appendChild(button);
                         });
-                        label.appendChild(checkbox);
-                        const icon = iconFor(item_name, category);
-                        if (icon) {
-                            const img = document.createElement('img');
-                            img.className = 'pool-icon';
-                            img.src = icon;
-                            img.alt = '';
-                            img.loading = 'lazy';
-                            label.appendChild(img);
-                        }
-                        label.appendChild(document.createTextNode(item_name));
-                        if (quantity > 1) {
-                            const count = document.createElement('span');
-                            count.className = 'pool-count';
-                            count.textContent = `×${quantity}`;
-                            label.appendChild(count);
-                        }
-                        container.appendChild(label);
+                        container.appendChild(heading);
+                        container.appendChild(grid);
                     });
                     updateCandidateCount();
                 }
 
                 function setAllCandidates(checked) {
-                    document.querySelectorAll('.candidate-checkbox').forEach((checkbox) => {
-                        checkbox.checked = checked;
-                        if (checked) {
-                            selectedCandidates.add(checkbox.value);
-                        } else {
-                            selectedCandidates.delete(checkbox.value);
-                        }
-                    });
+                    document.querySelectorAll('.candidate-checkbox').forEach((checkbox) => setCandidateChecked(checkbox, checked));
                     updateCandidateCount();
                 }
 
@@ -592,12 +608,15 @@
                 }
 
                 async function uploadYaml() {
-                    const input = document.getElementById('yaml-file-input');
-                    const file = input.files[0];
+                    const file = document.getElementById('yaml-file-input').files[0];
                     if (!file) {
                         setResultState(resultSection, 'Choose a YAML file first.', 'error');
                         return;
                     }
+                    await uploadYamlFile(file);
+                }
+
+                async function uploadYamlFile(file) {
                     const token = getStoredDiscordToken();
                     const formData = new FormData();
                     formData.append('file', file);
@@ -621,7 +640,9 @@
                 captureDiscordTokenFromHash();
                 renderDiscordAuthSection(authSection, (token) => {
                     lobbySection.style.display = (token && !currentJoinCode) ? 'block' : 'none';
-                    if (token && !categoriesData) {
+                    if (token && !createFormBuilt) {
+                        createFormBuilt = true;
+                        buildCreateForm();
                         loadCategories();
                     }
                 });
