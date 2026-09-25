@@ -61,7 +61,7 @@
 
                 <div id="candidate-section" style="display:none;">
                     <h3>Host: Choose the Draft Pool</h3>
-                    <p class="seed-actions__hint">Every draftable item in your seed is listed below; Keyblades and Accessories start selected. Drafting one gives that player an extra copy early - it stays in the seed for everyone. Items your seed has several of can go in more than once - set the number of copies beside them. Select at least as many copies as the draft needs; if you select more, a random subset is used.</p>
+                    <p class="seed-actions__hint">Every draftable item in your seed is listed below. Drafting one gives that player an extra copy early - it stays in the seed for everyone. Items your seed has several of can go in more than once - set the number of copies beside them. Select at least as many copies as the draft needs; if you select more, a random subset is used.</p>
                     <div class="action-row">
                         <button type="button" class="secondary" id="select-all-candidates-button">Select All</button>
                         <button type="button" class="secondary" id="select-none-candidates-button">Select None</button>
@@ -125,7 +125,6 @@
 
                 let currentJoinCode = null;
                 let pollTimer = null;
-                let categoriesData = null;
                 let createFormBuilt = false;
                 let candidatesKey = null;
                 let selectedCandidates = new Map();
@@ -209,14 +208,6 @@
                     }
                     draftTypeSelect.addEventListener('change', updateDraftTypeFields);
                     updateDraftTypeFields();
-                }
-
-                async function loadCategories() {
-                    try {
-                        categoriesData = await apiGet('/draft/item_categories');
-                    } catch (error) {
-                        categoriesData = null;
-                    }
                 }
 
                 async function createGame() {
@@ -361,7 +352,7 @@
                     }
                 }
 
-                function candidateRow({ item_name, category, quantity }, checked) {
+                function candidateRow({ item_name, category, quantity }) {
                     const row = document.createElement('tr');
                     const id = `candidate-${item_name.replace(/[^A-Za-z0-9]/g, '-')}`;
                     const icon = iconFor(item_name, category);
@@ -372,7 +363,6 @@
                             ? `<input type="number" class="candidate-copies" min="1" max="${quantity}" value="${quantity}" aria-label="Copies of ${escapeHtml(item_name)}"> / ${quantity}`
                             : ''}</td>`;
                     const checkbox = row.querySelector('.candidate-checkbox');
-                    setCandidateChecked(checkbox, checked);
                     checkbox.addEventListener('change', () => {
                         setCandidateChecked(checkbox, checkbox.checked);
                         updateCandidateCount();
@@ -397,7 +387,6 @@
                     }
                     candidatesKey = key;
                     selectedCandidates = new Map();
-                    const defaultCategories = categoriesData ? categoriesData.default : null;
 
                     const byCategory = new Map();
                     candidates.forEach((candidate) => {
@@ -408,7 +397,6 @@
                     const table = document.createElement('table');
                     table.className = 'location-table';
                     Array.from(byCategory.keys()).sort().forEach((category) => {
-                        const checkedByDefault = !defaultCategories || defaultCategories.includes(category);
                         const group = document.createElement('tbody');
                         const headerRow = document.createElement('tr');
                         headerRow.className = 'candidate-list__category';
@@ -427,7 +415,7 @@
                             headerContent.appendChild(button);
                         });
                         group.appendChild(headerRow);
-                        byCategory.get(category).forEach((candidate) => group.appendChild(candidateRow(candidate, checkedByDefault)));
+                        byCategory.get(category).forEach((candidate) => group.appendChild(candidateRow(candidate)));
                         table.appendChild(group);
                     });
 
@@ -613,7 +601,6 @@
                     if (token && !createFormBuilt) {
                         createFormBuilt = true;
                         buildCreateForm();
-                        loadCategories();
                     }
                 });
 
