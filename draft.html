@@ -373,7 +373,7 @@
                         <td><input type="checkbox" class="candidate-checkbox" id="${id}" value="${escapeHtml(item_name)}"></td>
                         <td><label for="${id}">${icon ? `<img class="pool-icon" src="${icon}" alt="" loading="lazy">` : ''}${escapeHtml(item_name)}</label></td>
                         <td class="pool-count">${quantity > 1
-                            ? `<input type="number" class="candidate-copies" min="1" max="${quantity}" value="1" aria-label="Copies of ${escapeHtml(item_name)}"> / ${quantity}`
+                            ? `<input type="number" class="candidate-copies" min="1" max="${quantity}" value="${quantity}" aria-label="Copies of ${escapeHtml(item_name)}"> / ${quantity}`
                             : ''}</td>`;
                     const checkbox = row.querySelector('.candidate-checkbox');
                     setCandidateChecked(checkbox, checked);
