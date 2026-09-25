@@ -4,7 +4,8 @@
   "worldId": 11,
   "room": "Coliseum (Preliminaries)",
   "exclude": [
-    "Missile Diver"
+    "Missile Diver",
+    "Sniperwild"
   ],
   "pairs": [
     {

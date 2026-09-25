@@ -3,7 +3,9 @@
   "world": "Olympus Coliseum",
   "worldId": 11,
   "room": "Coliseum: Arena",
-  "exclude": [],
+  "exclude": [
+    "Sniperwild"
+  ],
   "pairs": [
     {
       "enemy": "Shadow",
