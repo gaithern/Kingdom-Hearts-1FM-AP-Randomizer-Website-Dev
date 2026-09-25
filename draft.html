@@ -22,7 +22,7 @@
                     });
             </script>
             <div class="page-intro">
-                <p>Log in with Discord, then create or join a draft game to draft KH1 items with friends before racing. The host uploads one settings YAML to generate the seed; everyone else races that same seed in their own room, with their own drafted items delivered automatically.</p>
+                <p>Log in with Discord, then create or join a draft game to draft KH1 items with friends before racing. The host uploads one settings YAML to generate the seed and picks which of that seed's items go into the draft; everyone races that same seed in their own room, with their own drafted items delivered automatically as an early extra copy.</p>
             </div>
 
             <div class="card">
@@ -55,17 +55,28 @@
                     <div id="item-pool" class="item-pool"></div>
                 </div>
 
-                <div id="host-start-section" class="action-row" style="display:none;">
-                    <button id="start-draft-button">Start Draft</button>
-                </div>
-
                 <div id="yaml-section" style="display:none;">
                     <h3>Host: Upload Settings</h3>
-                    <p class="seed-actions__hint">Need a YAML? Build one on the <a href="generate_a_seed">Generate a Seed</a> page's Finish tab (Save Settings), then upload it here.</p>
+                    <p class="seed-actions__hint">Need a YAML? Build one on the <a href="generate_a_seed">Generate a Seed</a> page's Finish tab (Save Settings), then upload it here. Uploading again before the draft starts re-rolls the seed.</p>
                     <div class="action-row">
                         <input type="file" id="yaml-file-input" accept=".yaml,.yml">
                         <button id="upload-yaml-button">Upload &amp; Generate</button>
                     </div>
+                </div>
+
+                <div id="candidate-section" style="display:none;">
+                    <h3>Host: Choose the Draft Pool</h3>
+                    <p class="seed-actions__hint">Every item below is in your seed. Drafting one gives that player an extra copy early - it stays in the seed for everyone. Select at least as many items as the draft needs; if you select more, a random subset is used.</p>
+                    <div class="action-row">
+                        <button type="button" class="secondary" id="select-all-candidates-button">Select All</button>
+                        <button type="button" class="secondary" id="select-none-candidates-button">Select None</button>
+                        <span id="candidate-count" class="pool-count"></span>
+                    </div>
+                    <div class="category-checkboxes" id="candidate-checkboxes"></div>
+                </div>
+
+                <div id="host-start-section" class="action-row" style="display:none;">
+                    <button id="start-draft-button">Start Draft</button>
                 </div>
 
                 <div id="result-section" class="result-box"></div>
@@ -129,6 +140,11 @@
                 let currentJoinCode = null;
                 let pollTimer = null;
                 let categoriesData = null;
+                // Host's pool selection survives the 3s re-render; reset
+                // whenever a (re-)generated seed brings a new candidate list.
+                let candidatesKey = null;
+                let selectedCandidates = new Set();
+                let requiredPoolSize = 0;
 
                 function setResultState(el, message, type = 'info') {
                     el.innerHTML = message;
@@ -318,10 +334,10 @@
                 }
 
                 const STATUS_LABELS = {
-                    lobby: 'Waiting for players to join...',
+                    lobby: 'Waiting for players to join and the host to upload settings...',
+                    generating: 'Generating the seed...',
+                    pool_selection: 'Seed ready - the host is choosing the item pool.',
                     drafting: 'Draft in progress.',
-                    awaiting_yaml: 'Waiting on the host to upload settings.',
-                    generating: 'Generating your seed...',
                     sending_items: 'Delivering drafted items to each room...',
                     complete: 'Done! Your room is ready.',
                     error: 'Something went wrong.',
@@ -359,6 +375,74 @@
                     poolContainer.querySelectorAll('.pick-button').forEach((button) => {
                         button.addEventListener('click', () => pickItem(button.dataset.item));
                     });
+                }
+
+                function updateCandidateCount() {
+                    const selected = selectedCandidates.size;
+                    const short = selected < requiredPoolSize;
+                    document.getElementById('candidate-count').textContent =
+                        `${selected} selected / ${requiredPoolSize} needed${short ? ` - select ${requiredPoolSize - selected} more` : ''}`;
+                    document.getElementById('start-draft-button').disabled = short;
+                }
+
+                function renderCandidates(candidates) {
+                    const key = candidates.map((c) => c.item_name).join('|');
+                    if (key === candidatesKey) {
+                        updateCandidateCount();
+                        return;
+                    }
+                    candidatesKey = key;
+                    selectedCandidates = new Set(candidates.map((c) => c.item_name));
+
+                    const container = document.getElementById('candidate-checkboxes');
+                    container.innerHTML = '';
+                    candidates.forEach(({ item_name, category, quantity }) => {
+                        const label = document.createElement('label');
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.className = 'candidate-checkbox';
+                        checkbox.value = item_name;
+                        checkbox.checked = true;
+                        checkbox.addEventListener('change', () => {
+                            if (checkbox.checked) {
+                                selectedCandidates.add(item_name);
+                            } else {
+                                selectedCandidates.delete(item_name);
+                            }
+                            updateCandidateCount();
+                        });
+                        label.appendChild(checkbox);
+                        const icon = iconFor(item_name, category);
+                        if (icon) {
+                            const img = document.createElement('img');
+                            img.className = 'pool-icon';
+                            img.src = icon;
+                            img.alt = '';
+                            img.loading = 'lazy';
+                            label.appendChild(img);
+                        }
+                        label.appendChild(document.createTextNode(item_name));
+                        if (quantity > 1) {
+                            const count = document.createElement('span');
+                            count.className = 'pool-count';
+                            count.textContent = `×${quantity}`;
+                            label.appendChild(count);
+                        }
+                        container.appendChild(label);
+                    });
+                    updateCandidateCount();
+                }
+
+                function setAllCandidates(checked) {
+                    document.querySelectorAll('.candidate-checkbox').forEach((checkbox) => {
+                        checkbox.checked = checked;
+                        if (checked) {
+                            selectedCandidates.add(checkbox.value);
+                        } else {
+                            selectedCandidates.delete(checkbox.value);
+                        }
+                    });
+                    updateCandidateCount();
                 }
 
                 // Row/column/diagonal cell coordinates for a 3x3 grid, matching
@@ -450,8 +534,13 @@
 
                     setResultState(statusMessage, STATUS_LABELS[state.status] || state.status, state.status === 'error' ? 'error' : 'info');
 
-                    document.getElementById('host-start-section').style.display =
-                        (state.status === 'lobby' && state.is_host) ? 'flex' : 'none';
+                    const hostChoosingPool = state.status === 'pool_selection' && state.is_host;
+                    document.getElementById('host-start-section').style.display = hostChoosingPool ? 'flex' : 'none';
+                    document.getElementById('candidate-section').style.display = hostChoosingPool ? 'block' : 'none';
+                    if (hostChoosingPool) {
+                        requiredPoolSize = state.required_pool_size;
+                        renderCandidates(state.candidates);
+                    }
 
                     const poolSection = document.getElementById('pool-section');
                     if (state.status === 'drafting' && state.draft_type === 'grid') {
@@ -467,9 +556,13 @@
                     }
 
                     document.getElementById('yaml-section').style.display =
-                        (state.status === 'awaiting_yaml' && state.is_host) ? 'block' : 'none';
+                        ((state.status === 'lobby' || state.status === 'pool_selection') && state.is_host) ? 'block' : 'none';
 
-                    if (state.status === 'complete') {
+                    if (state.status === 'lobby' && state.error_message) {
+                        // A failed generation drops the game back to the lobby
+                        // so the host can fix their YAML and upload again.
+                        setResultState(resultSection, `Seed generation failed: ${escapeHtml(state.error_message)}`, 'error');
+                    } else if (state.status === 'complete') {
                         setResultState(resultSection, `Your room is ready: <a href="${state.room_link}">${state.room_link}</a>`, 'success');
                         stopPolling();
                     } else if (state.status === 'error') {
@@ -482,7 +575,7 @@
 
                 async function startDraft() {
                     try {
-                        await apiPost(`/draft/${currentJoinCode}/start`);
+                        await apiPost(`/draft/${currentJoinCode}/start`, { items: Array.from(selectedCandidates) });
                         pollState();
                     } catch (error) {
                         setResultState(statusMessage, escapeHtml(error.message), 'error');
@@ -538,6 +631,8 @@
                 document.getElementById('leave-game-button').addEventListener('click', leaveGame);
                 document.getElementById('start-draft-button').addEventListener('click', startDraft);
                 document.getElementById('upload-yaml-button').addEventListener('click', uploadYaml);
+                document.getElementById('select-all-candidates-button').addEventListener('click', () => setAllCandidates(true));
+                document.getElementById('select-none-candidates-button').addEventListener('click', () => setAllCandidates(false));
 
                 const urlJoinCode = new URLSearchParams(window.location.search).get('join_code');
                 if (urlJoinCode && getStoredDiscordToken()) {

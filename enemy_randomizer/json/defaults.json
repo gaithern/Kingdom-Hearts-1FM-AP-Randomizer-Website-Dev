@@ -53,7 +53,7 @@
       "Sheltering Zone",
       "Sniperwild",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wizard",
       "Wyvern",
@@ -130,7 +130,7 @@
       "Sheltering Zone",
       "Sniperwild",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wizard",
       "Wyvern",
@@ -201,7 +201,7 @@
       "Search Ghost",
       "Shadow",
       "Sheltering Zone",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wyvern",
       "Yellow Opera"
@@ -283,7 +283,7 @@
       "Search Ghost",
       "Shadow",
       "Sheltering Zone",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wyvern",
       "Yellow Opera"
@@ -357,7 +357,7 @@
       "Sheltering Zone",
       "Sniperwild",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wizard",
       "Wyvern",
@@ -439,7 +439,7 @@
       "Sheltering Zone",
       "Sniperwild",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wizard",
       "Wyvern",
@@ -503,7 +503,7 @@
       "Sea Neon",
       "Shadow (Halloween Town)",
       "Sheltering Zone",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight (Halloween Town)",
       "Wyvern",
       "Yellow Opera"
@@ -572,7 +572,7 @@
       "Shadow",
       "Sheltering Zone",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wizard",
       "Wyvern",
@@ -595,7 +595,7 @@
       "Shadow",
       "Yellow Opera"
     ],
-    "Stealth Sneak": [
+    "Stealth Soldier": [
       "Air Pirate",
       "Air Soldier",
       "Bitsniper",
@@ -652,7 +652,7 @@
       "Search Ghost (Halloween Town)",
       "Shadow (Halloween Town)",
       "Sheltering Zone",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wyvern",
       "Yellow Opera"
     ],
@@ -682,7 +682,7 @@
       "Sheltering Zone",
       "Sniperwild",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight",
       "Wyvern",
       "Yellow Opera"
@@ -713,7 +713,7 @@
       "Sheltering Zone",
       "Sniperwild",
       "Soldier",
-      "Stealth Sneak",
+      "Stealth Soldier",
       "Wight Knight (Halloween Town)",
       "Wyvern",
       "Yellow Opera"
