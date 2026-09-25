@@ -4,7 +4,8 @@
   "worldId": 11,
   "room": "Coliseum (Cups)",
   "exclude": [
-    "Missile Diver"
+    "Missile Diver",
+    "Sniperwild"
   ],
   "pairs": [
     {
