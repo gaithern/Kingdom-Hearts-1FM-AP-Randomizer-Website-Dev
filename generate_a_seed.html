@@ -84,6 +84,10 @@
                     return optionEl;
                 }
 
+                function titleCase(text) {
+                    return text.replace(/(^|\s)\S/g, (c) => c.toUpperCase());
+                }
+
                 function presetId(setting) {
                     return controlId(setting) + '-preset';
                 }
@@ -105,7 +109,7 @@
                     const preset = document.createElement('select');
                     preset.id = presetId(setting);
                     preset.setAttribute('aria-label', setting.label + ' preset');
-                    setting.special.forEach((s) => preset.appendChild(buildOptionEl({ value: String(s.value), text: s.text })));
+                    setting.special.forEach((s) => preset.appendChild(buildOptionEl({ value: String(s.value), text: titleCase(s.text) })));
                     preset.appendChild(buildOptionEl({ value: 'custom', text: 'Custom…' }));
                     preset.addEventListener('change', () => {
                         if (preset.value === 'custom') {
