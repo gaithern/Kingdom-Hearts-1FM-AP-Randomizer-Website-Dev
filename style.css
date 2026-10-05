@@ -253,29 +253,14 @@ p, ul, ol {
     margin-bottom: 0;
 }
 
-.setting-row__control input[type="range"] {
+.setting-row__control input[type="number"] {
     flex: 1 1 auto;
-    width: auto;
-    min-width: 0;
+    width: 100%;
     margin-bottom: 0;
 }
 
-.output-pill {
-    display: inline-block;
-    flex: 0 0 auto;
-    min-width: 2.5em;
-    padding: 4px 10px;
-    background: var(--surface-hover);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    font-weight: 600;
-    color: var(--accent);
-    font-size: 0.9em;
-    text-align: center;
-}
-
-.output-pill--hidden {
-    display: none;
+.setting-row__control select + input[type="number"] {
+    flex: 0 0 6em;
 }
 
 .settings-grid > .setting-row:nth-child(odd):last-child {
@@ -295,41 +280,6 @@ p, ul, ol {
     .settings-grid > .setting-row:nth-child(odd):last-child {
         transform: none;
     }
-}
-
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 6px;
-    background: var(--surface-hover);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0;
-    margin: 6px 0;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--gold);
-    border: 2px solid #1a1206;
-    cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--gold);
-    border: 2px solid #1a1206;
-    cursor: pointer;
-}
-
-input[type="range"]::-moz-range-track {
-    background: transparent;
 }
 
 button, img {

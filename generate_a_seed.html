@@ -83,19 +83,41 @@
                     return optionEl;
                 }
 
-                // Range pills show a NamedRange's special name (e.g. "4x") when the slider lands on one.
-                function outputText(setting, value) {
-                    if (setting.type === 'range' && setting.special) {
-                        const special = setting.special.find((s) => s.value === Number(value));
-                        if (special) {
-                            return special.text;
-                        }
-                    }
-                    return value;
+                function presetId(setting) {
+                    return controlId(setting) + '-preset';
                 }
 
-                function refreshOutput(setting, control) {
-                    control.nextElementSibling.value = outputText(setting, control.value);
+                function applyPreset(setting, preset, number) {
+                    const special = setting.special.find((s) => s.value === Number(number.value));
+                    preset.value = special ? String(special.value) : 'custom';
+                    number.hidden = Boolean(special);
+                }
+
+                function syncPreset(setting) {
+                    const preset = document.getElementById(presetId(setting));
+                    if (preset) {
+                        applyPreset(setting, preset, document.getElementById(controlId(setting)));
+                    }
+                }
+
+                function buildPreset(setting, number) {
+                    const preset = document.createElement('select');
+                    preset.id = presetId(setting);
+                    preset.setAttribute('aria-label', setting.label + ' preset');
+                    setting.special.forEach((s) => preset.appendChild(buildOptionEl({ value: String(s.value), text: s.text })));
+                    preset.appendChild(buildOptionEl({ value: 'custom', text: 'Custom…' }));
+                    preset.addEventListener('change', () => {
+                        if (preset.value === 'custom') {
+                            number.hidden = false;
+                            number.focus();
+                            return;
+                        }
+                        number.value = preset.value;
+                        number.hidden = true;
+                        persistFormState();
+                    });
+                    applyPreset(setting, preset, number);
+                    return preset;
                 }
 
                 // Normalizes a value from a saved file or localStorage into one this setting's control
@@ -135,7 +157,7 @@
                     }
                     const control = document.getElementById(controlId(setting));
                     control.value = normalized;
-                    refreshOutput(setting, control);
+                    syncPreset(setting);
                     return true;
                 }
 
@@ -181,10 +203,19 @@
                         setting.options.forEach((opt) => control.appendChild(buildOptionEl(opt, setting.default)));
                     } else if (setting.type === 'range') {
                         control = document.createElement('input');
-                        control.type = 'range';
+                        control.type = 'number';
                         control.min = setting.min;
                         control.max = setting.max;
+                        control.step = 1;
                         control.value = setting.default;
+                        control.addEventListener('change', () => {
+                            const number = Math.round(Number(control.value));
+                            control.value = Number.isFinite(number) && control.value !== ''
+                                ? Math.min(setting.max, Math.max(setting.min, number))
+                                : setting.default;
+                            syncPreset(setting);
+                            persistFormState();
+                        });
                     } else if (setting.type === 'text') {
                         control = document.createElement('input');
                         control.type = 'text';
@@ -195,10 +226,7 @@
                     control.id = controlId(setting);
                     control.name = setting.key;
                     control.required = true;
-                    control.addEventListener('input', () => {
-                        refreshOutput(setting, control);
-                        persistFormState();
-                    });
+                    control.addEventListener('input', persistFormState);
                     return control;
                 }
 
@@ -227,13 +255,10 @@
                     const controlWrap = document.createElement('div');
                     controlWrap.className = 'setting-row__control';
                     const control = buildControl(setting);
+                    if (setting.type === 'range' && setting.special && setting.special.length) {
+                        controlWrap.appendChild(buildPreset(setting, control));
+                    }
                     controlWrap.appendChild(control);
-
-                    const output = document.createElement('output');
-                    output.className = setting.type === 'range' ? 'output-pill' : 'output-pill output-pill--hidden';
-                    output.setAttribute('for', control.id);
-                    output.value = outputText(setting, setting.default);
-                    controlWrap.appendChild(output);
 
                     row.append(label, controlWrap);
                     return row;
