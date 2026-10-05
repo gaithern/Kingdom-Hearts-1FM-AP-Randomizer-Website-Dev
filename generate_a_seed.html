@@ -214,7 +214,6 @@
                             control.value = Number.isFinite(number) && control.value !== ''
                                 ? Math.min(setting.max, Math.max(setting.min, number))
                                 : setting.default;
-                            syncPreset(setting);
                             persistFormState();
                         });
                     } else if (setting.type === 'text') {
