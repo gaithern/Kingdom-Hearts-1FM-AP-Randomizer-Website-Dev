@@ -61,21 +61,21 @@ async function checkForUpdates() {
     const locationsAreLoaded = await loadLocationsIfNeeded();
     const settingsAreLoaded = locationsAreLoaded && await loadSettingsIfNeeded();
     if (!settingsAreLoaded) {
-      showConnectionStatus("Game running, randomizer not ready", "waiting");
+      showConnectionStatus("Game running", "waiting");
     } else {
       const result = await fetchFromApi("/state");
       if (addressWhenStarted !== getApiAddress()) {
         return;
       }
       if (result.notReady || result.missing) {
-        showConnectionStatus("Game running, randomizer not ready", "waiting");
+        showConnectionStatus("Game running", "waiting");
       } else {
         showConnectionStatus("Connected", "connected");
         await handleNewState(result.data);
       }
     }
   } catch (error) {
-    showConnectionStatus("Can't reach the API (is the game running?)", "disconnected");
+    showConnectionStatus("Can't reach the API", "disconnected");
   } finally {
     setTimeout(checkForUpdates, trackerConfig.checkForUpdatesEveryMilliseconds);
   }
