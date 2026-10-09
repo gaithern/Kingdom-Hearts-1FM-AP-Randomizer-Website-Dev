@@ -462,7 +462,6 @@ html.broadcast .tracker {
   margin: 0;
   padding: 6px;
   gap: 6px;
-  transform-origin: top left;
 }
 
 html.broadcast.background-transparent .panel {

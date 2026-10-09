@@ -2,7 +2,7 @@ const trackerConfig = {
   "defaultApiAddress": "http://127.0.0.1:47111",
   "checkForUpdatesEveryMilliseconds": 1000,
   "foundIconSizesToTryInPixels": [26, 22, 18, 15, 12, 10],
-  "broadcastWindowSize": { "width": 520, "height": 960 },
+  "broadcastWindowSize": { "width": 502, "height": 1230 },
 
   "worlds": {
     "destiny_islands":    { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Destiny Islands.png", "unlockedByItem": "Destiny Islands", "hiddenWhenSettingIsOff": "destiny_islands" },
@@ -48,7 +48,8 @@ const trackerConfig = {
       { "label": "Mermaid Kick", "countsItems": ["Mermaid Kick"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Mermaid Kick.png" },
       { "label": "Dodge Roll", "countsItems": ["Dodge Roll"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Dodge Roll.png" },
       { "label": "Lucky Emblems", "countsItems": ["Lucky Emblem"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Config/Emblem.png" },
-      { "label": "Raft Materials (Day 2 and Homecoming)", "countsItems": ["Raft Materials"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Raft Supplies.png" }
+      { "label": "Raft Materials (Day 2 and Homecoming)", "countsItems": ["Raft Materials"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Raft Supplies.png" },
+      { "label": "Empty Bottle", "countsItems": ["Empty Bottle"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Drinking Water.png" }
     ],
     [
       { "label": "Entry Pass", "countsItems": ["Entry Pass"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Olympus Cups.png" },
@@ -56,7 +57,8 @@ const trackerConfig = {
       { "label": "Slides", "countsItems": ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5", "Slide 6"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Slides.png" },
       { "label": "Crystal Trident", "countsItems": ["Crystal Trident"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Crystal Trident.png" },
       { "label": "Jack-In-The-Box / Forget-Me-Not", "countsItems": ["Jack-In-The-Box", "Forget-Me-Not"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Jack in the Box.png" },
-      { "label": "Theon Vol. 6", "countsItems": ["Theon Vol. 6"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Library Books.png" }
+      { "label": "Theon Vol. 6", "countsItems": ["Theon Vol. 6"], "icon": "tracker/images/Theon Vol. 6.png" },
+      { "label": "Old Book", "countsItems": ["Old Book"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Library Books.png" }
     ],
     [
       { "label": "Puppies", "countsItems": ["Puppy"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Dalmatians.png", "multiplyCountBySetting": "puppy_value" },

@@ -27,11 +27,11 @@ function scaleBroadcastToFitWindow() {
     return;
   }
   const main = document.getElementById("tracker");
-  main.style.transform = "none";
+  main.style.zoom = "1";
   const widthScale = window.innerWidth / main.offsetWidth;
   const heightScale = window.innerHeight / main.offsetHeight;
   const scale = Math.min(widthScale, heightScale);
-  main.style.transform = "scale(" + scale + ")";
+  main.style.zoom = String(scale);
 }
 
 function openBroadcastView() {

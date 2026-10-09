@@ -147,7 +147,8 @@ function shrinkFoundIconsToFit() {
   for (const foundItemArea of allFoundItemAreas) {
     for (const size of trackerConfig.foundIconSizesToTryInPixels) {
       foundItemArea.style.setProperty("--found-icon-size", size + "px");
-      const everythingFits = foundItemArea.scrollHeight <= foundItemArea.clientHeight;
+      const lastItem = foundItemArea.lastElementChild;
+      const everythingFits = !lastItem || lastItem.getBoundingClientRect().bottom <= foundItemArea.getBoundingClientRect().bottom;
       if (everythingFits) {
         break;
       }
