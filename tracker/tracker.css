@@ -232,10 +232,6 @@
   object-fit: contain;
 }
 
-.found-item.sent-by-server img {
-  filter: drop-shadow(0 0 3px #b48cff);
-}
-
 .item-count {
   position: absolute;
   right: -4px;

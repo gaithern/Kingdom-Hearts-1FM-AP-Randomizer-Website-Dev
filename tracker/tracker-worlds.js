@@ -137,7 +137,7 @@ function makeFoundItemsHtml(foundItems) {
   for (const item of foundItems) {
     const icon = getIconForItem(item.name);
     if (!foundItemsByIcon[icon]) {
-      foundItemsByIcon[icon] = { itemNames: [], count: 0, sentByServer: false, justReceived: false };
+      foundItemsByIcon[icon] = { itemNames: [], count: 0, justReceived: false };
       iconOrder.push(icon);
     }
     const iconGroup = foundItemsByIcon[icon];
@@ -145,9 +145,6 @@ function makeFoundItemsHtml(foundItems) {
       iconGroup.itemNames.push(item.name);
     }
     iconGroup.count += 1;
-    if (item.source === "remote") {
-      iconGroup.sentByServer = true;
-    }
     if (foundItemKeysLastTime !== null && !foundItemKeysLastTime.includes(getFoundItemKey(item))) {
       iconGroup.justReceived = true;
     }
@@ -157,11 +154,7 @@ function makeFoundItemsHtml(foundItems) {
   for (const icon of iconOrder) {
     const iconGroup = foundItemsByIcon[icon];
     let classes = "found-item";
-    let hoverText = iconGroup.itemNames.join(", ");
-    if (iconGroup.sentByServer) {
-      classes += " sent-by-server";
-      hoverText += " (sent by the server)";
-    }
+    const hoverText = iconGroup.itemNames.join(", ");
     if (iconGroup.justReceived) {
       classes += " just-received";
     }
