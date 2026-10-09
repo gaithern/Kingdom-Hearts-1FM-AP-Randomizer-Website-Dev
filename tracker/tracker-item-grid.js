@@ -31,9 +31,15 @@ function makeTrackedItemHtml(trackedItem, itemCounts) {
     classes += " just-received";
   }
 
+  let icon = trackedItem.icon;
+  if (trackedItem.iconForEachCombination) {
+    const ownedItemNames = trackedItem.countsItems.filter(itemName => howManyYouHave(itemCounts, itemName) > 0);
+    icon = getCombinationIcon(trackedItem, ownedItemNames);
+  }
+
   let html = '<span class="item-cell"><span class="' + classes + '">';
-  html += makeImageHtml(trackedItem.icon, trackedItem.label);
-  if (count > 1) {
+  html += makeImageHtml(icon, trackedItem.label);
+  if (count > 1 && !trackedItem.iconForEachCombination) {
     html += '<span class="item-count gummi-font">' + count + "</span>";
   }
   html += "</span></span>";

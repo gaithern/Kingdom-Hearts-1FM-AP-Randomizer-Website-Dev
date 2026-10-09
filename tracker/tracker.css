@@ -23,20 +23,6 @@
   --chip-background: #3d3d3d;
 }
 
-html.light-theme {
-  --page-background: #d9d9d9;
-  --panel-background: #ececec;
-  --world-background: #f6f6f6;
-  --border-color: #c4c4c4;
-  --text-color: #1c1c1c;
-  --faded-text-color: #5f5f5f;
-  --highlight-color: #0b74c4;
-  --connected-color: #15803d;
-  --disconnected-color: #b91c1c;
-  --warning-color: #b45309;
-  --chip-background: #dedede;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -50,6 +36,7 @@ html.light-theme {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 6px 12px;
   padding: 8px 12px;
   background: var(--panel-background);
@@ -135,14 +122,6 @@ html.light-theme {
   padding-left: 0;
 }
 
-.tracker ul li::before {
-  content: none;
-}
-
-.tracker .warning-list {
-  list-style-type: disc;
-}
-
 .panel {
   background: var(--panel-background);
   border: 2px solid var(--border-color);
@@ -177,14 +156,33 @@ html.light-theme {
   height: 64px;
 }
 
-.world-icon img {
+.world-icon > img {
   width: 64px;
   height: 64px;
   object-fit: contain;
 }
 
-.world.locked .world-icon img {
+.world.locked .world-icon > img {
   filter: grayscale(1) brightness(0.45);
+}
+
+.keyblade-chest {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 26px;
+  height: 26px;
+}
+
+.keyblade-chest img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px #000000);
+}
+
+.keyblade-chest.missing-keyblade img {
+  filter: grayscale(1) brightness(0.45) drop-shadow(0 0 2px #000000);
 }
 
 .important-checks-badge {
@@ -211,7 +209,8 @@ html.light-theme {
   flex: 1;
   min-width: 0;
   max-height: 64px;
-  overflow: hidden;
+  overflow: clip;
+  overflow-clip-margin: 16px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -221,6 +220,10 @@ html.light-theme {
 .found-item {
   position: relative;
   display: inline-flex;
+}
+
+.found-item.just-received {
+  z-index: 1;
 }
 
 .found-item img {
@@ -254,6 +257,7 @@ html.light-theme {
 
 .item-grid {
   --item-cell-size: 64px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,10 +268,12 @@ html.light-theme {
 .item-row {
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 .item-cell {
   width: var(--item-cell-size);
+  min-width: 0;
   display: flex;
   justify-content: center;
 }
@@ -335,73 +341,6 @@ html.light-theme {
   color: var(--faded-text-color);
 }
 
-.dropdown h2 {
-  margin: 12px 0 4px;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: var(--faded-text-color);
-}
-
-.setting-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.setting-chip {
-  padding: 2px 7px;
-  border-radius: 3px;
-  background: var(--chip-background);
-  font-size: 12px;
-}
-
-.debug-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 6px;
-}
-
-.debug-stat {
-  padding: 4px 8px;
-  border-radius: 4px;
-  background: var(--chip-background);
-}
-
-.debug-stat-name {
-  display: block;
-  font-size: 11px;
-  color: var(--faded-text-color);
-}
-
-.debug-stat-value {
-  overflow-wrap: anywhere;
-  font-weight: bold;
-}
-
-.warning-list {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--warning-color);
-}
-
-.change-log {
-  max-height: 240px;
-  overflow: auto;
-  font-family: Consolas, monospace;
-  font-size: 12px;
-}
-
-.change-log div {
-  padding: 1px 0;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.change-log .reload-message {
-  color: var(--disconnected-color);
-  font-weight: bold;
-}
-
 .raw-state {
   max-height: 420px;
   overflow: auto;
@@ -421,10 +360,6 @@ html.light-theme {
 
 .credits a {
   color: inherit;
-}
-
-.waiting-for-game {
-  display: none;
 }
 
 html.broadcast body {
@@ -522,19 +457,4 @@ html.broadcast.layout-tall .world-list {
 
 html.broadcast.layout-tall .item-grid {
   --item-cell-size: 40px;
-}
-
-html.broadcast.game-offline .tracker {
-  opacity: 0.35;
-}
-
-html.broadcast.game-offline .waiting-for-game {
-  display: grid;
-  place-items: center;
-  position: fixed;
-  inset: 0;
-  font-size: 28px;
-  color: #ffffff;
-  text-shadow: 0 0 4px #000000, 0 0 8px #000000;
-  pointer-events: none;
 }

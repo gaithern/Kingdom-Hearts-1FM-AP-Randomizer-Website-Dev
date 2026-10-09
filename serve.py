@@ -12,6 +12,8 @@ import sys
 
 
 class CleanUrlHandler(http.server.SimpleHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
+
     def translate_path(self, path):
         full_path = super().translate_path(path)
         if not os.path.exists(full_path):

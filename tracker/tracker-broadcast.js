@@ -1,7 +1,6 @@
 function setUpBroadcastView() {
   const page = document.documentElement;
   page.classList.add("broadcast");
-  page.classList.add("game-offline");
 
   const background = urlParameters.get("bg") || "transparent";
   page.classList.add("background-" + background);

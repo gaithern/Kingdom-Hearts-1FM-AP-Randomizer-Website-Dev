@@ -1,5 +1,14 @@
+const archipelagoGroup = { key: "archipelago", name: "Archipelago" };
+
+function getFoundItemKey(item) {
+  if (item.location !== undefined) {
+    return "location " + item.location;
+  }
+  return "received " + item.index;
+}
+
 function shouldShowWorld(group, locationCountPerGroup) {
-  if (!locationCountPerGroup[group.key]) {
+  if (!locationCountPerGroup[group.key] || !trackerConfig.worlds[group.key]) {
     return false;
   }
   const settingThatHidesWorld = getWorldConfig(group.key).hiddenWhenSettingIsOff;
@@ -26,10 +35,13 @@ function drawWorlds(itemCounts) {
   const importantChecksFoundPerGroup = {};
   const foundItemsPerGroup = {};
   for (const item of currentState.items) {
-    if (item.location === undefined) {
+    let group = archipelagoGroup.key;
+    if (item.location !== undefined) {
+      group = getGroupOfLocation(item.location);
+    }
+    if (group === null) {
       continue;
     }
-    const group = getGroupOfLocation(item.location) || "other";
     if (item.progression) {
       importantChecksFoundPerGroup[group] = (importantChecksFoundPerGroup[group] || 0) + 1;
     }
@@ -41,18 +53,21 @@ function drawWorlds(itemCounts) {
     }
   }
 
+  const levelGroups = locationGroups.filter(group => group.key === "levels");
+  const otherGroups = locationGroups.filter(group => group.key !== "levels");
   let worldsHtml = "";
-  for (const group of locationGroups) {
+  for (const group of levelGroups.concat(otherGroups)) {
     if (!shouldShowWorld(group, locationCountPerGroup)) {
       continue;
     }
     worldsHtml += makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPerGroup, importantChecksFoundPerGroup, foundItemsPerGroup);
   }
+  worldsHtml += makeWorldHtml(archipelagoGroup, itemCounts, checkedCountPerGroup, locationCountPerGroup, importantChecksFoundPerGroup, foundItemsPerGroup);
   document.getElementById("world-list").innerHTML = worldsHtml;
 
-  foundLocationsLastTime = [];
+  foundItemKeysLastTime = [];
   for (const item of currentState.items) {
-    foundLocationsLastTime.push(item.location);
+    foundItemKeysLastTime.push(getFoundItemKey(item));
   }
 
   shrinkFoundIconsToFit();
@@ -73,11 +88,14 @@ function makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPer
 
   const checkedCount = checkedCountPerGroup[group.key] || 0;
   const locationCount = locationCountPerGroup[group.key];
-  const worldHoverText = group.name + " (" + checkedCount + " / " + locationCount + " checks)";
+  let worldHoverText = group.name + " (" + checkedCount + " / " + locationCount + " checks)";
+  if (group.key === archipelagoGroup.key) {
+    worldHoverText = group.name;
+  }
 
   const importantChecksFound = importantChecksFoundPerGroup[group.key] || 0;
   let worldIsComplete = false;
-  if (currentState.progression_remaining) {
+  if (currentState.progression_remaining && locationCount) {
     const importantChecksLeft = currentState.progression_remaining[group.key] || 0;
     worldIsComplete = importantChecksLeft === 0;
   }
@@ -91,11 +109,26 @@ function makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPer
   let html = '<div class="' + worldClasses + '">';
   html += '<div class="world-icon">';
   html += makeImageHtml(worldConfig.icon, worldHoverText);
-  html += '<span class="' + badgeClasses + '" title="' + badgeHoverText + '">' + importantChecksFound + "</span>";
+  if (seedSettings.keyblades_unlock_chests === true && worldConfig.chestKeyblade) {
+    html += makeKeybladeChestHtml(worldConfig.chestKeyblade, itemCounts);
+  }
+  if (group.key !== archipelagoGroup.key) {
+    html += '<span class="' + badgeClasses + '" title="' + badgeHoverText + '">' + importantChecksFound + "</span>";
+  }
   html += "</div>";
   html += '<div class="found-items">' + makeFoundItemsHtml(foundItemsPerGroup[group.key] || []) + "</div>";
   html += "</div>";
   return html;
+}
+
+function makeKeybladeChestHtml(keyblade, itemCounts) {
+  let classes = "keyblade-chest";
+  let hoverText = "Chests open with " + keyblade;
+  if (howManyYouHave(itemCounts, keyblade) === 0) {
+    classes += " missing-keyblade";
+    hoverText = "Chests need " + keyblade;
+  }
+  return '<span class="' + classes + '">' + makeImageHtml(trackerConfig.keybladeChestIcon, hoverText) + "</span>";
 }
 
 function makeFoundItemsHtml(foundItems) {
@@ -115,7 +148,7 @@ function makeFoundItemsHtml(foundItems) {
     if (item.source === "remote") {
       iconGroup.sentByServer = true;
     }
-    if (foundLocationsLastTime !== null && !foundLocationsLastTime.includes(item.location)) {
+    if (foundItemKeysLastTime !== null && !foundItemKeysLastTime.includes(getFoundItemKey(item))) {
       iconGroup.justReceived = true;
     }
   }

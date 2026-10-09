@@ -9,10 +9,6 @@ function getApiAddress() {
 function showConnectionStatus(message, statusName) {
   document.getElementById("status-message").textContent = message;
   document.getElementById("status-light").className = "status-light " + statusName;
-  if (isBroadcastView) {
-    const gameIsOffline = statusName !== "connected";
-    document.documentElement.classList.toggle("game-offline", gameIsOffline);
-  }
 }
 
 async function fetchFromApi(path) {
@@ -92,15 +88,13 @@ async function handleNewState(newState) {
   if (currentState !== null && newState.seed !== currentState.seed) {
     seedSettings = null;
     itemCountsLastTime = null;
-    foundLocationsLastTime = null;
+    foundItemKeysLastTime = null;
     const settingsAreLoaded = await loadSettingsIfNeeded();
     if (!settingsAreLoaded) {
       return;
     }
   }
-  previousState = currentState;
   currentState = newState;
-  addChangeToLog();
   drawEverything();
 }
 
@@ -110,5 +104,5 @@ function forgetEverything() {
   seedSettings = null;
   currentState = null;
   itemCountsLastTime = null;
-  foundLocationsLastTime = null;
+  foundItemKeysLastTime = null;
 }
