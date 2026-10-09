@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <title>Tracker</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tracker/tracker.css">
+</head>
+<body>
+<div class="container">
+    <meta name="color-scheme" content="light dark"/>
+
+    <div id="header-container"></div>
+
+    <script src="config.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-container').innerHTML = html;
+                document.getElementById('page-subtitle').textContent = 'Tracker';
+                document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
+            });
+    </script>
+
+    <div id="tracker" class="tracker">
+        <div class="tracker-toolbar">
+            <span class="connection-status">
+                <span id="status-light" class="status-light"></span>
+                <span id="status-message">Not connected</span>
+            </span>
+            <input id="api-address" aria-label="API address">
+            <button id="reload-locations-button">Reload locations</button>
+            <button id="save-snapshot-button">Save snapshot</button>
+            <button id="theme-button">Theme</button>
+            <button id="broadcast-view-button">Broadcast view</button>
+        </div>
+
+        <div id="world-list" class="panel world-list"></div>
+        <div id="item-grid" class="panel item-grid"></div>
+
+        <details class="panel dropdown">
+            <summary>How to use</summary>
+            <p>
+                Keep this page open while playing with
+                <a href="https://github.com/gaithern/KH1-RANDOMIZER" target="_blank" rel="noopener">KH1-RANDOMIZER</a>
+                installed. It reads your progress from the game on this computer, so it works offline and connected to Archipelago.
+            </p>
+            <p>
+                Each world shows how many important checks you have found there. The number turns blue once the world has none left.
+            </p>
+            <p>
+                For streaming, click <b>Broadcast view</b> and use that page's address as an OBS Browser Source.
+                Add <code>&amp;layout=wide</code> or <code>&amp;layout=tall</code> to change the layout, and change
+                <code>bg=dark</code> to <code>bg=transparent</code> or <code>bg=green</code> for the background.
+            </p>
+            <p>
+                If your browser asks to let this site access devices on your local network, allow it. That is how the page talks to the game.
+            </p>
+        </details>
+
+        <details class="panel dropdown">
+            <summary>Seed</summary>
+            <table id="seed-details"></table>
+        </details>
+
+        <details class="panel dropdown">
+            <summary>Settings</summary>
+            <div id="setting-chips" class="setting-chips"></div>
+            <table id="all-settings"></table>
+        </details>
+
+        <details class="panel dropdown">
+            <summary>Debug</summary>
+            <h2>Status</h2>
+            <div id="debug-stats" class="debug-stats"></div>
+            <h2>Warnings</h2>
+            <ul id="warning-list" class="warning-list"></ul>
+            <h2>Changes</h2>
+            <div id="change-log" class="change-log"></div>
+            <h2>Raw state</h2>
+            <pre id="raw-state" class="raw-state"></pre>
+        </details>
+
+        <div class="credits">
+            Icons and fonts:
+            <a href="https://televo.github.io/kingdom-hearts-recollection" target="_blank" rel="noopener">Kingdom Hearts Re:Collection</a>
+            by Televo
+        </div>
+    </div>
+</div>
+
+<div class="waiting-for-game gummi-font">Waiting for game...</div>
+
+<script src="tracker/tracker-config.js"></script>
+<script src="tracker/tracker-shared-state.js"></script>
+<script src="tracker/tracker-html-helpers.js"></script>
+<script src="tracker/tracker-api.js"></script>
+<script src="tracker/tracker-item-counting.js"></script>
+<script src="tracker/tracker-worlds.js"></script>
+<script src="tracker/tracker-item-grid.js"></script>
+<script src="tracker/tracker-dropdowns.js"></script>
+<script src="tracker/tracker-broadcast.js"></script>
+<script src="tracker/tracker-main.js"></script>
+</body>
+</html>
