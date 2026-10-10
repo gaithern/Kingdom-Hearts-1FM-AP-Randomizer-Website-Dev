@@ -28,13 +28,13 @@ function drawSeedDetails() {
 }
 
 function drawSettings() {
-  const allSettingNames = Object.keys(seedSettings).sort();
+  const allSettingNames = Object.keys(seedSettings).filter(settingName => !trackerConfig.settingsHiddenFromList.includes(settingName)).sort();
   let tableHtml = "";
   for (const settingName of allSettingNames) {
     tableHtml += makeTableRowHtml(settingName, JSON.stringify(seedSettings[settingName]));
   }
   if (allSettingNames.length === 0) {
-    tableHtml = makeTableRowHtml("No /settings from this randomizer", "");
+    tableHtml = makeTableRowHtml("No settings", "");
   }
 
   document.getElementById("all-settings").innerHTML = tableHtml;

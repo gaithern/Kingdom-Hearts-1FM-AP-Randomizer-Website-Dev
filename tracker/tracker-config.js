@@ -4,36 +4,40 @@ const trackerConfig = {
   "foundIconSizesToTryInPixels": [26, 22, 18, 15, 12, 10],
   "broadcastWindowSize": { "width": 502, "height": 1230 },
 
+  "apItemPlaceholder": 2641230,
+  "synthesisLocationType": "Synth",
+  "settingsHiddenFromList": ["seed", "slot_name", "starting_items", "remote_location_ids", "synthesis_item_name_byte_arrays", "spell_effectiveness", "spell_mp_costs"],
+
   "keybladeChestIcon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Config/Chest.png",
 
   "worlds": {
-    "destiny_islands":    { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Destiny Islands.png", "chestKeyblade": "Oathkeeper", "unlockedByItem": "Destiny Islands", "hiddenWhenSettingIsOff": "destiny_islands" },
-    "traverse_town":      { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Traverse Town KH1.png", "chestKeyblade": "Lionheart" },
-    "wonderland":         { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Wonderland.png", "chestKeyblade": "Lady Luck", "unlockedByItem": "Wonderland" },
-    "deep_jungle":        { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Deep Jungle.png", "chestKeyblade": "Jungle King", "unlockedByItem": "Deep Jungle" },
-    "hundred_acre_wood":  { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/100 Acre Wood.png", "chestKeyblade": "Spellbinder" },
-    "agrabah":            { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Agrabah.png", "chestKeyblade": "Three Wishes", "unlockedByItem": "Agrabah" },
-    "atlantica":          { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Atlantica KH1.png", "chestKeyblade": "Crabclaw", "unlockedByItem": "Atlantica", "hiddenWhenSettingIsOff": "atlantica" },
-    "halloween_town":     { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Halloween Town.png", "chestKeyblade": "Pumpkinhead", "unlockedByItem": "Halloween Town" },
-    "olympus_coliseum":   { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Olympus Coliseum KH1.png", "chestKeyblade": "Olympia", "unlockedByItem": "Olympus Coliseum" },
-    "monstro":            { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Monstro.png", "chestKeyblade": "Wishing Star", "unlockedByItem": "Monstro" },
-    "neverland":          { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Neverland KH1.png", "chestKeyblade": "Fairy Harp", "unlockedByItem": "Neverland" },
-    "hollow_bastion":     { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Hollow Bastion.png", "chestKeyblade": "Divine Rose", "unlockedByItem": "Hollow Bastion" },
-    "end_of_the_world":   { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/End of the World.png", "chestKeyblade": "Oblivion", "unlockedByItem": "End of the World" },
-    "levels":             { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Sora's Level.png" },
-    "synthesis":          { "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Synthesis.png" },
-    "archipelago":        { "icon": "tracker/images/Archipelago.png" }
+    "destiny_islands":    { "name": "Destiny Islands", "category": "Destiny Islands", "worldId": 1, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Destiny Islands.png", "chestKeyblade": "Oathkeeper", "unlockedByItem": "Destiny Islands", "hiddenWhenSettingIsOff": "destiny_islands" },
+    "traverse_town":      { "name": "Traverse Town", "category": "Traverse Town", "worldId": 3, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Traverse Town KH1.png", "chestKeyblade": "Lionheart" },
+    "wonderland":         { "name": "Wonderland", "category": "Wonderland", "worldId": 4, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Wonderland.png", "chestKeyblade": "Lady Luck", "unlockedByItem": "Wonderland" },
+    "deep_jungle":        { "name": "Deep Jungle", "category": "Deep Jungle", "worldId": 5, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Deep Jungle.png", "chestKeyblade": "Jungle King", "unlockedByItem": "Deep Jungle" },
+    "hundred_acre_wood":  { "name": "100 Acre Wood", "category": "100 Acre Wood", "worldId": 6, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/100 Acre Wood.png", "chestKeyblade": "Spellbinder" },
+    "agrabah":            { "name": "Agrabah", "category": "Agrabah", "worldId": 8, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Agrabah.png", "chestKeyblade": "Three Wishes", "unlockedByItem": "Agrabah" },
+    "atlantica":          { "name": "Atlantica", "category": "Atlantica", "worldId": 9, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Atlantica KH1.png", "chestKeyblade": "Crabclaw", "unlockedByItem": "Atlantica", "hiddenWhenSettingIsOff": "atlantica" },
+    "halloween_town":     { "name": "Halloween Town", "category": "Halloween Town", "worldId": 10, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Halloween Town.png", "chestKeyblade": "Pumpkinhead", "unlockedByItem": "Halloween Town" },
+    "olympus_coliseum":   { "name": "Olympus Coliseum", "category": "Olympus Coliseum", "worldId": 11, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Olympus Coliseum KH1.png", "chestKeyblade": "Olympia", "unlockedByItem": "Olympus Coliseum" },
+    "monstro":            { "name": "Monstro", "category": "Monstro", "worldId": 12, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Monstro.png", "chestKeyblade": "Wishing Star", "unlockedByItem": "Monstro" },
+    "neverland":          { "name": "Neverland", "category": "Neverland", "worldId": 13, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Neverland KH1.png", "chestKeyblade": "Fairy Harp", "unlockedByItem": "Neverland" },
+    "hollow_bastion":     { "name": "Hollow Bastion", "category": "Hollow Bastion", "worldId": 15, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Hollow Bastion.png", "chestKeyblade": "Divine Rose", "unlockedByItem": "Hollow Bastion" },
+    "end_of_the_world":   { "name": "End of the World", "category": "End of the World", "worldId": 16, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/End of the World.png", "chestKeyblade": "Oblivion", "unlockedByItem": "End of the World" },
+    "levels":             { "name": "Levels", "category": "Levels", "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Sora's Level.png" },
+    "synthesis":          { "name": "Synthesis", "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Synthesis.png" },
+    "archipelago":        { "name": "Archipelago", "icon": "tracker/images/Archipelago.png" }
   },
 
   "itemRows": [
     [
-      { "label": "Fire", "countsItems": ["Fire"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Fire Magic.png" },
-      { "label": "Blizzard", "countsItems": ["Blizzard"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Blizzard Magic.png" },
-      { "label": "Thunder", "countsItems": ["Thunder"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Thunder Magic.png" },
-      { "label": "Cure", "countsItems": ["Cure"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Cure Magic.png" },
-      { "label": "Gravity", "countsItems": ["Gravity"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Gravity Magic.png" },
-      { "label": "Stop", "countsItems": ["Stop"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Stop Magic.png" },
-      { "label": "Aero", "countsItems": ["Aero"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Aero Magic.png" }
+      { "label": "Fire", "countsItems": ["Progressive Fire"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Fire Magic.png" },
+      { "label": "Blizzard", "countsItems": ["Progressive Blizzard"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Blizzard Magic.png" },
+      { "label": "Thunder", "countsItems": ["Progressive Thunder"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Thunder Magic.png" },
+      { "label": "Cure", "countsItems": ["Progressive Cure"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Cure Magic.png" },
+      { "label": "Gravity", "countsItems": ["Progressive Gravity"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Gravity Magic.png" },
+      { "label": "Stop", "countsItems": ["Progressive Stop"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Stop Magic.png" },
+      { "label": "Aero", "countsItems": ["Progressive Aero"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Magic/Aero Magic.png" }
     ],
     [
       { "label": "Simba", "countsItems": ["Simba"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Summons/Simba Summon.png" },
@@ -45,7 +49,7 @@ const trackerConfig = {
     ],
     [
       { "label": "High Jump", "countsItems": ["High Jump"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/High Jump.png" },
-      { "label": "Glide", "countsItems": ["Glide", "Superglide"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Glide.png" },
+      { "label": "Glide", "countsItems": ["Progressive Glide"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Glide.png" },
       { "label": "Mermaid Kick", "countsItems": ["Mermaid Kick"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Mermaid Kick.png" },
       { "label": "Dodge Roll", "countsItems": ["Dodge Roll"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Dodge Roll.png" },
       { "label": "Lucky Emblems", "countsItems": ["Lucky Emblem"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Config/Emblem.png" },
@@ -67,7 +71,7 @@ const trackerConfig = {
       { "label": "Puppies", "countsItems": ["Puppy"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Dalmatians.png", "multiplyCountBySetting": "puppy_value" },
       { "label": "Postcards", "countsItems": ["Postcard"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Postcards.png" },
       { "label": "Old Book", "countsItems": ["Old Book"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Library Books.png" },
-      { "label": "Torn Pages", "countsItems": ["Torn Page", "Torn Page 1", "Torn Page 2", "Torn Page 3", "Torn Page 4", "Torn Page 5"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Torn Pages.png" },
+      { "label": "Torn Pages", "countsItems": ["Torn Page"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Torn Pages.png" },
       { "label": "Phil Cup", "countsItems": ["Phil Cup"], "icon": "tracker/images/Phil Cup.png" },
       { "label": "Pegasus Cup", "countsItems": ["Pegasus Cup"], "icon": "tracker/images/Pegasus Cup.png" },
       { "label": "Hercules Cup", "countsItems": ["Hercules Cup"], "icon": "tracker/images/Hercules Cup.png" }

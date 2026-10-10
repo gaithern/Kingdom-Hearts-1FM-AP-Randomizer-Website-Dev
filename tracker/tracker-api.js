@@ -13,95 +13,79 @@ function showConnectionStatus(message, statusName) {
 
 async function fetchFromApi(path) {
   const response = await fetch(getApiAddress() + path, { cache: "no-store" });
-  if (response.status === 503) {
-    return { notReady: true };
-  }
   if (response.status === 404) {
     return { missing: true };
   }
   if (!response.ok) {
     throw new Error(path + " returned " + response.status);
   }
-  const data = await response.json();
-  return { data: data };
+  const text = await response.text();
+  return { text: text, data: JSON.parse(text) };
 }
 
-async function loadLocationsIfNeeded() {
-  if (locationCatalog !== null) {
+// The seed files never change while the game runs, so they are loaded once
+// and forgotten when the game goes away (a new seed means a restart).
+async function loadSeedFilesIfNeeded() {
+  if (seedFiles !== null) {
     return true;
   }
-  const result = await fetchFromApi("/locations");
-  if (result.notReady || result.missing) {
-    return false;
+  const required = ["settings", "locations", "items"];
+  const optional = ["item_location_map", "progression_locations"];
+  const files = {};
+  for (const name of required.concat(optional)) {
+    const result = await fetchFromApi("/" + name);
+    if (result.missing && required.includes(name)) {
+      return false;
+    }
+    files[name] = result.missing ? null : result.data;
   }
-  locationCatalog = result.data.locations;
-  locationGroups = result.data.groups;
-  return true;
-}
-
-async function loadSettingsIfNeeded() {
-  if (seedSettings !== null) {
-    return true;
-  }
-  const result = await fetchFromApi("/settings");
-  if (result.notReady) {
-    return false;
-  }
-  if (result.missing) {
-    seedSettings = {};
-    return true;
-  }
-  seedSettings = result.data.settings;
+  seedFiles = files;
+  seedSettings = files.settings;
+  buildLocationCatalog();
   return true;
 }
 
 async function checkForUpdates() {
   const addressWhenStarted = getApiAddress();
   try {
-    const locationsAreLoaded = await loadLocationsIfNeeded();
-    const settingsAreLoaded = locationsAreLoaded && await loadSettingsIfNeeded();
-    if (!settingsAreLoaded) {
+    const seedFilesAreLoaded = await loadSeedFilesIfNeeded();
+    if (!seedFilesAreLoaded) {
       showConnectionStatus("Game running", "waiting");
     } else {
       const result = await fetchFromApi("/state");
       if (addressWhenStarted !== getApiAddress()) {
         return;
       }
-      if (result.notReady || result.missing) {
+      if (result.missing) {
         showConnectionStatus("Game running", "waiting");
       } else {
         showConnectionStatus("Connected", "connected");
-        await handleNewState(result.data);
+        handleNewState(result.text, result.data);
       }
     }
   } catch (error) {
     showConnectionStatus("Can't reach the API", "disconnected");
+    forgetEverything();
   } finally {
     setTimeout(checkForUpdates, trackerConfig.checkForUpdatesEveryMilliseconds);
   }
 }
 
-async function handleNewState(newState) {
-  if (currentState !== null && newState.revision === currentState.revision && newState.seed === currentState.seed) {
+function handleNewState(stateText, rawState) {
+  if (stateText === rawStateText) {
     return;
   }
-  if (currentState !== null && newState.seed !== currentState.seed) {
-    seedSettings = null;
-    itemCountsLastTime = null;
-    foundItemKeysLastTime = null;
-    const settingsAreLoaded = await loadSettingsIfNeeded();
-    if (!settingsAreLoaded) {
-      return;
-    }
-  }
-  currentState = newState;
+  rawStateText = stateText;
+  currentState = buildTrackerState(rawState);
   drawEverything();
 }
 
 function forgetEverything() {
+  seedFiles = null;
   locationCatalog = null;
   locationGroups = [];
   seedSettings = null;
+  rawStateText = null;
   currentState = null;
   itemCountsLastTime = null;
   foundItemKeysLastTime = null;
