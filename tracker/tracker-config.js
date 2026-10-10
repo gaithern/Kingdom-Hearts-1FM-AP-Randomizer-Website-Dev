@@ -8,7 +8,7 @@ const trackerConfig = {
   "synthesisLocationType": "Synth",
   "settingsHiddenFromList": ["seed", "slot_name", "starting_items", "remote_location_ids", "synthesis_item_name_byte_arrays", "spell_effectiveness", "spell_mp_costs"],
 
-  "keybladeChestIcon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Config/Chest.png",
+  "keybladeChestIcon": "tracker/images/Chest.png",
 
   "worlds": {
     "destiny_islands":    { "name": "Destiny Islands", "category": "Destiny Islands", "worldId": 1, "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Worlds/Destiny Islands.png", "chestKeyblade": "Oathkeeper", "unlockedByItem": "Destiny Islands", "hiddenWhenSettingIsOff": "destiny_islands" },
@@ -54,7 +54,7 @@ const trackerConfig = {
       { "label": "Dodge Roll", "countsItems": ["Dodge Roll"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/Growth/Dodge Roll.png" },
       { "label": "Lucky Emblems", "countsItems": ["Lucky Emblem"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Config/Emblem.png" },
       { "label": "Final Door Key", "countsItems": ["Final Door Key"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Config/Keyblade.png" },
-      { "label": "Raft Materials (Day 2 and Homecoming)", "countsItems": ["Raft Materials"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Raft Supplies.png" },
+      { "label": "Raft Materials", "countsItems": ["Raft Materials"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Raft Supplies.png" },
       { "label": "Empty Bottle", "countsItems": ["Empty Bottle"], "icon": "https://cdn.jsdelivr.net/gh/Televo/kingdom-hearts-recollection@main/Minimal/Key Items/KH1 Key Items/Drinking Water.png" }
     ],
     [
