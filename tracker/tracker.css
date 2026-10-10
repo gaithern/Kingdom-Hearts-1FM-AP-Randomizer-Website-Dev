@@ -242,6 +242,8 @@
   right: -4px;
   bottom: -4px;
   line-height: 1;
+  padding: 0.15em 0.2em;
+  margin: -0.15em -0.2em;
   white-space: nowrap;
   background: linear-gradient(#fff6c8, #f2b632);
   -webkit-background-clip: text;
