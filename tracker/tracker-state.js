@@ -93,8 +93,16 @@ function getProgressionRemaining(checkedLocations, progressionLocations) {
   return remaining;
 }
 
+function getCheckedLocations(rawState) {
+  let locations = rawState.checked_locations;
+  if (seedSettings.remote_items === "full") {
+    locations = locations.concat(rawState.server_checked_locations || []);
+  }
+  return [...new Set(locations)].sort((a, b) => a - b);
+}
+
 function buildTrackerState(rawState) {
-  const checkedLocations = [...rawState.checked_locations].sort((a, b) => a - b);
+  const checkedLocations = getCheckedLocations(rawState);
   const progressionLocations = new Set(seedFiles.progression_locations || []);
   const startingItems = (seedSettings.starting_items || []).map(itemId => ({ item: itemId, name: getItemName(itemId) }));
   return {
