@@ -1191,6 +1191,10 @@ button:disabled {
 }
 
 .world-icon {
+    opacity: 0.66;
+    transition: .5s ease;
+    backface-visibility: hidden;
+
     width: 160px;
     height: 160px;
     border-radius: var(--radius);
