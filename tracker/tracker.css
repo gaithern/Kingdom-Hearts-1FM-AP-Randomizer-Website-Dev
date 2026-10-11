@@ -367,7 +367,7 @@
 
 html.broadcast body {
   overflow: hidden;
-  background: transparent;
+  background: var(--page-background);
 }
 
 html.broadcast .container {
@@ -378,14 +378,6 @@ html.broadcast .container {
 
 html.broadcast #header-container {
   display: none;
-}
-
-html.broadcast.background-green body {
-  background: #00ff00;
-}
-
-html.broadcast.background-dark body {
-  background: var(--page-background);
 }
 
 html.broadcast .tracker-toolbar,
@@ -400,64 +392,4 @@ html.broadcast .tracker {
   margin: 0;
   padding: 6px;
   gap: 6px;
-}
-
-html.broadcast.background-transparent .panel {
-  background: rgba(28, 28, 28, 0.82);
-}
-
-html.broadcast.background-transparent .world-list {
-  background: transparent;
-}
-
-html.broadcast.background-transparent .world {
-  background: rgba(40, 40, 40, 0.82);
-}
-
-html.broadcast.hide-worlds .world-list {
-  display: none;
-}
-
-html.broadcast.hide-items .item-grid {
-  display: none;
-}
-
-html.broadcast.layout-wide .tracker {
-  width: 1600px;
-}
-
-html.broadcast.layout-wide .world-list {
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-}
-
-html.broadcast.layout-wide .world {
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 146px;
-}
-
-html.broadcast.layout-wide .found-items {
-  flex: none;
-  width: 100%;
-  justify-content: center;
-}
-
-html.broadcast.layout-wide .item-grid {
-  --item-cell-size: 44px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 18px;
-}
-
-html.broadcast.layout-tall .tracker {
-  width: 300px;
-}
-
-html.broadcast.layout-tall .world-list {
-  grid-template-columns: 1fr;
-}
-
-html.broadcast.layout-tall .item-grid {
-  --item-cell-size: 40px;
 }
