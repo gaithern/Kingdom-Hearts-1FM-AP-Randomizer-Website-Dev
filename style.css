@@ -197,6 +197,11 @@ p, ul, ol {
     transform: translateX(-50%) translateY(0);
 }
 
+.info-tip.below .info-tip__content {
+    bottom: auto;
+    top: calc(100% + 8px);
+}
+
 @media (max-width: 700px) {
     .info-tip__content {
         left: 0;

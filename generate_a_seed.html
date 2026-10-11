@@ -2,611 +2,526 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
     <title>Generate a Seed</title>
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-    <body> 
-        <div class="container">
-            <!-- Make dark mode -->
-            <meta name    = "color-scheme" content = "light dark"/>
-            
-            <div id="header-container"></div>
-            
-            <script>
-                fetch('header.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        document.getElementById('header-container').innerHTML = html;
-                        document.getElementById('page-subtitle').textContent = 'Generate a Seed';
-                        document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
-                    });
-            </script>
-            <div class="page-intro">
-                <p>Use the form below to decide your settings, then head to the <strong>Finish</strong> tab to create your seed.</p>
-                <p>Your choices are saved automatically as you go, so you won't lose them if you leave and come back later. The Finish tab also lets you save your settings to a file, or load a previously saved settings file to restore them here.</p>
-                <p>Not sure how to use the seed this page gives you? Check out the <a href="setup_guide">Setup Guide</a>.</p>
+<body>
+    <div class="container">
+        <div id="header-container"></div>
+
+        <div class="page-intro">
+            <p>Use the form below to decide your settings, then head to the <strong>Finish</strong> tab to create your seed.</p>
+            <p>Your choices are saved automatically as you go, so you won't lose them if you leave and come back later. The Finish tab also lets you save your settings to a file, or load a previously saved settings file to restore them here.</p>
+            <p>Not sure how to use the seed this page gives you? Check out the <a href="setup_guide">Setup Guide</a>.</p>
+        </div>
+
+        <div class="settings-tabs" id="settings-tabs"></div>
+        <div id="settings-panels"></div>
+
+        <div class="settings-panel" id="panel-finish" hidden>
+            <div class="card seed-actions">
+                <h3>Save / Load Settings</h3>
+                <p class="seed-actions__hint">Save your current settings to a file you can keep or share, or load a previously saved settings file to restore them here.</p>
+                <div class="action-row">
+                    <button type="button" class="secondary" id="save-button">Save Settings</button>
+                    <input type="file" id="load-input" accept=".yaml,.yml">
+                </div>
+                <div id="load-result" class="result-box"></div>
             </div>
-            <form id="settings-form">
-                <div class="settings-tabs" id="settings-tabs" role="tablist" aria-label="Settings categories"></div>
-                <div id="settings-panels"></div>
-            </form>
+            <div class="card seed-actions">
+                <h3>Generate Seed</h3>
+                <p class="seed-actions__hint">Generates a seed using the settings currently selected on this page.</p>
+                <button type="button" id="generate-button">Generate Seed</button>
+                <div id="generate-result" class="result-box"></div>
+            </div>
+        </div>
+    </div>
 
-            <script src="config.js"></script>
-            <script>
-                let settingsData = null;
-                // v2: settings are keyed by AP option key and store raw AP values (the v1 format keyed
-                // by display label and stored display strings, so it can't be applied to this form).
-                const STORAGE_KEY = 'kh1fm-generate-a-seed-settings-v2';
-                const flaskUrl = `${FLASK_BASE_URL}/generate`;
-                const optionsUrl = `${FLASK_BASE_URL}/kh1_options`;
+    <script src="config.js"></script>
+    <script>
+        var game = "";
+        var settings = [];
 
-                // Slot name isn't an AP option (it's the YAML's top-level "name:"), so it isn't part of
-                // the schema the backend serves and is added to the Misc tab here instead.
-                const SLOT_NAME_SETTING = {
-                    key: 'name',
-                    label: 'Slot Name',
-                    type: 'text',
-                    default: 'Player{number}',
-                    description: 'Defines what the slot name should be for hosting the game using Archipelago.\n\nYou can ignore this if you plan to play without using the server/client.',
-                    isSlotName: true
-                };
+        var slotNameSetting = {
+            key: "name",
+            label: "Slot Name",
+            type: "text",
+            default: "Player{number}",
+            description: "Defines what the slot name should be for hosting the game using Archipelago.\n\nYou can ignore this if you plan to play without using the server/client."
+        };
 
-                function setResultState(el, html, type = 'info') {
-                    el.innerHTML = html;
-                    el.classList.remove('success', 'error');
-                    if (type === 'success' || type === 'error') {
-                        el.classList.add(type);
+        fetch("header.html")
+            .then(function (response) { return response.text(); })
+            .then(function (html) {
+                document.getElementById("header-container").innerHTML = html;
+                document.getElementById("page-subtitle").textContent = "Generate a Seed";
+                document.getElementById("nav-apworld-link").href = FLASK_BASE_URL + "/kh1.apworld";
+            });
+
+        fetch(FLASK_BASE_URL + "/kh1_options")
+            .then(function (response) { return response.json(); })
+            .then(function (data) {
+                game = data.game;
+
+                var miscTab = data.tabs[data.tabs.length - 1];
+                for (var i = 0; i < data.tabs.length; i++) {
+                    if (data.tabs[i].slug == "misc") {
+                        miscTab = data.tabs[i];
                     }
                 }
+                miscTab.settings.unshift(slotNameSetting);
 
-                function escapeHtml(value) {
-                    return String(value).replace(/[&<>"']/g, (c) => ({
-                        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-                    }[c]));
+                for (var i = 0; i < data.tabs.length; i++) {
+                    addTab(data.tabs[i]);
                 }
+                addFinishTab();
+                showTab(data.tabs[0].slug);
+                loadFromBrowser();
+            })
+            .catch(function () {
+                document.getElementById("settings-panels").innerHTML =
+                    '<div class="result-box error">Couldn\'t load the settings from the server. Please try again later.</div>';
+            });
 
-                function allSettings() {
-                    return settingsData ? settingsData.tabs.flatMap((tab) => tab.settings) : [];
+        function addTab(tab) {
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "settings-tab";
+            button.id = "button-" + tab.slug;
+            button.textContent = tab.name;
+            button.onclick = function () { showTab(tab.slug); };
+            document.getElementById("settings-tabs").appendChild(button);
+
+            var panel = document.createElement("div");
+            panel.className = "settings-panel";
+            panel.id = "panel-" + tab.slug;
+
+            var grid = document.createElement("div");
+            grid.className = "settings-grid";
+            for (var i = 0; i < tab.settings.length; i++) {
+                grid.appendChild(makeSettingRow(tab.settings[i]));
+                settings.push(tab.settings[i]);
+            }
+
+            panel.appendChild(grid);
+            document.getElementById("settings-panels").appendChild(panel);
+        }
+
+        function addFinishTab() {
+            var button = document.createElement("button");
+            button.type = "button";
+            button.className = "settings-tab settings-tab--cta";
+            button.id = "button-finish";
+            button.textContent = "Finish";
+            button.onclick = function () { showTab("finish"); };
+            document.getElementById("settings-tabs").appendChild(button);
+
+            document.getElementById("settings-panels").appendChild(document.getElementById("panel-finish"));
+        }
+
+        function showTab(slug) {
+            var buttons = document.querySelectorAll(".settings-tab");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            document.getElementById("button-" + slug).classList.add("active");
+
+            var panels = document.querySelectorAll(".settings-panel");
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].hidden = true;
+            }
+            document.getElementById("panel-" + slug).hidden = false;
+        }
+
+        function makeSettingRow(setting) {
+            var row = document.createElement("div");
+            row.className = "setting-row";
+            row.innerHTML =
+                '<span class="setting-row__label">' + setting.label + ' ' +
+                    '<span class="info-tip" tabindex="0">' +
+                        '<span class="info-tip__icon">i</span>' +
+                        '<span class="info-tip__content"></span>' +
+                    '</span>' +
+                '</span>' +
+                '<div class="setting-row__control"></div>';
+            row.querySelector(".info-tip__content").textContent = setting.description;
+
+            var tip = row.querySelector(".info-tip");
+            tip.onmouseenter = function () { placeTip(tip); };
+            tip.onfocus = function () { placeTip(tip); };
+
+            var controlBox = row.querySelector(".setting-row__control");
+            if (setting.type == "select") {
+                controlBox.appendChild(makeDropdown(setting));
+            } else if (setting.type == "range") {
+                if (setting.special && setting.special.length > 0) {
+                    controlBox.appendChild(makePresetDropdown(setting));
                 }
+                controlBox.appendChild(makeNumberBox(setting));
+            } else {
+                controlBox.appendChild(makeTextBox(setting));
+            }
+            return row;
+        }
 
-                function controlId(setting) {
-                    return 'setting-' + setting.key;
+        function placeTip(tip) {
+            tip.classList.remove("below");
+            var content = tip.querySelector(".info-tip__content");
+            if (content.getBoundingClientRect().top < 0) {
+                tip.classList.add("below");
+            }
+        }
+
+        function makeDropdown(setting) {
+            var dropdown = document.createElement("select");
+            dropdown.id = setting.key;
+            for (var i = 0; i < setting.options.length; i++) {
+                var option = document.createElement("option");
+                option.value = setting.options[i].value;
+                option.textContent = setting.options[i].text;
+                dropdown.appendChild(option);
+            }
+            dropdown.value = setting.default;
+            dropdown.onchange = saveToBrowser;
+            return dropdown;
+        }
+
+        function makeTextBox(setting) {
+            var textBox = document.createElement("input");
+            textBox.type = "text";
+            textBox.id = setting.key;
+            textBox.value = setting.default;
+            textBox.oninput = saveToBrowser;
+            return textBox;
+        }
+
+        function makeNumberBox(setting) {
+            var numberBox = document.createElement("input");
+            numberBox.type = "number";
+            numberBox.id = setting.key;
+            numberBox.min = setting.min;
+            numberBox.max = setting.max;
+            numberBox.value = setting.default;
+            numberBox.onchange = function () {
+                var number = Math.round(Number(numberBox.value));
+                if (numberBox.value == "" || isNaN(number)) {
+                    number = setting.default;
                 }
+                if (number < setting.min) {
+                    number = setting.min;
+                }
+                if (number > setting.max) {
+                    number = setting.max;
+                }
+                numberBox.value = number;
+                saveToBrowser();
+            };
+            return numberBox;
+        }
 
-                function buildOptionEl(opt, selectedValue) {
-                    const optionEl = document.createElement('option');
-                    optionEl.value = opt.value;
-                    optionEl.textContent = opt.text;
-                    if (opt.value === selectedValue) {
-                        optionEl.selected = true;
+        function makePresetDropdown(setting) {
+            var dropdown = document.createElement("select");
+            dropdown.id = setting.key + "-preset";
+            for (var i = 0; i < setting.special.length; i++) {
+                var option = document.createElement("option");
+                option.value = setting.special[i].value;
+                option.textContent = capitalize(setting.special[i].text);
+                dropdown.appendChild(option);
+            }
+            var customOption = document.createElement("option");
+            customOption.value = "custom";
+            customOption.textContent = "Custom…";
+            dropdown.appendChild(customOption);
+
+            dropdown.onchange = function () {
+                var numberBox = document.getElementById(setting.key);
+                if (dropdown.value == "custom") {
+                    numberBox.hidden = false;
+                    numberBox.focus();
+                } else {
+                    numberBox.value = dropdown.value;
+                    numberBox.hidden = true;
+                    saveToBrowser();
+                }
+            };
+            return dropdown;
+        }
+
+        function updatePresetDropdown(setting) {
+            var dropdown = document.getElementById(setting.key + "-preset");
+            if (!dropdown) {
+                return;
+            }
+            var numberBox = document.getElementById(setting.key);
+            dropdown.value = "custom";
+            numberBox.hidden = false;
+            for (var i = 0; i < setting.special.length; i++) {
+                if (String(setting.special[i].value) == numberBox.value) {
+                    dropdown.value = numberBox.value;
+                    numberBox.hidden = true;
+                }
+            }
+        }
+
+        function capitalize(text) {
+            var words = text.split(" ");
+            for (var i = 0; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join(" ");
+        }
+
+        function setValue(setting, value) {
+            var text = String(value).trim();
+            var box = document.getElementById(setting.key);
+
+            if (setting.type == "text") {
+                box.value = text;
+                return true;
+            }
+
+            if (setting.type == "select") {
+                text = text.toLowerCase();
+                if (text == "yes" || text == "on") {
+                    text = "true";
+                }
+                if (text == "no" || text == "off") {
+                    text = "false";
+                }
+                for (var i = 0; i < setting.options.length; i++) {
+                    if (String(setting.options[i].value).toLowerCase() == text) {
+                        box.value = setting.options[i].value;
+                        return true;
                     }
-                    return optionEl;
                 }
+                return false;
+            }
 
-                function titleCase(text) {
-                    return text.replace(/(^|\s)\S/g, (c) => c.toUpperCase());
-                }
-
-                function presetId(setting) {
-                    return controlId(setting) + '-preset';
-                }
-
-                function applyPreset(setting, preset, number) {
-                    const special = setting.special.find((s) => s.value === Number(number.value));
-                    preset.value = special ? String(special.value) : 'custom';
-                    number.hidden = Boolean(special);
-                }
-
-                function syncPreset(setting) {
-                    const preset = document.getElementById(presetId(setting));
-                    if (preset) {
-                        applyPreset(setting, preset, document.getElementById(controlId(setting)));
+            if (setting.type == "range") {
+                var specials = setting.special || [];
+                for (var i = 0; i < specials.length; i++) {
+                    if (specials[i].text == text.toLowerCase() || String(specials[i].value) == text) {
+                        box.value = specials[i].value;
+                        updatePresetDropdown(setting);
+                        return true;
                     }
                 }
-
-                function buildPreset(setting, number) {
-                    const preset = document.createElement('select');
-                    preset.id = presetId(setting);
-                    preset.setAttribute('aria-label', setting.label + ' preset');
-                    setting.special.forEach((s) => preset.appendChild(buildOptionEl({ value: String(s.value), text: titleCase(s.text) })));
-                    preset.appendChild(buildOptionEl({ value: 'custom', text: 'Custom…' }));
-                    preset.addEventListener('change', () => {
-                        if (preset.value === 'custom') {
-                            number.hidden = false;
-                            number.focus();
-                            return;
-                        }
-                        number.value = preset.value;
-                        number.hidden = true;
-                        persistFormState();
-                    });
-                    applyPreset(setting, preset, number);
-                    return preset;
-                }
-
-                // Normalizes a value from a saved file or localStorage into one this setting's control
-                // accepts, or null if it isn't valid for the option.
-                function normalizeValue(setting, value) {
-                    if (value === null || value === undefined) {
-                        return null;
-                    }
-                    const text = String(value).trim();
-                    if (setting.type === 'text') {
-                        return text;
-                    }
-                    if (setting.type === 'select') {
-                        const aliases = { yes: 'true', on: 'true', no: 'false', off: 'false' };
-                        const lowered = text.toLowerCase();
-                        const candidates = [lowered, aliases[lowered]];
-                        const match = setting.options.find((opt) => candidates.includes(String(opt.value).toLowerCase()));
-                        return match ? match.value : null;
-                    }
-                    if (setting.type === 'range') {
-                        const special = (setting.special || []).find((s) => s.text === text.toLowerCase());
-                        const number = special ? special.value : Number(text);
-                        if (!Number.isInteger(number)) {
-                            return null;
-                        }
-                        const isSpecial = (setting.special || []).some((s) => s.value === number);
-                        return (isSpecial || (number >= setting.min && number <= setting.max)) ? String(number) : null;
-                    }
-                    return null;
-                }
-
-                // Returns whether the value was valid and applied.
-                function setControlValue(setting, value) {
-                    const normalized = normalizeValue(setting, value);
-                    if (normalized === null) {
-                        return false;
-                    }
-                    const control = document.getElementById(controlId(setting));
-                    control.value = normalized;
-                    syncPreset(setting);
+                var number = Number(text);
+                if (text != "" && Number.isInteger(number) && number >= setting.min && number <= setting.max) {
+                    box.value = number;
+                    updatePresetDropdown(setting);
                     return true;
                 }
+                return false;
+            }
 
-                function persistFormState() {
-                    if (!settingsData) {
-                        return;
-                    }
-                    const state = {};
-                    allSettings().forEach((setting) => {
-                        const el = document.getElementById(controlId(setting));
-                        if (el) {
-                            state[setting.key] = el.value;
-                        }
-                    });
-                    try {
-                        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-                    } catch (e) {
-                        // localStorage unavailable (private browsing, quota, etc.) - skip persistence
+            return false;
+        }
+
+        function saveToBrowser() {
+            var saved = {};
+            for (var i = 0; i < settings.length; i++) {
+                saved[settings[i].key] = document.getElementById(settings[i].key).value;
+            }
+            try {
+                localStorage.setItem("kh1fm-generate-a-seed-settings-v2", JSON.stringify(saved));
+            } catch (e) {
+            }
+        }
+
+        function loadFromBrowser() {
+            var saved = null;
+            try {
+                saved = JSON.parse(localStorage.getItem("kh1fm-generate-a-seed-settings-v2"));
+            } catch (e) {
+            }
+            for (var i = 0; i < settings.length; i++) {
+                if (saved && saved[settings[i].key] != null) {
+                    setValue(settings[i], saved[settings[i].key]);
+                }
+                updatePresetDropdown(settings[i]);
+            }
+        }
+
+        function makeYaml() {
+            var yaml = "name: " + document.getElementById("name").value + "\r\n";
+            yaml += "game: " + game + "\r\n";
+            yaml += game + ":\r\n";
+            for (var i = 0; i < settings.length; i++) {
+                if (settings[i].key != "name") {
+                    yaml += "  " + settings[i].key + ": " + document.getElementById(settings[i].key).value + "\r\n";
+                }
+            }
+            return yaml;
+        }
+
+        function loadYaml(text) {
+            var loaded = 0;
+            var skipped = [];
+            var lines = text.split(/\r?\n/);
+
+            for (var i = 0; i < lines.length; i++) {
+                var line = lines[i];
+                var colon = line.indexOf(":");
+                if (line.trim() == "" || colon == -1) {
+                    continue;
+                }
+
+                var key = line.slice(0, colon).trim();
+                var value = line.slice(colon + 1).trim();
+                var isIndented = line.startsWith("  ");
+
+                if (!isIndented && key != "name") {
+                    continue;
+                }
+                if (isIndented && key == "name") {
+                    skipped.push(key);
+                    continue;
+                }
+
+                var setting = null;
+                for (var j = 0; j < settings.length; j++) {
+                    if (settings[j].key == key) {
+                        setting = settings[j];
                     }
                 }
 
-                function restoreFormState() {
-                    let saved = null;
-                    try {
-                        saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-                    } catch (e) {
-                        return;
+                if (setting && setValue(setting, value)) {
+                    loaded++;
+                } else {
+                    skipped.push(key);
+                }
+            }
+
+            saveToBrowser();
+            return { loaded: loaded, skipped: skipped };
+        }
+
+        function downloadFile(blob, fileName) {
+            var link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        }
+
+        function showResult(box, message, type) {
+            box.innerHTML = message;
+            box.classList.remove("success");
+            box.classList.remove("error");
+            if (type) {
+                box.classList.add(type);
+            }
+        }
+
+        function escapeHtml(text) {
+            var div = document.createElement("div");
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.getElementById("save-button").onclick = function () {
+            downloadFile(new Blob([makeYaml()], { type: "text/plain" }), "settings.yaml");
+        };
+
+        document.getElementById("load-input").onchange = async function () {
+            var input = document.getElementById("load-input");
+            var resultBox = document.getElementById("load-result");
+            var file = input.files[0];
+            if (!file) {
+                return;
+            }
+
+            try {
+                var text = await file.text();
+                var result = loadYaml(text);
+                var message = "Loaded " + result.loaded + " setting(s) from " + escapeHtml(file.name) + ".";
+                if (result.skipped.length > 0) {
+                    message += " Skipped " + result.skipped.length + " unrecognized or invalid setting(s): " + escapeHtml(result.skipped.join(", ")) + ".";
+                }
+                showResult(resultBox, message, "success");
+            } catch (e) {
+                showResult(resultBox, "Error reading file: " + escapeHtml(e.message), "error");
+            }
+
+            input.value = "";
+        };
+
+        document.getElementById("generate-button").onclick = async function () {
+            var button = document.getElementById("generate-button");
+            var resultBox = document.getElementById("generate-result");
+
+            button.disabled = true;
+            showResult(resultBox, "Generating...");
+
+            var seedTab = window.open("", "_blank");
+            if (seedTab) {
+                seedTab.document.write(
+                    '<title>Generating seed...</title>' +
+                    '<body style="font-family: sans-serif; text-align: center; margin-top: 3em; background-color: black; color: white;">' +
+                    '<h1>Generating your seed...</h1>' +
+                    '<p style="font-size: 1.5em;">This tab will automatically redirect to your seed link when generation is finished.<br>Please don\'t close it.</p>' +
+                    '</body>'
+                );
+                seedTab.document.close();
+            }
+
+            var formData = new FormData();
+            formData.append("file", new Blob([makeYaml()], { type: "text/plain" }), "settings.yaml");
+            formData.append("discord_id", "-98765");
+
+            try {
+                var response = await fetch(FLASK_BASE_URL + "/generate", { method: "POST", body: formData });
+
+                if (!response.ok) {
+                    var errorText = await response.text();
+                    showResult(resultBox, "Error: HTTP " + response.status + ", " + escapeHtml(errorText), "error");
+                    if (seedTab) {
+                        seedTab.close();
                     }
-                    if (!saved) {
-                        return;
-                    }
-                    allSettings().forEach((setting) => {
-                        if (setting.key in saved) {
-                            setControlValue(setting, saved[setting.key]);
-                        }
-                    });
+                    button.disabled = false;
+                    return;
                 }
 
-                function buildControl(setting) {
-                    let control;
-                    if (setting.type === 'select') {
-                        control = document.createElement('select');
-                        setting.options.forEach((opt) => control.appendChild(buildOptionEl(opt, setting.default)));
-                    } else if (setting.type === 'range') {
-                        control = document.createElement('input');
-                        control.type = 'number';
-                        control.min = setting.min;
-                        control.max = setting.max;
-                        control.step = 1;
-                        control.value = setting.default;
-                        control.addEventListener('change', () => {
-                            const number = Math.round(Number(control.value));
-                            control.value = Number.isFinite(number) && control.value !== ''
-                                ? Math.min(setting.max, Math.max(setting.min, number))
-                                : setting.default;
-                            persistFormState();
-                        });
-                    } else if (setting.type === 'text') {
-                        control = document.createElement('input');
-                        control.type = 'text';
-                        control.value = setting.default;
-                    } else {
-                        throw new Error('Unknown setting type: ' + setting.type);
-                    }
-                    control.id = controlId(setting);
-                    control.name = setting.key;
-                    control.required = true;
-                    control.addEventListener('input', persistFormState);
-                    return control;
-                }
+                var seedLink = response.headers.get("X-Seed-Link");
+                var contentType = response.headers.get("Content-Type") || "";
 
-                function buildSettingRow(setting) {
-                    const row = document.createElement('div');
-                    row.className = 'setting-row';
+                if (contentType.includes("application/zip") || contentType.includes("application/octet-stream")) {
+                    var linkHtml = '<a href="' + seedLink + '">' + seedLink + '</a>';
+                    showResult(resultBox, "Generation completed<br>Seed link is: " + linkHtml + "<br>Downloading seed...");
 
-                    const label = document.createElement('span');
-                    label.className = 'setting-row__label';
-                    label.append(setting.label + ' ');
+                    var zip = await response.blob();
+                    downloadFile(zip, "mod.zip");
 
-                    const tip = document.createElement('span');
-                    tip.className = 'info-tip';
-                    tip.tabIndex = 0;
-                    const tipIcon = document.createElement('span');
-                    tipIcon.className = 'info-tip__icon';
-                    tipIcon.setAttribute('aria-hidden', 'true');
-                    tipIcon.textContent = 'i';
-                    const tipContent = document.createElement('span');
-                    tipContent.className = 'info-tip__content';
-                    // Descriptions are the apworld's option docstrings: plain text with newlines.
-                    tipContent.textContent = setting.description;
-                    tip.append(tipIcon, tipContent);
-                    label.appendChild(tip);
-
-                    const controlWrap = document.createElement('div');
-                    controlWrap.className = 'setting-row__control';
-                    const control = buildControl(setting);
-                    if (setting.type === 'range' && setting.special && setting.special.length) {
-                        controlWrap.appendChild(buildPreset(setting, control));
-                    }
-                    controlWrap.appendChild(control);
-
-                    row.append(label, controlWrap);
-                    return row;
-                }
-
-                function activateTab(slug) {
-                    document.querySelectorAll('.settings-tab').forEach((btn) => {
-                        const isTarget = btn.id === 'tab-btn-' + slug;
-                        btn.classList.toggle('active', isTarget);
-                        btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
-                        btn.tabIndex = isTarget ? 0 : -1;
-                    });
-                    document.querySelectorAll('.settings-panel').forEach((panel) => {
-                        panel.hidden = panel.id !== 'tab-panel-' + slug;
-                    });
-                }
-
-                function renderTabs(tabs) {
-                    const tabsContainer = document.getElementById('settings-tabs');
-                    const panelsContainer = document.getElementById('settings-panels');
-
-                    tabs.forEach((tab, index) => {
-                        const isFirst = index === 0;
-
-                        const button = document.createElement('button');
-                        button.type = 'button';
-                        button.className = isFirst ? 'settings-tab active' : 'settings-tab';
-                        button.setAttribute('role', 'tab');
-                        button.setAttribute('aria-selected', isFirst ? 'true' : 'false');
-                        button.setAttribute('aria-controls', 'tab-panel-' + tab.slug);
-                        button.id = 'tab-btn-' + tab.slug;
-                        button.tabIndex = isFirst ? 0 : -1;
-                        button.textContent = tab.name;
-                        button.addEventListener('click', () => activateTab(tab.slug));
-                        tabsContainer.appendChild(button);
-
-                        const panel = document.createElement('div');
-                        panel.className = 'settings-panel';
-                        panel.id = 'tab-panel-' + tab.slug;
-                        panel.setAttribute('role', 'tabpanel');
-                        panel.setAttribute('aria-labelledby', 'tab-btn-' + tab.slug);
-                        if (!isFirst) {
-                            panel.hidden = true;
-                        }
-
-                        const grid = document.createElement('div');
-                        grid.className = 'settings-grid';
-                        tab.settings.forEach((setting) => grid.appendChild(buildSettingRow(setting)));
-                        panel.appendChild(grid);
-
-                        panelsContainer.appendChild(panel);
-                    });
-                }
-
-                function buildYamlString() {
-                    if (!settingsData) {
-                        return '';
+                    if (seedLink && seedTab) {
+                        seedTab.location = seedLink;
+                    } else if (seedLink) {
+                        window.open(seedLink, "_blank");
+                    } else if (seedTab) {
+                        seedTab.close();
                     }
 
-                    //Create data object
-                    let data = "";
-
-                    //Append name
-                    data = data + "name: " + document.getElementById(controlId(SLOT_NAME_SETTING)).value + "\r\n";
-
-                    //Append game
-                    data = data + "game: " + settingsData.game + "\r\n";
-                    data = data + settingsData.game + ":" + "\r\n";
-
-                    //Append settings
-                    for (const setting of allSettings()) {
-                        if (setting.isSlotName) {
-                            continue;
-                        }
-                        data = data + "  " + setting.key + ": " + document.getElementById(controlId(setting)).value + "\r\n";
+                    showResult(resultBox, "Generation completed<br>Seed link is: " + linkHtml + "<br>Seed downloaded successfully.", "success");
+                } else {
+                    if (seedTab) {
+                        seedTab.close();
                     }
-
-                    return data;
+                    var responseText = await response.text();
+                    showResult(resultBox, "Generation completed.<br>Response: " + responseText, "success");
                 }
-
-                function downloadSettingsFile() {
-                    const data = buildYamlString();
-                    const filename = "settings.yaml";
-                    const type = "text/plain";
-                    const file = new Blob([data], { type: type });
-                    const a = document.createElement("a");
-                    const url = URL.createObjectURL(file);
-                    a.href = url;
-                    a.download = filename;
-                    document.body.appendChild(a);
-                    a.click();
-
-                    // Clean up the URL object after the download
-                    setTimeout(() => {
-                        URL.revokeObjectURL(url);
-                        document.body.removeChild(a);
-                    }, 0);
+            } catch (e) {
+                if (seedTab) {
+                    seedTab.close();
                 }
+                showResult(resultBox, "Error: " + escapeHtml(e.message), "error");
+            }
 
-                function parseSettingsYaml(text) {
-                    const lines = text.split(/\r?\n/);
-                    const result = { name: null, values: {} };
-                    for (const line of lines) {
-                        if (!line.trim()) {
-                            continue;
-                        }
-                        if (line.startsWith('  ')) {
-                            const idx = line.indexOf(':');
-                            if (idx === -1) {
-                                continue;
-                            }
-                            const key = line.slice(2, idx).trim();
-                            const value = line.slice(idx + 1).trim();
-                            result.values[key] = value;
-                        } else if (line.startsWith('name:')) {
-                            result.name = line.slice('name:'.length).trim();
-                        }
-                        // "game:" and "Kingdom Hearts:" lines are constant/structural - ignored
-                    }
-                    return result;
-                }
-
-                function loadSettingsFromYamlText(text) {
-                    if (!settingsData) {
-                        return { applied: 0, unrecognized: [] };
-                    }
-
-                    const parsed = parseSettingsYaml(text);
-                    const byKey = new Map(allSettings().filter((s) => !s.isSlotName).map((s) => [s.key, s]));
-
-                    let applied = 0;
-                    const unrecognized = [];
-
-                    if (parsed.name !== null && setControlValue(SLOT_NAME_SETTING, parsed.name)) {
-                        applied++;
-                    }
-
-                    for (const [key, rawValue] of Object.entries(parsed.values)) {
-                        const setting = byKey.get(key);
-                        if (setting && setControlValue(setting, rawValue)) {
-                            applied++;
-                        } else {
-                            unrecognized.push(key);
-                        }
-                    }
-
-                    persistFormState();
-                    return { applied, unrecognized };
-                }
-
-                async function generateKH1APR(file, discordId, flaskApGenerateUrl, onProgress, onError, onSuccess, seedTab) {
-                    if (!file) {
-                        onError("Please attach a file to send.");
-                        return;
-                    }
-
-                    const data = { discord_id: discordId };
-                    const file_name = file.name;
-                    const file_bytes = await file.arrayBuffer(); // Read the file content as ArrayBuffer
-                    const formData = new FormData();
-                    formData.append('file', new Blob([file_bytes]), file_name);
-                    formData.append('discord_id', discordId);
-
-                    try {
-                        onProgress("Generating..."); // Indicate generation in progress
-
-                        const response = await fetch(flaskApGenerateUrl, {
-                            method: 'POST',
-                            body: formData,
-                            // No need for Content-Type header when using FormData
-                        });
-
-                        if (!response.ok) {
-                            const errorText = await response.text();
-                            onError(`HTTP error! status: ${response.status}, body: ${errorText}`);
-                            if (seedTab) seedTab.close();
-                            return;
-                        }
-
-                        for (const [key, value] of response.headers.entries()) {
-                            console.log(`Header Key: ${key}\nHeader Value: ${value}`);
-                        }
-                        const seedLink = response.headers.get('X-Seed-Link') || 'No seed link found.';
-                        const contentType = response.headers.get('Content-Type') || '';
-
-                        if (contentType.includes('application/zip') || contentType.includes('application/octet-stream')) {
-                            onProgress(`Generation completed<br>Seed link is: <a href="${seedLink}">${seedLink}</a><br>Downloading seed...`);
-                            const blob = await response.blob();
-                            const url = window.URL.createObjectURL(blob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = `mod.zip`; // Create a filename for download
-                            document.body.appendChild(a);
-                            a.click();
-                            document.body.removeChild(a);
-                            window.URL.revokeObjectURL(url);
-                            if (seedLink && seedLink !== 'No seed link found.') {
-                                if (seedTab) {
-                                    seedTab.location = seedLink;
-                                } else {
-                                    window.open(seedLink, '_blank');
-                                }
-                            } else if (seedTab) {
-                                seedTab.close();
-                            }
-                            onSuccess(`Generation completed<br>Seed link is: <a href="${seedLink}">${seedLink}</a><br>Seed downloaded successfully.`);
-                        } else {
-                            if (seedTab) seedTab.close();
-                            const responseText = await response.text();
-                            onSuccess(`Generation completed.<br>Response: ${responseText}`);
-                        }
-
-                    } catch (error) {
-                        if (seedTab) seedTab.close();
-                        onError(`An error occurred while sending the file or receiving the response: ${error.message}`);
-                    }
-                }
-
-                function buildActionsTab() {
-                    const tabsContainer = document.getElementById('settings-tabs');
-                    const panelsContainer = document.getElementById('settings-panels');
-
-                    const button = document.createElement('button');
-                    button.type = 'button';
-                    button.className = 'settings-tab settings-tab--cta';
-                    button.setAttribute('role', 'tab');
-                    button.setAttribute('aria-selected', 'false');
-                    button.setAttribute('aria-controls', 'tab-panel-generate');
-                    button.id = 'tab-btn-generate';
-                    button.tabIndex = -1;
-                    button.textContent = 'Finish';
-                    button.addEventListener('click', () => activateTab('generate'));
-                    tabsContainer.appendChild(button);
-
-                    const panel = document.createElement('div');
-                    panel.className = 'settings-panel';
-                    panel.id = 'tab-panel-generate';
-                    panel.setAttribute('role', 'tabpanel');
-                    panel.setAttribute('aria-labelledby', 'tab-btn-generate');
-                    panel.hidden = true;
-                    panel.innerHTML = `
-                        <div class="card seed-actions">
-                            <h3>Save / Load Settings</h3>
-                            <p class="seed-actions__hint">Save your current settings to a file you can keep or share, or load a previously saved settings file to restore them here.</p>
-                            <div class="action-row">
-                                <button type="button" class="secondary" id="save-settings-button">Save Settings</button>
-                                <input type="file" id="load-yaml-input" accept=".yaml,.yml">
-                            </div>
-                            <div id="load-result" class="result-box"></div>
-                        </div>
-                        <div class="card seed-actions">
-                            <h3>Generate Seed</h3>
-                            <p class="seed-actions__hint">Generates a seed using the settings currently selected on this page.</p>
-                            <button type="button" id="generate-button">Generate Seed</button>
-                            <div id="generation-result" class="result-box"></div>
-                        </div>
-                    `;
-                    panelsContainer.appendChild(panel);
-
-                    document.getElementById('save-settings-button').addEventListener('click', downloadSettingsFile);
-
-                    document.getElementById('load-yaml-input').addEventListener('change', async () => {
-                        const input = document.getElementById('load-yaml-input');
-                        const loadResult = document.getElementById('load-result');
-                        const file = input.files[0];
-                        if (!file) {
-                            return;
-                        }
-                        try {
-                            const text = await file.text();
-                            const { applied, unrecognized } = loadSettingsFromYamlText(text);
-                            let message = `Loaded ${applied} setting${applied === 1 ? '' : 's'} from ${escapeHtml(file.name)}.`;
-                            if (unrecognized.length > 0) {
-                                message += ` Skipped ${unrecognized.length} unrecognized or invalid setting${unrecognized.length === 1 ? '' : 's'}: ${escapeHtml(unrecognized.join(', '))}.`;
-                            }
-                            setResultState(loadResult, message, 'success');
-                        } catch (e) {
-                            setResultState(loadResult, `Error reading file: ${escapeHtml(e.message)}`, 'error');
-                        }
-                        input.value = '';
-                    });
-
-                    const generateButton = document.getElementById('generate-button');
-                    const resultDiv = document.getElementById('generation-result');
-
-                    generateButton.addEventListener('click', async () => {
-                        setResultState(resultDiv, '', 'info'); // Clear previous results
-                        generateButton.disabled = true; // Disable button during generation
-                        const yamlText = buildYamlString();
-                        const file = new File([yamlText], 'settings.yaml', { type: 'text/plain' });
-                        // Open the tab synchronously within the click gesture so popup blockers allow it;
-                        // its location gets set to the seed link once generation finishes.
-                        const seedTab = window.open('', '_blank');
-                        if (seedTab) {
-                            seedTab.document.write(`
-                                <title>Generating seed...</title>
-                                <body style="font-family: sans-serif; text-align: center; margin-top: 3em; background-color: black; color: white;">
-                                    <h1>Generating your seed...</h1>
-                                    <p style="font-size: 1.5em;">This tab will automatically redirect to your seed link when generation is finished.<br>Please don't close it.</p>
-                                </body>
-                            `);
-                            seedTab.document.close();
-                        }
-                        await generateKH1APR(
-                            file,
-                            '-98765',
-                            flaskUrl,
-                            (message) => {
-                                setResultState(resultDiv, message, 'info');
-                            },
-                            (error) => {
-                                setResultState(resultDiv, `Error: ${escapeHtml(error)}`, 'error');
-                                generateButton.disabled = false; // Re-enable on error
-                            },
-                            (successMessage) => {
-                                setResultState(resultDiv, successMessage, 'success');
-                                generateButton.disabled = false; // Re-enable on success
-                            },
-                            seedTab
-                        );
-                    });
-                }
-
-                fetch(optionsUrl)
-                    .then((response) => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then((data) => {
-                        const slotNameTab = data.tabs.find((tab) => tab.slug === 'misc') || data.tabs[data.tabs.length - 1];
-                        slotNameTab.settings.unshift(SLOT_NAME_SETTING);
-                        settingsData = data;
-                        renderTabs(data.tabs);
-                        buildActionsTab();
-                        restoreFormState();
-                    })
-                    .catch((error) => {
-                        const panelsContainer = document.getElementById('settings-panels');
-                        panelsContainer.innerHTML = '<div class="result-box error"></div>';
-                        panelsContainer.firstElementChild.textContent =
-                            `Couldn't load the settings from the server (${error.message}). Please try again later.`;
-                    });
-            </script>
-    </div> </body>
+            button.disabled = false;
+        };
+    </script>
+</body>
 </html>
