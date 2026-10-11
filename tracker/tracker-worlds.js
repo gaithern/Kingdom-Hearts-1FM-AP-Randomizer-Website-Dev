@@ -24,14 +24,6 @@ function drawWorlds(itemCounts) {
     locationCountPerGroup[location.group] = (locationCountPerGroup[location.group] || 0) + 1;
   }
 
-  const checkedCountPerGroup = {};
-  for (const locationId of currentState.checked_locations) {
-    const group = getGroupOfLocation(locationId);
-    if (group) {
-      checkedCountPerGroup[group] = (checkedCountPerGroup[group] || 0) + 1;
-    }
-  }
-
   const importantChecksFoundPerGroup = {};
   const foundItemsPerGroup = {};
   for (const item of currentState.items) {
@@ -60,9 +52,9 @@ function drawWorlds(itemCounts) {
     if (!shouldShowWorld(group, locationCountPerGroup)) {
       continue;
     }
-    worldsHtml += makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPerGroup, importantChecksFoundPerGroup, foundItemsPerGroup);
+    worldsHtml += makeWorldHtml(group, itemCounts, importantChecksFoundPerGroup, foundItemsPerGroup);
   }
-  worldsHtml += makeWorldHtml(archipelagoGroup, itemCounts, checkedCountPerGroup, locationCountPerGroup, importantChecksFoundPerGroup, foundItemsPerGroup);
+  worldsHtml += makeWorldHtml(archipelagoGroup, itemCounts, importantChecksFoundPerGroup, foundItemsPerGroup);
   document.getElementById("world-list").innerHTML = worldsHtml;
 
   foundItemKeysLastTime = [];
@@ -73,7 +65,7 @@ function drawWorlds(itemCounts) {
   shrinkFoundIconsToFit();
 }
 
-function makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPerGroup, importantChecksFoundPerGroup, foundItemsPerGroup) {
+function makeWorldHtml(group, itemCounts, importantChecksFoundPerGroup, foundItemsPerGroup) {
   const worldConfig = getWorldConfig(group.key);
 
   let worldClasses = "world";
@@ -86,16 +78,9 @@ function makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPer
     worldClasses += " locked";
   }
 
-  const checkedCount = checkedCountPerGroup[group.key] || 0;
-  const locationCount = locationCountPerGroup[group.key];
-  let worldHoverText = group.name + " (" + checkedCount + " / " + locationCount + " checks)";
-  if (group.key === archipelagoGroup.key) {
-    worldHoverText = group.name;
-  }
-
   const importantChecksFound = importantChecksFoundPerGroup[group.key] || 0;
   let worldIsComplete = false;
-  if (currentState.progression_remaining && locationCount) {
+  if (currentState.progression_remaining) {
     const importantChecksLeft = currentState.progression_remaining[group.key] || 0;
     worldIsComplete = importantChecksLeft === 0;
   }
@@ -108,7 +93,7 @@ function makeWorldHtml(group, itemCounts, checkedCountPerGroup, locationCountPer
 
   let html = '<div class="' + worldClasses + '">';
   html += '<div class="world-icon">';
-  html += makeImageHtml(worldConfig.icon, worldHoverText);
+  html += makeImageHtml(worldConfig.icon, group.name);
   if (seedSettings.keyblades_unlock_chests === true && worldConfig.chestKeyblade) {
     html += makeKeybladeChestHtml(worldConfig.chestKeyblade, itemCounts);
   }
