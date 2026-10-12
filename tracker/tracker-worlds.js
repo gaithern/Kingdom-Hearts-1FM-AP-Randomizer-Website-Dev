@@ -24,7 +24,7 @@ function drawWorlds(itemCounts) {
     locationCountPerGroup[location.group] = (locationCountPerGroup[location.group] || 0) + 1;
   }
 
-  const importantChecksFoundPerGroup = {};
+  const importantChecksFoundPerGroup = { ...currentState.progression_found };
   const foundItemsPerGroup = {};
   for (const item of currentState.items) {
     let group = archipelagoGroup.key;
@@ -34,7 +34,7 @@ function drawWorlds(itemCounts) {
     if (group === null) {
       continue;
     }
-    if (item.progression) {
+    if (item.progression && item.location === undefined) {
       importantChecksFoundPerGroup[group] = (importantChecksFoundPerGroup[group] || 0) + 1;
     }
     if (getIconForItem(item.name) !== null) {

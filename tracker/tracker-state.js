@@ -44,7 +44,7 @@ function getItemName(itemId) {
   return item ? item.name : null;
 }
 
-function getItemsFoundInGame(checkedLocations, progressionLocations) {
+function getItemsFoundInGame(checkedLocations) {
   const itemLocationMap = seedFiles.item_location_map || {};
   const remoteLocations = new Set(seedSettings.remote_location_ids || []);
   const foundItems = [];
@@ -55,7 +55,7 @@ function getItemsFoundInGame(checkedLocations, progressionLocations) {
     }
     const name = getItemName(itemId);
     if (name !== null) {
-      foundItems.push({ item: itemId, name: name, source: "game", location: locationId, progression: progressionLocations.has(locationId) });
+      foundItems.push({ item: itemId, name: name, source: "game", location: locationId });
     }
   }
   return foundItems;
@@ -93,6 +93,17 @@ function getProgressionRemaining(checkedLocations, progressionLocations) {
   return remaining;
 }
 
+function getProgressionFound(checkedLocations, progressionLocations) {
+  const found = {};
+  for (const locationId of checkedLocations) {
+    const groupKey = progressionLocations.has(locationId) && getGroupOfLocation(locationId);
+    if (groupKey) {
+      found[groupKey] = (found[groupKey] || 0) + 1;
+    }
+  }
+  return found;
+}
+
 function getCheckedLocations(rawState) {
   let locations = rawState.checked_locations;
   if (seedSettings.remote_items === "full") {
@@ -115,8 +126,9 @@ function buildTrackerState(rawState) {
     in_gummi: rawState.in_gummi,
     victory: rawState.victory,
     checked_locations: checkedLocations,
-    items: getItemsFoundInGame(checkedLocations, progressionLocations).concat(getItemsReceived(rawState)),
+    items: getItemsFoundInGame(checkedLocations).concat(getItemsReceived(rawState)),
     starting_items: startingItems,
+    progression_found: getProgressionFound(checkedLocations, progressionLocations),
     progression_remaining: getProgressionRemaining(checkedLocations, progressionLocations),
   };
 }
