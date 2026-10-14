@@ -8,14 +8,7 @@ function getFoundItemKey(item) {
 }
 
 function shouldShowWorld(group, locationCountPerGroup) {
-  if (!locationCountPerGroup[group.key] || !trackerConfig.worlds[group.key]) {
-    return false;
-  }
-  const settingThatHidesWorld = getWorldConfig(group.key).hiddenWhenSettingIsOff;
-  if (settingThatHidesWorld && seedSettings[settingThatHidesWorld] === false) {
-    return false;
-  }
-  return true;
+  return Boolean(locationCountPerGroup[group.key] && trackerConfig.worlds[group.key]);
 }
 
 function drawWorlds(itemCounts) {
