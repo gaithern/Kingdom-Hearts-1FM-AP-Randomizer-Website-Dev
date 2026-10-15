@@ -1,0 +1,31 @@
+.leaderboard-card h3 {
+    margin: 0;
+    border-bottom: none;
+}
+
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface-hover);
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.rank-badge.rank-1 {
+    background: linear-gradient(180deg, #ffe5a3, var(--gold));
+    color: #1a1206;
+}
+
+.rank-badge.rank-2 {
+    background: linear-gradient(180deg, #eef0f5, #b7b9c6);
+    color: #1a1206;
+}
+
+.rank-badge.rank-3 {
+    background: linear-gradient(180deg, #e3a36a, #b3713a);
+    color: #1a1206;
+}

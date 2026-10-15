@@ -66,9 +66,37 @@
     color: var(--gold);
 }
 
-/* The target list reuses .category-checkboxes from the site stylesheet. */
 .er-tier {
     padding: 14px 16px;
+}
+
+.er-targets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+}
+
+.er-targets label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.er-targets label:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent-dim);
+}
+
+.er-targets input[type="checkbox"] {
+    margin: 0;
+    flex: 0 0 auto;
 }
 
 .er-empty {
