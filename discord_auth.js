@@ -1,9 +1,3 @@
-// Shared Discord OAuth login helper for pages that need a logged-in Discord
-// identity (Daily Seed, Draft). Depends on config.js's FLASK_BASE_URL being
-// loaded first. The backend flow is webapp/oauth_tools.py's
-// /oauth/login -> Discord -> /oauth/callback, which redirects back here with
-// #token=<signed session token>.
-
 const DISCORD_TOKEN_STORAGE_KEY = 'kh1_discord_token';
 
 function escapeHtml(value) {
@@ -33,7 +27,6 @@ function getStoredDiscordToken() {
     return token;
 }
 
-// Picks up the token handed back from the OAuth callback redirect. Call once per page load.
 function captureDiscordTokenFromHash() {
     const match = window.location.hash.match(/token=([^&]+)/);
     if (match) {
@@ -42,8 +35,6 @@ function captureDiscordTokenFromHash() {
     }
 }
 
-// Renders a login link (logged out) or name + logout link (logged in) into containerEl.
-// onChange(token|null) is called after every render, including after logout.
 function renderDiscordAuthSection(containerEl, onChange) {
     const token = getStoredDiscordToken();
     if (!token) {
