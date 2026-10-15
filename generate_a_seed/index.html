@@ -162,6 +162,8 @@
                     controlBox.appendChild(makePresetDropdown(setting));
                 }
                 controlBox.appendChild(makeNumberBox(setting));
+            } else if (setting.type == "set") {
+                controlBox.appendChild(makeCheckboxList(setting));
             } else {
                 controlBox.appendChild(makeTextBox(setting));
             }
@@ -223,6 +225,91 @@
             return numberBox;
         }
 
+        function makeCheckboxList(setting) {
+            var list = document.createElement("div");
+            list.className = "checkbox-list";
+            list.id = setting.key;
+            for (var i = 0; i < setting.options.length; i++) {
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.value = setting.options[i];
+                checkbox.checked = setting.default.includes(setting.options[i]);
+                checkbox.onchange = saveToBrowser;
+
+                var label = document.createElement("label");
+                label.className = "checkbox-list__item";
+                label.appendChild(checkbox);
+                label.appendChild(document.createTextNode(setting.options[i]));
+                list.appendChild(label);
+            }
+            return list;
+        }
+
+        function getCheckedKeys(setting) {
+            var checkboxes = document.getElementById(setting.key).querySelectorAll("input");
+            var checkedKeys = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    checkedKeys.push(checkboxes[i].value);
+                }
+            }
+            return checkedKeys;
+        }
+
+        function setCheckedKeys(setting, value) {
+            var keys = value;
+            if (!Array.isArray(keys)) {
+                keys = parseYamlList(String(value));
+            }
+            for (var i = 0; i < keys.length; i++) {
+                if (!setting.options.includes(keys[i])) {
+                    return false;
+                }
+            }
+            var checkboxes = document.getElementById(setting.key).querySelectorAll("input");
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = keys.includes(checkboxes[i].value);
+            }
+            return true;
+        }
+
+        function parseYamlList(text) {
+            var inside = text.trim();
+            if (inside.startsWith("[") && inside.endsWith("]")) {
+                inside = inside.slice(1, -1);
+            }
+            var keys = [];
+            var parts = inside.split(",");
+            for (var i = 0; i < parts.length; i++) {
+                var key = parts[i].trim();
+                var firstCharacter = key.charAt(0);
+                var lastCharacter = key.charAt(key.length - 1);
+                var isQuoted = firstCharacter == '"' || firstCharacter == "'";
+                if (key.length >= 2 && isQuoted && lastCharacter == firstCharacter) {
+                    key = key.slice(1, -1);
+                }
+                if (key != "") {
+                    keys.push(key);
+                }
+            }
+            return keys;
+        }
+
+        function makeYamlList(keys) {
+            var quotedKeys = [];
+            for (var i = 0; i < keys.length; i++) {
+                quotedKeys.push(JSON.stringify(keys[i]));
+            }
+            return "[" + quotedKeys.join(", ") + "]";
+        }
+
+        function getValue(setting) {
+            if (setting.type == "set") {
+                return getCheckedKeys(setting);
+            }
+            return document.getElementById(setting.key).value;
+        }
+
         function makePresetDropdown(setting) {
             var dropdown = document.createElement("select");
             dropdown.id = setting.key + "-preset";
@@ -276,6 +363,10 @@
         }
 
         function setValue(setting, value) {
+            if (setting.type == "set") {
+                return setCheckedKeys(setting, value);
+            }
+
             var text = String(value).trim();
             var box = document.getElementById(setting.key);
 
@@ -325,7 +416,7 @@
         function saveToBrowser() {
             var saved = {};
             for (var i = 0; i < settings.length; i++) {
-                saved[settings[i].key] = document.getElementById(settings[i].key).value;
+                saved[settings[i].key] = getValue(settings[i]);
             }
             try {
                 localStorage.setItem("kh1fm-generate-a-seed-settings-v2", JSON.stringify(saved));
@@ -352,9 +443,14 @@
             yaml += "game: " + game + "\r\n";
             yaml += game + ":\r\n";
             for (var i = 0; i < settings.length; i++) {
-                if (settings[i].key != "name") {
-                    yaml += "  " + settings[i].key + ": " + document.getElementById(settings[i].key).value + "\r\n";
+                if (settings[i].key == "name") {
+                    continue;
                 }
+                var value = getValue(settings[i]);
+                if (settings[i].type == "set") {
+                    value = makeYamlList(value);
+                }
+                yaml += "  " + settings[i].key + ": " + value + "\r\n";
             }
             return yaml;
         }
