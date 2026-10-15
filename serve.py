@@ -2,8 +2,8 @@
 """Local dev server with GitHub Pages-style clean URLs.
 
 `python -m http.server` only serves exact filenames, so links like
-href="generate_a_seed" 404 locally even though GitHub Pages resolves
-them to generate_a_seed.html in production. This wraps the stdlib
+href="agrabah" 404 locally even though GitHub Pages resolves
+them to agrabah.html in production. This wraps the stdlib
 server to do the same fallback.
 """
 import http.server
