@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Neverland</title>
-    <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="stylesheet" href="/style.css">
 </head>
     <body> 
         <div class="container">
@@ -11,6 +11,18 @@
             <meta name    = "color-scheme" content = "light dark"/>
             
             <div id="header-container"></div>
+
+            <script>
+                fetch('/header.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('header-container').innerHTML = html;
+                        document.getElementById('page-subtitle').textContent = 'Traverse Town';
+                        document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
+                    });
+            </script>
+            <script src="config.js"></script>
+
         <h2>Location Information</h2>
 
         <table class="location-table">
@@ -27,252 +39,240 @@
             <tr>
               <td>Neverland Hold Flight 1st Chest</td>
               <td>Ship: Hold</td>
-              <td><font color=#13ff00>Beginner: <img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="25px" width="25px">Green Trinity OR Glide</font><br><font color=#ffffff>Normal: 3 High Jump</font></td>
+              <td><font color=#13ff00>Beginner: <img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="20px" width="20px">Green Trinity OR Glide</font><br><font color=#ffffff>Normal: 3 High Jump</font></td>
               <td>Open the chests at the top of the room.<br><br>NOTE: Flight is granted either with Glide acquired, or if obtained at the Captain Hook fight.</td>
-              <td><img src="./images/locations/neverland/Neverland Hold Flight 1st Chest.webp" alt="Neverland Hold Flight 1st Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Hold Flight 1st Chest.webp" alt="Neverland Hold Flight 1st Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Hold Flight 2nd Chest</td>
               <td>Ship: Hold</td>
-              <td><font color=#13ff00>Beginner: <img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="25px" width="25px">Green Trinity OR Glide</font><br><font color=#ffffff>Normal: 3 High Jump</font></td>
+              <td><font color=#13ff00>Beginner: <img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="20px" width="20px">Green Trinity OR Glide</font><br><font color=#ffffff>Normal: 3 High Jump</font></td>
               <td>Open the chests at the top of the room.<br><br>NOTE: Flight is granted either with Glide acquired, or if obtained at the Captain Hook fight.</td>
-              <td><img src="./images/locations/neverland/Neverland Hold Flight 2nd Chest.webp" alt="Neverland Hold Flight 2nd Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Hold Flight 2nd Chest.webp" alt="Neverland Hold Flight 2nd Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Hold Yellow Trinity Left Blue Chest</td>
               <td>Ship Hold</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="25px" width="25px">Yellow Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="20px" width="20px">Yellow Trinity</td>
               <td>Open the blue chest in the back corner of the room.</td>
-              <td><img src="./images/locations/neverland/Neverland Hold Yellow Trinity Left Blue Chest.webp" alt="Neverland Hold Yellow Trinity Left Blue Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Hold Yellow Trinity Left Blue Chest.webp" alt="Neverland Hold Yellow Trinity Left Blue Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Hold Aero Chest</td>
               <td>Ship:Hold</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="25px" width="25px">Yellow Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="20px" width="20px">Yellow Trinity</td>
               <td>Open the chest atop the shelf.<br><br>NOTE: The message for obtaining the item will appear twice. You will only obtain one item.<br><br>This chest does not need Fairy Harp.</td>
-              <td><img src="./images/locations/neverland/Neverland Hold Aero Chest.webp" alt="Neverland Hold Aero Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Hold Aero Chest.webp" alt="Neverland Hold Aero Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Hold Yellow Trinity Right Blue Chest</td>
               <td>Ship: Hold (Yellow Trinity)</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="25px" width="25px">Yellow Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="20px" width="20px">Yellow Trinity</td>
               <td>Open the other blue chest.</td>
-              <td><img src="./images/locations/neverland/Neverland Hold Yellow Trinity Right Blue Chest.webp" alt="Neverland Hold Yellow Trinity Right Blue Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Hold Yellow Trinity Right Blue Chest.webp" alt="Neverland Hold Yellow Trinity Right Blue Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Hold Yellow Trinity Green Chest</td>
               <td>Ship: Hold (Yellow Trinity)</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="25px" width="25px">Yellow Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Yellow%20Trinity.png?raw=true" alt="Yellow Trinity" height="20px" width="20px">Yellow Trinity</td>
               <td>Open the green chest.</td>
-              <td><img src="./images/locations/neverland/Neverland Hold Yellow Trinity Green Chest.webp" alt="Neverland Hold Yellow Trinity Green Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Hold Yellow Trinity Green Chest.webp" alt="Neverland Hold Yellow Trinity Green Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Galley Chest</td>
               <td>Ship: Galley</td>
               <td></td>
               <td>Open the chest tucked in a corner near the furnace.</td>
-              <td><img src="./images/locations/neverland/Neverland Galley Chest.webp" alt="Neverland Galley Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Galley Chest.webp" alt="Neverland Galley Chest" class="loc-img"></td>
             </tr>
             <tr>
-              <td colspan="5" class="callout"><h2>The locations below requires <img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="25px" width="25px">GREEN TRINITY</h2></td>
+              <td colspan="5" class="callout"><h2>The locations below requires <img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="20px" width="20px">GREEN TRINITY</h2></td>
             </tr>
             <tr>
               <td>Neverland Defeat Anti Sora Raven's Claw Event</td>
               <td>Captain's Cabin</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font></td>
               <td>Defeat Anti Sora.</td>
-              <td><img src="./images/locations/neverland/Neverland Defeat Anti Sora Raven's Claw Event.webp" alt="Neverland Defeat Anti Sora Raven's Claw Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Defeat Anti Sora Raven's Claw Event.webp" alt="Neverland Defeat Anti Sora Raven's Claw Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Captain's Cabin Chest</td>
               <td>Captain's Cabin</td>
               <td></td>
               <td>Open the green chest atop the bed's headrest.</td>
-              <td><img src="./images/locations/neverland/Neverland Captain's Cabin Chest.webp" alt="Neverland Captain's Cabin Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Captain's Cabin Chest.webp" alt="Neverland Captain's Cabin Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Cabin Chest</td>
               <td>Cabin</td>
               <td></td>
               <td>Open the green chest near the save point.</td>
-              <td><img src="./images/locations/neverland/Neverland Cabin Chest.webp" alt="Neverland Cabin Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Cabin Chest.webp" alt="Neverland Cabin Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Encounter Hook Cure Event</td>
               <td>Pirate Ship</td>
               <td></td>
               <td>Encounter Captain Hook<br><br>After beginning the fight with Captain Hook, you can just go back in the ship and not fight, if you wanted to.</td>
-              <td><img src="./images/locations/neverland/Neverland Encounter Hook Cure Event.webp" alt="Neverland Encounter Hook Cure Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Encounter Hook Cure Event.webp" alt="Neverland Encounter Hook Cure Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Defeat Hook Ansem's Report 9</td>
               <td>Pirate Ship</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font></td>
               <td>Defeat Captain Hook.</td>
-              <td><img src="./images/locations/neverland/Neverland Defeat Hook Ansem's Report 9.webp" alt="Neverland Defeat Hook Ansem's Report 9" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Defeat Hook Ansem's Report 9.webp" alt="Neverland Defeat Hook Ansem's Report 9" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Defeat Captain Hook Ars Arcanum Event</td>
               <td>Ship Deck</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font></td>
               <td>Defeat Captain Hook.</td>
-              <td><img src="./images/locations/neverland/Neverland Defeat Captain Hook Ars Arcanum Event.webp" alt="Neverland Defeat Captain Hook Ars Arcanum Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Defeat Captain Hook Ars Arcanum Event.webp" alt="Neverland Defeat Captain Hook Ars Arcanum Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Pirate Ship Crows Nest Chest</td>
               <td>Pirate Ship</td>
               <td></td>
               <td>Open the chest up in the crows nest toward the bow.</td>
-              <td><img src="./images/locations/neverland/Neverland Pirate Ship Crows Nest Chest.webp" alt="Neverland Pirate Ship Crows Nest Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Pirate Ship Crows Nest Chest.webp" alt="Neverland Pirate Ship Crows Nest Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Pirate Ship Deck White Trinity Chest</td>
               <td>Pirate Ship</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/White%20Trinity.png?raw=true" alt="White Trinity" height="25px" width="25px">White Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/White%20Trinity.png?raw=true" alt="White Trinity" height="20px" width="20px">White Trinity</td>
               <td>Activate the White Trinity near the helm.</td>
-              <td><img src="./images/locations/neverland/Neverland Pirate Ship Deck White Trinity Chest.webp" alt="Neverland Pirate Ship Deck White Trinity Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Pirate Ship Deck White Trinity Chest.webp" alt="Neverland Pirate Ship Deck White Trinity Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Seal Keyhole Navi-G Piece Event</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Seal the Keyhole</td>
-              <td><img src="./images/locations/neverland/Neverland Seal Keyhole Navi-G Piece Event.webp" alt="Neverland Seal Keyhole Navi-G Piece Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Seal Keyhole Navi-G Piece Event.webp" alt="Neverland Seal Keyhole Navi-G Piece Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Seal Keyhole Fairy Harp Event</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Seal the Keyhole</td>
-              <td><img src="./images/locations/neverland/Neverland Seal Keyhole Fairy Harp Event.webp" alt="Neverland Seal Keyhole Fairy Harp Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Seal Keyhole Fairy Harp Event.webp" alt="Neverland Seal Keyhole Fairy Harp Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Seal Keyhole Tinker Bell Event</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Seal the Keyhole.</td>
-              <td><img src="./images/locations/neverland/Neverland Seal Keyhole Tinker Bell Event.webp" alt="Neverland Seal Keyhole Tinker Bell Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Seal Keyhole Tinker Bell Event.webp" alt="Neverland Seal Keyhole Tinker Bell Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Seal Keyhole Glide Event</td> <!-- Not the best screenshot for this, not sure what else to put here-->
               <td>Clock Tower</td>
               <td></td>
               <td>Seal the Keyhole.</td>
-              <td><img src="./images/locations/neverland/Neverland Seal Keyhole Glide Event.webp" alt="Neverland Seal Keyhole Glide Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Seal Keyhole Glide Event.webp" alt="Neverland Seal Keyhole Glide Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower Chest</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open the green chest along the upper walkway.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower Chest.webp" alt="Neverland Clock Tower Chest" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower Chest.webp" alt="Neverland Clock Tower Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 01:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 1:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0100 Door.webp" alt="Neverland Clock Tower 01:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0100 Door.webp" alt="Neverland Clock Tower 01:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 02:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 2:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0200 Door.webp" alt="Neverland Clock Tower 02:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0200 Door.webp" alt="Neverland Clock Tower 02:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 03:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 3:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0300 Door.webp" alt="Neverland Clock Tower 03:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0300 Door.webp" alt="Neverland Clock Tower 03:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 04:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 4:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0400 Door.webp" alt="Neverland Clock Tower 04:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0400 Door.webp" alt="Neverland Clock Tower 04:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 05:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 5:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0500 Door.webp" alt="Neverland Clock Tower 05:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0500 Door.webp" alt="Neverland Clock Tower 05:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 06:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 6:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0600 Door.webp" alt="Neverland Clock Tower 06:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0600 Door.webp" alt="Neverland Clock Tower 06:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 07:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 7:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0700 Door.webp" alt="Neverland Clock Tower 07:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0700 Door.webp" alt="Neverland Clock Tower 07:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 08:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 8:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0800 Door.webp" alt="Neverland Clock Tower 08:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0800 Door.webp" alt="Neverland Clock Tower 08:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 09:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 9:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 0900 Door.webp" alt="Neverland Clock Tower 09:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 0900 Door.webp" alt="Neverland Clock Tower 09:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 10:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 10:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 1000 Door.webp" alt="Neverland Clock Tower 10:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 1000 Door.webp" alt="Neverland Clock Tower 10:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 11:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 11:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 1100 Door.webp" alt="Neverland Clock Tower 11:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 1100 Door.webp" alt="Neverland Clock Tower 11:00 Door" class="loc-img"></td>
             </tr>
             <tr>
               <td>Neverland Clock Tower 12:00 Door</td>
               <td>Clock Tower</td>
               <td></td>
               <td>Open 12:00 Door.</td>
-              <td><img src="./images/locations/neverland/Neverland Clock Tower 1200 Door.webp" alt="Neverland Clock Tower 12:00 Door" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Clock Tower 1200 Door.webp" alt="Neverland Clock Tower 12:00 Door" class="loc-img"></td>
             </tr>
             <tr>
-              <td colspan="5" class="callout"><h2>Tinker Bell appears in Ship: Cabin after defeating Riku-Ansem in HOLLOW BASTION<br>Only appears at the Clock tower after every Clock tower location has been collected<br>Only in logic if SUPERBOSSES are enabled</h2></td>
+              <td colspan="5" class="callout"><h2>Only appears at the Clock tower after every Clock tower location has been collected<br>Only in logic if SUPERBOSSES are enabled</h2></td>
             </tr>
             <tr>
               <td>Neverland Defeat Phantom Stop Event</td>
               <td>Clock Tower</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font><br><br><font color=#13ff00>Beginner: All Level 3 Magic AND Leaf Bracer</font><br><font color=#ffffff>Normal: All Level 2 Magic AND Leaf Bracer</font><br><font color=#ffcd00>Proud: Fire, Blizzard, Thunder, AND Stop; no Leaf Bracer</font><br><font color=#f44336>Minimal: Stop, AND any two of Fire, Blizzard, OR Thunder.<br>No Defensive Tools</font></td>
               <td>Defeat Phantom.<br><br>Phantom logically expects access to 8 worlds and <i>Defensive Tools</i>.</td>
-              <td><img src="./images/locations/neverland/Neverland Defeat Phantom Stop Event.webp" alt="Neverland Defeat Phantom Stop Event" class="loc-img"></td>
+              <td><img src="./images/neverland/Neverland Defeat Phantom Stop Event.webp" alt="Neverland Defeat Phantom Stop Event" class="loc-img"></td>
             </tr>
         </table>
-
-        <script>
-            fetch('header.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('header-container').innerHTML = html;
-                    document.getElementById('page-subtitle').textContent = 'Neverland';
-                    document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
-                });
-        </script>
-        <script src="config.js"></script>
-
     </div> </body>
 </html>
