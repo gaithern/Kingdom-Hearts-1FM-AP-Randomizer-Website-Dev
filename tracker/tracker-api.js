@@ -23,8 +23,6 @@ async function fetchFromApi(path) {
   return { text: text, data: JSON.parse(text) };
 }
 
-// The seed files never change while the game runs, so they are loaded once
-// and forgotten when the game goes away (a new seed means a restart).
 async function loadSeedFilesIfNeeded() {
   if (seedFiles !== null) {
     return true;
