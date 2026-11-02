@@ -49,14 +49,6 @@
       "weight": 2,
       "halloweenTown": false
     },
-    "Black Fungi": {
-      "model": "xa_ex_2380.mdls",
-      "mset": "xa_ex_2380.mset",
-      "charId": 334,
-      "slots": 13,
-      "weight": 7,
-      "halloweenTown": false
-    },
     "Blue Rhapsody": {
       "model": "xa_ex_2120.mdls",
       "mset": "xa_ex_2120.mset",
@@ -137,36 +129,12 @@
       "weight": 4,
       "halloweenTown": false
     },
-    "Jet Balloon": {
-      "model": "xa_ex_2480.mdls",
-      "mset": "xa_ex_2480.mset",
-      "charId": 345,
-      "slots": 5,
-      "weight": 7,
-      "halloweenTown": false
-    },
     "Large Body": {
       "model": "xa_ex_2050.mdls",
       "mset": "xa_ex_2050.mset",
       "charId": 304,
       "slots": 5,
       "weight": 6,
-      "halloweenTown": false
-    },
-    "Missile Diver": {
-      "model": "xa_ex_2490.mdls",
-      "mset": "xa_ex_2490.mset",
-      "charId": 346,
-      "slots": 2,
-      "weight": 6,
-      "halloweenTown": false
-    },
-    "Pink Agaricus": {
-      "model": "xa_ex_2410.mdls",
-      "mset": "xa_ex_2410.mset",
-      "charId": 339,
-      "slots": 11,
-      "weight": 0,
       "halloweenTown": false
     },
     "Pirate": {
@@ -183,14 +151,6 @@
       "charId": 302,
       "slots": 5,
       "weight": 3,
-      "halloweenTown": false
-    },
-    "Rare Truffles": {
-      "model": "xa_ex_2390.mdls",
-      "mset": "xa_ex_2390.mset",
-      "charId": 335,
-      "slots": 7,
-      "weight": 7,
       "halloweenTown": false
     },
     "Red Nocturne": {
@@ -270,14 +230,6 @@
       "mset": "xa_ex_2010.mset",
       "charId": 300,
       "slots": 5,
-      "weight": 4,
-      "halloweenTown": false
-    },
-    "Stealth Soldier": {
-      "model": "xa_ex_2430.mdls",
-      "mset": "xa_ex_2430.mset",
-      "charId": 341,
-      "slots": 4,
       "weight": 4,
       "halloweenTown": false
     },

@@ -133,7 +133,7 @@ however the checkboxes are set.
 
 ```json
 {
-  "exclude": ["Pink Agaricus", "Black Fungi"],
+  "exclude": ["Angel Star", "Wizard"],
   "pairs": [
     { "enemy": "Shadow", "mdlsIndex": [12], "msetIndex": [13],
       "randomize": true, "exclude": ["Aquatank"] }
