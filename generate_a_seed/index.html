@@ -362,6 +362,15 @@
             return words.join(" ");
         }
 
+        function findOption(setting, text) {
+            for (var i = 0; i < setting.options.length; i++) {
+                if (String(setting.options[i].value).toLowerCase() == text) {
+                    return setting.options[i];
+                }
+            }
+            return null;
+        }
+
         function setValue(setting, value) {
             if (setting.type == "set") {
                 return setCheckedKeys(setting, value);
@@ -377,19 +386,18 @@
 
             if (setting.type == "select") {
                 text = text.toLowerCase();
-                if (text == "yes" || text == "on") {
-                    text = "true";
+                var option = findOption(setting, text);
+                if (option == null && (text == "yes" || text == "on")) {
+                    option = findOption(setting, "true");
                 }
-                if (text == "no" || text == "off") {
-                    text = "false";
+                if (option == null && (text == "no" || text == "off")) {
+                    option = findOption(setting, "false");
                 }
-                for (var i = 0; i < setting.options.length; i++) {
-                    if (String(setting.options[i].value).toLowerCase() == text) {
-                        box.value = setting.options[i].value;
-                        return true;
-                    }
+                if (option == null) {
+                    return false;
                 }
-                return false;
+                box.value = option.value;
+                return true;
             }
 
             if (setting.type == "range") {
