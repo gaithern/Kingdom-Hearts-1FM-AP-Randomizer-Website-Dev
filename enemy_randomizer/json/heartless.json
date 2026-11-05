@@ -217,14 +217,6 @@
       "weight": 5,
       "halloweenTown": false
     },
-    "Sniperwild": {
-      "model": "xa_ex_2450.mdls",
-      "mset": "xa_ex_2450.mset",
-      "charId": 343,
-      "slots": 6,
-      "weight": 5,
-      "halloweenTown": false
-    },
     "Soldier": {
       "model": "xa_ex_2010.mdls",
       "mset": "xa_ex_2010.mset",
