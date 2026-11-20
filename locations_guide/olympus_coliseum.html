@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Olympus Coliseum</title>
-    <link rel="icon" type="image/x-icon" href="./images/icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="stylesheet" href="/style.css">
 </head>
     <body> 
         <div class="container">
@@ -11,6 +11,18 @@
             <meta name    = "color-scheme" content = "light dark"/>
             
             <div id="header-container"></div>
+
+            <script>
+                fetch('/header.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('header-container').innerHTML = html;
+                        document.getElementById('page-subtitle').textContent = 'Traverse Town';
+                        document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
+                    });
+            </script>
+            <script src="config.js"></script>
+
         <h2>Location Information</h2>
 
         <table class="location-table">
@@ -27,65 +39,65 @@
             <tr>
               <td>Olympus Coliseum Coliseum Gates Green Trinity</td>
               <td>Coliseum Gates</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="25px" width="25px">Green Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Green%20Trinity.png?raw=true" alt="Green Trinity" height="20px" width="20px">Green Trinity</td>
               <td>Activate the Green Trinity to the right facing the World Exit.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Green Trinity.webp" alt="Olympus Coliseum Coliseum Gates Green Trinity" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Green Trinity.webp" alt="Olympus Coliseum Coliseum Gates Green Trinity" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Right Blue Trinity Chest</td>
               <td>Coliseum Gates</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Blue%20Trinity.png?raw=true" alt="Blue Trinity" height="25px" width="25px">Blue Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Blue%20Trinity.png?raw=true" alt="Blue Trinity" height="20px" width="20px">Blue Trinity</td>
               <td>Open the chest that falls after activating the Blue Trinity near the statue to the right.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Right Blue Trinity Chest.webp" alt="Olympus Coliseum Coliseum Gates Right Blue Trinity Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Right Blue Trinity Chest.webp" alt="Olympus Coliseum Coliseum Gates Right Blue Trinity Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Left Blue Trinity Chest</td>
               <td>Coliseum Gates</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Blue%20Trinity.png?raw=true" alt="Blue Trinity" height="25px" width="25px">Blue Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/Blue%20Trinity.png?raw=true" alt="Blue Trinity" height="20px" width="20px">Blue Trinity</td>
               <td>Open the chest that falls after activating the Blue Trinity near the statue to the left.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Left Blue Trinity Chest.webp" alt="Olympus Coliseum Coliseum Gates Left Blue Trinity Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Left Blue Trinity Chest.webp" alt="Olympus Coliseum Coliseum Gates Left Blue Trinity Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Left Behind Columns Chest</td>
               <td>Coliseum Gates</td>
               <td></td>
               <td>Open the chest within some pillars to the left facing the Lobby entrance.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Left Behind Columns Chest.webp" alt="Olympus Coliseum Coliseum Gates Left Behind Columns Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Left Behind Columns Chest.webp" alt="Olympus Coliseum Coliseum Gates Left Behind Columns Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates White Trinity Chest</td>
               <td>Coliseum Gates</td>
-              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/White%20Trinity.png?raw=true" alt="White Trinity" height="25px" width="25px">White Trinity</td>
+              <td><img src="https://github.com/Televo/kingdom-hearts-recollection/blob/main/Minimal/Key%20Items/KH1%20Key%20Items/White%20Trinity.png?raw=true" alt="White Trinity" height="20px" width="20px">White Trinity</td>
               <td>Open the chest after activating the White Trinity in the center of the Coliseum Gates.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates White Trinity Chest.webp" alt="Olympus Coliseum Coliseum Gates White Trinity Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates White Trinity Chest.webp" alt="Olympus Coliseum Coliseum Gates White Trinity Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Blizzara Chest</td>
               <td>Coliseum Gates</td>
               <td>Blizzara</td>
               <td>Open the chest on the left end of the Coliseum Gates after putting out all of the braziers with Blizzara or Blizzaga.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Blizzara Chest.webp" alt="Olympus Coliseum Coliseum Gates Blizzara Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Blizzara Chest.webp" alt="Olympus Coliseum Coliseum Gates Blizzara Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Blizzaga Chest</td>
               <td>Coliseum Gates</td>
               <td>Blizzaga</td>
               <td>Open the chest on the right end of the Coliseum Gates after putting out all of the braziers with Blizzaga.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Blizzaga Chest.webp" alt="Olympus Coliseum Coliseum Gates Blizzaga Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Blizzaga Chest.webp" alt="Olympus Coliseum Coliseum Gates Blizzaga Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Clear Phil's Training Thunder Event</td>
               <td>Lobby</td>
               <td></td>
               <td>Complete Phil's Training.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Clear Phil's Training Thunder Event.webp" alt="Olympus Coliseum Clear Phil's Training Thunder Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Clear Phil's Training Thunder Event.webp" alt="Olympus Coliseum Clear Phil's Training Thunder Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Entry Pass Event</td>
               <td>Coliseum Gates</td>
               <td></td>
               <td>Complete Phil's Training.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Entry Pass Event.webp" alt="Olympus Coliseum Coliseum Gates Entry Pass Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Entry Pass Event.webp" alt="Olympus Coliseum Coliseum Gates Entry Pass Event" class="loc-img"></td>
             </tr>
             <tr>
               <td colspan="5" class="callout"><h2>The locations below require the <img src="images\location_guide_misc\Forget Me Pass\Minimal\Entry Pass.png" alt="Entry Pass" height="36px" width="36px"> ENTRY PASS item</h2></td>
@@ -95,21 +107,21 @@
               <td>Coliseum Arena</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font></td>
               <td>Defeat Cerberus.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Defeat Cerberus Inferno Band Event.webp" alt="Olympus Coliseum Defeat Cerberus Inferno Band Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Defeat Cerberus Inferno Band Event.webp" alt="Olympus Coliseum Defeat Cerberus Inferno Band Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Coliseum Gates Hero's License Event</td>
               <td>Lobby</td>
               <td></td>
               <td>Defeat Cerberus.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Coliseum Gates Hero's License Event.webp" alt="Olympus Coliseum Coliseum Gates Hero's License Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Coliseum Gates Hero's License Event.webp" alt="Olympus Coliseum Coliseum Gates Hero's License Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Cloud Sonic Blade Event</td>
               <td>Coliseum Gates</td>
               <td></td>
               <td>Speak with Cloud.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Cloud Sonic Blade Event.webp" alt="Olympus Coliseum Cloud Sonic Blade Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Cloud Sonic Blade Event.webp" alt="Olympus Coliseum Cloud Sonic Blade Event" class="loc-img"></td>
             </tr>
             <tr>
               <td colspan="5" class="callout"><h2>The tournaments below require the CUPS option to be set to "cups" or "hades_cup"</h2></td>
@@ -119,42 +131,42 @@
               <td>Phil Cup</td>
               <td>Phil Cup</td>
               <td>Complete Phil Cup Together.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Phil Cup.webp" alt="Complete Phil Cup" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Phil Cup.webp" alt="Complete Phil Cup" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Phil Cup Solo</td>
               <td>Phil Cup</td>
               <td>Phil Cup</td>
               <td>Complete Phil Cup Solo.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Phil Cup Solo.webp" alt="Complete Phil Cup Solo" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Phil Cup Solo.webp" alt="Complete Phil Cup Solo" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Phil Cup Time Trial</td>
               <td>Phil Cup</td>
               <td>Phil Cup</td>
               <td>Complete Phil Cup Time Trial.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Phil Cup Time Trial.webp" alt="Complete Phil Cup Time Trial" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Phil Cup Time Trial.webp" alt="Complete Phil Cup Time Trial" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Pegasus Cup</td>
               <td>Pegasus Cup</td>
               <td>Pegasus Cup</td>
               <td>Complete Pegasus Cup Together.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Pegasus Cup.webp" alt="Complete Pegasus Cup" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Pegasus Cup.webp" alt="Complete Pegasus Cup" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Pegasus Cup Solo</td>
               <td>Pegasus Cup</td>
               <td>Pegasus Cup</td>
               <td>Complete Pegasus Cup Solo.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Pegasus Cup Solo.webp" alt="Complete Pegasus Cup Solo" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Pegasus Cup Solo.webp" alt="Complete Pegasus Cup Solo" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Pegasus Cup Time Trial</td>
               <td>Pegasus Cup</td>
               <td>Pegasus Cup</td>
               <td>Complete Pegasus Cup Time Trial.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Pegasus Cup Time Trial.webp" alt="Complete Pegasus Cup Time Trial" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Pegasus Cup Time Trial.webp" alt="Complete Pegasus Cup Time Trial" class="loc-img"></td>
             </tr>
             <tr>
               <td colspan="5" class="callout"><h2>The locations below logically expects access to 4 worlds</h2></td>
@@ -164,42 +176,42 @@
               <td>Hercules Cup</td>
               <td>Hercules</td>
               <td>Defeat Cloud on the 4th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hercules Cup Defeat Cloud Event.webp" alt="Hercules Cup Defeat Cloud Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hercules Cup Defeat Cloud Event.webp" alt="Hercules Cup Defeat Cloud Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Hercules Cup</td>
               <td>Hercules Cup</td>
               <td>Hercules Cup</td>
               <td>Defeat Hercules on the 1st seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Hercules Cup.webp" alt="Complete Hercules Cup" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Hercules Cup.webp" alt="Complete Hercules Cup" class="loc-img"></td>
             </tr>
             <tr>
               <td>Hercules Cup Yellow Trinity Event</td>
               <td>Lobby</td>
               <td>Hercules Cup</td>
               <td>Complete Hercules Cup Together.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hercules Cup Yellow Trinity Event.webp" alt="Hercules Cup Yellow Trinity Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hercules Cup Yellow Trinity Event.webp" alt="Hercules Cup Yellow Trinity Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Hercules Cup Solo</td>
               <td>Hercules Cup</td>
               <td>Hercules Cup</td>
               <td>Complete Hercules Cup Solo.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Hercules Cup Solo.webp" alt="Complete Hercules Cup Solo" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Hercules Cup Solo.webp" alt="Complete Hercules Cup Solo" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Hercules Cup Time Trial</td>
               <td>Hercules Cup</td>
               <td>Hercules Cup</td>
               <td>Complete Hercules Cup Time Trial.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Hercules Cup Time Trial.webp" alt="Complete Hercules Cup Time Trial" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Hercules Cup Time Trial.webp" alt="Complete Hercules Cup Time Trial" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Olympia Chest</td>
               <td>Coliseum Lobby</td>
               <td>Phil Cup & Pegasus Cup & Hercules Cup</td>
               <td>Complete Phil Cup, Pegasus Cup, and Hercules Cup.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Olympia Chest.webp" alt="Olympus Coliseum Olympia Chest" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Olympia Chest.webp" alt="Olympus Coliseum Olympia Chest" class="loc-img"></td>
             </tr>
             <tr>
               <td colspan="5" class="callout"><h2>Hades Cup requires the Cups option be set to All Cups
@@ -211,70 +223,70 @@
               <td>Hades Cup</td>
               <td></td>
               <td>Defeat Yuffie on the 44th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hades Cup Defeat Yuffie Event.webp" alt="Hades Cup Defeat Yuffie Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hades Cup Defeat Yuffie Event.webp" alt="Hades Cup Defeat Yuffie Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Hades Cup Defeat Behemoth Event</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Defeat Behemoth on the 40th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hades Cup Defeat Behemoth Event.webp" alt="Hades Cup Defeat Behemoth Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hades Cup Defeat Behemoth Event.webp" alt="Hades Cup Defeat Behemoth Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Hades Cup Defeat Cerberus Event</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Defeat Cerberus on the 30th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hades Cup Defeat Cerberus Event.webp" alt="Hades Cup Defeat Cerberus Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hades Cup Defeat Cerberus Event.webp" alt="Hades Cup Defeat Cerberus Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Hades Cup Defeat Cloud and Leon Event</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Defeat Leon and Cloud on the 20th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hades Cup Defeat Cloud and Leon Event.webp" alt="Hades Cup Defeat Cloud and Leon Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hades Cup Defeat Cloud and Leon Event.webp" alt="Hades Cup Defeat Cloud and Leon Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Hades Cup Defeat Hades Event</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Defeat Hades on the 10th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Hades Cup Defeat Hades Event.webp" alt="Hades Cup Defeat Hades Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Hades Cup Defeat Hades Event.webp" alt="Hades Cup Defeat Hades Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Defeat Hades Ansem's Report 8</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Defeat Hades on the 10th seed.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Defeat Hades Ansem's Report 8.webp" alt="Olympus Coliseum Defeat Hades Ansem's Report 8" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Defeat Hades Ansem's Report 8.webp" alt="Olympus Coliseum Defeat Hades Ansem's Report 8" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Gates Purple Jar After Defeating Hades</td>
               <td>Coliseum Gates</td>
               <td></td>
               <td>Interact with the purple pot behind some pillars to the right facing the Lobby entrance, after defeating Hades.</td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Gates Purple Jar After Defeating Hades.webp" alt="Olympus Coliseum Gates Purple Jar After Defeating Hades" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Gates Purple Jar After Defeating Hades.webp" alt="Olympus Coliseum Gates Purple Jar After Defeating Hades" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Hades Cup</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Complete Hades Cup Together.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Hades Cup.webp" alt="Complete Hades Cup" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Hades Cup.webp" alt="Complete Hades Cup" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Hades Cup Solo</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Complete Hades Cup Solo.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Hades Cup Solo.webp" alt="Complete Hades Cup Solo" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Hades Cup Solo.webp" alt="Complete Hades Cup Solo" class="loc-img"></td>
             </tr>
             <tr>
               <td>Complete Hades Cup Time Trial</td>
               <td>Hades Cup</td>
               <td></td>
               <td>Complete Hades Cup Time Trial.</td>
-              <td><img src="./images/locations/olympus_coliseum/Complete Hades Cup Time Trial.webp" alt="Complete Hades Cup Time Trial" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Complete Hades Cup Time Trial.webp" alt="Complete Hades Cup Time Trial" class="loc-img"></td>
             </tr>
             <tr>
               <td colspan="5" class="callout"><h2>Only in logic if SUPERBOSSES are enabled, or Final Rest Door Key is set to Sephiroth</h2></td>
@@ -284,14 +296,14 @@
               <td>Platinum Match</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font><br><br><font color=#f44336>Minimal: No defensive tools</font></td>
               <td>Defeat Sephiroth.<br><br>Sephiroth logically expects access to 8 worlds and <i>Defensive Tools</i><br>Platinum Match appears upon having all three Cup items.</td></td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Defeat Sephiroth One-Winged Angel Event.webp" alt="Olympus Coliseum Defeat Sephiroth One-Winged Angel Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Defeat Sephiroth One-Winged Angel Event.webp" alt="Olympus Coliseum Defeat Sephiroth One-Winged Angel Event" class="loc-img"></td>
             </tr>
             <tr>
               <td>Olympus Coliseum Defeat Sephiroth Ansem's Report 12</td>
               <td>Platinum Match</td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font><br><br><font color=#f44336>Minimal: No defensive tools</font></td>
               <td>Defeat Sephiroth.<br><br>Sephiroth logically expects access to 8 worlds and <i>Defensive Tools</i><br>Platinum Match appears upon having all three Cup items.</td></td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Defeat Sephiroth Ansem's Report 12.webp" alt="Olympus Coliseum Defeat Sephiroth Ansem's Report 12" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Defeat Sephiroth Ansem's Report 12.webp" alt="Olympus Coliseum Defeat Sephiroth Ansem's Report 12" class="loc-img"></td>
             </tr>
             <tr>
               <td colspan="5" class="callout"><h2>Only in logic if SUPERBOSSES are enabled AND the Cups option be set to All Cups</h2></td>
@@ -301,21 +313,9 @@
               <td>Gold Match </td>
               <td><font color=#13ff00>Beginners are guaranteed access to some basic tools.</font><br><br><font color=#ffffff>Normal: Guard</font><br><font color=#f44336>Minimal: Nothing.<br>No defensive tools</font></td>
               <td>Defeat Ice Titan.<br><br>Gold Match only appears after beating Hades Cup.</td></td>
-              <td><img src="./images/locations/olympus_coliseum/Olympus Coliseum Defeat Ice Titan Diamond Dust Event.webp" alt="Olympus Coliseum Defeat Ice Titan Diamond Dust Event" class="loc-img"></td>
+              <td><img src="./images/olympus_coliseum/Olympus Coliseum Defeat Ice Titan Diamond Dust Event.webp" alt="Olympus Coliseum Defeat Ice Titan Diamond Dust Event" class="loc-img"></td>
             </tr>
           </tbody>
         </table>
-
-        <script>
-            fetch('header.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('header-container').innerHTML = html;
-                    document.getElementById('page-subtitle').textContent = 'Olympus Coliseum';
-                    document.getElementById('nav-apworld-link').href = `${FLASK_BASE_URL}/kh1.apworld`;
-                });
-        </script>
-        <script src="config.js"></script>
-
     </div> </body>
 </html>
