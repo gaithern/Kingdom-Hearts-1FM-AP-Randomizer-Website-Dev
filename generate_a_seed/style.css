@@ -206,6 +206,34 @@
     transform: translateX(calc(50% + 10px));
 }
 
+#server-settings {
+    grid-template-columns: 1fr;
+    max-width: 50%;
+    margin-bottom: 16px;
+}
+
+#panel-finish .action-row {
+    max-width: 50%;
+}
+
+#load-input {
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    #server-settings {
+        max-width: none;
+    }
+
+    #panel-finish .action-row {
+        max-width: none;
+    }
+}
+
+#server-settings > .setting-row:nth-child(odd):last-child {
+    transform: none;
+}
+
 @media (max-width: 700px) {
     .settings-grid {
         grid-template-columns: 1fr;

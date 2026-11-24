@@ -55,6 +55,7 @@
                 <div id="yaml-section" style="display:none;">
                     <h3>Host: Re-upload Settings</h3>
                     <p class="seed-actions__hint">Upload a different YAML to re-roll the seed before the draft starts (or to retry if generation failed).</p>
+                    <div class="draft-form" id="reupload-server-settings"></div>
                     <div class="action-row">
                         <input type="file" id="yaml-file-input" accept=".yaml,.yml">
                         <button id="upload-yaml-button">Upload &amp; Generate</button>
@@ -137,6 +138,12 @@
                 let candidatesKey = null;
                 let selectedCandidates = new Map();
                 let requiredPoolSize = 0;
+                let serverSettings = [];
+                const serverSettingsLoaded = loadServerSettings();
+                serverSettingsLoaded.then(() => {
+                    const reuploadContainer = document.getElementById('reupload-server-settings');
+                    addServerSettingFields(reuploadContainer, null, 'reupload-');
+                });
 
                 function setResultState(el, message, type = 'info') {
                     el.innerHTML = message;
@@ -195,7 +202,7 @@
                             <span>Number of Grids</span>
                             <input type="text" id="num-grids-input" value="3">
                         </label>
-                        <label class="draft-form__field draft-form__field--wide">
+                        <label class="draft-form__field draft-form__field--wide" id="create-yaml-field">
                             <span>Settings YAML</span>
                             <span class="file-picker">
                                 <input type="file" class="file-picker__input" id="create-yaml-file-input" accept=".yaml,.yml">
@@ -226,6 +233,71 @@
                         const file = yamlFileInput.files[0];
                         document.getElementById('create-yaml-file-name').textContent = file ? file.name : 'No file chosen';
                     });
+
+                    serverSettingsLoaded.then(() => {
+                        const yamlField = document.getElementById('create-yaml-field');
+                        addServerSettingFields(container, yamlField, 'create-');
+                    });
+                }
+
+                async function loadServerSettings() {
+                    try {
+                        const data = await apiGet('/kh1_options');
+                        serverSettings = data.server_settings || [];
+                    } catch (error) {
+                        serverSettings = [];
+                    }
+                }
+
+                function makeServerSettingControl(setting) {
+                    if (setting.type === 'select') {
+                        const dropdown = document.createElement('select');
+                        for (const choice of setting.options) {
+                            const option = document.createElement('option');
+                            option.value = choice.value;
+                            option.textContent = choice.text;
+                            dropdown.appendChild(option);
+                        }
+                        return dropdown;
+                    }
+                    const numberBox = document.createElement('input');
+                    numberBox.type = 'number';
+                    numberBox.min = setting.min;
+                    numberBox.max = setting.max;
+                    return numberBox;
+                }
+
+                function makeServerSettingField(setting, idPrefix) {
+                    const field = document.createElement('label');
+                    field.className = 'draft-form__field';
+                    field.title = setting.description;
+
+                    const title = document.createElement('span');
+                    title.textContent = setting.label;
+                    field.appendChild(title);
+
+                    const control = makeServerSettingControl(setting);
+                    control.id = idPrefix + setting.key;
+                    control.value = setting.default;
+                    field.appendChild(control);
+                    return field;
+                }
+
+                function addServerSettingFields(container, beforeElement, idPrefix) {
+                    for (const setting of serverSettings) {
+                        container.insertBefore(makeServerSettingField(setting, idPrefix), beforeElement);
+                    }
+                }
+
+                function getServerSettingValues(idPrefix) {
+                    const values = {};
+                    for (const setting of serverSettings) {
+                        const control = document.getElementById(idPrefix + setting.key);
+                        if (control) {
+                            values[setting.key] = control.value;
+                        }
+                    }
+                    return values;
                 }
 
                 async function createGame() {
@@ -253,7 +325,7 @@
                         return;
                     }
                     enterGame(data.join_code);
-                    await uploadYamlFile(yamlFile);
+                    await uploadYamlFile(yamlFile, getServerSettingValues('create-'));
                 }
 
                 async function joinGame() {
@@ -589,13 +661,16 @@
                         setResultState(resultSection, 'Choose a YAML file first.', 'error');
                         return;
                     }
-                    await uploadYamlFile(file);
+                    await uploadYamlFile(file, getServerSettingValues('reupload-'));
                 }
 
-                async function uploadYamlFile(file) {
+                async function uploadYamlFile(file, serverSettingValues) {
                     const token = getStoredDiscordToken();
                     const formData = new FormData();
                     formData.append('file', file);
+                    for (const key in serverSettingValues) {
+                        formData.append(key, serverSettingValues[key]);
+                    }
                     try {
                         setResultState(resultSection, 'Uploading and generating - this can take a little while...', 'info');
                         const response = await fetch(`${flaskBase}/draft/${currentJoinCode}/upload_yaml`, {
