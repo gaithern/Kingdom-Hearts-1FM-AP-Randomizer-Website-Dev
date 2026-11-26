@@ -112,18 +112,41 @@ function doesAnUnknownItemCount() {
   return isOptionTurnedOn("other_players_items_are_important");
 }
 
-function isImportantLocation(locationId, itemNamesYouFound) {
-  const itemName = getItemNameAtLocation(locationId, itemNamesYouFound);
-  if (itemName === null) {
-    return doesAnUnknownItemCount();
-  }
-  if (!isOptionTurnedOn("only_tracked_items_are_important")) {
-    return true;
-  }
+function isItemTracked(itemName) {
   if (getWorldUnlockedByItem(itemName) !== null) {
     return true;
   }
   return getTrackedItemThatCounts(itemName) !== null;
+}
+
+function isImportantLocation(locationId, itemNamesYouFound, progressionLocations) {
+  const itemName = getItemNameAtLocation(locationId, itemNamesYouFound);
+  const seedSaysItIsImportant = progressionLocations.has(locationId);
+  if (itemName === null) {
+    return seedSaysItIsImportant && doesAnUnknownItemCount();
+  }
+  if (!seedSaysItIsImportant) {
+    return isOptionTurnedOn("all_tracked_items_are_important") && isItemTracked(itemName);
+  }
+  if (!isOptionTurnedOn("only_tracked_items_are_important")) {
+    return true;
+  }
+  return isItemTracked(itemName);
+}
+
+function getLocationsThatMightBeImportant(itemNamesYouFound) {
+  const locations = new Set(seedFiles.progression_locations || []);
+  if (!isOptionTurnedOn("all_tracked_items_are_important")) {
+    return locations;
+  }
+  const itemLocationMap = seedFiles.item_location_map || {};
+  for (const locationKey of Object.keys(itemLocationMap)) {
+    locations.add(Number(locationKey));
+  }
+  for (const locationKey of Object.keys(itemNamesYouFound)) {
+    locations.add(Number(locationKey));
+  }
+  return locations;
 }
 
 function getImportantMultiworldItemsFound() {
@@ -147,9 +170,10 @@ function countImportantChecksPerGroup() {
   const counts = { found: {}, remaining: {}, remainingIsKnown: seedFiles.progression_locations !== null };
   const checkedLocations = new Set(currentState.checked_locations);
   const itemNamesYouFound = getItemNamesYouFoundByLocation();
-  for (const locationId of seedFiles.progression_locations || []) {
+  const progressionLocations = new Set(seedFiles.progression_locations || []);
+  for (const locationId of getLocationsThatMightBeImportant(itemNamesYouFound)) {
     const groupKey = getGroupOfLocation(locationId);
-    if (!groupKey || !isImportantLocation(locationId, itemNamesYouFound)) {
+    if (!groupKey || !isImportantLocation(locationId, itemNamesYouFound, progressionLocations)) {
       continue;
     }
     if (checkedLocations.has(locationId)) {

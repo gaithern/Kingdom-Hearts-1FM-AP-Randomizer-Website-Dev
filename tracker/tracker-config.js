@@ -32,7 +32,8 @@ const trackerConfig = {
 
   "importantCheckOptions": [
     { "key": "other_players_items_are_important", "name": "Other players' progression items count as important", "isOnByDefault": true },
-    { "key": "only_tracked_items_are_important", "name": "Only tracked items count as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
+    { "key": "only_tracked_items_are_important", "name": "Only tracked items count as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." },
+    { "key": "all_tracked_items_are_important", "name": "All tracked items count as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
   ],
 
   "cornerIconOptions": [
