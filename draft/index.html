@@ -52,16 +52,6 @@
                     <div id="item-pool" class="item-pool"></div>
                 </div>
 
-                <div id="yaml-section" style="display:none;">
-                    <h3>Host: Re-upload Settings</h3>
-                    <p class="seed-actions__hint">Upload a different YAML to re-roll the seed before the draft starts (or to retry if generation failed).</p>
-                    <div class="draft-form" id="reupload-server-settings"></div>
-                    <div class="action-row">
-                        <input type="file" id="yaml-file-input" accept=".yaml,.yml">
-                        <button id="upload-yaml-button">Upload &amp; Generate</button>
-                    </div>
-                </div>
-
                 <div id="candidate-section" style="display:none;">
                     <h3>Host: Choose the Draft Pool</h3>
                     <p class="seed-actions__hint">Every draftable item in your seed is listed below. Select those you wish to draft.</p>
@@ -142,10 +132,6 @@
                 let requiredPoolSize = 0;
                 let serverSettings = [];
                 const serverSettingsLoaded = loadServerSettings();
-                serverSettingsLoaded.then(() => {
-                    const reuploadContainer = document.getElementById('reupload-server-settings');
-                    addServerSettingFields(reuploadContainer, null, 'reupload-');
-                });
 
                 function setResultState(el, message, type = 'info') {
                     el.innerHTML = message;
@@ -619,11 +605,8 @@
                         poolSection.style.display = 'none';
                     }
 
-                    document.getElementById('yaml-section').style.display =
-                        ((state.status === 'lobby' || state.status === 'pool_selection') && state.is_host) ? 'block' : 'none';
-
                     if (state.status === 'lobby' && state.error_message) {
-                        setResultState(resultSection, `Seed generation failed: ${escapeHtml(state.error_message)}`, 'error');
+                        setResultState(resultSection, `Seed generation failed: ${escapeHtml(state.error_message)}<br>Leave this game and create a new one to try again.`, 'error');
                     } else if (state.status === 'complete') {
                         setResultState(resultSection, `Your room is ready: <a href="${state.room_link}">${state.room_link}</a>`, 'success');
                         stopPolling();
@@ -655,15 +638,6 @@
                     } catch (error) {
                         setResultState(statusMessage, escapeHtml(error.message), 'error');
                     }
-                }
-
-                async function uploadYaml() {
-                    const file = document.getElementById('yaml-file-input').files[0];
-                    if (!file) {
-                        setResultState(resultSection, 'Choose a YAML file first.', 'error');
-                        return;
-                    }
-                    await uploadYamlFile(file, getServerSettingValues('reupload-'));
                 }
 
                 async function uploadYamlFile(file, serverSettingValues) {
@@ -703,7 +677,6 @@
                 document.getElementById('join-game-button').addEventListener('click', joinGame);
                 document.getElementById('leave-game-button').addEventListener('click', leaveGame);
                 document.getElementById('start-draft-button').addEventListener('click', startDraft);
-                document.getElementById('upload-yaml-button').addEventListener('click', uploadYaml);
                 document.getElementById('select-all-candidates-button').addEventListener('click', () => setAllCandidates(true));
                 document.getElementById('select-none-candidates-button').addEventListener('click', () => setAllCandidates(false));
 
