@@ -31,8 +31,8 @@ const trackerConfig = {
   },
 
   "importantCheckOptions": [
-    { "key": "only_tracked_items_are_important", "name": "Treat untracked items as unimportant", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." },
-    { "key": "all_tracked_items_are_important", "name": "Treat all tracked items as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
+    { "key": "only_tracked_items_are_important", "name": "Treat untracked items as unimportant", "isOnByDefault": true, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." },
+    { "key": "all_tracked_items_are_important", "name": "Treat all tracked items as important", "isOnByDefault": true, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
   ],
 
   "cornerIconOptions": [
