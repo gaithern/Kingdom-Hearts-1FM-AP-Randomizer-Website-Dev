@@ -39,6 +39,14 @@
         <div id="world-list" class="panel world-list"></div>
         <div id="item-grid" class="panel item-grid"></div>
 
+        <details id="tracker-options" class="panel dropdown">
+            <summary>Tracker options</summary>
+            <div class="tracker-options-heading">Important checks</div>
+            <div id="important-check-options" class="tracker-options-list"></div>
+            <div class="tracker-options-heading">Tracked items</div>
+            <div id="item-group-toggles" class="tracker-options-list"></div>
+        </details>
+
         <details class="panel dropdown">
             <summary>Seed</summary>
             <table id="seed-details"></table>
@@ -58,6 +66,9 @@
             Icons and fonts:
             <a href="https://televo.github.io/kingdom-hearts-recollection" target="_blank" rel="noopener">Kingdom Hearts Re:Collection</a>
             by Televo.
+            Ability and synthesis material icons:
+            <a href="https://github.com/culk/Kingdom-Hearts-FM-AP-Tracker" target="_blank" rel="noopener">Kingdom Hearts FM AP Tracker</a>
+            by culk (MIT).
         </div>
     </div>
 </div>
@@ -66,6 +77,7 @@
 <script src="tracker/tracker-shared-state.js"></script>
 <script src="tracker/tracker-html-helpers.js"></script>
 <script src="tracker/tracker-api.js"></script>
+<script src="tracker/tracker-options.js"></script>
 <script src="tracker/tracker-item-counting.js"></script>
 <script src="tracker/tracker-state.js"></script>
 <script src="tracker/tracker-worlds.js"></script>

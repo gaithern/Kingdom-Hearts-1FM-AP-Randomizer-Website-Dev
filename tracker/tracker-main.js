@@ -16,6 +16,8 @@ function startTracker() {
 
   document.getElementById("broadcast-view-button").addEventListener("click", openBroadcastView);
 
+  setUpTrackerOptions();
+
   if (isBroadcastView) {
     setUpBroadcastView();
   }

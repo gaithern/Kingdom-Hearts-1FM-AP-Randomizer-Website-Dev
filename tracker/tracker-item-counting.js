@@ -60,16 +60,57 @@ function getCombinationIcon(trackedItem, ownedItemNames) {
   return trackedItem.iconForEachCombination.replace("{combination}", combination);
 }
 
-function getIconForItem(itemName) {
-  for (const row of trackerConfig.itemRows) {
-    for (const trackedItem of row) {
+function getTrackedItemIcon(trackedItem, ownedItemNames) {
+  if (trackedItem.iconForEachCombination) {
+    return getCombinationIcon(trackedItem, ownedItemNames);
+  }
+  return trackedItem.icon;
+}
+
+function getCornerIconForItem(itemName) {
+  const trackedItem = getTrackedItemThatCounts(itemName);
+  if (trackedItem !== null && trackedItem.cornerIconItem === itemName) {
+    return trackedItem.cornerIcon;
+  }
+  return null;
+}
+
+function isCornerIconTurnedOn(trackedItem) {
+  if (!trackedItem.cornerIconItem) {
+    return false;
+  }
+  return isOptionTurnedOn(trackedItem.cornerIconOption);
+}
+
+function getTrackedItemThatCounts(itemName) {
+  for (const itemGroup of getItemGroupsTurnedOn()) {
+    for (const trackedItem of itemGroup.items) {
       if (trackedItem.countsItems.includes(itemName)) {
-        if (trackedItem.iconForEachCombination) {
-          return getCombinationIcon(trackedItem, [itemName]);
-        }
-        return trackedItem.icon;
+        return trackedItem;
+      }
+      if (trackedItem.cornerIconItem === itemName && isCornerIconTurnedOn(trackedItem)) {
+        return trackedItem;
       }
     }
+  }
+  return null;
+}
+
+function getLabelForItem(itemName) {
+  const trackedItem = getTrackedItemThatCounts(itemName);
+  if (trackedItem !== null) {
+    return trackedItem.label;
+  }
+  return itemName;
+}
+
+function getIconForItem(itemName) {
+  if (itemName === trackerConfig.importantMultiworldItem.name) {
+    return trackerConfig.importantMultiworldItem.icon;
+  }
+  const trackedItem = getTrackedItemThatCounts(itemName);
+  if (trackedItem !== null) {
+    return getTrackedItemIcon(trackedItem, [itemName]);
   }
   for (const worldConfig of Object.values(trackerConfig.worlds)) {
     if (worldConfig.unlockedByItem === itemName) {

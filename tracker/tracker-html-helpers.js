@@ -11,6 +11,10 @@ function makeImageHtml(iconPath, hoverText) {
   return '<img src="' + escapeHtml(encodeURI(iconPath)) + '" alt="' + escapeHtml(hoverText) + '" title="' + escapeHtml(hoverText) + '">';
 }
 
+function makeCornerIconHtml(iconPath, hoverText) {
+  return '<span class="corner-icon">' + makeImageHtml(iconPath, hoverText) + "</span>";
+}
+
 function makeTableRowHtml(name, value) {
   return "<tr><td>" + escapeHtml(name) + "</td><td>" + escapeHtml(value) + "</td></tr>";
 }

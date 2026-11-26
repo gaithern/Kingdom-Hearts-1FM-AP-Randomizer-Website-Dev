@@ -271,7 +271,62 @@
 .item-row {
   display: flex;
   justify-content: center;
+  gap: 6px;
   max-width: 100%;
+}
+
+.item-group {
+  display: flex;
+  min-width: 0;
+}
+
+.corner-icon {
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+}
+
+.item .corner-icon img,
+.found-item .corner-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 2px #000000);
+}
+
+.item.not-owned .corner-icon img {
+  opacity: 1;
+  filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 2px #000000);
+}
+
+.tracker-options-heading {
+  margin-top: 10px;
+  color: var(--faded-text-color);
+}
+
+.tracker-options-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 4px 12px;
+  margin-top: 4px;
+}
+
+#important-check-options {
+  grid-template-columns: 1fr;
+}
+
+.tracker-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.tracker-option input {
+  margin: 0;
 }
 
 .item-cell {
@@ -342,6 +397,7 @@
 
 .dropdown td:first-child {
   color: var(--faded-text-color);
+  white-space: nowrap;
 }
 
 .raw-state {

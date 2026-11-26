@@ -17,9 +17,11 @@ function drawWorlds(itemCounts) {
     locationCountPerGroup[location.group] = (locationCountPerGroup[location.group] || 0) + 1;
   }
 
-  const importantChecksFoundPerGroup = { ...currentState.progression_found };
+  const importantChecks = countImportantChecksPerGroup();
+  const importantChecksFoundPerGroup = importantChecks.found;
+  const allFoundItems = currentState.items.concat(getImportantMultiworldItemsFound());
   const foundItemsPerGroup = {};
-  for (const item of currentState.items) {
+  for (const item of allFoundItems) {
     let group = archipelagoGroup.key;
     if (item.location !== undefined) {
       group = getGroupOfLocation(item.location);
@@ -45,20 +47,20 @@ function drawWorlds(itemCounts) {
     if (!shouldShowWorld(group, locationCountPerGroup)) {
       continue;
     }
-    worldsHtml += makeWorldHtml(group, itemCounts, importantChecksFoundPerGroup, foundItemsPerGroup);
+    worldsHtml += makeWorldHtml(group, itemCounts, importantChecks, foundItemsPerGroup);
   }
-  worldsHtml += makeWorldHtml(archipelagoGroup, itemCounts, importantChecksFoundPerGroup, foundItemsPerGroup);
+  worldsHtml += makeWorldHtml(archipelagoGroup, itemCounts, importantChecks, foundItemsPerGroup);
   document.getElementById("world-list").innerHTML = worldsHtml;
 
   foundItemKeysLastTime = [];
-  for (const item of currentState.items) {
+  for (const item of allFoundItems) {
     foundItemKeysLastTime.push(getFoundItemKey(item));
   }
 
   shrinkFoundIconsToFit();
 }
 
-function makeWorldHtml(group, itemCounts, importantChecksFoundPerGroup, foundItemsPerGroup) {
+function makeWorldHtml(group, itemCounts, importantChecks, foundItemsPerGroup) {
   const worldConfig = getWorldConfig(group.key);
 
   let worldClasses = "world";
@@ -71,10 +73,10 @@ function makeWorldHtml(group, itemCounts, importantChecksFoundPerGroup, foundIte
     worldClasses += " locked";
   }
 
-  const importantChecksFound = importantChecksFoundPerGroup[group.key] || 0;
+  const importantChecksFound = importantChecks.found[group.key] || 0;
   let worldIsComplete = false;
-  if (currentState.progression_remaining) {
-    const importantChecksLeft = currentState.progression_remaining[group.key] || 0;
+  if (importantChecks.remainingIsKnown) {
+    const importantChecksLeft = importantChecks.remaining[group.key] || 0;
     worldIsComplete = importantChecksLeft === 0;
   }
   let badgeClasses = "important-checks-badge gummi-font";
@@ -114,11 +116,13 @@ function makeFoundItemsHtml(foundItems) {
   const iconOrder = [];
   for (const item of foundItems) {
     const icon = getIconForItem(item.name);
-    if (!foundItemsByIcon[icon]) {
-      foundItemsByIcon[icon] = { itemNames: [], count: 0, justReceived: false };
-      iconOrder.push(icon);
+    const cornerIcon = getCornerIconForItem(item.name);
+    const iconKey = icon + " " + getLabelForItem(item.name) + " " + cornerIcon;
+    if (!foundItemsByIcon[iconKey]) {
+      foundItemsByIcon[iconKey] = { icon: icon, cornerIcon: cornerIcon, itemNames: [], count: 0, justReceived: false };
+      iconOrder.push(iconKey);
     }
-    const iconGroup = foundItemsByIcon[icon];
+    const iconGroup = foundItemsByIcon[iconKey];
     if (!iconGroup.itemNames.includes(item.name)) {
       iconGroup.itemNames.push(item.name);
     }
@@ -129,15 +133,18 @@ function makeFoundItemsHtml(foundItems) {
   }
 
   let html = "";
-  for (const icon of iconOrder) {
-    const iconGroup = foundItemsByIcon[icon];
+  for (const iconKey of iconOrder) {
+    const iconGroup = foundItemsByIcon[iconKey];
     let classes = "found-item";
     const hoverText = iconGroup.itemNames.join(", ");
     if (iconGroup.justReceived) {
       classes += " just-received";
     }
     html += '<span class="' + classes + '">';
-    html += makeImageHtml(icon, hoverText);
+    html += makeImageHtml(iconGroup.icon, hoverText);
+    if (iconGroup.cornerIcon !== null) {
+      html += makeCornerIconHtml(iconGroup.cornerIcon, hoverText);
+    }
     if (iconGroup.count > 1) {
       html += '<span class="item-count gummi-font">' + iconGroup.count + "</span>";
     }

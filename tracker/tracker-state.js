@@ -1,7 +1,12 @@
 const SERVER_PLAYER = 0;
 
 function getGroupKeyForLocation(location) {
-  if (location.type === trackerConfig.synthesisLocationType) {
+  let typeText = "";
+  if (location.type) {
+    typeText = location.type;
+  }
+  const locationTypes = typeText.split(";");
+  if (locationTypes.includes(trackerConfig.synthesisLocationType)) {
     return "synthesis";
   }
   for (const [groupKey, worldConfig] of Object.entries(trackerConfig.worlds)) {
@@ -78,30 +83,72 @@ function getItemsReceived(rawState) {
   });
 }
 
-function getProgressionRemaining(checkedLocations, progressionLocations) {
-  if (seedFiles.progression_locations === null) {
-    return null;
-  }
-  const checked = new Set(checkedLocations);
-  const remaining = {};
-  for (const locationId of progressionLocations) {
-    const groupKey = getGroupOfLocation(locationId);
-    if (groupKey) {
-      remaining[groupKey] = (remaining[groupKey] || 0) + (checked.has(locationId) ? 0 : 1);
+function getItemNamesYouFoundByLocation() {
+  const itemNames = {};
+  for (const item of currentState.items) {
+    if (item.location !== undefined && item.name !== null) {
+      itemNames[item.location] = item.name;
     }
   }
-  return remaining;
+  return itemNames;
 }
 
-function getProgressionFound(checkedLocations, progressionLocations) {
-  const found = {};
-  for (const locationId of checkedLocations) {
-    const groupKey = progressionLocations.has(locationId) && getGroupOfLocation(locationId);
-    if (groupKey) {
-      found[groupKey] = (found[groupKey] || 0) + 1;
+function getItemNameAtLocation(locationId, itemNamesYouFound) {
+  if (itemNamesYouFound[locationId] !== undefined) {
+    return itemNamesYouFound[locationId];
+  }
+  const itemLocationMap = seedFiles.item_location_map || {};
+  const itemId = itemLocationMap[locationId];
+  if (itemId === undefined || itemId === trackerConfig.apItemPlaceholder) {
+    return null;
+  }
+  return getItemName(itemId);
+}
+
+function isImportantLocation(locationId, itemNamesYouFound) {
+  const itemName = getItemNameAtLocation(locationId, itemNamesYouFound);
+  if (itemName === null) {
+    return isOptionTurnedOn("other_players_items_are_important");
+  }
+  if (!isOptionTurnedOn("only_tracked_items_are_important")) {
+    return true;
+  }
+  return getTrackedItemThatCounts(itemName) !== null;
+}
+
+function getImportantMultiworldItemsFound() {
+  const multiworldItems = [];
+  if (seedFiles.item_location_map === null || !isOptionTurnedOn("other_players_items_are_important")) {
+    return multiworldItems;
+  }
+  const progressionLocations = new Set(seedFiles.progression_locations || []);
+  const itemNamesYouFound = getItemNamesYouFoundByLocation();
+  for (const locationId of currentState.checked_locations) {
+    const holdsProgression = progressionLocations.has(locationId);
+    const holdsAnotherPlayersItem = getItemNameAtLocation(locationId, itemNamesYouFound) === null;
+    if (holdsProgression && holdsAnotherPlayersItem) {
+      multiworldItems.push({ name: trackerConfig.importantMultiworldItem.name, source: "game", location: locationId });
     }
   }
-  return found;
+  return multiworldItems;
+}
+
+function countImportantChecksPerGroup() {
+  const counts = { found: {}, remaining: {}, remainingIsKnown: seedFiles.progression_locations !== null };
+  const checkedLocations = new Set(currentState.checked_locations);
+  const itemNamesYouFound = getItemNamesYouFoundByLocation();
+  for (const locationId of seedFiles.progression_locations || []) {
+    const groupKey = getGroupOfLocation(locationId);
+    if (!groupKey || !isImportantLocation(locationId, itemNamesYouFound)) {
+      continue;
+    }
+    if (checkedLocations.has(locationId)) {
+      counts.found[groupKey] = (counts.found[groupKey] || 0) + 1;
+    } else {
+      counts.remaining[groupKey] = (counts.remaining[groupKey] || 0) + 1;
+    }
+  }
+  return counts;
 }
 
 function getCheckedLocations(rawState) {
@@ -114,7 +161,6 @@ function getCheckedLocations(rawState) {
 
 function buildTrackerState(rawState) {
   const checkedLocations = getCheckedLocations(rawState);
-  const progressionLocations = new Set(seedFiles.progression_locations || []);
   const startingItems = (seedSettings.starting_items || []).map(itemId => ({ item: itemId, name: getItemName(itemId) }));
   return {
     seed: seedSettings.seed,
@@ -128,7 +174,5 @@ function buildTrackerState(rawState) {
     checked_locations: checkedLocations,
     items: getItemsFoundInGame(checkedLocations).concat(getItemsReceived(rawState)),
     starting_items: startingItems,
-    progression_found: getProgressionFound(checkedLocations, progressionLocations),
-    progression_remaining: getProgressionRemaining(checkedLocations, progressionLocations),
   };
 }

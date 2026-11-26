@@ -15,9 +15,16 @@ function scaleBroadcastToFitWindow() {
   main.style.zoom = String(scale);
 }
 
-function openBroadcastView() {
+function makeBroadcastAddress() {
   const pageAddress = window.location.href.split("?")[0].split("#")[0];
-  const broadcastAddress = pageAddress + "?broadcast&api=" + encodeURIComponent(getApiAddress());
+  let broadcastAddress = pageAddress + "?broadcast";
+  broadcastAddress += "&api=" + encodeURIComponent(getApiAddress());
+  broadcastAddress += "&on=" + encodeURIComponent(getKeysOfChoicesTurnedOn().join(","));
+  return broadcastAddress;
+}
+
+function openBroadcastView() {
+  const broadcastAddress = makeBroadcastAddress();
   const windowSize = trackerConfig.broadcastWindowSize;
   window.open(broadcastAddress, "_blank", "width=" + windowSize.width + ",height=" + windowSize.height);
 }
