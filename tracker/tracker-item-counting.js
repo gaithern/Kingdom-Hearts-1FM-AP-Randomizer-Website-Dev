@@ -112,9 +112,17 @@ function getIconForItem(itemName) {
   if (trackedItem !== null) {
     return getTrackedItemIcon(trackedItem, [itemName]);
   }
+  const worldConfig = getWorldUnlockedByItem(itemName);
+  if (worldConfig !== null) {
+    return worldConfig.icon;
+  }
+  return null;
+}
+
+function getWorldUnlockedByItem(itemName) {
   for (const worldConfig of Object.values(trackerConfig.worlds)) {
     if (worldConfig.unlockedByItem === itemName) {
-      return worldConfig.icon;
+      return worldConfig;
     }
   }
   return null;

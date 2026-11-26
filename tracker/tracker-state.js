@@ -120,6 +120,9 @@ function isImportantLocation(locationId, itemNamesYouFound) {
   if (!isOptionTurnedOn("only_tracked_items_are_important")) {
     return true;
   }
+  if (getWorldUnlockedByItem(itemName) !== null) {
+    return true;
+  }
   return getTrackedItemThatCounts(itemName) !== null;
 }
 
