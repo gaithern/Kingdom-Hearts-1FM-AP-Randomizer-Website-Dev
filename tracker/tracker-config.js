@@ -9,7 +9,7 @@ const trackerConfig = {
   "settingsHiddenFromList": ["seed", "slot_name", "starting_items", "remote_location_ids", "synthesis_item_name_byte_arrays", "spell_effectiveness", "spell_mp_costs", "entrance_pairings", "door_destinations"],
 
   "keybladeChestIcon": "tracker/images/Chest.png",
-  "importantMultiworldItem": { "name": "Important item for another player", "icon": "tracker/images/Archipelago.png" },
+  "importantMultiworldItem": { "name": "Important item for another player" },
 
   "worlds": {
     "destiny_islands":    { "name": "Destiny Islands", "category": "Destiny Islands", "worldId": 1, "icon": "tracker/images/Destiny Islands.png", "chestKeyblade": "Oathkeeper", "unlockedByItem": "Destiny Islands" },
@@ -31,9 +31,8 @@ const trackerConfig = {
   },
 
   "importantCheckOptions": [
-    { "key": "other_players_items_are_important", "name": "Other players' progression items count as important", "isOnByDefault": true },
-    { "key": "only_tracked_items_are_important", "name": "Only tracked items count as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." },
-    { "key": "all_tracked_items_are_important", "name": "All tracked items count as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
+    { "key": "only_tracked_items_are_important", "name": "Treat untracked items as unimportant", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." },
+    { "key": "all_tracked_items_are_important", "name": "Treat all tracked items as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
   ],
 
   "cornerIconOptions": [

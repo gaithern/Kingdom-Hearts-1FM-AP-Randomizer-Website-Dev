@@ -105,9 +105,6 @@ function getLabelForItem(itemName) {
 }
 
 function getIconForItem(itemName) {
-  if (itemName === trackerConfig.importantMultiworldItem.name) {
-    return trackerConfig.importantMultiworldItem.icon;
-  }
   const trackedItem = getTrackedItemThatCounts(itemName);
   if (trackedItem !== null) {
     return getTrackedItemIcon(trackedItem, [itemName]);

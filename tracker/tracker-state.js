@@ -106,10 +106,10 @@ function getItemNameAtLocation(locationId, itemNamesYouFound) {
 }
 
 function doesAnUnknownItemCount() {
-  if (seedSettings.remote_items === "full") {
+  if (!isOptionTurnedOn("only_tracked_items_are_important")) {
     return true;
   }
-  return isOptionTurnedOn("other_players_items_are_important");
+  return isItemTracked(trackerConfig.importantMultiworldItem.name);
 }
 
 function isItemTracked(itemName) {
@@ -151,7 +151,7 @@ function getLocationsThatMightBeImportant(itemNamesYouFound) {
 
 function getImportantMultiworldItemsFound() {
   const multiworldItems = [];
-  if (seedFiles.item_location_map === null || !doesAnUnknownItemCount()) {
+  if (seedFiles.item_location_map === null) {
     return multiworldItems;
   }
   const progressionLocations = new Set(seedFiles.progression_locations || []);
