@@ -66,6 +66,9 @@ const trackerConfig = {
       { "label": "Tinker Bell", "countsItems": ["Tinker Bell"], "icon": "tracker/images/Tinkerbell Summon.png" },
       { "label": "Mushu", "countsItems": ["Mushu"], "icon": "tracker/images/Mushu Summon.png" }
     ] },
+    { "key": "items_for_other_players", "name": "Multiworld Items", "isOnByDefault": false, "items": [
+      { "label": "Important items found for other players", "countsItems": ["Important item for another player"], "icon": "tracker/images/Archipelago.png" }
+    ] },
     { "key": "summon_gems", "name": "Summon Gems", "isOnByDefault": true, "items": [
       { "label": "Earthshine", "countsItems": ["Earthshine"], "icon": "tracker/images/Earthshine.png" },
       { "label": "Naturespark", "countsItems": ["Naturespark"], "icon": "tracker/images/Naturespark.png" },

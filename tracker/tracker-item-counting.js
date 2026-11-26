@@ -31,7 +31,7 @@ function howManyYouHave(itemCounts, itemName) {
 
 function countItemsYouHave() {
   const itemCounts = {};
-  const allItems = currentState.items.concat(currentState.starting_items);
+  const allItems = currentState.items.concat(currentState.starting_items, getImportantMultiworldItemsFound());
   for (const item of allItems) {
     itemCounts[item.name] = howManyYouHave(itemCounts, item.name) + 1;
   }
