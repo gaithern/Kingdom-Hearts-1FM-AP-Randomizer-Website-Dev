@@ -31,12 +31,16 @@ const trackerConfig = {
   },
 
   "importantCheckOptions": [
-    { "key": "only_tracked_items_are_important", "name": "Only tracked items count as important", "isOnByDefault": false },
-    { "key": "other_players_items_are_important", "name": "Other players' progression items count as important", "isOnByDefault": true }
+    { "key": "other_players_items_are_important", "name": "Other players' progression items count as important", "isOnByDefault": true },
+    { "key": "only_tracked_items_are_important", "name": "Only tracked items count as important", "isOnByDefault": false, "unavailableWhenSettingIs": { "remote_items": "full" }, "unavailableNote": "Not available because this seed's remote items setting is full, so the tracker can't see which of your items are in unchecked locations." }
   ],
 
   "cornerIconOptions": [
     { "key": "arts", "name": "Arts", "isOnByDefault": false }
+  ],
+
+  "broadcastOptions": [
+    { "key": "transparent_background", "name": "Transparent background for broadcast view", "isOnByDefault": false }
   ],
 
   "mostItemsInARow": 8,

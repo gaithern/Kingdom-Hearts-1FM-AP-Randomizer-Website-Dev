@@ -40,6 +40,7 @@ async function loadSeedFilesIfNeeded() {
   seedFiles = files;
   seedSettings = files.settings;
   buildLocationCatalog();
+  drawTrackerOptions();
   return true;
 }
 
@@ -79,6 +80,7 @@ function handleNewState(stateText, rawState) {
 }
 
 function forgetEverything() {
+  const aSeedWasLoaded = seedSettings !== null;
   seedFiles = null;
   locationCatalog = null;
   locationGroups = [];
@@ -87,4 +89,7 @@ function forgetEverything() {
   currentState = null;
   itemCountsLastTime = null;
   foundItemKeysLastTime = null;
+  if (aSeedWasLoaded) {
+    drawTrackerOptions();
+  }
 }

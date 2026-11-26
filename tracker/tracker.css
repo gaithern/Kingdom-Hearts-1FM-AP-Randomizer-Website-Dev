@@ -314,7 +314,8 @@
   margin-top: 4px;
 }
 
-#important-check-options {
+#important-check-options,
+#broadcast-options {
   grid-template-columns: 1fr;
 }
 
@@ -327,6 +328,17 @@
 
 .tracker-option input {
   margin: 0;
+}
+
+.tracker-option.unavailable {
+  cursor: default;
+  color: var(--faded-text-color);
+}
+
+.tracker-option-note {
+  margin: -2px 0 2px 19px;
+  font-size: 11px;
+  color: var(--faded-text-color);
 }
 
 .item-cell {
@@ -424,6 +436,13 @@
 html.broadcast body {
   overflow: hidden;
   background: var(--page-background);
+}
+
+html.broadcast.transparent-background {
+  --page-background: transparent;
+  --panel-background: transparent;
+  --world-background: transparent;
+  --border-color: transparent;
 }
 
 html.broadcast .container {

@@ -15,7 +15,6 @@ function startTracker() {
   apiAddressBox.addEventListener("change", forgetEverything);
 
   document.getElementById("broadcast-view-button").addEventListener("click", openBroadcastView);
-
   setUpTrackerOptions();
 
   if (isBroadcastView) {

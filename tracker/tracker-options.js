@@ -3,7 +3,7 @@ const trackerChoicesStorageKey = "kh1TrackerChoices";
 let trackerChoices = loadStartingChoices();
 
 function getAllChoices() {
-  return trackerConfig.importantCheckOptions.concat(trackerConfig.itemGroups, trackerConfig.cornerIconOptions);
+  return trackerConfig.importantCheckOptions.concat(trackerConfig.itemGroups, trackerConfig.cornerIconOptions, trackerConfig.broadcastOptions);
 }
 
 function getKeysOfChoicesTurnedOn() {
@@ -52,7 +52,22 @@ function saveTrackerChoices() {
   }
 }
 
+function isChoiceUnavailable(choice) {
+  if (!choice.unavailableWhenSettingIs || seedSettings === null) {
+    return false;
+  }
+  for (const [settingName, settingValue] of Object.entries(choice.unavailableWhenSettingIs)) {
+    if (seedSettings[settingName] === settingValue) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function isChoiceTurnedOn(choice) {
+  if (isChoiceUnavailable(choice)) {
+    return false;
+  }
   const savedChoice = trackerChoices[choice.key];
   if (savedChoice === undefined) {
     return choice.isOnByDefault;
@@ -78,10 +93,20 @@ function makeCheckboxHtml(choice) {
   if (isChoiceTurnedOn(choice)) {
     checkedText = " checked";
   }
-  let html = '<label class="tracker-option">';
-  html += '<input type="checkbox" data-choice-key="' + escapeHtml(choice.key) + '"' + checkedText + ">";
+  const isUnavailable = isChoiceUnavailable(choice);
+  let labelClasses = "tracker-option";
+  let disabledText = "";
+  if (isUnavailable) {
+    labelClasses += " unavailable";
+    disabledText = " disabled";
+  }
+  let html = '<label class="' + labelClasses + '">';
+  html += '<input type="checkbox" data-choice-key="' + escapeHtml(choice.key) + '"' + checkedText + disabledText + ">";
   html += escapeHtml(choice.name);
   html += "</label>";
+  if (isUnavailable) {
+    html += '<div class="tracker-option-note">' + escapeHtml(choice.unavailableNote) + "</div>";
+  }
   return html;
 }
 
@@ -100,6 +125,12 @@ function drawTrackerOptions() {
     itemGroupTogglesHtml += makeCheckboxHtml(cornerIconOption);
   }
   document.getElementById("item-group-toggles").innerHTML = itemGroupTogglesHtml;
+
+  let broadcastOptionsHtml = "";
+  for (const broadcastOption of trackerConfig.broadcastOptions) {
+    broadcastOptionsHtml += makeCheckboxHtml(broadcastOption);
+  }
+  document.getElementById("broadcast-options").innerHTML = broadcastOptionsHtml;
 }
 
 function redrawIfConnected() {
@@ -127,6 +158,7 @@ function handleTrackerChoicesChangedInAnotherWindow(event) {
   drawTrackerOptions();
   redrawIfConnected();
   if (isBroadcastView) {
+    applyBroadcastBackground();
     history.replaceState(null, "", makeBroadcastAddress());
   }
 }
