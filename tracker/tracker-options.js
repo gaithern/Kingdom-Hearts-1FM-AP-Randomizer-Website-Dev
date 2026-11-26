@@ -150,6 +150,17 @@ function handleTrackerOptionClicked(event) {
   redrawIfConnected();
 }
 
+function resetTrackerOptionsToDefaults() {
+  const userIsSure = window.confirm("Reset all tracker options to their defaults?");
+  if (!userIsSure) {
+    return;
+  }
+  trackerChoices = {};
+  saveTrackerChoices();
+  drawTrackerOptions();
+  redrawIfConnected();
+}
+
 function handleTrackerChoicesChangedInAnotherWindow(event) {
   if (event.key !== trackerChoicesStorageKey) {
     return;
@@ -166,5 +177,6 @@ function handleTrackerChoicesChangedInAnotherWindow(event) {
 function setUpTrackerOptions() {
   drawTrackerOptions();
   document.getElementById("tracker-options").addEventListener("change", handleTrackerOptionClicked);
+  document.getElementById("reset-options-button").addEventListener("click", resetTrackerOptionsToDefaults);
   window.addEventListener("storage", handleTrackerChoicesChangedInAnotherWindow);
 }

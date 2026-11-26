@@ -335,6 +335,17 @@
   color: var(--faded-text-color);
 }
 
+.reset-options-button {
+  margin: 12px 0 2px;
+  padding: 2px 10px;
+  font-size: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--chip-background);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
 .tracker-option-note {
   margin: -2px 0 2px 19px;
   font-size: 11px;
