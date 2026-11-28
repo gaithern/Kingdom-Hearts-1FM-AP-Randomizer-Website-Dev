@@ -1,0 +1,3587 @@
+{
+  "2651654": {
+    "name": "100 Acre Wood Meadow Inside Log Chest",
+    "category": "100 Acre Wood",
+    "type": "Chest"
+  },
+  "2651691": {
+    "name": "100 Acre Wood Bouncing Spot Left Cliff Chest",
+    "category": "100 Acre Wood",
+    "type": "Chest"
+  },
+  "2651692": {
+    "name": "100 Acre Wood Bouncing Spot Right Tree Alcove Chest",
+    "category": "100 Acre Wood",
+    "type": "Chest"
+  },
+  "2651693": {
+    "name": "100 Acre Wood Bouncing Spot Under Giant Pot Chest",
+    "category": "100 Acre Wood",
+    "type": "Chest"
+  },
+  "2656345": {
+    "name": "100 Acre Wood Bouncing Spot Turn in Rare Nut 1",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656346": {
+    "name": "100 Acre Wood Bouncing Spot Turn in Rare Nut 2",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656347": {
+    "name": "100 Acre Wood Bouncing Spot Turn in Rare Nut 3",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656348": {
+    "name": "100 Acre Wood Bouncing Spot Turn in Rare Nut 4",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656349": {
+    "name": "100 Acre Wood Bouncing Spot Turn in Rare Nut 5",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656350": {
+    "name": "100 Acre Wood Pooh's House Owl Cheer",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656351": {
+    "name": "100 Acre Wood Convert Torn Page 1",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656352": {
+    "name": "100 Acre Wood Convert Torn Page 2",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656353": {
+    "name": "100 Acre Wood Convert Torn Page 3",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656354": {
+    "name": "100 Acre Wood Convert Torn Page 4",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656355": {
+    "name": "100 Acre Wood Convert Torn Page 5",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656356": {
+    "name": "100 Acre Wood Pooh's House Start Fire",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656357": {
+    "name": "100 Acre Wood Pooh's Room Cabinet",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656358": {
+    "name": "100 Acre Wood Pooh's Room Chimney",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656359": {
+    "name": "100 Acre Wood Bouncing Spot Break Log",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2656360": {
+    "name": "100 Acre Wood Bouncing Spot Fall Through Top of Tree Next to Pooh",
+    "category": "100 Acre Wood",
+    "type": ""
+  },
+  "2659112": {
+    "name": "Accessory Ability Stud",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659123": {
+    "name": "Accessory Angel Bangle",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659127": {
+    "name": "Accessory Atlas Armlet",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659108": {
+    "name": "Accessory Blizzaga Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659145": {
+    "name": "Accessory Blizzagun Band",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659107": {
+    "name": "Accessory Blizzara Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659106": {
+    "name": "Accessory Blizzard Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659131": {
+    "name": "Accessory Brave Warrior",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659115": {
+    "name": "Accessory Chaos Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659151": {
+    "name": "Accessory Cosmic Arts",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659130": {
+    "name": "Accessory Crystal Crown",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659116": {
+    "name": "Accessory Dark Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659117": {
+    "name": "Accessory Element Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659122": {
+    "name": "Accessory Energy Bangle",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659142": {
+    "name": "Accessory EXP Bracelet",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659139": {
+    "name": "Accessory EXP Earring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659143": {
+    "name": "Accessory EXP Necklace",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659141": {
+    "name": "Accessory EXP Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659104": {
+    "name": "Accessory Fira Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659105": {
+    "name": "Accessory Firaga Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659144": {
+    "name": "Accessory Firagun Band",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659103": {
+    "name": "Accessory Fire Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659124": {
+    "name": "Accessory Gaia Bangle",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659120": {
+    "name": "Accessory Golem Chain",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659113": {
+    "name": "Accessory Guard Earring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659128": {
+    "name": "Accessory Heartguard",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659136": {
+    "name": "Accessory Holy Circlet",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659147": {
+    "name": "Accessory Ifrit Belt",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659132": {
+    "name": "Accessory Ifrit's Horn",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659133": {
+    "name": "Accessory Inferno Band",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659125": {
+    "name": "Accessory Magic Armlet",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659114": {
+    "name": "Accessory Master Earring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659150": {
+    "name": "Accessory Moogle Badge",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659154": {
+    "name": "Accessory Obsidian Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659138": {
+    "name": "Accessory Omega Arts",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659119": {
+    "name": "Accessory Power Chain",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659153": {
+    "name": "Accessory Prime Cap",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659100": {
+    "name": "Accessory Protect Chain",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659102": {
+    "name": "Accessory Protega Chain",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659101": {
+    "name": "Accessory Protera Chain",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659149": {
+    "name": "Accessory Ramuh Belt",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659137": {
+    "name": "Accessory Raven's Claw",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659135": {
+    "name": "Accessory Ray of Light",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659129": {
+    "name": "Accessory Ribbon",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659152": {
+    "name": "Accessory Royal Crown",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659126": {
+    "name": "Accessory Rune Armlet",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659148": {
+    "name": "Accessory Shiva Belt",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659118": {
+    "name": "Accessory Three Stars",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659111": {
+    "name": "Accessory Thundaga Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659146": {
+    "name": "Accessory Thundagun Band",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659110": {
+    "name": "Accessory Thundara Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659109": {
+    "name": "Accessory Thunder Ring",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659121": {
+    "name": "Accessory Titan Chain",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2659134": {
+    "name": "Accessory White Fang",
+    "category": "Accessories",
+    "type": "Augment"
+  },
+  "2652294": {
+    "name": "Agrabah Aladdin's House Main Street Entrance Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652331": {
+    "name": "Agrabah Aladdin's House Plaza Entrance Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652011": {
+    "name": "Agrabah Alley Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652012": {
+    "name": "Agrabah Bazaar Across Windows Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2659217": {
+    "name": "Agrabah Bazaar Black Fungi Defeat Reward",
+    "category": "Agrabah",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656605": {
+    "name": "Agrabah Bazaar Blue Trinity",
+    "category": "Agrabah",
+    "type": ""
+  },
+  "2652013": {
+    "name": "Agrabah Bazaar High Corner Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652172": {
+    "name": "Agrabah Cave of Wonders Bottomless Hall Across Chasm Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652171": {
+    "name": "Agrabah Cave of Wonders Bottomless Hall Pillar Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652134": {
+    "name": "Agrabah Cave of Wonders Bottomless Hall Raised Platform Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652251": {
+    "name": "Agrabah Cave of Wonders Dark Chamber Abu Gem Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652252": {
+    "name": "Agrabah Cave of Wonders Dark Chamber Across from Relic Chamber Entrance Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652253": {
+    "name": "Agrabah Cave of Wonders Dark Chamber Bridge Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652254": {
+    "name": "Agrabah Cave of Wonders Dark Chamber Near Save Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652094": {
+    "name": "Agrabah Cave of Wonders Entrance Left Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652131": {
+    "name": "Agrabah Cave of Wonders Entrance Tall Tower Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2652332": {
+    "name": "Agrabah Cave of Wonders Entrance White Trinity Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652132": {
+    "name": "Agrabah Cave of Wonders Hall High Left Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652133": {
+    "name": "Agrabah Cave of Wonders Hall Near Bottomless Hall Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652293": {
+    "name": "Agrabah Cave of Wonders Hidden Room Left Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2652292": {
+    "name": "Agrabah Cave of Wonders Hidden Room Right Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652213": {
+    "name": "Agrabah Cave of Wonders Relic Chamber Jump from Stairs Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652214": {
+    "name": "Agrabah Cave of Wonders Relic Chamber Stairs Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652291": {
+    "name": "Agrabah Cave of Wonders Silent Chamber Blue Trinity Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652212": {
+    "name": "Agrabah Cave of Wonders Treasure Room Above Fire Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652173": {
+    "name": "Agrabah Cave of Wonders Treasure Room Across Platforms Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2652211": {
+    "name": "Agrabah Cave of Wonders Treasure Room Large Treasure Pile Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2656611": {
+    "name": "Agrabah Cave of Wonders Treasure Room Red Trinity",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2652174": {
+    "name": "Agrabah Cave of Wonders Treasure Room Small Treasure Pile Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2659205": {
+    "name": "Agrabah Cave of Wonders Treasure Room White Mushroom Gravity x3 Reward",
+    "category": "Agrabah",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656052": {
+    "name": "Agrabah Defeat Jafar Blizzard Event",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2657018": {
+    "name": "Agrabah Defeat Jafar Genie Ansem's Report 1",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2656053": {
+    "name": "Agrabah Defeat Jafar Genie Fire Event",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2657026": {
+    "name": "Agrabah Defeat Kurt Zisa Ansem's Report 11",
+    "category": "Agrabah",
+    "type": "Boss;Super Bosses"
+  },
+  "2656378": {
+    "name": "Agrabah Defeat Kurt Zisa Zantetsuken Event",
+    "category": "Agrabah",
+    "type": "Boss;Super Bosses"
+  },
+  "2656051": {
+    "name": "Agrabah Defeat Pot Centipede Ray of Light Event",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2652051": {
+    "name": "Agrabah Main Street High Above Alley Entrance Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652052": {
+    "name": "Agrabah Main Street High Above Palace Gates Entrance Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652014": {
+    "name": "Agrabah Main Street Right Palace Entrance Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652091": {
+    "name": "Agrabah Palace Gates High Close to Palace Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2652054": {
+    "name": "Agrabah Palace Gates High Opposite Palace Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2652053": {
+    "name": "Agrabah Palace Gates Low Chest",
+    "category": "Agrabah",
+    "type": "Chest;Boss"
+  },
+  "2659212": {
+    "name": "Agrabah Palace Gates Pot Scorpion Defeated Reward",
+    "category": "Agrabah",
+    "type": "Rare Heartless;Boss"
+  },
+  "2651972": {
+    "name": "Agrabah Plaza By Storage Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2651973": {
+    "name": "Agrabah Plaza Raised Terrace Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2651974": {
+    "name": "Agrabah Plaza Top Corner Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2656054": {
+    "name": "Agrabah Seal Keyhole Genie Event",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2656056": {
+    "name": "Agrabah Seal Keyhole Green Trinity Event",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2656055": {
+    "name": "Agrabah Seal Keyhole Three Wishes Event",
+    "category": "Agrabah",
+    "type": "Boss"
+  },
+  "2652093": {
+    "name": "Agrabah Storage Behind Barrel Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2652092": {
+    "name": "Agrabah Storage Green Trinity Chest",
+    "category": "Agrabah",
+    "type": "Chest"
+  },
+  "2656805": {
+    "name": "Aladdin Starting Accessory 1",
+    "category": "Agrabah",
+    "type": "Accessory"
+  },
+  "2656806": {
+    "name": "Aladdin Starting Accessory 2",
+    "category": "Agrabah",
+    "type": "Accessory"
+  },
+  "2656807": {
+    "name": "Ariel Starting Accessory 1",
+    "category": "Atlantica",
+    "type": "Accessory"
+  },
+  "2656808": {
+    "name": "Ariel Starting Accessory 2",
+    "category": "Atlantica",
+    "type": "Accessory"
+  },
+  "2656809": {
+    "name": "Ariel Starting Accessory 3",
+    "category": "Atlantica",
+    "type": "Accessory"
+  },
+  "2652534": {
+    "name": "Atlantica Ariel's Grotto High Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2652572": {
+    "name": "Atlantica Ariel's Grotto Low Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2652571": {
+    "name": "Atlantica Ariel's Grotto Middle Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2656214": {
+    "name": "Atlantica Below Deck Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2659206": {
+    "name": "Atlantica Below Deck White Mushroom Stop x3 Reward",
+    "category": "Atlantica",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656213": {
+    "name": "Atlantica Cavern Nook Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656071": {
+    "name": "Atlantica Defeat Ursula I Mermaid Kick Event",
+    "category": "Atlantica",
+    "type": "Boss"
+  },
+  "2657016": {
+    "name": "Atlantica Defeat Ursula II Ansem's Report 3",
+    "category": "Atlantica",
+    "type": "Boss"
+  },
+  "2656072": {
+    "name": "Atlantica Defeat Ursula II Thunder Event",
+    "category": "Atlantica",
+    "type": "Boss"
+  },
+  "2656073": {
+    "name": "Atlantica Seal Keyhole Crabclaw Event",
+    "category": "Atlantica",
+    "type": "Boss"
+  },
+  "2656381": {
+    "name": "Atlantica Sunken Ship Crystal Trident Event",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2652531": {
+    "name": "Atlantica Sunken Ship In Flipped Boat Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2652533": {
+    "name": "Atlantica Sunken Ship Inside Ship Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2652532": {
+    "name": "Atlantica Sunken Ship Seabed Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2656211": {
+    "name": "Atlantica Triton's Palace Near Path Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656209": {
+    "name": "Atlantica Triton's Palace Thunder Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656212": {
+    "name": "Atlantica Triton's Palace Wall Left Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656210": {
+    "name": "Atlantica Triton's Palace Wall Right Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2652611": {
+    "name": "Atlantica Triton's Palace White Trinity Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2656216": {
+    "name": "Atlantica Undersea Cave Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656215": {
+    "name": "Atlantica Undersea Garden Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656201": {
+    "name": "Atlantica Undersea Gorge Blizzard Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2652574": {
+    "name": "Atlantica Undersea Gorge Jammed by Ariel's Grotto Chest",
+    "category": "Atlantica",
+    "type": "Chest"
+  },
+  "2656202": {
+    "name": "Atlantica Undersea Gorge Ocean Floor Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656205": {
+    "name": "Atlantica Undersea Valley Fire Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656203": {
+    "name": "Atlantica Undersea Valley Higher Cave Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656204": {
+    "name": "Atlantica Undersea Valley Lower Cave Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656208": {
+    "name": "Atlantica Undersea Valley Ocean Floor Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656207": {
+    "name": "Atlantica Undersea Valley Pillar Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2656206": {
+    "name": "Atlantica Undersea Valley Wall Clam",
+    "category": "Atlantica",
+    "type": ""
+  },
+  "2652573": {
+    "name": "Atlantica Ursula's Lair Use Fire on Urchin Chest",
+    "category": "Atlantica",
+    "type": "Chest;Boss"
+  },
+  "2656814": {
+    "name": "Beast Starting Accessory 1",
+    "category": "Hollow Bastion",
+    "type": "Accessory"
+  },
+  "2659010": {
+    "name": "Complete Hades Cup",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659011": {
+    "name": "Complete Hades Cup Solo",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659012": {
+    "name": "Complete Hades Cup Time Trial",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659007": {
+    "name": "Complete Hercules Cup",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659008": {
+    "name": "Complete Hercules Cup Solo",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659009": {
+    "name": "Complete Hercules Cup Time Trial",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659004": {
+    "name": "Complete Pegasus Cup",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659005": {
+    "name": "Complete Pegasus Cup Solo",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659006": {
+    "name": "Complete Pegasus Cup Time Trial",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659001": {
+    "name": "Complete Phil Cup",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659002": {
+    "name": "Complete Phil Cup Solo",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659003": {
+    "name": "Complete Phil Cup Time Trial",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659219": {
+    "name": "Deep Jungle Bamboo Thicket Black Ballade 4 Strikes Reward",
+    "category": "Deep Jungle",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656367": {
+    "name": "Deep Jungle Bamboo Thicket Save Gorillas",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2651333": {
+    "name": "Deep Jungle Camp Blue Trinity Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Puppy"
+  },
+  "2656362": {
+    "name": "Deep Jungle Camp Ether Experiment",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656361": {
+    "name": "Deep Jungle Camp Hi-Potion Experiment",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656363": {
+    "name": "Deep Jungle Camp Replication Experiment",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656366": {
+    "name": "Deep Jungle Camp Save Gorillas",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656387": {
+    "name": "Deep Jungle Camp Slide 1",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656388": {
+    "name": "Deep Jungle Camp Slide 2",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656389": {
+    "name": "Deep Jungle Camp Slide 3",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656390": {
+    "name": "Deep Jungle Camp Slide 4",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656391": {
+    "name": "Deep Jungle Camp Slide 5",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656392": {
+    "name": "Deep Jungle Camp Slide 6",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2659204": {
+    "name": "Deep Jungle Camp White Mushroom Cure x3 Reward",
+    "category": "Deep Jungle",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656384": {
+    "name": "Deep Jungle Cavern of Hearts Navi-G Piece Event",
+    "category": "Deep Jungle",
+    "type": "Boss"
+  },
+  "2651332": {
+    "name": "Deep Jungle Cavern of Hearts White Trinity Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Boss"
+  },
+  "2651411": {
+    "name": "Deep Jungle Cliff Right Cliff Left Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2651412": {
+    "name": "Deep Jungle Cliff Right Cliff Right Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2656364": {
+    "name": "Deep Jungle Cliff Save Gorillas",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2651293": {
+    "name": "Deep Jungle Climbing Trees Blue Trinity Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2656368": {
+    "name": "Deep Jungle Climbing Trees Save Gorillas",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2656022": {
+    "name": "Deep Jungle Defeat Clayton Cure Event",
+    "category": "Deep Jungle",
+    "type": "Boss"
+  },
+  "2656021": {
+    "name": "Deep Jungle Defeat Sabor White Fang Event",
+    "category": "Deep Jungle",
+    "type": "Boss"
+  },
+  "2651251": {
+    "name": "Deep Jungle Hippo's Lagoon Center Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Puppy"
+  },
+  "2651252": {
+    "name": "Deep Jungle Hippo's Lagoon Left Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2651253": {
+    "name": "Deep Jungle Hippo's Lagoon Right Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2656370": {
+    "name": "Deep Jungle Jungle Slider 10 Fruits",
+    "category": "Deep Jungle",
+    "type": "Boss;Jungle Slider"
+  },
+  "2656371": {
+    "name": "Deep Jungle Jungle Slider 20 Fruits",
+    "category": "Deep Jungle",
+    "type": "Boss;Jungle Slider"
+  },
+  "2656372": {
+    "name": "Deep Jungle Jungle Slider 30 Fruits",
+    "category": "Deep Jungle",
+    "type": "Boss;Jungle Slider"
+  },
+  "2656373": {
+    "name": "Deep Jungle Jungle Slider 40 Fruits",
+    "category": "Deep Jungle",
+    "type": "Boss;Jungle Slider"
+  },
+  "2656374": {
+    "name": "Deep Jungle Jungle Slider 50 Fruits",
+    "category": "Deep Jungle",
+    "type": "Boss;Jungle Slider"
+  },
+  "2656023": {
+    "name": "Deep Jungle Seal Keyhole Jungle King Event",
+    "category": "Deep Jungle",
+    "type": "Boss"
+  },
+  "2656024": {
+    "name": "Deep Jungle Seal Keyhole Red Trinity Event",
+    "category": "Deep Jungle",
+    "type": "Boss"
+  },
+  "2651334": {
+    "name": "Deep Jungle Tent Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2656383": {
+    "name": "Deep Jungle Tent Protect-G Event",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2651213": {
+    "name": "Deep Jungle Tree House Beneath Tree House Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2659209": {
+    "name": "Deep Jungle Tree House Pink Agaricus 100 Hits Reward",
+    "category": "Deep Jungle",
+    "type": "Rare Heartless;Boss"
+  },
+  "2651214": {
+    "name": "Deep Jungle Tree House Rooftop Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2656365": {
+    "name": "Deep Jungle Tree House Save Gorillas",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2651413": {
+    "name": "Deep Jungle Tree House Suspended Boat Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2656610": {
+    "name": "Deep Jungle Treetop Green Trinity",
+    "category": "Deep Jungle",
+    "type": ""
+  },
+  "2651331": {
+    "name": "Deep Jungle Tunnel Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2651292": {
+    "name": "Deep Jungle Vines 2 Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Puppy"
+  },
+  "2651291": {
+    "name": "Deep Jungle Vines Chest",
+    "category": "Deep Jungle",
+    "type": "Chest"
+  },
+  "2651374": {
+    "name": "Deep Jungle Waterfall Cavern High Middle Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Boss"
+  },
+  "2651373": {
+    "name": "Deep Jungle Waterfall Cavern High Wall Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Boss"
+  },
+  "2651371": {
+    "name": "Deep Jungle Waterfall Cavern Low Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Boss"
+  },
+  "2651372": {
+    "name": "Deep Jungle Waterfall Cavern Middle Chest",
+    "category": "Deep Jungle",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2650011": {
+    "name": "Destiny Islands Chest",
+    "category": "Destiny Islands",
+    "type": "Chest"
+  },
+  "2656713": {
+    "name": "Destiny Islands Cove Gather Mushroom in Small Cave (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656712": {
+    "name": "Destiny Islands Cove Gather Mushroom Near Zip Line (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655105": {
+    "name": "Destiny Islands Cove Race Riku (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656714": {
+    "name": "Destiny Islands Cove Talk to Kairi (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655107": {
+    "name": "Destiny Islands Cove Talk to Kairi Hi-Potion Reward (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655106": {
+    "name": "Destiny Islands Cove Talk to Kairi Potion Reward (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655102": {
+    "name": "Destiny Islands Gather Coconut (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656715": {
+    "name": "Destiny Islands Gather Drinking Water (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656700": {
+    "name": "Destiny Islands Seashore Capture Fish 1 (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656701": {
+    "name": "Destiny Islands Seashore Capture Fish 2 (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656702": {
+    "name": "Destiny Islands Seashore Capture Fish 3 (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655100": {
+    "name": "Destiny Islands Seashore Defeat Riku (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655101": {
+    "name": "Destiny Islands Seashore Defeat Trio (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656706": {
+    "name": "Destiny Islands Seashore Gather Cloth (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656707": {
+    "name": "Destiny Islands Seashore Gather Rope (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656703": {
+    "name": "Destiny Islands Seashore Gather Seagull Egg (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656704": {
+    "name": "Destiny Islands Seashore Log on Riku's Island (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656705": {
+    "name": "Destiny Islands Seashore Log under Bridge (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655104": {
+    "name": "Destiny Islands Seashore Talk to Kairi Hi-Potion Reward (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2655103": {
+    "name": "Destiny Islands Seashore Talk to Kairi Potion Reward (Day 1)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656711": {
+    "name": "Destiny Islands Secret Place Gather Mushroom (Day 2)",
+    "category": "Destiny Islands",
+    "type": ""
+  },
+  "2656800": {
+    "name": "Donald Starting Accessory 1",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Accessory"
+  },
+  "2656801": {
+    "name": "Donald Starting Accessory 2",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Accessory"
+  },
+  "2656111": {
+    "name": "End of the World Defeat Chernabog Superglide Event",
+    "category": "End of the World",
+    "type": "Boss"
+  },
+  "2654573": {
+    "name": "End of the World Final Dimension 10th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654531": {
+    "name": "End of the World Final Dimension 1st Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654532": {
+    "name": "End of the World Final Dimension 2nd Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654533": {
+    "name": "End of the World Final Dimension 3rd Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654534": {
+    "name": "End of the World Final Dimension 4th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654571": {
+    "name": "End of the World Final Dimension 5th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654572": {
+    "name": "End of the World Final Dimension 6th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654612": {
+    "name": "End of the World Final Dimension 7th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654611": {
+    "name": "End of the World Final Dimension 8th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654574": {
+    "name": "End of the World Final Dimension 9th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654772": {
+    "name": "End of the World Final Rest Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654651": {
+    "name": "End of the World Giant Crevasse 1st Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654653": {
+    "name": "End of the World Giant Crevasse 2nd Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654613": {
+    "name": "End of the World Giant Crevasse 3rd Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654652": {
+    "name": "End of the World Giant Crevasse 4th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654614": {
+    "name": "End of the World Giant Crevasse 5th Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2659216": {
+    "name": "End of the World Linked Worlds Neoshadow 7th Defeated Reward",
+    "category": "End of the World",
+    "type": "Rare Heartless;Boss"
+  },
+  "2659203": {
+    "name": "End of the World Linked Worlds White Mushroom Thunder x3 Reward",
+    "category": "End of the World",
+    "type": "Rare Heartless;Boss"
+  },
+  "2654734": {
+    "name": "End of the World World Terminus 100 Acre Wood Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654694": {
+    "name": "End of the World World Terminus Agrabah Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654731": {
+    "name": "End of the World World Terminus Atlantica Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654693": {
+    "name": "End of the World World Terminus Deep Jungle Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654732": {
+    "name": "End of the World World Terminus Halloween Town Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654771": {
+    "name": "End of the World World Terminus Hollow Bastion Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654733": {
+    "name": "End of the World World Terminus Neverland Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654692": {
+    "name": "End of the World World Terminus Olympus Coliseum Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654654": {
+    "name": "End of the World World Terminus Traverse Town Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2654691": {
+    "name": "End of the World World Terminus Wonderland Chest",
+    "category": "End of the World",
+    "type": "Chest;Boss"
+  },
+  "2656802": {
+    "name": "Goofy Starting Accessory 1",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Accessory"
+  },
+  "2656803": {
+    "name": "Goofy Starting Accessory 2",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Accessory"
+  },
+  "2659016": {
+    "name": "Hades Cup Defeat Behemoth Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659015": {
+    "name": "Hades Cup Defeat Cerberus Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659013": {
+    "name": "Hades Cup Defeat Cloud and Leon Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659017": {
+    "name": "Hades Cup Defeat Hades Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659014": {
+    "name": "Hades Cup Defeat Yuffie Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2653052": {
+    "name": "Halloween Town Boneyard Tombstone Puzzle Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653291": {
+    "name": "Halloween Town Bridge Left of Gate Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2659208": {
+    "name": "Halloween Town Bridge Rare Truffle Juggle 100 Reward",
+    "category": "Halloween Town",
+    "type": "Rare Heartless;Boss"
+  },
+  "2653053": {
+    "name": "Halloween Town Bridge Right of Gate Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653051": {
+    "name": "Halloween Town Bridge Under Bridge",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653054": {
+    "name": "Halloween Town Cemetery Behind Grave Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Boss"
+  },
+  "2653092": {
+    "name": "Halloween Town Cemetery Between Graves Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Boss"
+  },
+  "2653091": {
+    "name": "Halloween Town Cemetery By Cat Shape Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2653292": {
+    "name": "Halloween Town Cemetery By Striped Grave Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Boss"
+  },
+  "2657012": {
+    "name": "Halloween Town Defeat Oogie Boogie Ansem's Report 7",
+    "category": "Halloween Town",
+    "type": "Boss"
+  },
+  "2656081": {
+    "name": "Halloween Town Defeat Oogie Boogie Holy Circlet Event",
+    "category": "Halloween Town",
+    "type": "Boss"
+  },
+  "2656082": {
+    "name": "Halloween Town Defeat Oogie's Manor Gravity Event",
+    "category": "Halloween Town",
+    "type": "Boss"
+  },
+  "2656382": {
+    "name": "Halloween Town Graveyard Forget-Me-Not Event",
+    "category": "Halloween Town",
+    "type": ""
+  },
+  "2659207": {
+    "name": "Halloween Town Graveyard White Mushroom Aero x3 Reward",
+    "category": "Halloween Town",
+    "type": "Rare Heartless;Boss"
+  },
+  "2653133": {
+    "name": "Halloween Town Guillotine Square High Tower Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653134": {
+    "name": "Halloween Town Guillotine Square Pumpkin Structure Left Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653294": {
+    "name": "Halloween Town Guillotine Square Pumpkin Structure Right Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Puppy"
+  },
+  "2656331": {
+    "name": "Halloween Town Guillotine Square Ring Jack's Doorbell 3 Times",
+    "category": "Halloween Town",
+    "type": ""
+  },
+  "2653293": {
+    "name": "Halloween Town Guillotine Square Under Jack's House Stairs Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2656508": {
+    "name": "Halloween Town Lab Torn Page",
+    "category": "Halloween Town",
+    "type": ""
+  },
+  "2659214": {
+    "name": "Halloween Town Manor Ruins Chimera 9 Heads Reward",
+    "category": "Halloween Town",
+    "type": "Rare Heartless;Boss"
+  },
+  "2653014": {
+    "name": "Halloween Town Moonlight Hill White Trinity Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Puppy"
+  },
+  "2653171": {
+    "name": "Halloween Town Oogie's Manor Entrance Steps Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653132": {
+    "name": "Halloween Town Oogie's Manor Grounds Red Trinity Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653131": {
+    "name": "Halloween Town Oogie's Manor Hollow Chest",
+    "category": "Halloween Town",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2653172": {
+    "name": "Halloween Town Oogie's Manor Inside Entrance Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653093": {
+    "name": "Halloween Town Oogie's Manor Lower Iron Cage Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2653094": {
+    "name": "Halloween Town Oogie's Manor Upper Iron Cage Chest",
+    "category": "Halloween Town",
+    "type": "Chest"
+  },
+  "2656083": {
+    "name": "Halloween Town Seal Keyhole Pumpkinhead Event",
+    "category": "Halloween Town",
+    "type": "Boss"
+  },
+  "2659018": {
+    "name": "Hercules Cup Defeat Cloud Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2659019": {
+    "name": "Hercules Cup Yellow Trinity Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2654331": {
+    "name": "Hollow Bastion Base Level Bubble Under the Wall Platform Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654333": {
+    "name": "Hollow Bastion Base Level Near Crystal Switch Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654332": {
+    "name": "Hollow Bastion Base Level Platform Near Entrance Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654133": {
+    "name": "Hollow Bastion Castle Gates Freestanding Pillar Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654132": {
+    "name": "Hollow Bastion Castle Gates Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Puppy"
+  },
+  "2654134": {
+    "name": "Hollow Bastion Castle Gates High Pillar Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2656105": {
+    "name": "Hollow Bastion Defeat Behemoth Omega Arts Event",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656103": {
+    "name": "Hollow Bastion Defeat Dragon Maleficent Fireglow Event",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2657014": {
+    "name": "Hollow Bastion Defeat Maleficent Ansem's Report 5",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656102": {
+    "name": "Hollow Bastion Defeat Maleficent Donald Cheer Event",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656101": {
+    "name": "Hollow Bastion Defeat Riku I White Trinity Event",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656104": {
+    "name": "Hollow Bastion Defeat Riku II Ragnarok Event",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2657024": {
+    "name": "Hollow Bastion Defeat Unknown Ansem's Report 13",
+    "category": "Hollow Bastion",
+    "type": "Boss;Super Bosses"
+  },
+  "2656379": {
+    "name": "Hollow Bastion Defeat Unknown EXP Necklace Event",
+    "category": "Hollow Bastion",
+    "type": "Boss;Super Bosses"
+  },
+  "2656609": {
+    "name": "Hollow Bastion Dungeon Blue Trinity",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2654373": {
+    "name": "Hollow Bastion Dungeon By Candles Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654374": {
+    "name": "Hollow Bastion Dungeon Corner Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2656517": {
+    "name": "Hollow Bastion Entrance Hall Emblem Piece (Chest)",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2656516": {
+    "name": "Hollow Bastion Entrance Hall Emblem Piece (Flame)",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656519": {
+    "name": "Hollow Bastion Entrance Hall Emblem Piece (Fountain)",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656518": {
+    "name": "Hollow Bastion Entrance Hall Emblem Piece (Statue)",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2654212": {
+    "name": "Hollow Bastion Entrance Hall Left of Emblem Door Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654492": {
+    "name": "Hollow Bastion Grand Hall Left of Gate Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2654491": {
+    "name": "Hollow Bastion Grand Hall Oblivion Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2659218": {
+    "name": "Hollow Bastion Grand Hall Stealth Soldier Defeat Reward",
+    "category": "Hollow Bastion",
+    "type": "Rare Heartless;Boss"
+  },
+  "2654454": {
+    "name": "Hollow Bastion Grand Hall Steps Right Side Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654172": {
+    "name": "Hollow Bastion Great Crest After Battle Platform Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2656608": {
+    "name": "Hollow Bastion Great Crest Blue Trinity",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2654171": {
+    "name": "Hollow Bastion Great Crest Lower Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654174": {
+    "name": "Hollow Bastion High Tower 1st Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654173": {
+    "name": "Hollow Bastion High Tower 2nd Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654211": {
+    "name": "Hollow Bastion High Tower Above Sliding Blocks Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654214": {
+    "name": "Hollow Bastion Library 1st Floor Turn the Carousel Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654252": {
+    "name": "Hollow Bastion Library 2nd Floor Turn the Carousel 1st Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654253": {
+    "name": "Hollow Bastion Library 2nd Floor Turn the Carousel 2nd Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2656523": {
+    "name": "Hollow Bastion Library Speak to Aerith Cure",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2656522": {
+    "name": "Hollow Bastion Library Speak to Belle Divine Rose",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2654213": {
+    "name": "Hollow Bastion Library Top of Bookshelf Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654251": {
+    "name": "Hollow Bastion Library Top of Bookshelf Turn the Carousel Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2656623": {
+    "name": "Hollow Bastion Lift Stop from Waterway Examine Node",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2654294": {
+    "name": "Hollow Bastion Lift Stop Heartless Sigil Door Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654254": {
+    "name": "Hollow Bastion Lift Stop Library Node After High Tower Switch Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654291": {
+    "name": "Hollow Bastion Lift Stop Library Node Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654293": {
+    "name": "Hollow Bastion Lift Stop Outside Library Gravity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2654292": {
+    "name": "Hollow Bastion Lift Stop Under High Tower Sliding Blocks Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654094": {
+    "name": "Hollow Bastion Rising Falls Floating Platform Near Bubble Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654093": {
+    "name": "Hollow Bastion Rising Falls Floating Platform Near Save Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Puppy"
+  },
+  "2654131": {
+    "name": "Hollow Bastion Rising Falls High Platform Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654091": {
+    "name": "Hollow Bastion Rising Falls Under Water 1st Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654092": {
+    "name": "Hollow Bastion Rising Falls Under Water 2nd Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2654054": {
+    "name": "Hollow Bastion Rising Falls Water's Surface Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654494": {
+    "name": "Hollow Bastion Rising Falls White Trinity Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest;Boss"
+  },
+  "2656106": {
+    "name": "Hollow Bastion Speak to Princesses Fire Event",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2657027": {
+    "name": "Hollow Bastion Speak with Aerith Ansem's Report 10",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2657017": {
+    "name": "Hollow Bastion Speak with Aerith Ansem's Report 2",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2657015": {
+    "name": "Hollow Bastion Speak with Aerith Ansem's Report 4",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2657013": {
+    "name": "Hollow Bastion Speak with Aerith Ansem's Report 6",
+    "category": "Hollow Bastion",
+    "type": "Boss"
+  },
+  "2654371": {
+    "name": "Hollow Bastion Waterway Blizzard on Bubble Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654334": {
+    "name": "Hollow Bastion Waterway Near Save Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2654372": {
+    "name": "Hollow Bastion Waterway Unlock Passage from Base Level Chest",
+    "category": "Hollow Bastion",
+    "type": "Chest"
+  },
+  "2656810": {
+    "name": "Jack Starting Accessory 1",
+    "category": "Halloween Town",
+    "type": "Accessory"
+  },
+  "2656811": {
+    "name": "Jack Starting Accessory 2",
+    "category": "Halloween Town",
+    "type": "Accessory"
+  },
+  "2658102": {
+    "name": "Level 002",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658103": {
+    "name": "Level 003",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658104": {
+    "name": "Level 004",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658105": {
+    "name": "Level 005",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658106": {
+    "name": "Level 006",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658107": {
+    "name": "Level 007",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658108": {
+    "name": "Level 008",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658109": {
+    "name": "Level 009",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658110": {
+    "name": "Level 010",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658111": {
+    "name": "Level 011",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658112": {
+    "name": "Level 012",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658113": {
+    "name": "Level 013",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658114": {
+    "name": "Level 014",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658115": {
+    "name": "Level 015",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658116": {
+    "name": "Level 016",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658117": {
+    "name": "Level 017",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658118": {
+    "name": "Level 018",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658119": {
+    "name": "Level 019",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658120": {
+    "name": "Level 020",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658121": {
+    "name": "Level 021",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658122": {
+    "name": "Level 022",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658123": {
+    "name": "Level 023",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658124": {
+    "name": "Level 024",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658125": {
+    "name": "Level 025",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658126": {
+    "name": "Level 026",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658127": {
+    "name": "Level 027",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658128": {
+    "name": "Level 028",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658129": {
+    "name": "Level 029",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658130": {
+    "name": "Level 030",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658131": {
+    "name": "Level 031",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658132": {
+    "name": "Level 032",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658133": {
+    "name": "Level 033",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658134": {
+    "name": "Level 034",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658135": {
+    "name": "Level 035",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658136": {
+    "name": "Level 036",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658137": {
+    "name": "Level 037",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658138": {
+    "name": "Level 038",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658139": {
+    "name": "Level 039",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658140": {
+    "name": "Level 040",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658141": {
+    "name": "Level 041",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658142": {
+    "name": "Level 042",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658143": {
+    "name": "Level 043",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658144": {
+    "name": "Level 044",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658145": {
+    "name": "Level 045",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658146": {
+    "name": "Level 046",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658147": {
+    "name": "Level 047",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658148": {
+    "name": "Level 048",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658149": {
+    "name": "Level 049",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658150": {
+    "name": "Level 050",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658151": {
+    "name": "Level 051",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658152": {
+    "name": "Level 052",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658153": {
+    "name": "Level 053",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658154": {
+    "name": "Level 054",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658155": {
+    "name": "Level 055",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658156": {
+    "name": "Level 056",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658157": {
+    "name": "Level 057",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658158": {
+    "name": "Level 058",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658159": {
+    "name": "Level 059",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658160": {
+    "name": "Level 060",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658161": {
+    "name": "Level 061",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658162": {
+    "name": "Level 062",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658163": {
+    "name": "Level 063",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658164": {
+    "name": "Level 064",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658165": {
+    "name": "Level 065",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658166": {
+    "name": "Level 066",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658167": {
+    "name": "Level 067",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658168": {
+    "name": "Level 068",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658169": {
+    "name": "Level 069",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658170": {
+    "name": "Level 070",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658171": {
+    "name": "Level 071",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658172": {
+    "name": "Level 072",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658173": {
+    "name": "Level 073",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658174": {
+    "name": "Level 074",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658175": {
+    "name": "Level 075",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658176": {
+    "name": "Level 076",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658177": {
+    "name": "Level 077",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658178": {
+    "name": "Level 078",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658179": {
+    "name": "Level 079",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658180": {
+    "name": "Level 080",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658181": {
+    "name": "Level 081",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658182": {
+    "name": "Level 082",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658183": {
+    "name": "Level 083",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658184": {
+    "name": "Level 084",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658185": {
+    "name": "Level 085",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658186": {
+    "name": "Level 086",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658187": {
+    "name": "Level 087",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658188": {
+    "name": "Level 088",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658189": {
+    "name": "Level 089",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658190": {
+    "name": "Level 090",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658191": {
+    "name": "Level 091",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658192": {
+    "name": "Level 092",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658193": {
+    "name": "Level 093",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658194": {
+    "name": "Level 094",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658195": {
+    "name": "Level 095",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658196": {
+    "name": "Level 096",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658197": {
+    "name": "Level 097",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658198": {
+    "name": "Level 098",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658199": {
+    "name": "Level 099",
+    "category": "Levels",
+    "type": ""
+  },
+  "2658200": {
+    "name": "Level 100",
+    "category": "Levels",
+    "type": ""
+  },
+  "2653534": {
+    "name": "Monstro Chamber 2 Ground Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653571": {
+    "name": "Monstro Chamber 2 Platform Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653614": {
+    "name": "Monstro Chamber 3 Ground Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653652": {
+    "name": "Monstro Chamber 3 Near Chamber 6 Entrance Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653651": {
+    "name": "Monstro Chamber 3 Platform Above Chamber 2 Entrance Chest",
+    "category": "Monstro",
+    "type": "Chest;Puppy"
+  },
+  "2653653": {
+    "name": "Monstro Chamber 3 Platform Near Chamber 6 Entrance Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653733": {
+    "name": "Monstro Chamber 5 Atop Barrel Chest",
+    "category": "Monstro",
+    "type": "Chest;Puppy"
+  },
+  "2656607": {
+    "name": "Monstro Chamber 5 Blue Trinity",
+    "category": "Monstro",
+    "type": ""
+  },
+  "2653771": {
+    "name": "Monstro Chamber 5 Low 1st Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653734": {
+    "name": "Monstro Chamber 5 Low 2nd Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653613": {
+    "name": "Monstro Chamber 5 Platform Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2652452": {
+    "name": "Monstro Chamber 6 Low Chest",
+    "category": "Monstro",
+    "type": "Chest;Puppy"
+  },
+  "2652413": {
+    "name": "Monstro Chamber 6 Other Platform Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2652414": {
+    "name": "Monstro Chamber 6 Platform Near Chamber 5 Entrance Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2652451": {
+    "name": "Monstro Chamber 6 Raised Area Near Chamber 1 Entrance Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2655092": {
+    "name": "Monstro Chamber 6 White Trinity Chest",
+    "category": "Monstro",
+    "type": "Chest;Boss"
+  },
+  "2656061": {
+    "name": "Monstro Defeat Parasite Cage I Goofy Cheer Event",
+    "category": "Monstro",
+    "type": "Boss"
+  },
+  "2656062": {
+    "name": "Monstro Defeat Parasite Cage II Stop Event",
+    "category": "Monstro",
+    "type": "Boss"
+  },
+  "2656606": {
+    "name": "Monstro Mouth Blue Trinity",
+    "category": "Monstro",
+    "type": "Boss"
+  },
+  "2653454": {
+    "name": "Monstro Mouth Boat Deck Chest",
+    "category": "Monstro",
+    "type": "Chest;Boss"
+  },
+  "2653494": {
+    "name": "Monstro Mouth Green Trinity Top of Boat Chest",
+    "category": "Monstro",
+    "type": "Chest;Boss"
+  },
+  "2653492": {
+    "name": "Monstro Mouth High Platform Across from Boat Chest",
+    "category": "Monstro",
+    "type": "Chest;Puppy"
+  },
+  "2653491": {
+    "name": "Monstro Mouth High Platform Boat Side Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2653732": {
+    "name": "Monstro Mouth High Platform Near Teeth Chest",
+    "category": "Monstro",
+    "type": "Chest;Boss"
+  },
+  "2653493": {
+    "name": "Monstro Mouth Near Ship Chest",
+    "category": "Monstro",
+    "type": "Chest"
+  },
+  "2659213": {
+    "name": "Monstro Stomach Grand Ghost Defeat Reward",
+    "category": "Monstro",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656612": {
+    "name": "Monstro Throat Blue Trinity",
+    "category": "Monstro",
+    "type": "Boss"
+  },
+  "2653813": {
+    "name": "Neverland Cabin Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss"
+  },
+  "2654053": {
+    "name": "Neverland Captain's Cabin Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2656332": {
+    "name": "Neverland Clock Tower 01:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656333": {
+    "name": "Neverland Clock Tower 02:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656334": {
+    "name": "Neverland Clock Tower 03:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656335": {
+    "name": "Neverland Clock Tower 04:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656336": {
+    "name": "Neverland Clock Tower 05:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656337": {
+    "name": "Neverland Clock Tower 06:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656338": {
+    "name": "Neverland Clock Tower 07:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656339": {
+    "name": "Neverland Clock Tower 08:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656340": {
+    "name": "Neverland Clock Tower 09:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656341": {
+    "name": "Neverland Clock Tower 10:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656342": {
+    "name": "Neverland Clock Tower 11:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656343": {
+    "name": "Neverland Clock Tower 12:00 Door",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2654014": {
+    "name": "Neverland Clock Tower Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss"
+  },
+  "2656091": {
+    "name": "Neverland Defeat Anti Sora Raven's Claw Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656097": {
+    "name": "Neverland Defeat Captain Hook Ars Arcanum Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2657028": {
+    "name": "Neverland Defeat Hook Ansem's Report 9",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656096": {
+    "name": "Neverland Defeat Phantom Stop Event",
+    "category": "Neverland",
+    "type": "Boss;Super Bosses"
+  },
+  "2656092": {
+    "name": "Neverland Encounter Hook Cure Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2653812": {
+    "name": "Neverland Galley Chest",
+    "category": "Neverland",
+    "type": "Chest"
+  },
+  "2656344": {
+    "name": "Neverland Hold Aero Chest",
+    "category": "Neverland",
+    "type": "Chest"
+  },
+  "2653814": {
+    "name": "Neverland Hold Flight 1st Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2654051": {
+    "name": "Neverland Hold Flight 2nd Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss"
+  },
+  "2654052": {
+    "name": "Neverland Hold Yellow Trinity Green Chest",
+    "category": "Neverland",
+    "type": "Chest;Puppy"
+  },
+  "2653811": {
+    "name": "Neverland Hold Yellow Trinity Left Blue Chest",
+    "category": "Neverland",
+    "type": "Chest"
+  },
+  "2653774": {
+    "name": "Neverland Hold Yellow Trinity Right Blue Chest",
+    "category": "Neverland",
+    "type": "Chest"
+  },
+  "2653773": {
+    "name": "Neverland Pirate Ship Crows Nest Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss"
+  },
+  "2653772": {
+    "name": "Neverland Pirate Ship Deck White Trinity Chest",
+    "category": "Neverland",
+    "type": "Chest;Boss;Puppy"
+  },
+  "2659215": {
+    "name": "Neverland Pirate Ship Jet Balloon Defeat Reward",
+    "category": "Neverland",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656093": {
+    "name": "Neverland Seal Keyhole Fairy Harp Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656095": {
+    "name": "Neverland Seal Keyhole Glide Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656112": {
+    "name": "Neverland Seal Keyhole Navi-G Piece Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656094": {
+    "name": "Neverland Seal Keyhole Tinker Bell Event",
+    "category": "Neverland",
+    "type": "Boss"
+  },
+  "2656031": {
+    "name": "Olympus Coliseum Clear Phil's Training Thunder Event",
+    "category": "Olympus Coliseum",
+    "type": ""
+  },
+  "2656032": {
+    "name": "Olympus Coliseum Cloud Sonic Blade Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss"
+  },
+  "2653373": {
+    "name": "Olympus Coliseum Coliseum Gates Blizzaga Chest",
+    "category": "Olympus Coliseum",
+    "type": "Chest"
+  },
+  "2653372": {
+    "name": "Olympus Coliseum Coliseum Gates Blizzara Chest",
+    "category": "Olympus Coliseum",
+    "type": "Chest"
+  },
+  "2656386": {
+    "name": "Olympus Coliseum Coliseum Gates Entry Pass Event",
+    "category": "Olympus Coliseum",
+    "type": ""
+  },
+  "2656377": {
+    "name": "Olympus Coliseum Coliseum Gates Green Trinity",
+    "category": "Olympus Coliseum",
+    "type": ""
+  },
+  "2656380": {
+    "name": "Olympus Coliseum Coliseum Gates Hero's License Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss"
+  },
+  "2653332": {
+    "name": "Olympus Coliseum Coliseum Gates Left Behind Columns Chest",
+    "category": "Olympus Coliseum",
+    "type": "Chest"
+  },
+  "2653334": {
+    "name": "Olympus Coliseum Coliseum Gates Left Blue Trinity Chest",
+    "category": "Olympus Coliseum",
+    "type": "Chest"
+  },
+  "2653333": {
+    "name": "Olympus Coliseum Coliseum Gates Right Blue Trinity Chest",
+    "category": "Olympus Coliseum",
+    "type": "Chest;Puppy"
+  },
+  "2653371": {
+    "name": "Olympus Coliseum Coliseum Gates White Trinity Chest",
+    "category": "Olympus Coliseum",
+    "type": "Chest"
+  },
+  "2656033": {
+    "name": "Olympus Coliseum Defeat Cerberus Inferno Band Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss"
+  },
+  "2657011": {
+    "name": "Olympus Coliseum Defeat Hades Ansem's Report 8",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2656329": {
+    "name": "Olympus Coliseum Defeat Ice Titan Diamond Dust Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Super Bosses;Cups"
+  },
+  "2657025": {
+    "name": "Olympus Coliseum Defeat Sephiroth Ansem's Report 12",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Super Bosses"
+  },
+  "2656328": {
+    "name": "Olympus Coliseum Defeat Sephiroth One-Winged Angel Event",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Super Bosses"
+  },
+  "2656330": {
+    "name": "Olympus Coliseum Gates Purple Jar After Defeating Hades",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2656369": {
+    "name": "Olympus Coliseum Olympia Chest",
+    "category": "Olympus Coliseum",
+    "type": "Boss;Cups"
+  },
+  "2656812": {
+    "name": "Peter Pan Starting Accessory 1",
+    "category": "Neverland",
+    "type": "Accessory"
+  },
+  "2656813": {
+    "name": "Peter Pan Starting Accessory 2",
+    "category": "Neverland",
+    "type": "Accessory"
+  },
+  "2656804": {
+    "name": "Tarzan Starting Accessory 1",
+    "category": "Deep Jungle",
+    "type": "Accessory"
+  },
+  "2650212": {
+    "name": "Traverse Town 1st District Accessory Shop Roof Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Postcard"
+  },
+  "2656521": {
+    "name": "Traverse Town 1st District Aerith Gift",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650411": {
+    "name": "Traverse Town 1st District Blue Trinity Balcony Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Postcard"
+  },
+  "2656600": {
+    "name": "Traverse Town 1st District Blue Trinity by Exit Door",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650211": {
+    "name": "Traverse Town 1st District Candle Puzzle Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2656520": {
+    "name": "Traverse Town 1st District Leon Gift",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656501": {
+    "name": "Traverse Town 1st District Safe Postcard",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Postcard"
+  },
+  "2656375": {
+    "name": "Traverse Town 1st District Speak with Cid Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650213": {
+    "name": "Traverse Town 2nd District Boots and Shoes Awning Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Postcard"
+  },
+  "2650251": {
+    "name": "Traverse Town 2nd District Gizmo Shop Facade Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2650214": {
+    "name": "Traverse Town 2nd District Rooftop Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2659211": {
+    "name": "Traverse Town 2nd District Sniperwild 30th Defeated Reward",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Rare Heartless;Boss"
+  },
+  "2656505": {
+    "name": "Traverse Town 3rd District Balcony Postcard",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Postcard"
+  },
+  "2656601": {
+    "name": "Traverse Town 3rd District Blue Trinity",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650332": {
+    "name": "Traverse Town Accessory Shop Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2650252": {
+    "name": "Traverse Town Alleyway Balcony Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2650892": {
+    "name": "Traverse Town Alleyway Behind Crates Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Puppy"
+  },
+  "2650253": {
+    "name": "Traverse Town Alleyway Blue Room Awning Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2650254": {
+    "name": "Traverse Town Alleyway Corner Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2656017": {
+    "name": "Traverse Town Defeat Guard Armor 500 Munny Reward",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656013": {
+    "name": "Traverse Town Defeat Guard Armor Blue Trinity Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656016": {
+    "name": "Traverse Town Defeat Guard Armor Brave Warrior Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656011": {
+    "name": "Traverse Town Defeat Guard Armor Dodge Roll Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656012": {
+    "name": "Traverse Town Defeat Guard Armor Fire Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656131": {
+    "name": "Traverse Town Defeat Opposite Armor Aero Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656132": {
+    "name": "Traverse Town Defeat Opposite Armor Navi-G Piece Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2650334": {
+    "name": "Traverse Town Geppetto's House Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Boss"
+  },
+  "2656305": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Aerith Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656308": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Cactaur Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656303": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Cid Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656304": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Geppetto Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656309": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Hyperion Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656307": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Leon Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656306": {
+    "name": "Traverse Town Geppetto's House Geppetto Reward Yuffie Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656310": {
+    "name": "Traverse Town Geppetto's House Pinocchio Reward Chocobo Blueprint",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss"
+  },
+  "2656506": {
+    "name": "Traverse Town Geppetto's House Postcard",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Boss;Postcard"
+  },
+  "2656502": {
+    "name": "Traverse Town Gizmo Shop Postcard 1",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Postcard"
+  },
+  "2656503": {
+    "name": "Traverse Town Gizmo Shop Postcard 2",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Postcard"
+  },
+  "2650292": {
+    "name": "Traverse Town Green Room Clock Puzzle Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2650293": {
+    "name": "Traverse Town Green Room Table Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2656500": {
+    "name": "Traverse Town Item Shop Postcard",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Postcard"
+  },
+  "2650893": {
+    "name": "Traverse Town Item Workshop Left Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Puppy"
+  },
+  "2656504": {
+    "name": "Traverse Town Item Workshop Postcard",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Postcard"
+  },
+  "2650371": {
+    "name": "Traverse Town Item Workshop Right Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2656015": {
+    "name": "Traverse Town Kairi Secret Waterway Oathkeeper Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656014": {
+    "name": "Traverse Town Leon Secret Waterway Earthshine Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656602": {
+    "name": "Traverse Town Magician's Study Blue Trinity",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656114": {
+    "name": "Traverse Town Magician's Study Earthshine Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656117": {
+    "name": "Traverse Town Magician's Study Fireglow Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656118": {
+    "name": "Traverse Town Magician's Study Lord Fortune Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656115": {
+    "name": "Traverse Town Magician's Study Naturespark Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656311": {
+    "name": "Traverse Town Magician's Study Obtained All Arts Items",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656312": {
+    "name": "Traverse Town Magician's Study Obtained All LV1 Magic",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656313": {
+    "name": "Traverse Town Magician's Study Obtained All LV3 Magic",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656116": {
+    "name": "Traverse Town Magician's Study Watergleam Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656120": {
+    "name": "Traverse Town Mail Postcard 01 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656121": {
+    "name": "Traverse Town Mail Postcard 02 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656122": {
+    "name": "Traverse Town Mail Postcard 03 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656123": {
+    "name": "Traverse Town Mail Postcard 04 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656124": {
+    "name": "Traverse Town Mail Postcard 05 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656125": {
+    "name": "Traverse Town Mail Postcard 06 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656126": {
+    "name": "Traverse Town Mail Postcard 07 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656127": {
+    "name": "Traverse Town Mail Postcard 08 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656128": {
+    "name": "Traverse Town Mail Postcard 09 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656129": {
+    "name": "Traverse Town Mail Postcard 10 Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650891": {
+    "name": "Traverse Town Mystical House Glide Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Puppy"
+  },
+  "2650331": {
+    "name": "Traverse Town Mystical House Yellow Trinity Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2656314": {
+    "name": "Traverse Town Piano Room Return 10 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656315": {
+    "name": "Traverse Town Piano Room Return 20 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656316": {
+    "name": "Traverse Town Piano Room Return 30 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656317": {
+    "name": "Traverse Town Piano Room Return 40 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656318": {
+    "name": "Traverse Town Piano Room Return 50 Puppies Reward 1",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656319": {
+    "name": "Traverse Town Piano Room Return 50 Puppies Reward 2",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656320": {
+    "name": "Traverse Town Piano Room Return 60 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656321": {
+    "name": "Traverse Town Piano Room Return 70 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656322": {
+    "name": "Traverse Town Piano Room Return 80 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656324": {
+    "name": "Traverse Town Piano Room Return 90 Puppies",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656326": {
+    "name": "Traverse Town Piano Room Return 99 Puppies Reward 1",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656327": {
+    "name": "Traverse Town Piano Room Return 99 Puppies Reward 2",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650294": {
+    "name": "Traverse Town Red Room Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2659201": {
+    "name": "Traverse Town Red Room White Mushroom Fire x3 Reward",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Rare Heartless;Boss"
+  },
+  "2656113": {
+    "name": "Traverse Town Secret Waterway Navi Gummi Event",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2650894": {
+    "name": "Traverse Town Secret Waterway Near Stairs Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest;Puppy"
+  },
+  "2650333": {
+    "name": "Traverse Town Secret Waterway White Trinity Chest",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Chest"
+  },
+  "2656400": {
+    "name": "Traverse Town Synth 15 Items",
+    "category": "Traverse Town",
+    "type": "Traverse Town"
+  },
+  "2656401": {
+    "name": "Traverse Town Synth Item 01",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656402": {
+    "name": "Traverse Town Synth Item 02",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656403": {
+    "name": "Traverse Town Synth Item 03",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656404": {
+    "name": "Traverse Town Synth Item 04",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656405": {
+    "name": "Traverse Town Synth Item 05",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656406": {
+    "name": "Traverse Town Synth Item 06",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656407": {
+    "name": "Traverse Town Synth Item 07",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656408": {
+    "name": "Traverse Town Synth Item 08",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656409": {
+    "name": "Traverse Town Synth Item 09",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656410": {
+    "name": "Traverse Town Synth Item 10",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656411": {
+    "name": "Traverse Town Synth Item 11",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656412": {
+    "name": "Traverse Town Synth Item 12",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656413": {
+    "name": "Traverse Town Synth Item 13",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656414": {
+    "name": "Traverse Town Synth Item 14",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656415": {
+    "name": "Traverse Town Synth Item 15",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656416": {
+    "name": "Traverse Town Synth Item 16",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656417": {
+    "name": "Traverse Town Synth Item 17",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656418": {
+    "name": "Traverse Town Synth Item 18",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656419": {
+    "name": "Traverse Town Synth Item 19",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656420": {
+    "name": "Traverse Town Synth Item 20",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656421": {
+    "name": "Traverse Town Synth Item 21",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656422": {
+    "name": "Traverse Town Synth Item 22",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656423": {
+    "name": "Traverse Town Synth Item 23",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656424": {
+    "name": "Traverse Town Synth Item 24",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656425": {
+    "name": "Traverse Town Synth Item 25",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656426": {
+    "name": "Traverse Town Synth Item 26",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656427": {
+    "name": "Traverse Town Synth Item 27",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656428": {
+    "name": "Traverse Town Synth Item 28",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656429": {
+    "name": "Traverse Town Synth Item 29",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656430": {
+    "name": "Traverse Town Synth Item 30",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656431": {
+    "name": "Traverse Town Synth Item 31",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656432": {
+    "name": "Traverse Town Synth Item 32",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656433": {
+    "name": "Traverse Town Synth Item 33",
+    "category": "Traverse Town",
+    "type": "Traverse Town;Synth"
+  },
+  "2656396": {
+    "name": "Wonderland Antenna Evidence Box",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2656613": {
+    "name": "Wonderland Bizarre Room Examine Flower Pot",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2659210": {
+    "name": "Wonderland Bizarre Room Gigas Shadow 7th Defeated Reward",
+    "category": "Wonderland",
+    "type": "Rare Heartless;Boss"
+  },
+  "2650971": {
+    "name": "Wonderland Bizarre Room Green Trinity Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651091": {
+    "name": "Wonderland Bizarre Room Lamp Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2656385": {
+    "name": "Wonderland Bizarre Room Navi-G Piece Event",
+    "category": "Wonderland",
+    "type": "Boss"
+  },
+  "2656376": {
+    "name": "Wonderland Bizarre Room Read Book",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656394": {
+    "name": "Wonderland Claw Marks Evidence Box",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2656041": {
+    "name": "Wonderland Defeat Trickmaster Blizzard Event",
+    "category": "Wonderland",
+    "type": "Boss"
+  },
+  "2656042": {
+    "name": "Wonderland Defeat Trickmaster Ifrit's Horn Event",
+    "category": "Wonderland",
+    "type": "Boss"
+  },
+  "2656393": {
+    "name": "Wonderland Footprints Evidence Box",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2656604": {
+    "name": "Wonderland Lotus Forest Blue Trinity by Moving Boulder",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656603": {
+    "name": "Wonderland Lotus Forest Blue Trinity in Alcove",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2651054": {
+    "name": "Wonderland Lotus Forest Corner Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651052": {
+    "name": "Wonderland Lotus Forest Glide Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651053": {
+    "name": "Wonderland Lotus Forest Nut Chest",
+    "category": "Wonderland",
+    "type": "Chest;Puppy"
+  },
+  "2656614": {
+    "name": "Wonderland Lotus Forest Red Ether Flower Across from Queen's Castle",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656625": {
+    "name": "Wonderland Lotus Forest Red Ether Flower Along Wall",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656617": {
+    "name": "Wonderland Lotus Forest Red Flower Raise Lily Pads",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2651051": {
+    "name": "Wonderland Lotus Forest Through the Painting Thunder Plant Chest",
+    "category": "Wonderland",
+    "type": "Chest;Puppy"
+  },
+  "2651133": {
+    "name": "Wonderland Lotus Forest Through the Painting White Trinity Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651014": {
+    "name": "Wonderland Lotus Forest Thunder Plant Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2659202": {
+    "name": "Wonderland Lotus Forest White Mushroom Blizzard x3 Reward",
+    "category": "Wonderland",
+    "type": "Rare Heartless;Boss"
+  },
+  "2656616": {
+    "name": "Wonderland Lotus Forest Yellow Elixir Flower Through Painting",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656615": {
+    "name": "Wonderland Lotus Forest Yellow Potion Flower in Center Alcove",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656624": {
+    "name": "Wonderland Lotus Forest Yellow Potion Flower Through Painting",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2651011": {
+    "name": "Wonderland Queen's Castle Hedge Left Red Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651012": {
+    "name": "Wonderland Queen's Castle Hedge Right Blue Chest",
+    "category": "Wonderland",
+    "type": "Chest;Puppy"
+  },
+  "2651013": {
+    "name": "Wonderland Queen's Castle Hedge Right Red Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2650932": {
+    "name": "Wonderland Rabbit Hole Defeat Heartless 1 Chest",
+    "category": "Wonderland",
+    "type": "Wonderland;Chest"
+  },
+  "2650933": {
+    "name": "Wonderland Rabbit Hole Defeat Heartless 2 Chest",
+    "category": "Wonderland",
+    "type": "Wonderland;Chest"
+  },
+  "2650934": {
+    "name": "Wonderland Rabbit Hole Defeat Heartless 3 Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2650931": {
+    "name": "Wonderland Rabbit Hole Green Trinity Chest",
+    "category": "Wonderland",
+    "type": "Wonderland;Chest"
+  },
+  "2656395": {
+    "name": "Wonderland Stench Evidence Box",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651094": {
+    "name": "Wonderland Tea Party Garden Above Lotus Forest Entrance 1st Chest",
+    "category": "Wonderland",
+    "type": "Chest;Puppy"
+  },
+  "2651093": {
+    "name": "Wonderland Tea Party Garden Above Lotus Forest Entrance 2nd Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651132": {
+    "name": "Wonderland Tea Party Garden Across From Bizarre Room Entrance Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2651131": {
+    "name": "Wonderland Tea Party Garden Bear and Clock Puzzle Chest",
+    "category": "Wonderland",
+    "type": "Chest"
+  },
+  "2656618": {
+    "name": "Wonderland Tea Party Garden Left Cushioned Chair",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656621": {
+    "name": "Wonderland Tea Party Garden Left Gray Chair",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656619": {
+    "name": "Wonderland Tea Party Garden Left Pink Chair",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656622": {
+    "name": "Wonderland Tea Party Garden Right Brown Chair",
+    "category": "Wonderland",
+    "type": ""
+  },
+  "2656620": {
+    "name": "Wonderland Tea Party Garden Right Yellow Chair",
+    "category": "Wonderland",
+    "type": ""
+  }
+}

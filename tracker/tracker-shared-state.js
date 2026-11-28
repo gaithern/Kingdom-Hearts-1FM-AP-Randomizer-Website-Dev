@@ -9,3 +9,5 @@ let rawStateText = null;
 let currentState = null;
 let itemCountsLastTime = null;
 let foundItemKeysLastTime = null;
+let connectionSession = 0;
+let localPollingIsRunning = false;

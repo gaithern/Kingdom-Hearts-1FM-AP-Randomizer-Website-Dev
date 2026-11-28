@@ -1,4 +1,7 @@
 function getCurrentWorldName() {
+  if (currentState.world === null || currentState.world === undefined) {
+    return "Unknown";
+  }
   let worldName = "World " + currentState.world;
   for (const group of locationGroups) {
     if (group.key === currentState.current_group) {

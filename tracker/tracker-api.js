@@ -23,48 +23,71 @@ async function fetchFromApi(path) {
   return { text: text, data: JSON.parse(text) };
 }
 
-async function loadSeedFilesIfNeeded() {
-  if (seedFiles !== null) {
-    return true;
-  }
+async function loadSeedFilesFromApi() {
   const required = ["settings", "locations", "items"];
   const optional = ["item_location_map", "progression_locations"];
   const files = {};
   for (const name of required.concat(optional)) {
     const result = await fetchFromApi("/" + name);
     if (result.missing && required.includes(name)) {
-      return false;
+      return null;
     }
     files[name] = result.missing ? null : result.data;
   }
+  return files;
+}
+
+function useSeedFiles(files) {
   seedFiles = files;
   seedSettings = files.settings;
   buildLocationCatalog();
   drawTrackerOptions();
-  return true;
+}
+
+async function checkLocalApi(sessionWhenStarted) {
+  if (seedFiles === null) {
+    const files = await loadSeedFilesFromApi();
+    if (sessionWhenStarted !== connectionSession) {
+      return;
+    }
+    if (files === null) {
+      showConnectionStatus("Game running", "waiting");
+      return;
+    }
+    useSeedFiles(files);
+  }
+  const result = await fetchFromApi("/state");
+  if (sessionWhenStarted !== connectionSession) {
+    return;
+  }
+  if (result.missing) {
+    showConnectionStatus("Game running", "waiting");
+  } else {
+    showConnectionStatus("Connected", "connected");
+    handleNewState(result.text, result.data);
+  }
+}
+
+function startLocalPolling() {
+  if (!localPollingIsRunning) {
+    localPollingIsRunning = true;
+    checkForUpdates();
+  }
 }
 
 async function checkForUpdates() {
-  const addressWhenStarted = getApiAddress();
+  if (getConnectionSource() !== "local") {
+    localPollingIsRunning = false;
+    return;
+  }
+  const sessionWhenStarted = connectionSession;
   try {
-    const seedFilesAreLoaded = await loadSeedFilesIfNeeded();
-    if (!seedFilesAreLoaded) {
-      showConnectionStatus("Game running", "waiting");
-    } else {
-      const result = await fetchFromApi("/state");
-      if (addressWhenStarted !== getApiAddress()) {
-        return;
-      }
-      if (result.missing) {
-        showConnectionStatus("Game running", "waiting");
-      } else {
-        showConnectionStatus("Connected", "connected");
-        handleNewState(result.text, result.data);
-      }
-    }
+    await checkLocalApi(sessionWhenStarted);
   } catch (error) {
-    showConnectionStatus("Can't reach the API", "disconnected");
-    forgetEverything();
+    if (sessionWhenStarted === connectionSession) {
+      showConnectionStatus("Can't reach the API", "disconnected");
+      forgetEverything();
+    }
   } finally {
     setTimeout(checkForUpdates, trackerConfig.checkForUpdatesEveryMilliseconds);
   }
@@ -80,6 +103,7 @@ function handleNewState(stateText, rawState) {
 }
 
 function forgetEverything() {
+  connectionSession += 1;
   const aSeedWasLoaded = seedSettings !== null;
   seedFiles = null;
   locationCatalog = null;

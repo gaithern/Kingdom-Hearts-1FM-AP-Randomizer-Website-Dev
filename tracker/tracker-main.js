@@ -21,7 +21,7 @@ function startTracker() {
     setUpBroadcastView();
   }
 
-  checkForUpdates();
+  setUpConnectionSource();
 }
 
 startTracker();

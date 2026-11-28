@@ -27,7 +27,16 @@ function scaleBroadcastToFitWindow() {
 function makeBroadcastAddress() {
   const pageAddress = window.location.href.split("?")[0].split("#")[0];
   let broadcastAddress = pageAddress + "?broadcast";
-  broadcastAddress += "&api=" + encodeURIComponent(getApiAddress());
+  broadcastAddress += "&source=" + encodeURIComponent(getConnectionSource());
+  if (getConnectionSource() === "room") {
+    broadcastAddress += "&room=" + encodeURIComponent(getRoomAddress());
+    broadcastAddress += "&slot=" + encodeURIComponent(getRoomSlotName());
+    if (getRoomPassword() !== "") {
+      broadcastAddress += "&password=" + encodeURIComponent(getRoomPassword());
+    }
+  } else {
+    broadcastAddress += "&api=" + encodeURIComponent(getApiAddress());
+  }
   broadcastAddress += "&on=" + encodeURIComponent(getKeysOfChoicesTurnedOn().join(","));
   return broadcastAddress;
 }

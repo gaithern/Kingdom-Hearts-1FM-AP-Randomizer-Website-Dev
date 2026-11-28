@@ -28,12 +28,24 @@
 
     <div id="tracker" class="tracker">
         <div class="tracker-toolbar">
-            <input id="api-address" aria-label="API address">
+            <select id="connection-source" aria-label="Connect to">
+                <option value="local">Local game</option>
+                <option value="room">Archipelago</option>
+            </select>
             <span class="connection-status">
                 <span id="status-light" class="status-light"></span>
                 <span id="status-message">Not connected</span>
             </span>
             <button id="broadcast-view-button" title="Opens the broadcast view and copies its link for OBS">Broadcast view</button>
+            <div class="connection-fields">
+                <input id="api-address" aria-label="API address">
+                <span id="room-fields" class="room-fields" hidden>
+                    <input id="room-address" aria-label="Room address" placeholder="archipelago.gg:38281">
+                    <input id="room-slot" aria-label="Slot name" placeholder="Slot name">
+                    <input id="room-password" type="password" aria-label="Room password" placeholder="Password">
+                    <button id="room-connect-button" type="button">Connect</button>
+                </span>
+            </div>
         </div>
 
         <div id="world-list" class="panel world-list"></div>
@@ -80,7 +92,8 @@
 <script src="tracker/tracker-shared-state.js"></script>
 <script src="tracker/tracker-html-helpers.js"></script>
 <script src="tracker/tracker-api.js"></script>
-<script src="tracker/tracker-options.js"></script>
+<script src="tracker/tracker-connection.js"></script>
+<script src="tracker/tracker-archipelago.js"></script><script src="tracker/tracker-options.js"></script>
 <script src="tracker/tracker-item-counting.js"></script>
 <script src="tracker/tracker-state.js"></script>
 <script src="tracker/tracker-worlds.js"></script>

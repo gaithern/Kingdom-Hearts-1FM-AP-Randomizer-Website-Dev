@@ -44,6 +44,7 @@
 }
 
 .tracker-toolbar input,
+.tracker-toolbar select,
 .tracker-toolbar button {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -61,8 +62,37 @@
   background: var(--page-background);
 }
 
-.tracker-toolbar button {
+.tracker-toolbar button,
+.tracker-toolbar select {
   cursor: pointer;
+}
+
+.tracker-toolbar [hidden] {
+  display: none;
+}
+
+.connection-fields {
+  display: flex;
+  flex-basis: 100%;
+  gap: 6px;
+  min-width: 0;
+}
+
+.room-fields {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 6px;
+  min-width: 0;
+}
+
+.tracker-toolbar .connection-fields input {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+}
+
+.tracker-toolbar .room-fields #room-address {
+  flex-grow: 2;
 }
 
 #broadcast-view-button {
@@ -75,7 +105,6 @@
 }
 
 .connection-status {
-  width: 132px;
   white-space: nowrap;
   font-family: system-ui, sans-serif;
   font-size: 13px;
@@ -103,6 +132,7 @@
   max-width: 560px;
   margin: 16px auto 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
   color: var(--text-color);
   font-family: "KHMenu", system-ui, sans-serif;

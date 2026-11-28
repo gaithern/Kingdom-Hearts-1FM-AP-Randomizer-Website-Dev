@@ -1,0 +1,893 @@
+{
+  "2641001": {
+    "name": "Potion"
+  },
+  "2641002": {
+    "name": "Hi-Potion"
+  },
+  "2641003": {
+    "name": "Ether"
+  },
+  "2641004": {
+    "name": "Elixir"
+  },
+  "2641006": {
+    "name": "Mega-Potion"
+  },
+  "2641007": {
+    "name": "Mega-Ether"
+  },
+  "2641008": {
+    "name": "Megalixir"
+  },
+  "2641009": {
+    "name": "Torn Page"
+  },
+  "2641010": {
+    "name": "Final Door Key"
+  },
+  "2641011": {
+    "name": "Destiny Islands"
+  },
+  "2641012": {
+    "name": "Raft Materials"
+  },
+  "2641017": {
+    "name": "Protect Chain"
+  },
+  "2641018": {
+    "name": "Protera Chain"
+  },
+  "2641019": {
+    "name": "Protega Chain"
+  },
+  "2641020": {
+    "name": "Fire Ring"
+  },
+  "2641021": {
+    "name": "Fira Ring"
+  },
+  "2641022": {
+    "name": "Firaga Ring"
+  },
+  "2641023": {
+    "name": "Blizzard Ring"
+  },
+  "2641024": {
+    "name": "Blizzara Ring"
+  },
+  "2641025": {
+    "name": "Blizzaga Ring"
+  },
+  "2641026": {
+    "name": "Thunder Ring"
+  },
+  "2641027": {
+    "name": "Thundara Ring"
+  },
+  "2641028": {
+    "name": "Thundaga Ring"
+  },
+  "2641029": {
+    "name": "Ability Stud"
+  },
+  "2641030": {
+    "name": "Guard Earring"
+  },
+  "2641031": {
+    "name": "Master Earring"
+  },
+  "2641032": {
+    "name": "Chaos Ring"
+  },
+  "2641033": {
+    "name": "Dark Ring"
+  },
+  "2641034": {
+    "name": "Element Ring"
+  },
+  "2641035": {
+    "name": "Three Stars"
+  },
+  "2641036": {
+    "name": "Power Chain"
+  },
+  "2641037": {
+    "name": "Golem Chain"
+  },
+  "2641038": {
+    "name": "Titan Chain"
+  },
+  "2641039": {
+    "name": "Energy Bangle"
+  },
+  "2641040": {
+    "name": "Angel Bangle"
+  },
+  "2641041": {
+    "name": "Gaia Bangle"
+  },
+  "2641042": {
+    "name": "Magic Armlet"
+  },
+  "2641043": {
+    "name": "Rune Armlet"
+  },
+  "2641044": {
+    "name": "Atlas Armlet"
+  },
+  "2641045": {
+    "name": "Heartguard"
+  },
+  "2641046": {
+    "name": "Ribbon"
+  },
+  "2641047": {
+    "name": "Crystal Crown"
+  },
+  "2641048": {
+    "name": "Brave Warrior"
+  },
+  "2641049": {
+    "name": "Ifrit's Horn"
+  },
+  "2641050": {
+    "name": "Inferno Band"
+  },
+  "2641051": {
+    "name": "White Fang"
+  },
+  "2641052": {
+    "name": "Ray of Light"
+  },
+  "2641053": {
+    "name": "Holy Circlet"
+  },
+  "2641054": {
+    "name": "Raven's Claw"
+  },
+  "2641055": {
+    "name": "Omega Arts"
+  },
+  "2641056": {
+    "name": "EXP Earring"
+  },
+  "2641058": {
+    "name": "EXP Ring"
+  },
+  "2641059": {
+    "name": "EXP Bracelet"
+  },
+  "2641060": {
+    "name": "EXP Necklace"
+  },
+  "2641061": {
+    "name": "Firagun Band"
+  },
+  "2641062": {
+    "name": "Blizzagun Band"
+  },
+  "2641063": {
+    "name": "Thundagun Band"
+  },
+  "2641064": {
+    "name": "Ifrit Belt"
+  },
+  "2641065": {
+    "name": "Shiva Belt"
+  },
+  "2641066": {
+    "name": "Ramuh Belt"
+  },
+  "2641067": {
+    "name": "Moogle Badge"
+  },
+  "2641068": {
+    "name": "Cosmic Arts"
+  },
+  "2641069": {
+    "name": "Royal Crown"
+  },
+  "2641070": {
+    "name": "Prime Cap"
+  },
+  "2641071": {
+    "name": "Obsidian Ring"
+  },
+  "2641082": {
+    "name": "Dream Sword"
+  },
+  "2641083": {
+    "name": "Dream Shield"
+  },
+  "2641084": {
+    "name": "Dream Rod"
+  },
+  "2641085": {
+    "name": "Wooden Sword"
+  },
+  "2641086": {
+    "name": "Jungle King"
+  },
+  "2641087": {
+    "name": "Three Wishes"
+  },
+  "2641088": {
+    "name": "Fairy Harp"
+  },
+  "2641089": {
+    "name": "Pumpkinhead"
+  },
+  "2641090": {
+    "name": "Crabclaw"
+  },
+  "2641091": {
+    "name": "Divine Rose"
+  },
+  "2641092": {
+    "name": "Spellbinder"
+  },
+  "2641093": {
+    "name": "Olympia"
+  },
+  "2641094": {
+    "name": "Lionheart"
+  },
+  "2641095": {
+    "name": "Metal Chocobo"
+  },
+  "2641096": {
+    "name": "Oathkeeper"
+  },
+  "2641097": {
+    "name": "Oblivion"
+  },
+  "2641098": {
+    "name": "Lady Luck"
+  },
+  "2641099": {
+    "name": "Wishing Star"
+  },
+  "2641100": {
+    "name": "Ultima Weapon"
+  },
+  "2641101": {
+    "name": "Diamond Dust"
+  },
+  "2641102": {
+    "name": "One-Winged Angel"
+  },
+  "2641104": {
+    "name": "Morning Star"
+  },
+  "2641105": {
+    "name": "Shooting Star"
+  },
+  "2641106": {
+    "name": "Magus Staff"
+  },
+  "2641107": {
+    "name": "Wisdom Staff"
+  },
+  "2641108": {
+    "name": "Warhammer"
+  },
+  "2641109": {
+    "name": "Silver Mallet"
+  },
+  "2641110": {
+    "name": "Grand Mallet"
+  },
+  "2641111": {
+    "name": "Lord Fortune"
+  },
+  "2641112": {
+    "name": "Violetta"
+  },
+  "2641113": {
+    "name": "Dream Rod (Donald)"
+  },
+  "2641114": {
+    "name": "Save the Queen"
+  },
+  "2641115": {
+    "name": "Wizard's Relic"
+  },
+  "2641116": {
+    "name": "Meteor Strike"
+  },
+  "2641117": {
+    "name": "Fantasista"
+  },
+  "2641120": {
+    "name": "Mythril Shield"
+  },
+  "2641121": {
+    "name": "Onyx Shield"
+  },
+  "2641122": {
+    "name": "Stout Shield"
+  },
+  "2641123": {
+    "name": "Golem Shield"
+  },
+  "2641124": {
+    "name": "Adamant Shield"
+  },
+  "2641125": {
+    "name": "Smasher"
+  },
+  "2641126": {
+    "name": "Gigas Fist"
+  },
+  "2641127": {
+    "name": "Genji Shield"
+  },
+  "2641128": {
+    "name": "Herc's Shield"
+  },
+  "2641129": {
+    "name": "Dream Shield (Goofy)"
+  },
+  "2641130": {
+    "name": "Save the King"
+  },
+  "2641131": {
+    "name": "Defender"
+  },
+  "2641132": {
+    "name": "Mighty Shield"
+  },
+  "2641133": {
+    "name": "Seven Elements"
+  },
+  "2641142": {
+    "name": "Tent"
+  },
+  "2641143": {
+    "name": "Camping Set"
+  },
+  "2641144": {
+    "name": "Cottage"
+  },
+  "2641149": {
+    "name": "Wonderland"
+  },
+  "2641150": {
+    "name": "Olympus Coliseum"
+  },
+  "2641151": {
+    "name": "Deep Jungle"
+  },
+  "2641152": {
+    "name": "Power Up"
+  },
+  "2641153": {
+    "name": "Defense Up"
+  },
+  "2641154": {
+    "name": "AP Up"
+  },
+  "2641155": {
+    "name": "Agrabah"
+  },
+  "2641156": {
+    "name": "Monstro"
+  },
+  "2641157": {
+    "name": "Atlantica"
+  },
+  "2641158": {
+    "name": "Fire Arts"
+  },
+  "2641159": {
+    "name": "Blizzard Arts"
+  },
+  "2641160": {
+    "name": "Thunder Arts"
+  },
+  "2641161": {
+    "name": "Cure Arts"
+  },
+  "2641162": {
+    "name": "Gravity Arts"
+  },
+  "2641163": {
+    "name": "Stop Arts"
+  },
+  "2641164": {
+    "name": "Aero Arts"
+  },
+  "2641165": {
+    "name": "Neverland"
+  },
+  "2641166": {
+    "name": "Halloween Town"
+  },
+  "2641167": {
+    "name": "Puppy"
+  },
+  "2641168": {
+    "name": "Hollow Bastion"
+  },
+  "2641169": {
+    "name": "End of the World"
+  },
+  "2641170": {
+    "name": "Blue Trinity"
+  },
+  "2641171": {
+    "name": "Red Trinity"
+  },
+  "2641172": {
+    "name": "Green Trinity"
+  },
+  "2641173": {
+    "name": "Yellow Trinity"
+  },
+  "2641174": {
+    "name": "White Trinity"
+  },
+  "2641175": {
+    "name": "Progressive Fire"
+  },
+  "2641176": {
+    "name": "Progressive Blizzard"
+  },
+  "2641177": {
+    "name": "Progressive Thunder"
+  },
+  "2641178": {
+    "name": "Progressive Cure"
+  },
+  "2641179": {
+    "name": "Progressive Gravity"
+  },
+  "2641180": {
+    "name": "Progressive Stop"
+  },
+  "2641181": {
+    "name": "Progressive Aero"
+  },
+  "2641182": {
+    "name": "Phil Cup"
+  },
+  "2641183": {
+    "name": "Theon Vol. 6"
+  },
+  "2641184": {
+    "name": "Pegasus Cup"
+  },
+  "2641185": {
+    "name": "Hercules Cup"
+  },
+  "2641186": {
+    "name": "Empty Bottle"
+  },
+  "2641187": {
+    "name": "Old Book"
+  },
+  "2641188": {
+    "name": "Emblem Piece (Flame)"
+  },
+  "2641189": {
+    "name": "Emblem Piece (Chest)"
+  },
+  "2641190": {
+    "name": "Emblem Piece (Statue)"
+  },
+  "2641191": {
+    "name": "Emblem Piece (Fountain)"
+  },
+  "2641206": {
+    "name": "Watergleam"
+  },
+  "2641207": {
+    "name": "Naturespark"
+  },
+  "2641208": {
+    "name": "Fireglow"
+  },
+  "2641209": {
+    "name": "Earthshine"
+  },
+  "2641210": {
+    "name": "Crystal Trident"
+  },
+  "2641211": {
+    "name": "Postcard"
+  },
+  "2641217": {
+    "name": "Slide 1"
+  },
+  "2641218": {
+    "name": "Slide 2"
+  },
+  "2641219": {
+    "name": "Slide 3"
+  },
+  "2641220": {
+    "name": "Slide 4"
+  },
+  "2641221": {
+    "name": "Slide 5"
+  },
+  "2641222": {
+    "name": "Slide 6"
+  },
+  "2641223": {
+    "name": "Footprints"
+  },
+  "2641224": {
+    "name": "Claw Marks"
+  },
+  "2641225": {
+    "name": "Stench"
+  },
+  "2641226": {
+    "name": "Antenna"
+  },
+  "2641227": {
+    "name": "Forget-Me-Not"
+  },
+  "2641228": {
+    "name": "Jack-In-The-Box"
+  },
+  "2641229": {
+    "name": "Entry Pass"
+  },
+  "2641231": {
+    "name": "Dumbo"
+  },
+  "2641233": {
+    "name": "Bambi"
+  },
+  "2641234": {
+    "name": "Genie"
+  },
+  "2641235": {
+    "name": "Tinker Bell"
+  },
+  "2641236": {
+    "name": "Mushu"
+  },
+  "2641237": {
+    "name": "Simba"
+  },
+  "2641238": {
+    "name": "Lucky Emblem"
+  },
+  "2641239": {
+    "name": "Max HP Increase"
+  },
+  "2641240": {
+    "name": "Max MP Increase"
+  },
+  "2641241": {
+    "name": "Max AP Increase"
+  },
+  "2641242": {
+    "name": "Strength Increase"
+  },
+  "2641243": {
+    "name": "Defense Increase"
+  },
+  "2641244": {
+    "name": "Item Slot Increase"
+  },
+  "2641245": {
+    "name": "Accessory Slot Increase"
+  },
+  "2641254": {
+    "name": "Mythril"
+  },
+  "2641255": {
+    "name": "Orichalcum"
+  },
+  "2642001": {
+    "name": "High Jump"
+  },
+  "2642002": {
+    "name": "Mermaid Kick"
+  },
+  "2642003": {
+    "name": "Progressive Glide"
+  },
+  "2643005": {
+    "name": "Treasure Magnet"
+  },
+  "2643006": {
+    "name": "Combo Plus"
+  },
+  "2643007": {
+    "name": "Air Combo Plus"
+  },
+  "2643008": {
+    "name": "Critical Plus"
+  },
+  "2643010": {
+    "name": "Scan"
+  },
+  "2643011": {
+    "name": "Sonic Blade"
+  },
+  "2643012": {
+    "name": "Ars Arcanum"
+  },
+  "2643013": {
+    "name": "Strike Raid"
+  },
+  "2643014": {
+    "name": "Ragnarok"
+  },
+  "2643015": {
+    "name": "Trinity Limit"
+  },
+  "2643016": {
+    "name": "Cheer"
+  },
+  "2643017": {
+    "name": "Vortex"
+  },
+  "2643018": {
+    "name": "Aerial Sweep"
+  },
+  "2643019": {
+    "name": "Counterattack"
+  },
+  "2643020": {
+    "name": "Blitz"
+  },
+  "2643021": {
+    "name": "Guard"
+  },
+  "2643022": {
+    "name": "Dodge Roll"
+  },
+  "2643023": {
+    "name": "MP Haste"
+  },
+  "2643024": {
+    "name": "MP Rage"
+  },
+  "2643025": {
+    "name": "Second Chance"
+  },
+  "2643026": {
+    "name": "Berserk"
+  },
+  "2643027": {
+    "name": "Jackpot"
+  },
+  "2643028": {
+    "name": "Lucky Strike"
+  },
+  "2643053": {
+    "name": "Slapshot"
+  },
+  "2643054": {
+    "name": "Sliding Dash"
+  },
+  "2643055": {
+    "name": "Hurricane Blast"
+  },
+  "2643056": {
+    "name": "Ripple Drive"
+  },
+  "2643057": {
+    "name": "Stun Impact"
+  },
+  "2643058": {
+    "name": "Gravity Break"
+  },
+  "2643059": {
+    "name": "Zantetsuken"
+  },
+  "2643060": {
+    "name": "Tech Boost"
+  },
+  "2643061": {
+    "name": "Encounter Plus"
+  },
+  "2643062": {
+    "name": "Leaf Bracer"
+  },
+  "2643064": {
+    "name": "EXP Zero"
+  },
+  "2643065": {
+    "name": "Combo Master"
+  },
+  "2644000": {
+    "name": "Finisher Lock"
+  },
+  "2644001": {
+    "name": "Air Finisher Lock"
+  },
+  "2644002": {
+    "name": "Haste"
+  },
+  "2644003": {
+    "name": "Hastera"
+  },
+  "2644004": {
+    "name": "Hastega"
+  },
+  "2644005": {
+    "name": "Slow"
+  },
+  "2644006": {
+    "name": "Slowra"
+  },
+  "2644007": {
+    "name": "Slowga"
+  },
+  "2644008": {
+    "name": "Air Guard/Dodge Roll"
+  },
+  "2644010": {
+    "name": "Fire Cost Up"
+  },
+  "2644011": {
+    "name": "Blizzard Cost Up"
+  },
+  "2644012": {
+    "name": "Thunder Cost Up"
+  },
+  "2644013": {
+    "name": "Cure Cost Up"
+  },
+  "2644014": {
+    "name": "Gravity Cost Up"
+  },
+  "2644015": {
+    "name": "Stop Cost Up"
+  },
+  "2644016": {
+    "name": "Aero Cost Up"
+  },
+  "2644017": {
+    "name": "Fire Cost Down"
+  },
+  "2644018": {
+    "name": "Blizzard Cost Down"
+  },
+  "2644019": {
+    "name": "Thunder Cost Down"
+  },
+  "2644020": {
+    "name": "Cure Cost Down"
+  },
+  "2644021": {
+    "name": "Gravity Cost Down"
+  },
+  "2644022": {
+    "name": "Stop Cost Down"
+  },
+  "2644023": {
+    "name": "Aero Cost Down"
+  },
+  "2644024": {
+    "name": "Fire Boost"
+  },
+  "2644025": {
+    "name": "Blizzard Boost"
+  },
+  "2644026": {
+    "name": "Thunder Boost"
+  },
+  "2644027": {
+    "name": "Cure Boost"
+  },
+  "2644028": {
+    "name": "Gravity Boost"
+  },
+  "2644029": {
+    "name": "Stop Boost"
+  },
+  "2644030": {
+    "name": "Aero Boost"
+  },
+  "2644031": {
+    "name": "Fire Down"
+  },
+  "2644032": {
+    "name": "Blizzard Down"
+  },
+  "2644033": {
+    "name": "Thunder Down"
+  },
+  "2644034": {
+    "name": "Cure Down"
+  },
+  "2644035": {
+    "name": "Gravity Down"
+  },
+  "2644036": {
+    "name": "Stop Down"
+  },
+  "2644037": {
+    "name": "Aero Down"
+  },
+  "2644038": {
+    "name": "Summon Anywhere"
+  },
+  "2644039": {
+    "name": "Summon Boost"
+  },
+  "2644040": {
+    "name": "Grounded"
+  },
+  "2645005": {
+    "name": "Treasure Magnet (Donald)"
+  },
+  "2645009": {
+    "name": "Second Wind (Donald)"
+  },
+  "2645016": {
+    "name": "Cheer (Donald)"
+  },
+  "2645023": {
+    "name": "MP Haste (Donald)"
+  },
+  "2645024": {
+    "name": "MP Rage (Donald)"
+  },
+  "2645025": {
+    "name": "Second Chance (Donald)"
+  },
+  "2645026": {
+    "name": "Berserk (Donald)"
+  },
+  "2645027": {
+    "name": "Jackpot (Donald)"
+  },
+  "2645028": {
+    "name": "Lucky Strike (Donald)"
+  },
+  "2645062": {
+    "name": "Leaf Bracer (Donald)"
+  },
+  "2646005": {
+    "name": "Treasure Magnet (Goofy)"
+  },
+  "2646009": {
+    "name": "Second Wind (Goofy)"
+  },
+  "2646016": {
+    "name": "Cheer (Goofy)"
+  },
+  "2646023": {
+    "name": "MP Haste (Goofy)"
+  },
+  "2646024": {
+    "name": "MP Rage (Goofy)"
+  },
+  "2646025": {
+    "name": "Second Chance (Goofy)"
+  },
+  "2646026": {
+    "name": "Berserk (Goofy)"
+  },
+  "2646027": {
+    "name": "Jackpot (Goofy)"
+  },
+  "2646028": {
+    "name": "Lucky Strike (Goofy)"
+  },
+  "2646029": {
+    "name": "Charge (Goofy)"
+  },
+  "2646030": {
+    "name": "Rocket (Goofy)"
+  },
+  "2646031": {
+    "name": "Tornado (Goofy)"
+  },
+  "2646032": {
+    "name": "MP Gift (Goofy)"
+  },
+  "2646063": {
+    "name": "Evolution (Goofy)"
+  }
+}

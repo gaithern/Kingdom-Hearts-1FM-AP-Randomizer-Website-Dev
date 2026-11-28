@@ -4,6 +4,19 @@ const trackerConfig = {
   "foundIconSizesToTryInPixels": [26, 22, 18, 15, 12, 10],
   "broadcastWindowSize": { "width": 502, "height": 1230 },
 
+  "catalogFiles": { "locations": "tracker/locations.json", "items": "tracker/items.json" },
+  "roomReconnectAfterMilliseconds": 5000,
+  "roomGameName": "Kingdom Hearts",
+  "roomItemsHandling": 3,
+  "archipelagoVersion": { "major": 0, "minor": 6, "build": 0, "class": "Version" },
+  "roomRefusalMessages": {
+    "InvalidSlot": "Slot not found",
+    "InvalidGame": "Wrong game",
+    "InvalidPassword": "Wrong password",
+    "IncompatibleVersion": "Server too old",
+    "InvalidItemsHandling": "Room refused"
+  },
+
   "apItemPlaceholder": 2641230,
   "synthesisLocationType": "Synth",
   "settingsHiddenFromList": ["seed", "slot_name", "starting_items", "remote_location_ids", "synthesis_item_name_byte_arrays", "spell_effectiveness", "spell_mp_costs", "entrance_pairings", "door_destinations"],
